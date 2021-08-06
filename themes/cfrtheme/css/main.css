@@ -29,17 +29,20 @@ header {
   text-transform: uppercase;
 }
 
-header a h1 {
+header h1 {
   font-size: 18px;
   font-weight: normal;
 
   color: var(--green1);
-  text-decoration: none;
 
   margin: 0;
   padding: 0;
 
   transition: font-size 0.2s;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header .nav-logo-container .logo {
@@ -139,7 +142,8 @@ header .nav-bar li:hover a {
   font-size: 18px;
 }
 
-header .nav-bar .current-menu-item {
+header .nav-bar .current-menu-item,
+header .nav-bar .current-menu-ancestor {
   background-color: var(--blue2);
   height: 100%;
 
@@ -149,17 +153,34 @@ header .nav-bar .current-menu-item {
   transition-timing-function: ease-out;
 }
 
-header .nav-bar .current-menu-item:hover {
+header .nav-bar li .sub-menu .current-menu-item:only-child {
+  border-radius: 0.5rem;
+}
+
+header .nav-bar li .sub-menu .current-menu-item:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+header .nav-bar li .sub-menu .current-menu-item:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+header .nav-bar .current-menu-item:hover,
+header .nav-bar .current-menu-ancestor:hover {
   background-color: var(--blue2);
   filter: brightness(110%);
 }
 
-header .nav-bar .current-menu-item:hover a {
+header .nav-bar .current-menu-item:hover > a,
+header .nav-bar .current-menu-ancestor:hover > a,
+header .nav-bar li .sub-menu .current-menu-item:hover a {
   color: #fff;
 }
 
 
-header .nav-bar .current-menu-item a {
+header .nav-bar .current-menu-item > a,
+header .nav-bar .current-menu-ancestor > a,
+header .nav-bar li .sub-menu .current-menu-item a {
   color: #fff;
   font-weight: normal;
 }
@@ -169,8 +190,7 @@ header .nav-bar li .sub-menu {
   z-index: 999;
   position: absolute;
 
-  top: 100%;
-  left: 0;
+  top: 90%;
   width: 200px;
 
   margin: 0;
@@ -180,12 +200,14 @@ header .nav-bar li .sub-menu {
   background: #fff;
 
   list-style-type: none;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 header .nav-bar li .sub-menu a {
   color: #808080;
   padding: 0.5rem;
+
+  font-size: 13px;
 
   display: block;
   text-decoration: none;
