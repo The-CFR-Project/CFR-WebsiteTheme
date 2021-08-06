@@ -1,1 +1,1 @@
-# CFR-WordPressTheme
+# CFR WordPress Theme
