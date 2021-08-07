@@ -29,7 +29,7 @@
       <a href="<?php echo home_url();?>">
         <h1>The Carbon Footprint Reduction Project</h1>
       </a>
-      
+
     </div>
   </div>
 
@@ -43,10 +43,14 @@
       );
     ?>
   </div>
+
+
 </header>
 
 <div class="nav-bar-translucent-rectangle">
 </div>
 
-<section class="page-wrap">
-  <div class="container">
+<div class="test">
+  hello
+</div>
+<div class="container-fluid">

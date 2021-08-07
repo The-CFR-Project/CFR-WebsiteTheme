@@ -1,5 +1,4 @@
 * {
-
 }
 
 :root {
@@ -64,7 +63,7 @@ header .nav-header-container:hover .logo {
 }
 
 header .nav-header-container:hover h1 {
-  font-size: 19px;
+  /*font-size: 19px;*/
 }
 
 header .nav-logo-container {
@@ -94,6 +93,7 @@ header .nav-container {
   display: flex;
 
   width: 50%;
+  padding-right: 50px;
 }
 
 header .menu-navigation-bar-container {
@@ -157,11 +157,11 @@ header .nav-bar li .sub-menu .current-menu-item:only-child {
   border-radius: 0.5rem;
 }
 
-header .nav-bar li .sub-menu .current-menu-item:first-child {
+header .nav-bar li .sub-menu .current-menu-item:first-child:not(:only-child) {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-header .nav-bar li .sub-menu .current-menu-item:last-child {
+header .nav-bar li .sub-menu .current-menu-item:last-child:not(:only-child) {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
@@ -191,7 +191,7 @@ header .nav-bar li .sub-menu {
   position: absolute;
 
   top: 90%;
-  width: 200px;
+  width: 180px;
 
   margin: 0;
   padding: 0;
@@ -231,5 +231,8 @@ header .nav-bar .menu-item-has-children:hover .sub-menu {
 
 .page-wrap {
   padding: 2rem 0; /* Padding between the navigation bar and the content */
+}
 
+.test {
+  background-color: red;
 }
