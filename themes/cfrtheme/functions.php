@@ -29,7 +29,7 @@ add_theme_support( "menus" );
 register_nav_menus(
   array(
       "nav-bar" => "Navigation Bar Location",
-      "mobile-menu" => "Mobile Menu Location"
+      "home-banner" => "Home Banner Location"
   )
 );
 

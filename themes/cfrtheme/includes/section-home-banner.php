@@ -1,24 +1,39 @@
-<?php $divs = 4;?>
-
   <div class="header-slideshow-container">
 
-  <?php for ($i = 0; $i < $divs; $i++) {?>
+  <?php
+
+  $bannerItems = wp_get_nav_menu_items(get_nav_menu_locations()['home-banner']);
+
+  $i = 0;
+  foreach ( $bannerItems as $navItem ) {
+  ?>
     <div class="header-slide quick-fade">
-      <img src="<?php echo get_template_directory_uri();?>/images/header-slideshow-image<?php echo $i?>.png">
+      <img src="<?php echo get_template_directory_uri();?>/images/header-slideshow-image<?php echo $i?>.jpg">
 
       <div>
-        <h3>Lorem Ipsum Dolor Sit Amet</h3>
-        <button>Read More</button>
+        <h3><?php echo $navItem->title;?></h3>
+
+        <form action=<?php echo $navItem->url;?>>
+          <input type="submit" value="Read More" />
+        </form>
+
       </div>
 
     </div>
-  <?php }?>
+
+  <?php
+    $i += 1;
+    if ($i > 3) {
+      $i = 0;
+    }
+  }
+  ?>
 
     <a class="prev-slide" onclick="changeHeaderSlideshow(-1)">&#10094;</a>
     <a class="next-slide" onclick="changeHeaderSlideshow(1)">&#10095;</a>
 
     <div class="slideshow-dots-container">
-    <?php for ($i = 0; $i < $divs; $i++) {?>
+    <?php for ($i = 0; $i < sizeof($bannerItems); $i++) {?>
       <span class="header-slideshow-dot<?php echo ($i == 0) ? ' header-slideshow-dot-active' : '';?>"
         onclick="setHeaderSlideshow(<?php echo $i;?>)"></span>
     <?php }?>

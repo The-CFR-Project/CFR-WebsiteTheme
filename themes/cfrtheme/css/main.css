@@ -17,6 +17,16 @@
     --green1: #515760;
 }
 
+:focus {
+  outline-width: 1px;
+}
+
+/*
+
+The CFR Nv Located at the Top of the Screen
+--------------------------------------------------------------------------------
+*/
+
 header {
   display: flex;
 
@@ -29,7 +39,7 @@ header {
 }
 
 header h1 {
-  font-size: 18px;
+  font-size: 1.25em;
   font-weight: normal;
 
   color: var(--green1);
@@ -45,12 +55,12 @@ header a {
 }
 
 header .nav-logo-container .logo {
-  max-width: 50px;
+  max-width: 70px;
   height: auto;
+  padding: 10px;
 
   transition: max-width 0.2s;
 }
-
 
 header .nav-header-container {
   display: flex;
@@ -58,12 +68,21 @@ header .nav-header-container {
   width: 66%;
 }
 
-header .nav-header-container:hover .logo {
-  max-width: 55px;
+header .nav-header-container a:focus .logo {
+  max-width: 75px;
+  background-color: var(--grey1);
 }
 
-header .nav-header-container:hover h1 {
+header .nav-header-container a:hover .logo {
+  max-width: 75px;
+}
+
+header .nav-header-container:hover h1{
   /*font-size: 19px;*/
+}
+
+header .nav-header-container a:focus h1{
+  border-bottom: 1px dotted var(--green1);
 }
 
 header .nav-logo-container {
@@ -130,22 +149,47 @@ header .nav-bar li a {
 
   text-decoration: none;
   font-weight: normal;
-
   text-align: center;
+  font-size: 1.25rem;
 
   transition: color 0.1s, font-size 0.1s;
   transition-timing-function: ease-out;
 }
 
-header .nav-bar li:hover a {
+header .nav-bar li:hover a,
+header .nav-bar li:focus-within a {
   color: var(--grey4);
-  font-size: 18px;
+  font-size: 1.27rem;
+}
+
+header .nav-bar > li > a::after {
+  display: block;
+
+  height: 1.5px;
+  width: 0%;
+
+  background: var(--grey2);
+  content: "";
+
+  transition: width 0.2s;
+}
+
+header .nav-bar .current-menu-item > a::after,
+header .nav-bar .current-menu-ancestor > a::after {
+  background: #fff !important;
+}
+
+header .nav-bar > li:hover > a::after,
+header .nav-bar > li > a:focus::after{
+  width: 100%;
+  background: var(--grey4);
 }
 
 header .nav-bar .current-menu-item,
 header .nav-bar .current-menu-ancestor {
   background-color: var(--blue2);
   height: 100%;
+  z-index: 10;
 
   filter: brightness(100%);
 
@@ -166,14 +210,19 @@ header .nav-bar li .sub-menu .current-menu-item:last-child:not(:only-child) {
 }
 
 header .nav-bar .current-menu-item:hover,
-header .nav-bar .current-menu-ancestor:hover {
+header .nav-bar .current-menu-ancestor:hover,
+header .nav-bar .current-menu-item:focus-within,
+header .nav-bar .current-menu-ancestor:focus-within {
   background-color: var(--blue2);
   filter: brightness(110%);
 }
 
 header .nav-bar .current-menu-item:hover > a,
 header .nav-bar .current-menu-ancestor:hover > a,
-header .nav-bar li .sub-menu .current-menu-item:hover a {
+header .nav-bar li .sub-menu .current-menu-item:hover a,
+header .nav-bar .current-menu-item:focus-within > a,
+header .nav-bar .current-menu-ancestor:focus-within > a,
+header .nav-bar li .sub-menu .current-menu-item:focus-within a {
   color: #fff;
 }
 
@@ -187,8 +236,8 @@ header .nav-bar li .sub-menu .current-menu-item a {
 
 header .nav-bar li .sub-menu {
   display: none;
-  z-index: 999;
   position: absolute;
+  z-index: 10;
 
   top: 90%;
   width: 180px;
@@ -204,7 +253,7 @@ header .nav-bar li .sub-menu {
 }
 
 header .nav-bar li .sub-menu a {
-  color: #808080;
+  color: var(--grey2);
   padding: 0.5rem;
 
   font-size: 13px;
@@ -213,26 +262,192 @@ header .nav-bar li .sub-menu a {
   text-decoration: none;
 }
 
-header .nav-bar li .sub-menu a:hover {
+header .nav-bar li .sub-menu a:hover,
+header .nav-bar li .sub-menu a:focus {
   color: #000;
 }
 
 
-header .nav-bar .menu-item-has-children:hover .sub-menu {
+header .nav-bar .menu-item-has-children:hover .sub-menu,
+header .nav-bar .menu-item-has-children:focus-within .sub-menu {
   display: block;
 }
 
 .nav-bar-translucent-rectangle {
+  position: absolute;
+  z-index: 1;
   width: 100%;
   height: 20px;
 
-  background-color: var(--blue3);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .page-wrap {
   padding: 2rem 0; /* Padding between the navigation bar and the content */
 }
 
-.test {
-  background-color: red;
+/*
+
+The CFR Banner Slideshow Located at the Top of the Screen
+--------------------------------------------------------------------------------
+*/
+
+.header-slideshow-container {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+.header-slideshow-container img {
+  width: 100%;
+}
+
+.header-slideshow-container h3 {
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 2.5em;
+  font-weight: bold;
+
+  color: #fff;
+}
+
+.header-slideshow-container input {
+  display: inline-block;
+
+  background-color: #fff;
+  color: var(--blue3);
+  font-weight: bold;
+
+  width: 150px;
+  justify-content: center;
+  padding: 5px 0;
+
+  border-radius: 20px;
+  border: none;
+}
+
+.header-slideshow-container .header-slide {
+  display: none;
+}
+
+.header-slideshow-container .header-slide > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+.header-slideshow-container .prev-slide,
+.header-slideshow-container .next-slide {
+  position: absolute;
+  top: 50%;
+
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+
+  cursor: pointer;
+  user-select: none;
+
+  color: white;
+  border-radius: 0 10px 10px 0;
+
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+
+  transition: background-color 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.header-slideshow-container .next-slide {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+}
+
+.header-slideshow-container .prev-slide:hover,
+.header-slideshow-container .next-slide:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-slideshow-container .slideshow-dots-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.header-slideshow-container .header-slideshow-dot {
+  margin: 0 5px;
+  display: inline-block;
+
+  height: 1rem;
+  width: 1rem;
+
+  cursor: pointer;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+
+  transition: background-color 0.1s;
+  transition-timing-function: ease-out;
+}
+
+.header-slideshow-dot-active,
+.header-slideshow-container .header-slideshow-dot:hover {
+  background-color: #fff !important;
+}
+
+/* Fading animation */
+.quick-fade {
+  -webkit-animation-name: quick-fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: quick-fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes quick-fade {
+  from {
+    opacity: .7
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes quick-fade {
+  from {
+    opacity: .7
+  }
+  to {
+    opacity: 1
+  }
+}
+
+/*
+
+Bootstrap Overrides
+--------------------------------------------------------------------------------
+*/
+
+.container-fluid {
+  padding: 0;
+}
+
+.menu-home-banner-container {
+  width: 100%;
+  position: relative;
+  justify-content: center;
 }

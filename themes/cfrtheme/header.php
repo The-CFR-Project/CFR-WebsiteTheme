@@ -50,7 +50,4 @@
 <div class="nav-bar-translucent-rectangle">
 </div>
 
-<div class="test">
-  hello
-</div>
 <div class="container-fluid">
