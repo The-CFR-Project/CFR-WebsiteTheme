@@ -41,14 +41,22 @@
 
     <script>
       var headerSlideIndex = 0;
+      var resetCarousel = 0;
 
-      setHeaderSlideshow(headerSlideIndex);
+      reloadSlideshow(headerSlideIndex);
+      carousel();
 
       function changeHeaderSlideshow(n) {
-        setHeaderSlideshow(headerSlideIndex + n);
+        reloadSlideshow(headerSlideIndex + n);
+        resetCarousel = 2;
       }
 
       function setHeaderSlideshow(n) {
+        reloadSlideshow(n);
+        resetCarousel = 2;
+      }
+
+      function reloadSlideshow(n) {
         var i;
         var headerSlides = document.getElementsByClassName("header-slide");
         var headerSlideDots = document.getElementsByClassName("header-slideshow-dot");
@@ -70,6 +78,16 @@
 
         headerSlides[headerSlideIndex].style.display = "block";
         headerSlideDots[headerSlideIndex].className += " header-slideshow-dot-active";
+      }
+
+      function carousel() {
+        if (resetCarousel > 0) {
+          resetCarousel -= 1;
+        }
+        else {
+          reloadSlideshow(headerSlideIndex + 1)
+        }
+        setTimeout(carousel, 4000); // Change image every 4 seconds
       }
 
     </script>

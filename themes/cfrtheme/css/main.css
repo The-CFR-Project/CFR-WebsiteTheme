@@ -18,7 +18,7 @@
 }
 
 :focus {
-  outline-width: 1px;
+  outline-width: 0px;
 }
 
 /*
@@ -306,9 +306,9 @@ The CFR Banner Slideshow Located at the Top of the Screen
   margin-bottom: 30px;
 
   text-transform: uppercase;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 700;
 
   color: #fff;
 }
@@ -317,8 +317,7 @@ The CFR Banner Slideshow Located at the Top of the Screen
   display: inline-block;
 
   background-color: #fff;
-  color: var(--blue3);
-  font-weight: bold;
+  color: var(--grey3);
 
   width: 150px;
   justify-content: center;
@@ -326,6 +325,15 @@ The CFR Banner Slideshow Located at the Top of the Screen
 
   border-radius: 20px;
   border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+  transition: color 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.header-slideshow-container input:hover,
+.header-slideshow-container input:focus {
+  color: var(--blue3);
 }
 
 .header-slideshow-container .header-slide {
@@ -436,6 +444,157 @@ The CFR Banner Slideshow Located at the Top of the Screen
   }
 }
 
+
+/*
+
+The CFR Home Page Aircraft Section Located below the Banner
+--------------------------------------------------------------------------------
+*/
+
+.heading-container {
+  text-align: center;
+  font-weight: 700;
+
+  position: relative;
+
+  height: 300px;
+}
+
+.heading-container img {
+  position: absolute;
+
+  user-select: none;
+
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 63%;
+  text-align: center;
+}
+
+.heading-overlay,
+.heading-watermark {
+  position: absolute;
+
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heading-watermark {
+  text-transform: uppercase;
+  user-select: none;
+  color: var(--grey1);
+
+  font-size: 200px;
+}
+
+.heading-overlay {
+  text-transform: lowercase;
+  font-size: 30px;
+
+  z-index: 8;
+}
+
+.heading-overlay:nth-child(odd) {
+  color: var(--blue3);
+}
+
+.home-post form {
+  justify-content: center;
+}
+
+.home-post input {
+  background-color: var(--blue1);
+  color: #fff;
+
+  margin: auto;
+  display: block;
+  padding: 10px 40px;
+
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+  text-transform: lowercase;
+
+  transition: color 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.home-post p {
+  display: inline;
+  line-height: 200%;
+
+  color: var(--grey3);
+}
+
+.home-post a {
+
+  color: var(--blue2) !important;
+
+  text-transform: lowercase;
+
+  float: right;
+}
+
+.home-post .full-row {
+  width: 90%;
+  height: 130px;
+  position: relative;
+
+  margin-bottom: 70px;
+}
+
+.home-post .full-row img {
+  width: 120px;
+
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+    user-select: none;
+}
+
+.home-post .col-md-6 {
+  text-align: justify;
+  margin-bottom: 100px;
+
+  position: relative;
+}
+
+.home-post .col-md-6 img {
+  display: block;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  height: 130%;
+  max-height: 450px;
+
+  user-select: none;
+}
+
+.home-post .col-para {
+  padding-right: 17%;
+}
+
+.home-post .col-para img {
+  z-index: -1;
+
+  bottom: auto;
+  top: -30px;
+  right: 17%;
+
+  width: 384px;
+  height: 306px;
+
+  user-select: none;
+}
+
 /*
 
 Bootstrap Overrides
@@ -446,8 +605,7 @@ Bootstrap Overrides
   padding: 0;
 }
 
-.menu-home-banner-container {
-  width: 100%;
-  position: relative;
-  justify-content: center;
+.row {
+ margin-left: 0px !important;
+ margin-right: 0px !important;
 }

@@ -18,7 +18,7 @@ function load_js() {
 }
 
 add_action( "wp_enqueue_scripts", "load_css" );
-add_action( "wp_enqueue_scripts", "load_js" );
+//add_action( "wp_enqueue_scripts", "load_js" );
 
 
 // Theme Options
