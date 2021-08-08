@@ -9,16 +9,30 @@
     --grey5: #333;
     --grey6: #282828;
 
-    --blue4: #004C65;
-    --blue3: #246B81;
-    --blue2: #35B0AB;
     --blue1: #B6E2DF;
+    --blue2: #35B0AB;
+    --blue3: #246B81;
+    --blue4: #004C65;
 
     --green1: #515760;
+
+    --red1: #F7B595;
+    --red2: #F67280;
+    --red3: #C06C84;
+    --red4: #6F5980;
+    --red5: #3D2451;
 }
 
 :focus {
   outline-width: 0px;
+}
+
+section:nth-child(even) {
+  background-color: #fff;
+}
+
+section:nth-child(odd) {
+  background-color: var(--grey1);
 }
 
 /*
@@ -496,7 +510,11 @@ The CFR Home Page Aircraft Section Located below the Banner
   z-index: 8;
 }
 
-.heading-overlay:nth-child(odd) {
+section:nth-child(odd) .heading-overlay {
+  color: var(--red4);
+}
+
+section:nth-child(even) .heading-overlay {
   color: var(--blue3);
 }
 
@@ -593,6 +611,16 @@ The CFR Home Page Aircraft Section Located below the Banner
   height: 306px;
 
   user-select: none;
+}
+
+/*
+
+The CFR Home Page Cards Section Located below the Aircrafts Section
+--------------------------------------------------------------------------------
+*/
+
+.cards-section-container {
+  height: 500px;
 }
 
 /*
