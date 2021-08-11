@@ -18,7 +18,7 @@ function load_js() {
 }
 
 add_action( "wp_enqueue_scripts", "load_css" );
-//add_action( "wp_enqueue_scripts", "load_js" );
+add_action( "wp_enqueue_scripts", "load_js" );
 
 
 // Theme Options
@@ -29,7 +29,9 @@ add_theme_support( "menus" );
 register_nav_menus(
   array(
       "nav-bar" => "Navigation Bar Location",
-      "home-banner" => "Home Banner Location"
+      "home-banner" => "Home Banner Location",
+      "footer" => "Footer Location",
+      "footer-social" => "Footer Socials Location"
   )
 );
 

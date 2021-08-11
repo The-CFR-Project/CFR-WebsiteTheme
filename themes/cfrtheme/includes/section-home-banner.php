@@ -14,7 +14,7 @@
         <h3><?php echo $navItem->title;?></h3>
 
         <form action=<?php echo $navItem->url;?>>
-          <input type="submit" value="Read More" />
+          <input id="read-more" type="submit" value="Read More" />
         </form>
 
       </div>
@@ -34,8 +34,8 @@
 
     <div class="slideshow-dots-container">
     <?php for ($i = 0; $i < sizeof($bannerItems); $i++) {?>
-      <span class="header-slideshow-dot<?php echo ($i == 0) ? ' header-slideshow-dot-active' : '';?>"
-        onclick="setHeaderSlideshow(<?php echo $i;?>)"></span>
+      <button class="header-slideshow-dot<?php echo ($i == 0) ? ' header-slideshow-dot-active' : '';?>"
+        onclick="setHeaderSlideshow(<?php echo $i;?>)"></button>
     <?php }?>
     </div>
 
@@ -84,7 +84,7 @@
         if (resetCarousel > 0) {
           resetCarousel -= 1;
         }
-        else {
+        else if (document.activeElement.id != "read-more") {
           reloadSlideshow(headerSlideIndex + 1)
         }
         setTimeout(carousel, 4000); // Change image every 4 seconds

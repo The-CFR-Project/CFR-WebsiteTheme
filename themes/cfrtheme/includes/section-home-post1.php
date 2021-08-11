@@ -26,6 +26,12 @@
     <div class="row">
 
       <div class="col-md-6">
+        <div>
+          <a href="<?php echo $doc->query('//ol/li')[2]->nodeValue;?>">
+            <div></div>
+          </a>
+        </div>
+        
         <img src="<?php echo get_template_directory_uri();?>/images/balloon1.svg">
       </div>
 
@@ -33,13 +39,16 @@
         <?php
         $firstp = true;
         foreach ($doc->query('//p') as $node) {
-          echo ($firstp ? "<p>" : "<br><br><p>") . $node->nodeValue . "<p>";
+          echo ($firstp ? "<p>" : "<br><br><p>") . $node->nodeValue . "</p>";
           $firstp = false;
         }?>
-        <a>Read More</a>
+        <a href="<?php echo get_permalink( $post )?>">Read More</a>
+      </div>
 
+      <div class="background-image">
         <img src="<?php echo get_template_directory_uri();?>/images/flight-watermark.svg">
       </div>
+
     </div>
 
   </div>

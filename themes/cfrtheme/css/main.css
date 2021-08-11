@@ -1,4 +1,7 @@
-* {
+*,
+*::before,
+*::after {
+
 }
 
 :root {
@@ -21,14 +24,21 @@
     --red3: #C06C84;
     --red4: #6F5980;
     --red5: #3D2451;
+
+    --yellow1: #FFCC66;
 }
 
-:focus {
-  outline-width: 0px;
+html {
+
 }
 
-section:nth-child(even) {
-  background-color: #fff;
+:focus-visible {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 section:nth-child(odd) {
@@ -59,13 +69,27 @@ header h1 {
   color: var(--green1);
 
   margin: 0;
-  padding: 0;
+  padding: 5px;
 
   transition: font-size 0.2s;
 }
 
 header a {
   text-decoration: none;
+}
+
+header a::after {
+  display: block;
+
+  height: 1.5px;
+  width: 0%;
+  content: "";
+
+  transition: width 0.2s;
+}
+
+header a:hover::after {
+  width: 100%;
 }
 
 header .nav-logo-container .logo {
@@ -82,8 +106,10 @@ header .nav-header-container {
   width: 66%;
 }
 
-header .nav-header-container a:focus .logo {
+header .nav-header-container a:focus-visible .logo {
   max-width: 75px;
+
+  border: 2px dashed var(--grey2);
   background-color: var(--grey1);
 }
 
@@ -95,8 +121,8 @@ header .nav-header-container:hover h1{
   /*font-size: 19px;*/
 }
 
-header .nav-header-container a:focus h1{
-  border-bottom: 1px dotted var(--green1);
+header .nav-header-container a:focus-visible h1{
+  border: 2px dashed var(--grey2);
 }
 
 header .nav-logo-container {
@@ -177,15 +203,7 @@ header .nav-bar li:focus-within a {
 }
 
 header .nav-bar > li > a::after {
-  display: block;
-
-  height: 1.5px;
-  width: 0%;
-
   background: var(--grey2);
-  content: "";
-
-  transition: width 0.2s;
 }
 
 header .nav-bar .current-menu-item > a::after,
@@ -277,7 +295,7 @@ header .nav-bar li .sub-menu a {
 }
 
 header .nav-bar li .sub-menu a:hover,
-header .nav-bar li .sub-menu a:focus {
+header .nav-bar li .sub-menu a:focus-visible {
   color: #000;
 }
 
@@ -341,13 +359,18 @@ The CFR Banner Slideshow Located at the Top of the Screen
   border: none;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 
-  transition: color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
   transition-timing-function: ease-out;
 }
 
-.header-slideshow-container input:hover,
-.header-slideshow-container input:focus {
+.header-slideshow-container input:hover {
   color: var(--blue3);
+}
+
+.header-slideshow-container input:focus-visible {
+  background-color: var(--blue2);
+  outline: 2px dashed #fff;
+  color: #fff !important;
 }
 
 .header-slideshow-container .header-slide {
@@ -418,18 +441,28 @@ The CFR Banner Slideshow Located at the Top of the Screen
   height: 1rem;
   width: 1rem;
 
+  border: none;
+
   cursor: pointer;
 
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 
-  transition: background-color 0.1s;
+  transition: background-color 0.1s, width 0.2s, height 0.2s;
   transition-timing-function: ease-out;
 }
 
 .header-slideshow-dot-active,
 .header-slideshow-container .header-slideshow-dot:hover {
   background-color: #fff !important;
+}
+
+.header-slideshow-container .header-slideshow-dot:focus-visible {
+  background-color: var(--blue2) !important;
+  outline: 2px dashed #fff;
+
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 /* Fading animation */
@@ -536,8 +569,17 @@ section:nth-child(even) .heading-overlay {
 
   text-transform: lowercase;
 
-  transition: color 0.2s;
+  transition: background-color 0.2s;
   transition-timing-function: ease-out;
+}
+
+.home-post input:hover,
+.home-post input:focus-visible {
+  background-color: var(--blue2);
+}
+
+.home-post input:focus-visible {
+  outline: 2px dashed var(--blue4);
 }
 
 .home-post p {
@@ -548,12 +590,23 @@ section:nth-child(even) .heading-overlay {
 }
 
 .home-post a {
-
-  color: var(--blue2) !important;
-
   text-transform: lowercase;
 
+  padding: 8px;
+  color: var(--blue2) !important;
+
   float: right;
+}
+
+.home-post img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.home-post a::after {
+  background: var(--blue2);
+  margin-top: 0px;
+  height: 1px;
 }
 
 .home-post .full-row {
@@ -564,14 +617,16 @@ section:nth-child(even) .heading-overlay {
   margin-bottom: 70px;
 }
 
+.home-post .full-row div {
+  width: 100%;
+}
+
 .home-post .full-row img {
   width: 120px;
 
   right: 0;
   bottom: 0;
   position: absolute;
-
-    user-select: none;
 }
 
 .home-post .col-md-6 {
@@ -589,29 +644,58 @@ section:nth-child(even) .heading-overlay {
   left: 0;
   right: 0;
   margin: auto;
+  padding: 20px;
 
   height: 130%;
-  max-height: 450px;
+  max-height: 470px;
 
-  user-select: none;
+  transition: height 0.2s, max-height 0.2s;
+}
+
+.home-post .col-md-6 a div {
+  position: absolute;
+
+  height: 40%;
+  max-height: 138px;
+  width: 150px;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  z-index: 1;
+
+  transform: translateX(22%);
+}
+
+.home-post .col-md-6 > div:hover + img,
+.home-post .col-md-6 > div:focus-within + img {
+  height: 140%;
+  max-height: 490px;
+}
+
+.home-post .col-md-6 > div:focus-within + img {
+  border: 2px dashed var(--grey2);
 }
 
 .home-post .col-para {
   padding-right: 17%;
 }
 
-.home-post .col-para img {
-  z-index: -1;
-
-  bottom: auto;
-  top: -30px;
-  right: 17%;
-
-  width: 384px;
-  height: 306px;
-
-  user-select: none;
+.home-post .col-para a:focus-visible {
+  border: 2px dashed var(--grey2);
 }
+
+.home-post .row .background-image img {
+  position: absolute;
+
+  z-index: -1;
+  left: 10px;
+  top: -130px;
+  width: 80%;
+}
+
 
 /*
 
@@ -621,6 +705,339 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .cards-section-container {
   height: 500px;
+}
+
+
+/*
+
+The CFR FAQs Section Located above the Instagram Wall
+--------------------------------------------------------------------------------
+*/
+
+.faq-container {
+  width: 80%;
+
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.faq-accordion-item {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--grey1);
+  border-radius: 20px;
+
+  margin-bottom: 40px;
+}
+
+.faq-accordion-checkbox {
+  display: none;
+}
+
+.faq-accordion-link {
+  color: var(--grey3);
+  cursor: pointer;
+
+  width: 100%;
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 40px;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+.faq-accordion-link .plus-icon,
+.faq-accordion-link .minus-icon {
+  transition: all 0.2s ease;
+}
+
+.faq-accordion-link:hover {
+  color: var(--grey6);
+}
+
+.faq-accordion-link:hover .plus-icon,
+.faq-accordion-link:hover .minus-icon {
+  filter: brightness(130%);
+  transform: scale(130%);
+}
+
+.faq-accordion-link .minus-icon {
+  display: none;
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+
+  text-align: justify;
+
+  position: relative;
+  background-color: #fff;
+
+  transition: max-height 0.5s ease;
+}
+
+.faq-accordion-checkbox:checked + label > .faq-answer {
+  max-height: 300px !important;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link {
+  color: var(--blue2);
+  font-weight: 600;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link .minus-icon {
+  display: block;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link .plus-icon {
+  display: none;
+}
+
+.faq-answer::before {
+  content: "";
+  background-color: var(--blue2);
+
+  position: absolute;
+  width: 5px;
+  height: 90%;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+}
+
+.faq-answer p {
+  color: var(--grey4);
+
+  width: 90%;
+  padding: 20px 40px;
+  margin: 0;
+}
+
+
+/*
+
+The CFR Social Media Insta Wall Located above the Footer
+--------------------------------------------------------------------------------
+*/
+.instawall-section-container {
+  position: relative;
+}
+
+.instawall-section-container .heading-container {
+  height: 150px;
+}
+
+.instawall-section-container #sbi_images :focus {
+  outline: 2px dashed var(--grey6) !important;
+}
+
+.instawall-section-container #sbi_load {
+  margin-bottom: -100%;
+  z-index: 10;
+}
+
+.instawall-section-container .sb_instagram_header {
+  display: none;
+}
+
+.instawall-section-container .sbi_load_btn,
+.instawall-section-container .sbi_follow_btn {
+  z-index: inherit;
+  transition: box-shadow 0.2s ease-out !important;
+}
+
+.instawall-section-container .sbi_load_btn:hover,
+.instawall-section-container .sbi_load_btn:focus-visible {
+  box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 5%) !important;
+}
+
+.instawall-section-container .sbi_follow_btn a:hover,
+.instawall-section-container .sbi_follow_btn a:focus-visible {
+  box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 20%) !important;
+}
+
+.instawall-section-container .sbi_load_btn:focus-visible,
+.instawall-section-container .sbi_follow_btn a:focus-visible {
+  outline: 2px dashed #fff !important;
+}
+
+.instawall-section-container .sbi_follow_btn a {
+  background: var(--blue2) !important;
+}
+
+.instawall-section-container .sbi_follow_btn {
+  position: relative;
+}
+
+.instawall-section-container img {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+
+  bottom: -100px;
+  pointer-events: none;
+
+}
+
+/*
+
+The CFR Footer Located at the bottom
+--------------------------------------------------------------------------------
+*/
+
+#footer-container {
+  width: 100%;
+}
+
+.full-search-container {
+  height: 300px;
+  background-color: var(--grey6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-search-container form {
+  height: 60px;
+  width: 70%;
+}
+
+.full-search-container form input {
+  height: 100%;
+  width: 90%;
+
+  padding-left: 20px;
+  float: left;
+
+  background-color: #fff;
+
+  border-radius: 30px 0 0 30px;
+  outline-offset: 10px;
+  border: none;
+}
+
+.full-search-container form input::placeholder {
+  color: var(--grey2);
+  opacity: 1; /* Firefox */
+}
+
+.full-search-container form button {
+  border-radius: 0 30px 30px 0;
+  border: none;
+
+  margin-left: -10px;
+  outline-offset: 10px;
+  float: left;
+
+  height: 100%;
+  width: 10%;
+
+  background-color: var(--blue2);
+  color: var(--blue3);
+
+  transition: filter 0.2s ease-out;
+}
+
+.full-search-container form button img {
+  transition: filter 0.2s ease-out;
+}
+
+.full-search-container form button:hover,
+.full-search-container form button:focus-visible {
+  filter: brightness(110%);
+}
+
+.full-search-container form button:hover img,
+.full-search-container form button:focus-visible img {
+  filter: invert();
+}
+
+.full-search-container form button:focus-visible {
+  outline: 2px dashed #fff;
+}
+
+.full-search-container form button img {
+  height: 50%;
+}
+
+.menu-footer-menu-container {
+  background-color: var(--grey6);
+
+  height: 40px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  width: 100%;
+  height: 100%;
+
+  text-transform: capitalize;
+  list-style-type: none;
+}
+
+.footer li {
+    margin: 0 10px;
+}
+
+.footer li a {
+  color: #fff;
+  transition: color 0.2s ease-out;
+  outline-offset: 5px;
+}
+
+.footer li:hover a {
+  color: var(--blue1);
+}
+
+.footer li a:focus-visible {
+  color: var(--blue1);
+  outline: 2px dashed #fff;
+}
+
+
+#footer-social-bar {
+  background-color: var(--blue3);
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-social-bar img {
+  margin: 0 5px;
+  width: 30px;
+
+  transition: filter 0.2s ease-out;
+}
+
+#footer-social-bar a:hover img,
+#footer-social-bar a:focus img {
+  filter: invert();
+}
+
+#copyright-bar {
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--blue2);
+  color: var(--blue4);
 }
 
 /*
@@ -636,4 +1053,6 @@ Bootstrap Overrides
 .row {
  margin-left: 0px !important;
  margin-right: 0px !important;
+
+ position: relative;
 }
