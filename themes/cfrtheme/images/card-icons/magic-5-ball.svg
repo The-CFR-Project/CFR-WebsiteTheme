@@ -1,0 +1,28 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 60 60">
+<defs>
+<g id="Layer0_0_FILL">
+<path fill="#252525" stroke="none" d="
+M 59.05 37.9
+Q 62.25 25.9 56 15.05 49.8 4.35 37.85 1.1 25.85 -2.1 15.05 4.1 4.3 10.35 1.1 22.35 -2.15 34.4 4.1 45.05 10.2 55.85 22.3 59.05 34.3 62.25 45.05 56 55.8 49.85 59.05 37.9
+M 45.1 21.45
+Q 48.8 27.75 46.9 34.65 45 41.65 38.75 45.2 32.5 48.75 25.6 46.95 18.65 45.1 15.05 38.8 11.35 32.7 13.25 25.7 15.15 18.8 21.3 15.05 27.6 11.45 34.55 13.4 41.5 15.15 45.1 21.45 Z"/>
+
+<path fill="#FAFAFA" stroke="none" d="
+M 46.9 34.65
+Q 48.8 27.75 45.1 21.45 41.5 15.15 34.55 13.4 27.6 11.45 21.3 15.05 15.15 18.8 13.25 25.7 11.35 32.7 15.05 38.8 18.65 45.1 25.6 46.95 32.5 48.75 38.75 45.2 45 41.65 46.9 34.65 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer0_0_FILL"/>
+</g>
+
+<g transform="matrix( 0.710601806640625, 0.410247802734375, -0.410247802734375, 0.710601806640625, 31.85,11.95) ">
+<clipPath id="Mask_Mask_1">
+<rect x="-2" y="-2" width="22.4" height="43.95" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_1)" writing-mode="lr"><tspan x="0" y="32.15" baseline-shift="0%" font-family="Ebrima" font-weight="bold" font-size="32" fill="#252525" xml:space="preserve">5</tspan></text>
+</g>
+</svg>

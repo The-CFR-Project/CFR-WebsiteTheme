@@ -1,0 +1,131 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="115px" height="114px" viewBox="0 0 115 114">
+<defs>
+<g id="Layer0_0_FILL">
+<path fill="#D0C4C4" stroke="none" d="
+M 87.95 97.8
+Q 97.1 91.55 90.8 82.4
+L 84.55 73.25
+Q 78.25 64.15 69.1 70.4
+L 60 76.65
+Q 50.85 82.95 57.15 92.05
+L 63.4 101.2
+Q 69.7 110.35 78.85 104.05
+L 87.95 97.8
+M 90.3 11.3
+L 81.9 4.1
+Q 73.45 -3.05 66.25 5.4
+L 64 8.1 59.1 13.8
+Q 51.9 22.25 60.35 29.4
+L 61.15 30.1 68.75 36.6
+Q 75 41.95 80.6 38.7
+L 80.55 38.15
+Q 79.65 27.1 90.65 26.25
+L 92.25 26.15
+Q 98.35 18.15 90.3 11.3 Z"/>
+
+<path fill="#DAD3D3" stroke="none" d="
+M 55.5 2.35
+L 44.6 0.3
+Q 33.75 -1.7 31.7 9.2
+L 29.7 20.1
+Q 27.7 31 38.55 33
+L 49.45 35.05
+Q 58.1 36.65 61.15 30.1
+L 60.35 29.4
+Q 51.9 22.25 59.1 13.8
+L 64 8.1
+Q 62.15 3.55 55.5 2.35 Z"/>
+
+<path fill="#B48F8F" stroke="none" d="
+M 114.5 46.6
+L 113.65 35.55
+Q 112.75 24.5 101.7 25.4
+L 92.25 26.15 90.65 26.25
+Q 79.65 27.1 80.55 38.15
+L 80.6 38.7 81.4 49.2
+Q 82.25 60.2 93.25 59.35
+L 104.3 58.5
+Q 115.35 57.6 114.5 46.6 Z"/>
+</g>
+
+<g id="Layer0_1_FILL">
+<path fill="#B48F8F" stroke="none" d="
+M 905 630
+L 905 615
+Q 905 600 890 600
+L 875 600
+Q 860 600 860 615
+L 860 630
+Q 860 645 875 645
+L 890 645
+Q 905 645 905 630 Z"/>
+</g>
+
+<g id="Layer0_3_FILL">
+<path fill="#D0C4C4" stroke="none" d="
+M 905 630
+L 905 615
+Q 905 600 890 600
+L 875 600
+Q 860 600 860 615
+L 860 630
+Q 860 645 875 645
+L 890 645
+Q 905 645 905 630 Z"/>
+</g>
+
+<g id="Layer0_5_FILL">
+<path fill="#DAD3D3" stroke="none" d="
+M 905 630
+L 905 615
+Q 905 600 890 600
+L 875 600
+Q 860 600 860 615
+L 860 630
+Q 860 645 875 645
+L 890 645
+Q 905 645 905 630 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer0_0_FILL"/>
+</g>
+
+<g transform="matrix( 0.70709228515625, 0.70709228515625, -0.70709228515625, 0.70709228515625, -144.1,-977.15) ">
+<use xlink:href="#Layer0_1_FILL"/>
+</g>
+
+<g transform="matrix( 0.70709228515625, 0.70709228515625, -0.70709228515625, 0.70709228515625, 47.1,66) ">
+<clipPath id="Mask_Mask_1">
+<rect x="-2" y="-2" width="24.9" height="43.95" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_1)" writing-mode="lr"><tspan x="0" y="32.15" baseline-shift="0%" font-family="Ebrima" font-weight="bold" font-size="32" fill="#FFFFFF" xml:space="preserve">R</tspan></text>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, -860,-572.85) ">
+<use xlink:href="#Layer0_3_FILL"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 12.85,29.6) ">
+<clipPath id="Mask_Mask_2">
+<rect x="-2" y="-2" width="23.95" height="43.95" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_2)" writing-mode="lr"><tspan x="0" y="32.15" baseline-shift="0%" font-family="Ebrima" font-weight="bold" font-size="32" fill="#FFFFFF" xml:space="preserve">C</tspan></text>
+</g>
+
+<g transform="matrix( 0.70709228515625, 0.70709228515625, -0.70709228515625, 0.70709228515625, -123.85,-1011) ">
+<use xlink:href="#Layer0_5_FILL"/>
+</g>
+
+<g transform="matrix( 0.70709228515625, 0.70709228515625, -0.70709228515625, 0.70709228515625, 67.6,30.4) ">
+<clipPath id="Mask_Mask_3">
+<rect x="-2" y="-2" width="23.95" height="43.95" fill="#FFFFFF" stroke="none"/>
+</clipPath>
+
+<text clip-path="url(#Mask_Mask_3)" writing-mode="lr"><tspan x="1.65" y="32.15" baseline-shift="0%" font-family="Ebrima" font-weight="bold" font-size="32" fill="#FFFFFF" xml:space="preserve">F</tspan></text>
+</g>
+</svg>
