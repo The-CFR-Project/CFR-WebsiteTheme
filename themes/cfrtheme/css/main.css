@@ -28,9 +28,10 @@
     --yellow1: #FFCC66;
 }
 
-/* html {
-
-} */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 :focus-visible {
   outline: none;
@@ -712,49 +713,44 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   font-size: 250%;
 }
 
-.cards-section-container img {
+.cards-section-container .card-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
+
+  height: 100%;
+  width: 100%;
+  top: 0;
 }
 
-.cards-section-container img.cards-bg-border {
-  width: 30%;
-  height: auto;
+.cards-section-container .card-middle-row {
+  display: flex;
+  justify-content: space-around;
 }
 
-.cards-section-container img.cards-bg-scrabble {
-  right: 3rem;
-  top: 3rem;
-  width: 10%;
-  height: auto;
+.cards-section-container .card-edge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
 }
 
-.cards-section-container img.cards-bg-discs {
-  top: 20rem;
-  left: 7rem;
-  width: 9%;
-  height: auto;
+.cards-section-container .card-edge-row .card-middle-col {
+  min-width: 200px;
 }
 
-.cards-section-container img.cards-bg-magic-5  {
-  top: 21rem;
-  right: 10rem;
-  width: 5%;
+.cards-section-container .card-middle-row .card-middle-col {
+  min-width: 600px;
 }
 
-.cards-section-container img.cards-bg-stationary  {
-  bottom: 0rem;
-  left: 0rem;
-  width: 10%;
+.cards-section-container .cards-bg-border {
+  width: 400px;
 }
 
-.cards-section-container img.cards-bg-dices {
-  bottom: 3rem;
-  right: 3rem;
-  width: 9%;
+.cards-section-container .cards-bg-stationary {
+  width: 150px;
 }
-
-
-
 
 /*
 
