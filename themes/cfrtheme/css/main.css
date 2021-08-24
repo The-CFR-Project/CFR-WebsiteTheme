@@ -742,6 +742,8 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .cards-section-container .card-middle-row .card-middle-col {
   min-width: 600px;
+  min-height: 320px;
+  position: relative;
 }
 
 .cards-section-container .cards-bg-border {
@@ -751,6 +753,32 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 .cards-section-container .cards-bg-stationary {
   width: 150px;
 }
+
+
+.Card {
+  width: 40%; /* 240px */
+  padding: 20% 2% 5%;
+  background-color: aliceblue;
+  height: auto;
+  text-align: center;
+  border: 1px solid #222;
+  position: absolute;
+  top: 20%;
+  border-radius: 5%;
+  z-index: 1;
+
+  transition: all .2s ease-in-out;
+}
+
+
+
+.Card:hover {
+  top: 0;
+  transition: all .4s ease-in-out;
+  transform:translateX(500);
+}
+
+
 
 /*
 

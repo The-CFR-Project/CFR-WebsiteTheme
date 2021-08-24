@@ -7,6 +7,7 @@
     ?>
     </div>
 
+    <!-- Background images and formatting -->
     <div class="card-rows">
 
       <div class="card-edge-row">
@@ -28,6 +29,34 @@
         </div>
 
         <div class="card-middle-col">
+            <?php
+            $doc = new DOMDocument();
+            $doc->loadHTML(apply_filters( 'the_content', $post->post_content ));
+            $doc = new DOMXPath($doc);
+
+            $i = 0;
+            $cards = $doc->query("//p");
+
+            
+            foreach ( $cards as $card) {
+              
+              
+              if ($i % 2 == 0) { // Card Title
+                echo ("<div class='Card' id=' card".(($i/2)+1)."' style='left:".($i * 26)."px'>");
+                echo $card->nodeValue;
+                echo "<br>";
+              }
+              else { // Card Content
+                echo $card->nodeValue;
+                echo "</div>";
+              }
+              
+
+              $i += 1;
+            }
+            
+
+            ?>
         </div>
 
         <div>
@@ -52,43 +81,14 @@
 
 
 
-    <div class="cards-body row">
-        <?php
-        // $doc = new DOMDocument();
-        // $doc->loadHTML(apply_filters( 'the_content', $post->post_content ));
-        // $doc = new DOMXPath($doc);
-
-        // $i = 0;
-        // $cards = $doc->query("//p");
-        // foreach ( $cards as $card) {
-        //   if ($i == intdiv(sizeof($cards), 3)) {
-        //     echo "</div>";
-        //     echo "<div class='col-md-3 card'>";
-        //   }
-        //   else if ($i == intdiv(sizeof($cards), 4)){
-        //     echo "</div>";
-        //     echo "<div class='col-md-3 card'>";
-        //   }
-        //   else {
-        //     echo "</div>";
-        //     echo "<div class='col-md-3 card'>";
-        //   }
-
-        //   if ($i % 3 == 0) { // Card Name
-        //     echo $card->nodeValue;
-        //   }
-        //   else { // Card Content
-
-        //     echo $card->nodeValue;
-
-        //   }
-
-        //   $i += 1;
-        // }
-        ?>
+    <div class="cards-body">
+        
     </div>
 
 
 
   </div>
 </section>
+
+<!------------------------------------- JavaScript ------------------------------------->
+
