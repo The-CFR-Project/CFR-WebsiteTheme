@@ -479,28 +479,25 @@ class SB_Instagram_Posts_Manager
 	 * @since 2.0/5.0
 	 */
 	public function does_resizing_tables_exist() {
-		if ( $this->resizing_tables_exist ) {
-			return true;
-		}
-		global $wpdb;
+        global $wpdb;
 
-		$table_name = esc_sql( $wpdb->prefix . SBI_INSTAGRAM_POSTS_TYPE );
+        $feeds_posts_table_name = esc_sql( $wpdb->prefix . SBI_INSTAGRAM_FEEDS_POSTS );
+        $resizing_key = "sbi_resizing_exists";
 
-		if ( $wpdb->get_var( "show tables like '$table_name'" ) != $table_name ) {
-			$this->resizing_tables_exist = false;
+        $sbi_resizing_cache = wp_cache_get( $resizing_key );
 
-			return false;
-		}
+		if ( false === $sbi_resizing_cache ) {
+			global $wpdb;
 
-		$feeds_posts_table_name = esc_sql( $wpdb->prefix . SBI_INSTAGRAM_FEEDS_POSTS );
-
-		if ( $wpdb->get_var( "show tables like '$feeds_posts_table_name'" ) != $feeds_posts_table_name ) {
-			$this->resizing_tables_exist = false;
-
-			return false;
+			if ( $wpdb->get_var( "show tables like '$feeds_posts_table_name'" ) == $feeds_posts_table_name ) {
+				wp_cache_set( $resizing_key, true );
+            } else {
+                wp_cache_set( $resizing_key, false );
+            }
 		}
 
-		return true;
+		return $sbi_resizing_cache;
+
 	}
 
 	/**

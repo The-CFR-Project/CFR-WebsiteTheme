@@ -3,7 +3,7 @@ Contributors: smashballoon, craig-at-smash-balloon
 Tags: Instagram, Instagram feed, Instagram photos, Instagram widget, Instagram gallery
 Requires at least: 3.4
 Tested up to: 5.8
-Stable tag: 2.9.2
+Stable tag: 2.9.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -272,13 +272,12 @@ For more FAQs related to the Instagram Feed plugin please visit the [FAQ section
 
 == Screenshots ==
 
-1. Default plugin styling
-2. Your Instagram Feed is completely customizable
-3. Display multiple Instagram feeds from any non-private Instagram account
-4. Your Instagram feeds are completely responsive and look great on any device
-5. Display your Instagram photos in multiple columns, with or without a scrollbar
+1. Easily display feeds from any of your Instagram accounts
+2. Your Instagram Feed is completely customizable and responsive
+3. Combine multiple accounts into a single feed
+5. Super quick and easy to get started. Just click the button to connect an Instagram account.
+5. Customize layouts, styles, colors, and more
 6. Just copy and paste the shortcode into any page, post or widget on your site
-7. The Instagram Feed plugin Settings pages
 
 == Other Notes ==
 
@@ -332,6 +331,15 @@ We understand that sometimes you need help, have issues or just have questions. 
 * Plus more customization options added all the time!
 
 == Changelog ==
+= 2.9.3.1 =
+* Fix: Fixed a problem with the image resizing table check that would cause blank images or non-optimized images to show in the feed.
+
+= 2.9.3 =
+* Fix: Fixed duplicate MySQL queries issue when checking for the resized images table.
+* Fix: Fixed an issue with the integration with the GDPR Cookie Consent plugin by WebToffee.
+* Fix: Removed max-height rule for the sbi_item elements to improve performance.
+* Tweak: Improved the reliability of the Instagram account connection process.
+
 = 2.9.2 =
 * Tested with WordPress 5.8 update.
 * Fix: PHP error "Uncaught Error: array_merge() does not accept unknown named parameters" when visiting the "About" page using PHP 8+.

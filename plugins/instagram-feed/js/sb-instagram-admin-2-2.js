@@ -21,42 +21,15 @@ jQuery(document).ready(function($) {
 
         var personalBasicApiURL = $('#sbi_config .sbi_admin_btn').attr('data-personal-basic-api'),
             newApiURL = $('#sbi_config .sbi_admin_btn').attr('data-new-api');
+
+        var modalHTML = '<div class="sbi-source-popup sbi-popup-inside sbi_config_modal"><div class="sbi-source-redirect sbi-fs"><div class="sbi-source-redirect-ld sbi-fs"><div></div></div> <div class="sbi-source-redirect-info sbi-fs"><strong class="sbi-fs">Redirecting to connect.smashballoon.com</strong> <p class="sbi-fs">You will be redirected to our app so you can connect your account in 5 seconds</p></div></div></div>';
         $('#sbi_config').append('<div id="sbi_config_info" class="sb_get_token">' +
-            '<div class="sbi_config_modal">' +
-            '<p>Are you connecting a Personal or Business Instagram Profile?</p>' +
-            '<div class="sbi_login_button_row">' +
-            '<input type="radio" id="sbi_basic_login" name="sbi_login_type" value="basic" checked>' +
-            '<label for="sbi_basic_login"><b>Personal</b> <a href="JavaScript:void(0);" class="sbi_tooltip_link"><i class="fa fa-question-circle"></i></a><div class="sbi_tooltip">Used for displaying user feeds from a "Personal" Instagram account. ' +
-            oldApiLink +
-            '</div></div>' +
-            '<div class="sbi_login_button_row">' +
-            '<input type="radio" id="sbi_business_login" name="sbi_login_type" value="business">' +
-
-            '<label for="sbi_business_login"><b>Business</b> </label>&nbsp;<a href="JavaScript:void(0);" class="sbi_tooltip_link"><i class="fa fa-question-circle"></i></a><div class="sbi_tooltip">Used for displaying a user feed from a "Business" or "Creator" Instagram account. A Business or Creator account is required for displaying automatic avatar/bio display in the header. See <a href="https://smashballoon.com/instagram-business-profiles" target="_blank">this FAQ</a> for more info.</div>' +
-            '</div>' +
-
-            '<div class="sbi_login_button_row"><a href="JavaScript:void(0);" class="sbi_tooltip_link" style="font-size: 12px;">I\'m not sure</a><div class="sbi_tooltip" style="display: none;"><p style="margin-top: 0;">The "Personal" option can display feeds from either a Personal or Business/Creator account.</p><p style="margin-bottom: 0;"">Connecting as a Business account will allow your avatar and bio in feed headers to update automatically. If needed, you can convert a Personal account into a Business account by following the directions <a href="https://smashballoon.com/instagram-business-profiles" target="_blank">here</a>.</p></div></div>' +
-
-            '<a href="'+personalBasicApiURL+'" class="sbi_admin_btn">Connect</a>' +
-            '<a href="JavaScript:void(0);"><i class="sbi_modal_close fa fa-times"></i></a>' +
-            '</div>' +
+            modalHTML +
             '</div>');
 
-        $('.sbi_modal_close').on('click', function(){
-            if (jQuery('.sbi-need-to-connect').length) {
-                $('#sbi_config_info').hide();
-            } else {
-                $('#sbi_config_info').remove();
-            }
-        });
-
-        $('input[name=sbi_login_type]').on('change',function() {
-            if ($('input[name=sbi_login_type]:checked').val() === 'business') {
-                $('a.sbi_admin_btn').attr('href',newApiURL);
-            } else {
-                $('a.sbi_admin_btn').attr('href',personalBasicApiURL);
-            }
-        });
+        setTimeout(function() {
+            window.location.href = newApiURL;
+        },3000);
     });
 
     if ($('.sbi_config_modal .sbi-managed-pages').length) {

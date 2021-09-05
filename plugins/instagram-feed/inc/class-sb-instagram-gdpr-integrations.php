@@ -30,15 +30,15 @@ class SB_Instagram_GDPR_Integrations {
 	 *
 	 * @return array
 	 */
-	public static function undo_script_blocking( $blocking ) {
-		$settings = sbi_get_database_settings();
-		if ( ! SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
-			return $blocking;
-		}
-		remove_filter( 'wt_cli_third_party_scripts', 'wt_cli_instagram_feed_script' );
-
-		return $blocking;
-	}
+	
+    public static function undo_script_blocking($scripts) { 
+        $settings = sbi_get_database_settings(); 
+        if ( ! SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) { 
+            return $scripts; 
+        } unset($scripts['instagram-feed']); 
+        
+        return $scripts;
+    }
 
 	/**
 	 * Whether or not consent plugins that Instagram Feed

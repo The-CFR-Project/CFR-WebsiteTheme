@@ -2820,3 +2820,104 @@
 	position: relative;
 	top: 1px;
 }
+
+/*
+	Add Source Loading
+*/
+#sbi_config_info .sbi_config_modal.sbi-popup-inside {
+	width: 880px;
+	max-width: calc(100% - 200px);
+	background: #fff;
+	color: #141B38;
+	position: relative;
+	box-shadow: 0px 26.7377px 77.2886px rgb(0 0 0 / 11%), 0px 14.2952px 41.3222px rgb(0 0 0 / 9%), 0px 8.01379px 23.1649px rgb(0 0 0 / 8%), 0px 4.25607px 12.3027px rgb(0 0 0 / 6%), 0px 1.77104px 5.11942px rgb(0 0 0 / 4%);
+	border-radius: 2px;
+	overflow-y: auto;
+	max-height: 80vh;
+	padding: 0;
+}
+#sbi_config_info .sbi_config_modal.sbi-popup-inside{
+	width: 575px;
+	height: 320px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sbi-source-redirect-ld{
+	text-align: center;
+}
+.sbi-source-redirect-ld div{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border-radius: 50px;
+	margin: 0 10px;
+	position: relative;
+	background-color: #0096CC;
+	color: #0096CC;
+	-webkit-animation: sb-source-redirect 1s infinite linear alternate;
+	animation: sb-source-redirect 1s infinite linear alternate;
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
+}
+
+.sbi-source-redirect-ld div:before,
+.sbi-source-redirect-ld div:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+}
+
+.sbi-source-redirect-ld div:before{
+	left: -45px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50px;
+	background-color: #0096CC;
+	color: #0096CC;
+	-webkit-animation: sb-source-redirect 1s infinite alternate;
+	animation: sb-source-redirect 1s infinite alternate;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+
+.sbi-source-redirect-ld div:after{
+	left: 45px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50px;
+	background-color: #0096CC;
+	color: #0096CC;
+	-webkit-animation: sb-source-redirect 1s infinite alternate;
+	animation: sb-source-redirect 1s infinite alternate;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+
+
+@-webkit-keyframes sb-source-redirect {
+	0% {background-color: #0096CC;}
+	50%,100% {background-color: #B5E5FF;}
+}
+@keyframes sb-source-redirect {
+	0% {background-color: #0096CC;}
+	50%,100% {background-color: #B5E5FF;}
+}
+
+
+.sbi-source-redirect-info{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.sbi-source-redirect-info strong{
+	font-size: 18px;
+}
+.sbi-source-redirect-info p{
+	color: #8C8F9A;
+	padding: 0 24%;
+	font-size: 16px;
+	margin-bottom: 0px;
+}
