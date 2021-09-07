@@ -790,7 +790,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   border-left: 2px solid #ccc;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
   border-radius: 30px;
-  
+
   display: none;
 }
 
@@ -799,7 +799,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 }
 
 .fact-card-fall { /* falls down to disappear */
-  z-index: 4; 
+  z-index: 4;
   transform: translate(0, 400px);
   transition: all .2s ease-in-out;
 }
@@ -807,9 +807,6 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 .fact-card-drop { /* falls down to appear */
   background-color: #000;
 }
-
-
-
 
 .card-suits {
   color: transparent;
