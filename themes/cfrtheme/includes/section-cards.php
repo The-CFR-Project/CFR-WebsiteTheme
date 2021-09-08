@@ -231,28 +231,31 @@
       var randIndex = Math.floor(Math.random() * allHiddenCards.length);
       var randDiv = allHiddenCards[randIndex];
 
-      //this.removeAttribute('style');
-
       this.style.transform = 'translateY(150%)';
+      this.removeEventListener("dblclick", onCardDoubleClick);
+      this.removeEventListener("click", onCardClick);
+      
 
       var randDivId = randDiv.id;
       randDiv.id = this.id;
+      
 
       randDiv.style.left = ((parseInt(randDiv.id)-1) * 70).toString() + "px";
       randDiv.style.zIndex = (parseInt(randDiv.id)).toString();
 
       setTimeout(() => {
+
         if (randDiv.id == "8-dis-card"){randDiv.className = "fact-card-display fact-card-stack";}
         else {randDiv.className = "fact-card-display fact-card-stack fact-card-open";}
-        onceClickedAnimation();
+        
       }, 1000);
       
 
       setTimeout(() => {
         this.id = randDivId;
         this.className = "fact-card-fall fact-card-hidden";
-        this.removeEventListener("dblclick", onCardDoubleClick);
-        this.removeEventListener("click", onCardClick);
+        this.removeAttribute('style');
+        onceClickedAnimation();
       }, 2000);
 
     }
