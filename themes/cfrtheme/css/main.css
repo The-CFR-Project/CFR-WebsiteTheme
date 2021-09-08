@@ -707,6 +707,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 .cards-section-container {
   height: 750px;
   position: relative;
+  overflow: hidden;
 }
 
 .cards-heading {
@@ -762,18 +763,24 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   background-color: white;
   height: 100%;
   text-align: center;
-  border-left: 2px solid #ccc;
+  border-left: 1px solid #ccc;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
   border-radius: 30px;
 
-}
-
-.fact-card-display {
   position: absolute;
   transition: all .2s ease-in-out;
   transform: translateX(0px);
   top: 10%;
+
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+
+
 }
+
 
 
 .fact-card-display:hover {
@@ -782,15 +789,6 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 }
 
 .fact-card-hidden{
-  width: 240px; /* 240px */
-  padding: 20% 3% 5%;
-  background-color: white;
-  height: 100%;
-  text-align: center;
-  border-left: 2px solid #ccc;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
-  border-radius: 30px;
-
   display: none;
 }
 
@@ -822,7 +820,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   color: transparent;
   position: absolute;
   font-size: 50px;
-  bottom: 10px;
+  bottom: 0;
   right: 10px;
   transform:scale(1, -1);
 }
@@ -846,6 +844,52 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   color: #999;
   padding: 20px 0 0;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 
 /*
 
