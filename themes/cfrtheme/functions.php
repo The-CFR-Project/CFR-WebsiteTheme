@@ -15,6 +15,9 @@ function load_js() {
 
   wp_register_script( "bootstrap", get_template_directory_uri() . "/js/bootstrap.min.js", "jquery", false, true );
   wp_enqueue_script( "bootstrap" );
+
+  wp_register_script( "planetary", get_template_directory_uri() . "/js/planetaryjs.js", array(), false, true );
+  wp_enqueue_script( "planetary" );
 }
 
 add_action( "wp_enqueue_scripts", "load_css" );
@@ -23,6 +26,7 @@ add_action( "wp_enqueue_scripts", "load_js" );
 
 // Theme Options
 add_theme_support( "menus" );
+add_theme_support( "post-thumbnails" );
 
 
 // Menus

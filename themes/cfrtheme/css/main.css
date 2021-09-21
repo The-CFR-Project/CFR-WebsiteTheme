@@ -752,6 +752,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .cards-section-container .card-middle-row .card-middle-col {
   min-width: 45%;
+  max-width: 65%;
   min-height: 360px;
   position: relative;
   text-align: right;
@@ -845,7 +846,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 .card-heading {
   text-shadow: 1px 1px #eee;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 120%;
 }
 
 .card-content {
@@ -976,7 +977,7 @@ The CFR FAQs Section Located above the Instagram Wall
 }
 
 .faq-accordion-checkbox:checked + label > .faq-answer {
-  max-height: 300px !important;
+  max-height: 400px !important;
 }
 
 .faq-accordion-checkbox:checked + label .faq-accordion-link {
@@ -1119,6 +1120,105 @@ The CFR 404 Page
   width: 100%;
   min-width: 250px;
 }
+
+
+/*
+
+The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
+--------------------------------------------------------------------------------
+*/
+
+.blogs-header-container {
+  background-color: #999;
+  position: relative;
+  height: 650px;
+  justify-content: center;
+  
+}
+
+.blogs-header-image {
+  width: 100%;
+  min-width: 900px;
+  opacity: 0.9;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.blogs-header-text {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  color: #eee;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  padding-top: 6%;
+}
+
+.blogs-header-text h1 {
+  padding: 200px 25px 0;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  font-weight: 700;
+}
+
+.blogs-header-text p {
+  padding: 50px 20%;
+}
+
+.heart-shape{
+  position: relative;
+  left: 48%;
+  bottom: 3%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #eee;
+}
+.heart-shape:before,
+.heart-shape:after{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #eee;
+}
+.heart-shape:before{
+  bottom: 0px;
+  left: -10px;
+}
+.heart-shape:after{
+  top: -10px;
+  right: 0px;
+}
+
+.blogs-archive-container {
+  height: auto;
+}
+
+
+
+
+
+
+/*
+
+The CFR Blogs Single Page (Page when a specific blog is clicked from the archive)
+--------------------------------------------------------------------------------
+*/
+
+.blogs-single-container {
+  padding: 100px 200px;
+  background-color: var(--grey1);
+}
+
 
 /*
 

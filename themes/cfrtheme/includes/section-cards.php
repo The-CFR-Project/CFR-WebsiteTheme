@@ -29,50 +29,6 @@
         </div>
 
         <div class="card-middle-col" id = "card-middle-col">
-            <?php
-            // $doc = new DOMDocument();
-            // $doc->loadHTML(apply_filters( 'the_content', $post->post_content ));
-            // $doc = new DOMXPath($doc);
-
-            // $i = 0;
-            // $all_cards = $doc->query("//p");
-            // $numbers = range(0, (count($all_cards)/2));
-            // shuffle($numbers);
-            // $displayed_cards = array_slice($numbers, 0, 8);
-
-
-            // $card_suits = array("♥", "♠", "♣", "♦");
-            // $card_icon_colors = array('9B72AA', 'BD4B4B', 'DF711B', '368B85', '3DB2FF', 'FFF47D');
-
-            // for ($i=0; $i<=15; $i++){
-
-            //   $card = $all_cards[2*($displayed_cards[intdiv($i, 2)])+$i%2];
-            //   if ($i % 2 == 0) { // Card Title
-            //     $rand_suit = $card_suits[array_rand($card_suits)];
-            //     $rand_color = $card_icon_colors[array_rand($card_icon_colors)];
-
-            //     echo ("<div class='fact-card' id='".(($i/2)+1)."card' style='left:".($i * 35)."px'>");
-
-            //     echo "<div class='card-suits' style='text-shadow: 0 0 0 #".$rand_color."'>".$rand_suit."</div>";
-            //     echo "<div class='card-suits-down' style='text-shadow: 0 0 0 #".$rand_color."'>".$rand_suit."</div>";
-            //     echo ("<img src='".get_template_directory_uri()."/images/card-icons/CFR-logo.png' class='card-bg-logo'>");
-
-
-            //     echo "<div class='card-heading' style='color: #".$rand_color."'>";
-            //     echo $card->nodeValue;
-            //     echo "</div>";
-
-            //   }
-            //   else { // Card Content
-
-            //     echo "<div class='card-content'>";
-            //     echo $card->nodeValue;
-            //     echo "</div>";
-            //     echo "</div>";
-            //   }
-            // }
-
-            ?>
 
             <?php
             $doc = new DOMDocument();
@@ -266,6 +222,10 @@
 
       for (i = 0; i < (allDisplayedCards.length - 1); i++) {
         allDisplayedCards[i].addEventListener('click', onCardClick);
+        allDisplayedCards[i].addEventListener("focus", function () {
+                                                this.style.top = "0"; 
+                                                this.style.transition = "all .4s ease-in-out"
+                                              });
       }
       twiceClickedAnimation();
     }
@@ -280,6 +240,11 @@
     }
 
     onceClickedAnimation();
+
+    firstCard = document.getElementById("1-dis-card");
+    firstCard.classList += " fact-card-open";
+
+
   </script>
 
   </div>
