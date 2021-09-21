@@ -8,7 +8,7 @@
 
     <?php echo apply_filters( 'the_content', $post->post_content );?>
 
-    <img src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
+    <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
 
   </div>
 </section>
