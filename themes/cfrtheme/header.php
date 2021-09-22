@@ -27,7 +27,7 @@
     <div class="nav-title-container">
 
       <a href="<?php echo home_url();?>">
-        <h1>The Carbon Footprint Reduction Project</h1>
+        <h1 class="green1">The Carbon Footprint Reduction Project</h1>
       </a>
 
     </div>

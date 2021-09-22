@@ -1,5 +1,5 @@
 <section>
-  <div class="cards-section-container container-fluid">
+  <div class="container-border-components container-fluid">
     <div class="heading-container">
     <?php
       $post = get_posts( array( "category_name" => "Cards Post") )[0];
@@ -8,14 +8,14 @@
     </div>
 
     <!-- Background images and formatting -->
-    <div class="card-rows">
+    <div class="border-components-row">
 
-      <div class="card-edge-row">
+      <div class="edge-row">
         <div>
           <img src="<?php echo get_template_directory_uri();?>/images/card-icons/cards-border.svg" class='cards-bg-border'>
         </div>
 
-        <div class="card-middle-col">
+        <div class="middle-col">
         </div>
 
         <div>
@@ -23,12 +23,12 @@
         </div>
       </div>
 
-      <div class="card-middle-row">
-        <div>
+      <div class="middle-row">
+        <div class="align-self-center">
           <img src="<?php echo get_template_directory_uri();?>/images/card-icons/discs.svg" class="cards-bg-discs">
         </div>
 
-        <div class="card-middle-col" id = "card-middle-col">
+        <div class="middle-col" id = "middle-col">
 
             <?php
             $doc = new DOMDocument();
@@ -122,17 +122,17 @@
 
         </div>
 
-        <div>
+        <div class="align-self-center">
           <img src="<?php echo get_template_directory_uri();?>/images/card-icons/magic-5-ball.svg" class="cards-bg-magic-5">
         </div>
       </div>
 
-      <div class="card-edge-row">
+      <div class="edge-row">
         <div>
           <img src="<?php echo get_template_directory_uri();?>/images/card-icons/stationary.svg" class="cards-bg-stationary">
         </div>
 
-        <div class="card-middle-col">
+        <div class="middle-col">
         </div>
 
         <div>
@@ -142,14 +142,14 @@
 
     </div>
 
-  <!------------------------------------- JavaScript ------------------------------------->
+  <!-- JavaScript ------------------------------------->
   <script>
 
     // Sorting Algorithm
     function sortArray(unsortedArray){
       unsortedArray = Array.prototype.slice.call(unsortedArray, 0);
 
-      var mylist = document.getElementById('card-middle-col');
+      var mylist = document.getElementById('middle-col');
       var listitems = [];
 
       for (i = 0; i < unsortedArray.length; i++) {
@@ -190,11 +190,11 @@
       this.style.transform = 'translateY(150%)';
       this.removeEventListener("dblclick", onCardDoubleClick);
       this.removeEventListener("click", onCardClick);
-      
+
 
       var randDivId = randDiv.id;
       randDiv.id = this.id;
-      
+
 
       randDiv.style.left = ((parseInt(randDiv.id)-1) * 70).toString() + "px";
       randDiv.style.zIndex = (parseInt(randDiv.id)).toString();
@@ -203,9 +203,9 @@
 
         if (randDiv.id == "8-dis-card"){randDiv.className = "fact-card-display fact-card-stack";}
         else {randDiv.className = "fact-card-display fact-card-stack fact-card-open";}
-        
+
       }, 1000);
-      
+
 
       setTimeout(() => {
         this.id = randDivId;
@@ -223,7 +223,7 @@
       for (i = 0; i < (allDisplayedCards.length - 1); i++) {
         allDisplayedCards[i].addEventListener('click', onCardClick);
         allDisplayedCards[i].addEventListener("focus", function () {
-                                                this.style.top = "0"; 
+                                                this.style.top = "0";
                                                 this.style.transition = "all .4s ease-in-out"
                                               });
       }

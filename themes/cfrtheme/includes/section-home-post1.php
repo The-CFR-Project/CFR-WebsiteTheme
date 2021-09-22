@@ -35,7 +35,7 @@
         <img src="<?php echo get_template_directory_uri();?>/images/balloon1.svg">
       </div>
 
-      <div class="col-md-6 col-para">
+      <div class="col-md-6 col-para text-justify">
         <?php
         $firstp = true;
         foreach ($doc->query('//p') as $node) {

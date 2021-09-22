@@ -38,12 +38,155 @@ html, body {
   border: none;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
 }
 
 section:nth-child(odd) {
   background-color: var(--grey1);
+}
+
+/*
+
+Specific General Theme CSS
+--------------------------------------------------------------------------------
+*/
+
+.red1 {
+  color: var(--red1);
+}
+
+.red2 {
+  color: var(--red2);
+}
+
+.red3 {
+  color: var(--red3);
+}
+
+.red4 {
+  color: var(--red4);
+}
+
+.red5 {
+  color: var(--red5);
+}
+
+.blue1 {
+  color: var(--blue1);
+}
+
+.blue2 {
+  color: var(--blue2);
+}
+
+.blue3 {
+  color: var(--blue3);
+}
+
+.blue4 {
+  color: var(--blue4);
+}
+
+.blue5 {
+  color: var(--blue5);
+}
+
+.blue1 {
+  color: var(--grey1);
+}
+
+.grey2 {
+  color: var(--grey2);
+}
+
+.grey3 {
+  color: var(--grey3);
+}
+
+.grey4 {
+  color: var(--grey4);
+}
+
+.grey5 {
+  color: var(--grey5);
+}
+
+.green1 {
+  color: var(--green1)
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/*
+
+Layout General Theme CSS
+--------------------------------------------------------------------------------
+*/
+
+.container-border-components {
+  height: 645px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-heading {
+  margin-top: -50px;
+}
+
+.container-border-components .border-components-row {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.container-border-components .middle-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-border-components .edge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.container-border-components .full-row {
+  width: 100%;
+}
+
+.container-border-components .full-row > img {
+  width: 100%;
+}
+
+.container-border-components .edge-row .middle-col {
+  min-width: 200px;
+}
+
+.container-border-components .middle-row .middle-col {
+  min-width: 45%;
+  max-width: 65%;
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  text-align: center;
 }
 
 /*
@@ -66,8 +209,6 @@ header {
 header h1 {
   font-size: 1.25em;
   font-weight: normal;
-
-  color: var(--green1);
 
   margin: 0;
   padding: 5px;
@@ -640,9 +781,7 @@ section:nth-child(even) .heading-overlay {
 }
 
 .home-post .col-md-6 {
-  text-align: justify;
   margin-bottom: 100px;
-
   position: relative;
 }
 
@@ -713,66 +852,19 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 --------------------------------------------------------------------------------
 */
 
-.cards-section-container {
-  height: 750px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cards-heading {
-  font-size: 250%;
-}
-
-.cards-section-container .card-rows {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-
-  height: 100%;
-  width: 100%;
-  top: 0;
-}
-
-.cards-section-container .card-middle-row {
-  display: flex;
-  justify-content: space-around;
-}
-
-.cards-section-container .card-edge-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-}
-
-.cards-section-container .card-edge-row .card-middle-col {
-  min-width: 200px;
-}
-
-.cards-section-container .card-middle-row .card-middle-col {
-  min-width: 45%;
-  max-width: 65%;
-  min-height: 360px;
-  position: relative;
-  text-align: right;
-}
-
-.cards-section-container .cards-bg-border {
+.cards-bg-border {
   width: 400px;
 }
 
-.cards-section-container .cards-bg-stationary {
+.cards-bg-stationary {
   width: 150px;
 }
 
-
-.fact-card-display{
-  width: 240px; /* 240px */
+.fact-card-display {
+  width: 240px;
   padding: 20% 3% 5%;
   background-color: white;
   height: 100%;
-  text-align: center;
   border-left: 1px solid #ccc;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
   border-radius: 30px;
@@ -787,11 +879,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   -moz-animation: fadeIn ease 0.5s;
   -o-animation: fadeIn ease 0.5s;
   -ms-animation: fadeIn ease 0.5s;
-
-
 }
-
-
 
 .fact-card-display:hover {
   top: 0;
@@ -968,8 +1056,6 @@ The CFR FAQs Section Located above the Instagram Wall
   overflow: hidden;
   max-height: 0;
 
-  text-align: justify;
-
   position: relative;
   background-color: #fff;
 
@@ -1133,7 +1219,7 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   position: relative;
   height: 650px;
   justify-content: center;
-  
+
 }
 
 .blogs-header-image {
@@ -1202,11 +1288,6 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
 .blogs-archive-container {
   height: auto;
 }
-
-
-
-
-
 
 /*
 
@@ -1372,6 +1453,106 @@ The CFR Footer Located at the bottom
 
   background-color: var(--blue2);
   color: var(--blue4);
+}
+
+/*
+
+CFR About Us Page, About CFR Section
+--------------------------------------------------------------------------------
+*/
+
+#about-cfr {
+  font-size: 20px;
+}
+
+.about-cfr-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-cfr-container h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.about-cfr-container img {
+  width: 100%;
+  padding-left: 50px;
+}
+
+#our-story {
+  padding-bottom: 100px;
+}
+
+#our-metrics .col-md-4 {
+    width: 30%;
+}
+
+#our-metrics h4 {
+  font-size: 40px;
+  font-weight: 800;
+
+}
+
+#our-metrics .middle-col {
+  min-width: 80%;
+}
+
+#our-metrics .middle-row img {
+  width: 120%;
+  min-width: 150px;
+
+  transition: transform 0.2s ease-out;
+}
+
+#our-metrics .middle-row > div:last-child {
+  text-align: right;
+}
+
+#our-metrics .middle-row div:last-child img {
+  transform: rotate(-25deg) translate(62%, -35%);
+}
+
+#our-metrics .middle-row div:last-child img:hover {
+  transform: rotate(-40deg) translate(42%, -35%);
+}
+
+
+#our-metrics .middle-row div:first-child img {
+  transform: rotate(25deg) translateX(-20%);;
+}
+
+#our-metrics .middle-row div:first-child img:hover {
+  transform: rotate(40deg) translateX(0%);
+}
+
+.our-metrics-container h4 {
+  font-size: 40px;
+}
+
+.our-metrics-container .col-md-4 {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 100px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.our-story-container img {
+  width: 80%;
+}
+
+.our-story-container .row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.our-story-container .col-md-5 {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*

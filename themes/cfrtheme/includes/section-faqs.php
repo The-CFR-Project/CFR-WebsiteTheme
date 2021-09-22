@@ -41,7 +41,7 @@
           }
           else { // is Answer
             echo "        <div class='faq-answer'>";
-            echo "          <p>";
+            echo "          <p class='text-justify'>";
             echo              $element->nodeValue;
             echo "        </div>";
             echo "      </label>";
