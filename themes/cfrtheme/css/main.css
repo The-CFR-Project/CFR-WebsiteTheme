@@ -1194,11 +1194,10 @@ The CFR 404 Page
   color: var(--blue2);
   font-size: 11vw;
   font-weight: bold;
-  margin-right: 4vw;
 }
 
 .main-text-404{
-  width: 100px;
+  margin-right: 4vw;
 }
 
 .main-404-container p {
