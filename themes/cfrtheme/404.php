@@ -11,7 +11,7 @@
       </div>
 
       <div class="col-md-6 align-self-center">
-        <div>
+        <div class="main-text-404">
           <h1>404</h1>
         </div>
         <div>

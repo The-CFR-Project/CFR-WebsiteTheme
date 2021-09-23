@@ -1192,16 +1192,18 @@ The CFR 404 Page
 
 .main-404-container h1 {
   color: var(--blue2);
-  font-size: 13vh;
+  font-size: 11vw;
   font-weight: bold;
-  margin-right: 28vh;
-  align-items: center;
-  justify-content: center;
+  margin-right: 4vw;
+}
+
+.main-text-404{
+  width: 100px;
 }
 
 .main-404-container p {
   color: var(--grey4);
-  font-size: 5vh;
+  font-size: 2vw;
 }
 
 .beagle {
