@@ -5,30 +5,31 @@
 } */
 
 :root {
-    --grey1: #f0f0f0;
-    --grey2: #ccc;
-    --grey3: #999;
-    --grey4: #666;
-    --grey5: #333;
-    --grey6: #282828;
+  --grey1: #f0f0f0;
+  --grey2: #ccc;
+  --grey3: #999;
+  --grey4: #666;
+  --grey5: #333;
+  --grey6: #282828;
 
-    --blue1: #B6E2DF;
-    --blue2: #35B0AB;
-    --blue3: #246B81;
-    --blue4: #004C65;
+  --blue1: #b6e2df;
+  --blue2: #35b0ab;
+  --blue3: #246b81;
+  --blue4: #004c65;
 
-    --green1: #515760;
+  --green1: #515760;
 
-    --red1: #F7B595;
-    --red2: #F67280;
-    --red3: #C06C84;
-    --red4: #6F5980;
-    --red5: #3D2451;
+  --red1: #f7b595;
+  --red2: #f67280;
+  --red3: #c06c84;
+  --red4: #6f5980;
+  --red5: #3d2451;
 
-    --yellow1: #FFCC66;
+  --yellow1: #ffcc66;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -117,7 +118,7 @@ Specific General Theme CSS
 }
 
 .green1 {
-  color: var(--green1)
+  color: var(--green1);
 }
 
 .text-justify {
@@ -143,7 +144,7 @@ Layout General Theme CSS
 .container-border-components .border-components-row {
   display: flex;
   flex-direction: column;
-  justify-content:flex-end;
+  justify-content: flex-end;
   position: absolute;
 
   height: 100%;
@@ -263,7 +264,7 @@ header .nav-header-container a:hover .logo {
   font-size: 19px;
 } */
 
-header .nav-header-container a:focus-visible h1{
+header .nav-header-container a:focus-visible h1 {
   border: 2px dashed var(--grey2);
 }
 
@@ -286,8 +287,8 @@ header .nav-title-container {
 }
 
 header .nav-title {
-    width: 50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
 }
 
 header .nav-container {
@@ -316,14 +317,14 @@ header .nav-bar {
 }
 
 header .nav-bar li {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 }
 
 header .nav-bar li a {
@@ -354,7 +355,7 @@ header .nav-bar .current-menu-ancestor > a::after {
 }
 
 header .nav-bar > li:hover > a::after,
-header .nav-bar > li > a:focus::after{
+header .nav-bar > li > a:focus::after {
   width: 100%;
   background: var(--grey4);
 }
@@ -400,7 +401,6 @@ header .nav-bar li .sub-menu .current-menu-item:focus-within a {
   color: #fff;
 }
 
-
 header .nav-bar .current-menu-item > a,
 header .nav-bar .current-menu-ancestor > a,
 header .nav-bar li .sub-menu .current-menu-item a {
@@ -440,7 +440,6 @@ header .nav-bar li .sub-menu a:hover,
 header .nav-bar li .sub-menu a:focus-visible {
   color: #000;
 }
-
 
 header .nav-bar .menu-item-has-children:hover .sub-menu,
 header .nav-bar .menu-item-has-children:focus-within .sub-menu {
@@ -626,22 +625,21 @@ The CFR Banner Slideshow Located at the Top of the Screen
 
 @-webkit-keyframes quick-fade {
   from {
-    opacity: .7
+    opacity: 0.7;
   }
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes quick-fade {
   from {
-    opacity: .7
+    opacity: 0.7;
   }
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
-
 
 /*
 
@@ -845,7 +843,6 @@ section:nth-child(even) .heading-overlay {
   width: 80%;
 }
 
-
 /*
 
 The CFR Home Page Cards Section Located below the Aircrafts Section
@@ -870,7 +867,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   border-radius: 30px;
 
   position: absolute;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   transform: translateX(0px);
   top: 10%;
 
@@ -883,10 +880,10 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .fact-card-display:hover {
   top: 0;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.fact-card-hidden{
+.fact-card-hidden {
   display: none;
 }
 
@@ -894,13 +891,15 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   margin-left: -155px;
 }
 
-.fact-card-fall { /* falls down to disappear */
+.fact-card-fall {
+  /* falls down to disappear */
   z-index: 4;
   transform: translate(0, 400px);
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.fact-card-drop { /* falls down to appear */
+.fact-card-drop {
+  /* falls down to appear */
   background-color: #000;
 }
 
@@ -920,7 +919,7 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   font-size: 50px;
   bottom: 0;
   right: 10px;
-  transform:scale(1, -1);
+  transform: scale(1, -1);
 }
 
 .card-bg-logo {
@@ -945,49 +944,48 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
-
 
 /*
 
@@ -1100,7 +1098,6 @@ The CFR FAQs Section Located above the Instagram Wall
   margin: 0;
 }
 
-
 /*
 
 The CFR Social Media Insta Wall Located above the Footer
@@ -1176,6 +1173,7 @@ The CFR 404 Page
   width: 50%;
   padding-top: 50px;
   padding-bottom: 200px;
+  text-justify: auto;
 }
 
 .main-404-container .row {
@@ -1194,19 +1192,22 @@ The CFR 404 Page
 
 .main-404-container h1 {
   color: var(--blue2);
-  font-size: 100px;
+  font-size: 13vh;
+  font-weight: bold;
+  margin-right: 28vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-404-container p {
-  color: var(--grey3);
-  font-size: 20px;
+  color: var(--grey4);
+  font-size: 5vh;
 }
 
 .beagle {
   width: 100%;
   min-width: 250px;
 }
-
 
 /*
 
@@ -1219,7 +1220,6 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   position: relative;
   height: 650px;
   justify-content: center;
-
 }
 
 .blogs-header-image {
@@ -1251,7 +1251,7 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   padding: 50px 20%;
 }
 
-.heart-shape{
+.heart-shape {
   position: relative;
   left: 48%;
   bottom: 3%;
@@ -1265,22 +1265,22 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   background-color: #eee;
 }
 .heart-shape:before,
-.heart-shape:after{
+.heart-shape:after {
   position: absolute;
   width: 20px;
   height: 20px;
-  content: '';
+  content: "";
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
   background-color: #eee;
 }
-.heart-shape:before{
+.heart-shape:before {
   bottom: 0px;
   left: -10px;
 }
-.heart-shape:after{
+.heart-shape:after {
   top: -10px;
   right: 0px;
 }
@@ -1299,7 +1299,6 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
   padding: 100px 200px;
   background-color: var(--grey1);
 }
-
 
 /*
 
@@ -1404,7 +1403,7 @@ The CFR Footer Located at the bottom
 }
 
 .footer li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .footer li a {
@@ -1421,7 +1420,6 @@ The CFR Footer Located at the bottom
   color: var(--blue1);
   outline: 2px dashed #fff;
 }
-
 
 #footer-social-bar {
   background-color: var(--blue3);
@@ -1485,13 +1483,12 @@ CFR About Us Page, About CFR Section
 }
 
 #our-metrics .col-md-4 {
-    width: 30%;
+  width: 30%;
 }
 
 #our-metrics h4 {
   font-size: 40px;
   font-weight: 800;
-
 }
 
 #our-metrics .middle-col {
@@ -1517,9 +1514,8 @@ CFR About Us Page, About CFR Section
   transform: rotate(-40deg) translate(42%, -35%);
 }
 
-
 #our-metrics .middle-row div:first-child img {
-  transform: rotate(25deg) translateX(-20%);;
+  transform: rotate(25deg) translateX(-20%);
 }
 
 #our-metrics .middle-row div:first-child img:hover {
@@ -1594,8 +1590,8 @@ Bootstrap Overrides
 }
 
 .row {
- margin-left: 0px !important;
- margin-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 
- position: relative;
+  position: relative;
 }
