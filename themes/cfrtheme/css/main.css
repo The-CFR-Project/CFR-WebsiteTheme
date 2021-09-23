@@ -43,6 +43,17 @@ h1 {
   text-transform: uppercase;
 }
 
+h6 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -125,6 +136,14 @@ Specific General Theme CSS
   text-align: justify;
 }
 
+.lowercase {
+  text-transform: lowercase;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 /*
 
 Layout General Theme CSS
@@ -135,10 +154,6 @@ Layout General Theme CSS
   height: 645px;
   position: relative;
   overflow: hidden;
-}
-
-.cards-heading {
-  margin-top: -50px;
 }
 
 .container-border-components .border-components-row {
@@ -647,13 +662,19 @@ The CFR Home Page Aircraft Section Located below the Banner
 --------------------------------------------------------------------------------
 */
 
+section:nth-child(odd) .heading-container {
+  height: 200px;
+}
+
+section:nth-child(even) .heading-container {
+  height: 300px;
+}
+
 .heading-container {
   text-align: center;
   font-weight: 700;
 
   position: relative;
-
-  height: 300px;
 }
 
 .heading-container img {
@@ -848,6 +869,10 @@ section:nth-child(even) .heading-overlay {
 The CFR Home Page Cards Section Located below the Aircrafts Section
 --------------------------------------------------------------------------------
 */
+
+.cards-heading {
+  margin-top: -10px;
+}
 
 .cards-bg-border {
   width: 400px;
@@ -1153,15 +1178,6 @@ The CFR Social Media Insta Wall Located above the Footer
   position: relative;
 }
 
-.bedrock-img {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-
-  bottom: -100px;
-  pointer-events: none;
-}
-
 /*
 
 The CFR 404 Page
@@ -1169,45 +1185,73 @@ The CFR 404 Page
 */
 
 .main-404-container {
-  height: 90vh;
-  width: 50%;
+  width: 60%;
   padding-top: 50px;
   padding-bottom: 200px;
-  text-justify: auto;
+}
+
+.main-404-container h1 {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.main-404-container p {
+  font-size: 20px;
+  text-align: center;
 }
 
 .main-404-container .row {
-  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-404-container .col-md-6 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 70%;
 }
 
 .main-404-container .col-md-6:last-child {
   flex-direction: column;
 }
 
-.main-404-container h1 {
-  color: var(--blue2);
-  font-size: 11vw;
-  font-weight: bold;
-}
-
-.main-text-404{
-  margin-right: 4vw;
-}
-
-.main-404-container p {
-  color: var(--grey4);
-  font-size: 2vw;
+.main-404-container .col-md-6:last-child div:last-child {
+  width: 70%;
 }
 
 .beagle {
   width: 100%;
-  min-width: 250px;
+  min-width: 220px;
+}
+
+@media (min-width: 768px) {
+  .main-404-container .col-md-6 {
+    width: 50%;
+  }
+
+  .main-404-container .col-md-6:last-child {
+    align-items: flex-start;
+  }
+
+  .main-404-container p {
+    text-align: justify;
+  }
+
+  .main-404-container .col-md-6:last-child div:last-child {
+    width: 100%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
 
 /*
@@ -1306,6 +1350,27 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 The CFR Footer Located at the bottom
 --------------------------------------------------------------------------------
 */
+
+.bedrock-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.bedrock-img {
+  width: 100%;
+  min-width: 600px;
+  height: 400px;
+  position: absolute;
+
+  bottom: -100px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+
+}
 
 #footer-container {
   width: 100%;
@@ -1479,9 +1544,11 @@ CFR About Us Page, About CFR Section
   padding-left: 50px;
 }
 
-#our-story {
-  padding-bottom: 100px;
-}
+/*
+
+CFR Metrics Section
+--------------------------------------------------------------------------------
+*/
 
 #our-metrics .col-md-4 {
   width: 30%;
@@ -1538,6 +1605,16 @@ CFR About Us Page, About CFR Section
   text-align: center;
 }
 
+/*
+
+CFR Our Story Section
+--------------------------------------------------------------------------------
+*/
+
+#our-story {
+  padding-bottom: 100px;
+}
+
 .our-story-container img {
   width: 80%;
 }
@@ -1552,26 +1629,105 @@ CFR About Us Page, About CFR Section
   justify-content: space-around;
 }
 
-#meet-the-team .row {
+/*
+
+CFR Meet the Team Section
+--------------------------------------------------------------------------------
+*/
+
+#meet-the-team p {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#meet-the-team h6 {
+  text-transform: lowercase;
+  color: var(--red5);
+}
+
+#meet-the-team .small-row h6 {
+  font-size: 15px;
+}
+
+#meet-the-team .large-row p {
+  color: var(--blue2);
+}
+
+#meet-the-team .medium-row p {
+  color: var(--red3);
+}
+
+#meet-the-team .large-row,
+#meet-the-team .medium-row,
+#meet-the-team .small-row {
+  justify-content: center;
+}
+
+#meet-the-team .large-row,
+#meet-the-team .medium-row {
   padding-bottom: 50px;
 }
 
-#meet-the-team .col-md-3 div {
+#meet-the-team .small-row {
+  padding-bottom: 20px;
+}
+
+#meet-the-team .col-md-3 > div,
+#meet-the-team .col-md-2 > div {
   overflow: hidden;
-  height: 380px;
 
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.1s;
 }
 
-#meet-the-team .col-md-3 div > div:first-child {
-  height: 1000px;
+#meet-the-team .col-md-3 > div > div:first-child,
+#meet-the-team .col-md-2 > div > div:first-child {
+  overflow: hidden;
+}
+
+#meet-the-team .large-row .col-md-3 > div > div:first-child {
+  height: 300px;
+}
+
+#meet-the-team .col-md-3:hover div,
+#meet-the-team .col-md-2:hover div {
+  transform: scale(1.02);
+}
+
+#meet-the-team .medium-row .col-md-3 > div > div:first-child {
+  height: 200px;
+}
+
+#meet-the-team .small-row .col-md-2 > div > div:first-child {
+  height: 100px;
+}
+
+#meet-the-team .col-md-3 > div > div:last-child {
+  height: 100px
+}
+
+#meet-the-team .col-md-2 > div > div:last-child {
+  height: 50px
+}
+
+#meet-the-team .col-md-3 > div > div:last-child,
+#meet-the-team .col-md-2 > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 #meet-the-team .dp {
@@ -1579,6 +1735,172 @@ CFR About Us Page, About CFR Section
   width: 100%;
   object-fit: cover;
 }
+
+/*
+
+CFR Contact Us Form
+--------------------------------------------------------------------------------
+*/
+
+#contact-form {
+  position: relative;
+}
+
+#megaphone-container {
+  position: absolute;
+
+  height: 200px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#megaphone-container div:first-child {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+#megaphone-container div:last-child {
+  width: 75%;
+  min-width: 500px;
+}
+
+#megaphone {
+  width: 150px;
+
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+#postbox-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#postbox-container div:first-child {
+  width: 60%;
+}
+
+#postbox {
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+.nf-form-fields-required {
+  display: none;
+}
+
+#nf-form-title-1 {
+  display: none;
+}
+
+nf-fields-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nf-field:nth-child(1) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(2) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(3) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(4) {
+  width: 80% !important;
+}
+
+#contact-form input {
+  width: 100%;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+  color: var(--blue2) !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input,
+.nf-form-content textarea,
+#nf-field-1,
+#nf-field-2,
+#nf-field-3,
+#nf-field-4 {
+  border-radius: 30px !important;
+  border: 3px solid var(--red4) !important;
+  border-color: var(--red4) !important;
+}
+
+#nf-field-3-container .nf-field-element:after {
+  height: 198px;
+  border-radius: 0 23px 23px 0 !important;
+  line-height: 198px !important;
+}
+
+#nf-field-4 {
+  background: var(--red4) !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+  border-radius: 0 50px 50px 0 !important;
+  background: var(--red4) !important;
+}
+
+.nf-after-form-content {
+  display: none;
+}
+
+.nf-response-msg {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nf-response-msg p {
+  text-align: center;
+}
+
+.nf-response-msg p:first-child {
+  font-weight: 700;
+  color: var(--red3);
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.nf-response-msg p:last-child {
+
+}
+
+
+@media (min-width: 768px) {
+  nf-field:nth-child(1) {
+    width: 30% !important;
+  }
+
+  nf-field:nth-child(2) {
+    width: 60% !important;
+  }
+
+  nf-field:nth-child(4) {
+    width: 30% !important;
+  }
+}
+
 
 /*
 

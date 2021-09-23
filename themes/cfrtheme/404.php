@@ -11,11 +11,11 @@
       </div>
 
       <div class="col-md-6 align-self-center">
-        <div class="main-text-404">
+        <div class="main-text-404 blue2">
           <h1>404</h1>
         </div>
         <div>
-          <p>Oops! Blubby can't find the page you're looking for!</p>
+          <p class="grey4">Oops! Blubby can't find the page you're looking for!</p>
         </div>
       </div>
     </div>
@@ -23,7 +23,11 @@
   </div>
 
   <div class="instawall-section-container container-fluid">
-    <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/404rock.svg">
+    <div class="bedrock-container">
+      <div>
+        <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/404rock.svg">
+      </div>
+    </div>
   </div>
 </section>
 

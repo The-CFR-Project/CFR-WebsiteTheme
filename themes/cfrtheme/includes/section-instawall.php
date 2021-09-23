@@ -11,7 +11,11 @@ $post = get_page_by_path("social-introverts");
 
     <?php echo apply_filters( 'the_content', $post->post_content );?>
 
-    <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
+    <div class="bedrock-container">
+      <div>
+        <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
+      </div>
+    </div>
 
   </div>
 </section>
