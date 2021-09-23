@@ -1555,6 +1555,34 @@ CFR About Us Page, About CFR Section
   justify-content: space-around;
 }
 
+#meet-the-team .row {
+  padding-bottom: 50px;
+}
+
+#meet-the-team .col-md-3 div {
+  overflow: hidden;
+  height: 380px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+}
+
+#meet-the-team .col-md-3 div > div:first-child {
+  height: 1000px;
+}
+
+#meet-the-team .dp {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /*
 
 Bootstrap Overrides

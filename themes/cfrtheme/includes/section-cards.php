@@ -1,10 +1,14 @@
+<?php
+$post = get_page_by_path("wanna-play-cards");
+$doc = new DOMDocument();
+$doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
+$doc = new DOMXPath( $doc );
+?>
+
 <section>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
-    <?php
-      $post = get_posts( array( "category_name" => "Cards Post") )[0];
-      echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";
-    ?>
+      <?php echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";?>
     </div>
 
     <!-- Background images and formatting -->
@@ -31,10 +35,6 @@
         <div class="middle-col" id = "middle-col">
 
             <?php
-            $doc = new DOMDocument();
-            $doc->loadHTML(apply_filters( 'the_content', $post->post_content ));
-            $doc = new DOMXPath( $doc );
-
             $i = 0;
             $d = 0;
             $h = 0;
