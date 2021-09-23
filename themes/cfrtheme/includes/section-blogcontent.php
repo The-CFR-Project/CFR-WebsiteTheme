@@ -1,6 +1,6 @@
 <!---------------------- Single Blog Page ---------------------->
 
-<div class="blogs-single-container">
+<div class="blogs-single-container">    
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <h3><?php the_title();?></h3>
