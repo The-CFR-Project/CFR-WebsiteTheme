@@ -5,7 +5,7 @@ $doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
 $doc = new DOMXPath( $doc );
 ?>
 
-<section>
+<section id="fact-cards">
   <div class="container-border-components container-fluid">
     <div class="heading-container">
       <?php echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";?>
@@ -40,7 +40,7 @@ $doc = new DOMXPath( $doc );
             $h = 0;
 
             $all_cards = $doc->query( "//p" );
-            $numbers = range( 0, ( count( $all_cards )/2 ));
+            $numbers = range( 0, ( count( $all_cards ) / 2 - 1));
             shuffle( $numbers );
             $displayed_cards = array_slice( $numbers, 0, 8 );
 
@@ -56,7 +56,7 @@ $doc = new DOMXPath( $doc );
                   $rand_suit = $card_suits[ array_rand( $card_suits ) ];
                   $rand_color = $card_icon_colors[ array_rand( $card_icon_colors ) ];
 
-                  echo "<div class='fact-card-display' id='" . ( $d + 1 ) . "-dis-card' style='left:" . ( $d * 70 ) . "px; z-index: " . ( $d + 1 ) . "'>";
+                  echo "<div class='fact-card-display' id='" . ( $d + 1 ) . "-dis-card' style='z-index: " . ( $d + 1 ) . "'>";
 
                   echo "<div class='card-suits' style='text-shadow: 0 0 0 #" . $rand_color . "'>";
                   echo    $rand_suit;
@@ -123,7 +123,9 @@ $doc = new DOMXPath( $doc );
         </div>
 
         <div class="align-self-center">
-          <img src="<?php echo get_template_directory_uri();?>/images/card-icons/magic-5-ball.svg" class="cards-bg-magic-5">
+          <div class="magic-ball-container">
+            <img src="<?php echo get_template_directory_uri();?>/images/card-icons/magic-5-ball.svg" class="cards-bg-magic-5">
+          </div>
         </div>
       </div>
 
@@ -144,6 +146,8 @@ $doc = new DOMXPath( $doc );
 
   <!-- JavaScript ------------------------------------->
   <script>
+
+    var falling = false;
 
     // Sorting Algorithm
     function sortArray(unsortedArray){
@@ -181,39 +185,39 @@ $doc = new DOMXPath( $doc );
     }
 
     function onCardDoubleClick() {
-      const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
-      const allHiddenCards = document.getElementsByClassName("fact-card-hidden");
+      if (!falling) {
+        const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
+        const allHiddenCards = document.getElementsByClassName("fact-card-hidden");
 
-      var randIndex = Math.floor(Math.random() * allHiddenCards.length);
-      var randDiv = allHiddenCards[randIndex];
+        var randIndex = Math.floor(Math.random() * allHiddenCards.length);
+        var randDiv = allHiddenCards[randIndex];
 
-      this.style.transform = 'translateY(150%)';
-      this.removeEventListener("dblclick", onCardDoubleClick);
-      this.removeEventListener("click", onCardClick);
+        this.style.transform = 'translateY(150%)';
+        this.removeEventListener("dblclick", onCardDoubleClick);
+        this.removeEventListener("click", onCardClick);
 
+        var randDivId = randDiv.id;
+        randDiv.id = this.id;
+        randDiv.style.zIndex = (parseInt(randDiv.id)).toString();
 
-      var randDivId = randDiv.id;
-      randDiv.id = this.id;
+        falling = true;
 
+        setTimeout(() => {
 
-      randDiv.style.left = ((parseInt(randDiv.id)-1) * 70).toString() + "px";
-      randDiv.style.zIndex = (parseInt(randDiv.id)).toString();
+          if (randDiv.id == "8-dis-card"){randDiv.className = "fact-card-display fact-card-stack";}
+          else {randDiv.className = "fact-card-display fact-card-stack fact-card-open";}
 
-      setTimeout(() => {
-
-        if (randDiv.id == "8-dis-card"){randDiv.className = "fact-card-display fact-card-stack";}
-        else {randDiv.className = "fact-card-display fact-card-stack fact-card-open";}
-
-      }, 1000);
+        }, 500);
 
 
-      setTimeout(() => {
-        this.id = randDivId;
-        this.className = "fact-card-fall fact-card-hidden";
-        this.removeAttribute('style');
-        onceClickedAnimation();
-      }, 2000);
-
+        setTimeout(() => {
+          this.id = randDivId;
+          this.className = "fact-card-fall fact-card-hidden";
+          this.removeAttribute('style');
+          onceClickedAnimation();
+          falling = false;
+        }, 1000);
+      }
     }
 
     // Shows Cards when clicked once

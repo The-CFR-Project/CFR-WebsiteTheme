@@ -870,6 +870,10 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 --------------------------------------------------------------------------------
 */
 
+.magic-ball-container {
+  width: 100px;
+}
+
 .cards-heading {
   margin-top: -10px;
 }
@@ -884,7 +888,6 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .fact-card-display {
   width: 240px;
-  padding: 20% 3% 5%;
   background-color: white;
   height: 100%;
   border-left: 1px solid #ccc;
@@ -896,11 +899,99 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   transform: translateX(0px);
   top: 10%;
 
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
   animation: fadeIn ease 0.5s;
   -webkit-animation: fadeIn ease 0.5s;
   -moz-animation: fadeIn ease 0.5s;
   -o-animation: fadeIn ease 0.5s;
   -ms-animation: fadeIn ease 0.5s;
+}
+
+.magic-ball-container {
+  width: 100px;
+}
+
+div#\38 -dis-card.fact-card-display {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+@media (max-width: 540px) {
+  .magic-ball-container {
+    display: none;
+  }
+
+  .cards-bg-discs {
+    display: none;
+  }
+
+  #fact-cards .middle-col {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .fact-card-display {
+    display: flex;
+  }
+
+  div#\31 -dis-card {
+    left: 0%;
+  }
+
+  div#\32 -dis-card {
+    left: 13%;
+  }
+
+  div#\33 -dis-card {
+    left: 26%;
+  }
+
+  div#\34 -dis-card {
+    left: 39%;
+  }
+
+  div#\35 -dis-card {
+    left: 52%;
+  }
+
+  div#\36 -dis-card {
+    left: 65%;
+  }
+
+  div#\37 -dis-card {
+    left: 78%;
+  }
+
+  div#\38 -dis-card.fact-card-display {
+    left: 91%;
+  }
+
+  .fact-card-open {
+    margin-left: -175px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fact-card-open {
+    margin-left: -170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fact-card-open {
+    margin-left: -155px;
+  }
 }
 
 .fact-card-display:hover {
@@ -910,10 +1001,6 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
 .fact-card-hidden {
   display: none;
-}
-
-.fact-card-open {
-  margin-left: -155px;
 }
 
 .fact-card-fall {
@@ -1747,11 +1834,11 @@ CFR Contact Us
 .contact-us-container{
   position: relative;
   height: auto;
+  padding-bottom: 100px;
 }
 
 .contactus-card-container{
   justify-content: center;
-  height: 80vh;
 }
 
 .contactus-card {
@@ -1765,7 +1852,7 @@ CFR Contact Us
 
   width: 275px;
   height: 400px;
-  
+
   text-align: left;
   font-size: 2rem;
 }
@@ -1806,7 +1893,7 @@ CFR Contact Us
 .contactus-card-button {
   position: absolute;
   border-radius: 100px;
-  
+
   padding: 8px;
   margin-top: 60%;
   bottom: 20px;

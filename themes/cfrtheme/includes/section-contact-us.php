@@ -27,7 +27,7 @@ $doc = new DOMXPath( $doc );
         }else if ($i == 2) {
           echo "<a href=''><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
         }
-        
+
       echo "</div>";
       endfor;
     ?>
