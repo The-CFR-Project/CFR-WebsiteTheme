@@ -1738,6 +1738,129 @@ CFR Meet the Team Section
 
 /*
 
+CFR Contact Us
+--------------------------------------------------------------------------------
+*/
+
+
+
+.contact-us-container{
+  position: relative;
+  height: auto;
+}
+
+.contactus-card-container{
+  justify-content: center;
+  height: 80vh;
+}
+
+.contactus-card {
+  margin: 50px 40px 20px;
+  padding: 30px 25px;
+  position: relative;
+
+  border-radius: 23px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+
+  width: 275px;
+  height: 400px;
+  
+  text-align: left;
+  font-size: 2rem;
+}
+
+.contactus-card:hover,
+.contactus-card:focus-within {
+  transform: scale(1.09);
+  transition: all 0.2s ease-in-out;
+}
+
+.contactus-card-1{
+  border-top: 15px solid var(--blue2);
+  color: var(--blue2);
+}
+
+.contactus-card-2{
+  border-top: 15px solid var(--red2);
+  color: var(--red2);
+}
+
+.contactus-card-3{
+  border-top: 15px solid var(--red3);
+  color: var(--red3);
+}
+
+.contactus-card-heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contactus-card-text {
+  margin-top: 50px;
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--grey5);
+}
+
+.contactus-card-button {
+  position: absolute;
+  border-radius: 100px;
+  
+  padding: 8px;
+  margin-top: 60%;
+  bottom: 20px;
+  width: 80%;
+
+  background-color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  border-style: solid;
+}
+
+.contactus-card-button-1 {
+  border-color: var(--blue2);
+  color: var(--blue2);
+}
+
+.contactus-card-button-1:hover,
+.contactus-card-button-1:focus {
+  background-color: var(--blue2);
+  border-color: #fff;
+  color: #fff;
+  transform: scale(1.01);
+}
+
+.contactus-card-button-2 {
+  border-color: var(--red2);
+  color: var(--red2);
+  transform: scale(1.01);
+}
+
+.contactus-card-button-2:hover,
+.contactus-card-button-2:focus {
+  background-color: var(--red2);
+  border-color: #fff;
+  color: #fff;
+  transform: scale(1.01);
+}
+
+.contactus-card-button-3{
+  border-color: var(--red3);
+  color: var(--red3);
+  transform: scale(1.01);
+}
+
+.contactus-card-button-3:hover,
+.contactus-card-button-3:focus  {
+  background-color: var(--red3);
+  border-color: #fff;
+  color: #fff;
+}
+
+
+/*
+
 CFR Contact Us Form
 --------------------------------------------------------------------------------
 */
@@ -1882,9 +2005,9 @@ nf-field:nth-child(4) {
   padding-bottom: 10px;
 }
 
-.nf-response-msg p:last-child {
+/* .nf-response-msg p:last-child {
 
-}
+} */
 
 
 @media (min-width: 768px) {

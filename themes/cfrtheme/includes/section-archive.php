@@ -1,6 +1,6 @@
 <!---------------------- Blogs Archive Page ---------------------->
 
-<?php $i = 1; ?>
+
 
 <div class="blogs-header-container">
 
@@ -9,19 +9,16 @@
         <h1>cfr  originals</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class='heart-shape'></div>
-    </div>
-    
-
-    
+    </div>  
 
 </div>
+
+<?php $i = 1; ?>
 <div class="blogs-archive-container">
 
     <h3>Latest Posts</h3>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-
-
 
         <!--  If the post is the latest one  -->  
         <?php if($i == 1): ?>
@@ -42,7 +39,7 @@
 
 
         <!--  Loops over next 4 latest posts  --> 
-        <?php if($i >= 1 && $i <= 4): ?>
+        <?php if($i >= 2 && $i <= 5): ?>
 
             <div class="row">
                 <?php echo "<div class=col blogs-archive-post-grid-".$i; ?>
@@ -56,7 +53,7 @@
 
 
         <!--  Loops over all remaining posts  --> 
-        <?php if($i > 4): ?>
+        <?php if($i > 5): ?>
 
             <div class="row">
                 <div class="blogs-archive-posts-more col-md-3">
