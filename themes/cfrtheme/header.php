@@ -47,7 +47,4 @@
 
 </header>
 
-<div class="nav-bar-translucent-rectangle">
-</div>
-
 <div class="container-fluid">

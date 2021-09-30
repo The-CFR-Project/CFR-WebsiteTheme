@@ -220,6 +220,9 @@ header {
   height: 100px;
 
   text-transform: uppercase;
+  position:fixed;
+  z-index:1000;
+  box-shadow: 0px 15px rgba(255, 255, 255, 0.4);
 }
 
 header h1 {
@@ -459,15 +462,6 @@ header .nav-bar li .sub-menu a:focus-visible {
 header .nav-bar .menu-item-has-children:hover .sub-menu,
 header .nav-bar .menu-item-has-children:focus-within .sub-menu {
   display: block;
-}
-
-.nav-bar-translucent-rectangle {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 20px;
-
-  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-bar-blue-rectangle {
