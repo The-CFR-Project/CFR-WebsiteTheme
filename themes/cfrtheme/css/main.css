@@ -1165,6 +1165,7 @@ The CFR FAQs Section Located above the Instagram Wall
 
   position: relative;
   background-color: #fff;
+  line-height: 32px;
 
   transition: max-height 0.5s ease;
 }
@@ -1390,6 +1391,8 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   }
 }
 
+/* Archive Carousel */
+
 .archive-carousel-slides-container {
   height: auto;
   position: relative;
@@ -1490,7 +1493,7 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
 }
 
 .archive-carousel-slide-indicator {
-  margin: 5px;
+  margin: 10px 5px;
   border-radius: 100%;
   width: 15px;
   height: 15px;
@@ -1506,6 +1509,89 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   opacity: 0.5;
   top: 0;
   left: 0;
+  min-width: 700px;
+}
+
+
+/* Latest Blogs */
+
+.blogs-archive-post {
+  padding: 0 100px;
+}
+
+.blogs-archive-permalink,
+.blogs-archive-permalink:hover {
+  color: var(--grey5);
+}
+
+.blogs-archive-post-latest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 50px;
+}
+
+.blogs-archive-post-latest-tn{
+  width: 60%;
+  height: auto;
+  margin-left: 10%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blogs-archive-post-latest-excerpt {
+  height: auto;
+  width: 40%;
+  min-width: 400px;
+  background-color: var(--grey1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position:relative;
+  left: -10%;
+  padding: 10px 25px 10px 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.blogs-archive-post-latest-excerpt h3 {
+  font-size: 300%;
+  font-weight:500;
+  margin: 10px 0 20px;
+}
+
+.blogs-archive-post-latest-excerpt p {
+  font-size: 150%;
+  font-weight: 200;
+} 
+
+.blogs-archive-post-grid {
+  padding-left: 5%;
+  line-height: 50px;
+}
+
+.blogs-archive-post-grid img {
+  width: 90%;
+  height: 200px;
+  margin-top: 40px;
+  
+}
+
+.blogs-archive-post-text {
+  width: 100%;
+  padding-right: 5px;
+  position: relative;
+  word-wrap:break-word;
+}
+
+.blogs-archive-post-grid h3 {
+  padding-top: 20px;
+  color: var(--grey5);
+  font-size: 24px;
+  position: relative;
+}
+
+.blogs-archive-post-grid p {
+  color: var(--blue2);
+  font-size: 18px;
+  font-weight: 500;
 }
 
 

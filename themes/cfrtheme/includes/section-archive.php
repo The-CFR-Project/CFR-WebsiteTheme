@@ -67,48 +67,48 @@
 
     <!-- Latest Posts -->
 
-    <h3>Latest Posts</h3>
     <?php $i = 1; ?>
-    <div class="row">
+    <div class="row blogs-archive-post">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
             <!--  If the post is the latest one  -->  
             <?php if($i == 1): ?>
-                <div class="blogs-archive-post-latest">
-                    <div class="blogs-archive-post-latest-excerpt">
-                        <h3><?php the_title();?></h3>
-                        <?php the_excerpt(); ?> 
-                        <a href="<?php the_permalink(); ?>" class="btn btn-success">Read more</a>
-                    </div>
+                <a href="<?php the_permalink(); ?>" class="blogs-archive-permalink">
+                    <div class="blogs-archive-post-latest">
 
-                    <div class="blogs-archive-post-latest-tn">
+                        <div class="blogs-archive-post-latest-tn col-md-3">
+                            <?php if(has_post_thumbnail()): ?>
+                                <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                            <?php endif; ?> 
+                        </div>
+
+                        <div class="blogs-archive-post-latest-excerpt col-md-6">
+                            <p>Spotlighted</p>
+                            <h3><?php the_title();?></h3>
+                            <?php echo "<p>" . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . "</p>";?>
+                            <?php echo "<p>".get_the_date('j.m.Y')."</p>"; ?>
+                        </div>
+
+                    </div> 
+                </a>  
+            <?php endif; ?> 
+
+            <!--  Loops over next 9 latest posts  --> 
+            <?php if($i >= 2 && $i <= 10): ?>
+
+                <a href="<?php the_permalink(); ?>" class="col-md-4">
+                    <?php  echo "<div class='blogs-archive-post-grid-". ($i-1) ." blogs-archive-post-grid'>" ?>
                         <?php if(has_post_thumbnail()): ?>
-                            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid img-thumbnail">
+                            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
                         <?php endif; ?> 
+                        <div class="blogs-archive-post-text">
+                            <h3><?php the_title();?></h3>
+                            <p><?php echo "<p>" . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . "</p>";?></p>
+                        </div>
                     </div>
-                </div>   
-            <?php endif; ?> 
-
-            <!--  Loops over next 4 latest posts  --> 
-            <?php if($i >= 2 && $i <= 5): ?>
-
-                <?php  echo "<div class='col-md-6 blogs-archive-post-grid-". ($i-1) ."' style='display: flex; position:relative;'>" ?>
-                    <h3><?php the_title();?></h3>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-success">Read more</a>
-                </div>
-
+                </a>
 
             <?php endif; ?> 
-
-            <!--  Loops over all remaining posts  --> 
-            <?php if($i > 5): ?>
-
-                <div class="blogs-archive-posts-more col-md-3">
-                    <h3><?php the_title();?></h3>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-success">Read more</a>   
-                </div>
-                
-            <?php endif ?>    
     
         <?php $i++; endwhile; endif;?>
     </div>
