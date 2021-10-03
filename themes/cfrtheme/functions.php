@@ -27,6 +27,8 @@ add_action( "wp_enqueue_scripts", "load_js" );
 // Theme Options
 add_theme_support( "menus" );
 add_theme_support( "post-thumbnails" );
+add_theme_support( "widgets" );
+
 
 // Filters
 add_filter( 'excerpt_length', 'your_prefix_excerpt_length' );
@@ -43,6 +45,19 @@ register_nav_menus(
       "footer-social" => "Footer Socials Location"
   )
 );
+
+// Register Sidebars
+function my_sidebars() {
+  register_sidebar(
+    array (
+      'name' => 'Blogs Archive Sidebar',
+      'id' => 'blogs-archive-sidebar',
+      'before-title' => '<h4 class="widget-title">',
+      'after-title' => '</h4>', 
+    )
+    );
+}
+add_action('widgets_init', 'my_sidebars');
 
 // Logos
 

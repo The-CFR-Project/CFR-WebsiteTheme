@@ -812,6 +812,7 @@ section:nth-child(even) .heading-overlay {
 
   height: 130%;
   max-height: 470px;
+  min-height: 400px;
 
   transition: height 0.2s, max-height 0.2s;
 }
@@ -1273,7 +1274,7 @@ The CFR 404 Page
   width: 60%;
   padding-top: 50px;
   padding-bottom: 200px;
-  margin: 100px 0;
+  margin-top: 100px;
 }
 
 .main-404-container h1 {
@@ -1794,7 +1795,7 @@ CFR About Us Page, About CFR Section
 }
 
 .about-cfr-container {
-  margin: 100px 0;
+  margin-top: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
 }

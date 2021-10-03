@@ -111,6 +111,14 @@
             <?php endif; ?> 
     
         <?php $i++; endwhile; endif;?>
+
+    </div>
+
+    <div class="blogs-archive-sidebar">
+        <?php if (is_active_sidebar('blogs-archive-sidebar')) {
+            dynamic_sidebar('blogs-archive-sidebar');
+        }
+        ?>
     </div>
 
 </div>  
