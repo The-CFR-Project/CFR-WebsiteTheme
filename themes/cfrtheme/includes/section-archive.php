@@ -5,6 +5,8 @@
         
     <!-- Handpicked Blogs on Archive Carousel-->
 
+    <?php $count = 0; if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php $count++; endwhile; endif;?>
 
     <div class="archive-carousel-container">
         <div class="archive-carousel-slides-container">
@@ -66,7 +68,7 @@
 
 
     <!-- Latest Posts -->
-
+    <section id="blogs-archive-latest">
     <?php $i = 1; ?>
     <div class="row blogs-archive-post">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
@@ -115,13 +117,56 @@
     </div>
 
     <div class="blogs-archive-sidebar">
-        <?php if (is_active_sidebar('blogs-archive-sidebar')) {
-            dynamic_sidebar('blogs-archive-sidebar');
-        }
-        ?>
+        <div class="blogs-sidebar-socials-icons">
+            <?php
+                $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
+                    foreach ( $socialItems as $footerItem ) {
+                    echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/images/" . $footerItem->title . "-icon.svg' class='blogs-sidebar-socials-icon'></a>";
+                    }   
+            ?>
+        </div>
+        <div class="blogs-sidebar-blogs row">
+            <h5 class='blogs-sidebar-blogs-title'>recommended</h5>    
+            <?php $i = 0; if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                
+                <?php if($i==$count-7): ?>
+                    <div class="blogs-sidebar-blogs-blog col-sm-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <h3><?php the_title() ?></h3>
+                            <p style='color:var(--blue2)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
+                            <?php echo "<p style='color:var(--blue2)'>".get_the_date('d M')."</p>"; ?>
+                        </a>
+                    </div>
+                <?php endif; ?>   
+
+                <?php if($i==$count-4): ?>
+                    <div class="blogs-sidebar-blogs-blog col-sm-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <h3><?php the_title() ?></h3>
+                            <p style='color:var(--red2)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
+                            <?php echo "<p style='color:var(--red2)'>".get_the_date('d M')."</p>"; ?>
+                        </a>
+                    </div>
+                <?php endif; ?>  
+
+                <?php if($i==$count-2): ?>
+                    <div class="blogs-sidebar-blogs-blog col-sm-4">
+                        <a href="<?php the_permalink(); ?>">
+                            <h3><?php the_title() ?></h3>
+                            <p style='color:var(--red3)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
+                            <?php echo "<p style='color:var(--red3)'>".get_the_date('d M')."</p>"; ?>
+                        </a>
+                    </div>
+                <?php endif; ?>   
+
+            <?php $i++;  endwhile; endif;?>
+        </div>
+
     </div>
 
-</div>  
+    </section> 
+</div>
+ 
 
 <script>
 

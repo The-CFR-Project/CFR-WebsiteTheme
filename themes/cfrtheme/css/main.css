@@ -1410,7 +1410,7 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   position: absolute;
   height: auto;
   width: 100%;
-  padding: 10% 10%;
+  padding: 10% 10% 2%;
 
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -1486,11 +1486,10 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
   height: auto;
   position: absolute;
   left: 0;
-  bottom: 30px;
+  bottom: 10px;
   display: flex;
   justify-content: center;
   z-index: 2;
-  /* align-items: center; */
 }
 
 .archive-carousel-slide-indicator {
@@ -1516,8 +1515,13 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
 
 /* Latest Blogs */
 
+#blogs-archive-latest {
+  padding: 0 100px 100px;
+}
+
 .blogs-archive-post {
-  padding: 0 100px;
+  padding-bottom: 100px;
+  border-bottom: 3px solid var(--grey3);
 }
 
 .blogs-archive-permalink,
@@ -1596,6 +1600,57 @@ The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
 }
 
 
+/* Blogs Archive Sidebar  */
+
+.blogs-archive-sidebar{
+  position: relative;
+  padding: 30px 0 50px;
+  display: flex;
+  
+  z-index: 2;
+}
+
+.blogs-sidebar-socials-icons{
+  width: fit-content;
+  height: fit-content;
+  border-right: 2px solid var(--grey3);
+  display: grid;
+}
+
+.blogs-sidebar-socials-icon{
+  transform: scale(1.5);
+  margin: 0 40px;
+  padding: 15px 0;
+}
+
+.blogs-sidebar-blogs {
+  width: 100%;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs-sidebar-blogs-title{
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.blogs-sidebar-blogs-blog {
+  padding: 10px;
+}
+
+.blogs-sidebar-blogs-blog h3 {
+  font-weight: 500;
+  color: var(--grey6);
+  padding-bottom: 10px;
+}
+
+.blogs-sidebar-blogs-blog p {
+  font-weight: 500;
+  font-size: 22px;
+}
 
 
 /*

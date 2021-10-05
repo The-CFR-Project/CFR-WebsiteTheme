@@ -10686,7 +10686,8 @@ define( 'controllers/fields/filterTypes',['models/fields/typeSectionCollection']
 					'product',
 					'quantity',
 					'shipping',
-					'total'
+					'total',
+					'button'
 				]);
 
                 // Search our results of hidden fields.
