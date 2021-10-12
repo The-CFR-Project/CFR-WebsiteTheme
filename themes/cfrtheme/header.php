@@ -8,7 +8,7 @@
 
 </head>
 <body>
-
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/header.css"); </style>
 <header>
   <div class="nav-header-container">
     <div class="nav-logo-container">

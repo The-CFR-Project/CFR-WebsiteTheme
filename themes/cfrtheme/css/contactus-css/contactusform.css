@@ -1,0 +1,165 @@
+/*
+
+CFR Contact Us Form
+--------------------------------------------------------------------------------
+*/
+
+#contact-form {
+  position: relative;
+}
+
+#megaphone-container {
+  position: absolute;
+
+  height: 200px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#megaphone-container div:first-child {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+#megaphone-container div:last-child {
+  width: 75%;
+  min-width: 500px;
+}
+
+#megaphone {
+  width: 150px;
+
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+#postbox-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#postbox-container div:first-child {
+  width: 60%;
+}
+
+#postbox {
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+.nf-form-fields-required {
+  display: none;
+}
+
+#nf-form-title-1 {
+  display: none;
+}
+
+nf-fields-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nf-field:nth-child(1) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(2) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(3) {
+  width: 95% !important;
+}
+
+nf-field:nth-child(4) {
+  width: 80% !important;
+}
+
+#contact-form input {
+  width: 100%;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+  color: var(--blue2) !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input,
+.nf-form-content textarea,
+#nf-field-1,
+#nf-field-2,
+#nf-field-3,
+#nf-field-4 {
+  border-radius: 30px !important;
+  border: 3px solid var(--red4) !important;
+  border-color: var(--red4) !important;
+}
+
+#nf-field-3-container .nf-field-element:after {
+  height: 198px;
+  border-radius: 0 23px 23px 0 !important;
+  line-height: 198px !important;
+}
+
+#nf-field-4 {
+  background: var(--red4) !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+  border-radius: 0 50px 50px 0 !important;
+  background: var(--red4) !important;
+}
+
+.nf-after-form-content {
+  display: none;
+}
+
+.nf-response-msg {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nf-response-msg p {
+  text-align: center;
+}
+
+.nf-response-msg p:first-child {
+  font-weight: 700;
+  color: var(--red3);
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+/* .nf-response-msg p:last-child {
+
+} */
+
+
+@media (min-width: 768px) {
+  nf-field:nth-child(1) {
+    width: 30% !important;
+  }
+
+  nf-field:nth-child(2) {
+    width: 60% !important;
+  }
+
+  nf-field:nth-child(4) {
+    width: 30% !important;
+  }
+}
+

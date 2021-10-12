@@ -3,18 +3,8 @@ $post = get_page_by_path("contact-form");
 ?>
 
 <section id="contact-form">
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/contactus-css/contactusform.css"); </style>
   <div class="container-fluid">
-
-    <!--
-    <div id="megaphone-container">
-      <div>
-        <img id="megaphone" src="<?php echo get_template_directory_uri();?>/images/megaphone.svg">
-      </div>
-
-      <div>
-      </div>
-    </div>
-    -->
 
     <div class="heading-container">
       <?php echo "<div class='heading-overlay'>" . $post->post_title . "</div>";?>
@@ -38,9 +28,9 @@ $post = get_page_by_path("contact-form");
 
   <div class="instawall-section-container container-fluid">
     <div class="bedrock-container">
-      <div>
-        <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
-      </div>
-    </div>
-  </div>
+        <div>
+            <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
+        </div>
+   </div>
+</div>
 </section>

@@ -1,0 +1,24 @@
+/*
+
+CFR Our Story Section
+--------------------------------------------------------------------------------
+*/
+
+#our-story {
+    padding-bottom: 100px;
+  }
+  
+  .our-story-container img {
+    width: 80%;
+  }
+  
+  .our-story-container .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .our-story-container .col-md-5 {
+    display: flex;
+    justify-content: space-around;
+  }
+  

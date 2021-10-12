@@ -6,6 +6,7 @@ $doc = new DOMXPath( $doc );
 ?>
 
 <section>
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/faqs.css"); </style>
   <div class="faq-container container-fluid">
 
     <div class="heading-container">

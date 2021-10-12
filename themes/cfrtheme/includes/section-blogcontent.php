@@ -1,6 +1,7 @@
 <!---------------------- Single Blog Page ---------------------->
 
-<div class="blogs-single-container">    
+<div class="blogs-single-container">   
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-single.css"); </style>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <h3><?php the_title();?></h3>

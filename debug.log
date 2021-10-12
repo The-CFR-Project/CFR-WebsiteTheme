@@ -1,0 +1,256 @@
+[06-Oct-2021 16:53:56 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to get_current_version_post() must be of the type int, string given, called in /Users/ritikagaikwad/Sites/CFR/wp-content/plugins/force-refresh/includes/api/client/inc.get-version.php on line 54 and defined in /Users/ritikagaikwad/Sites/CFR/wp-content/plugins/force-refresh/includes/api/client/inc.get-version.php:25
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-content/plugins/force-refresh/includes/api/client/inc.get-version.php(54): get_current_version_post('')
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/class-wp-hook.php(303): get_version('')
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-includes/plugin.php(470): WP_Hook->do_action(Array)
+#4 /Users/ritikagaikwad/Sites/CFR/wp-admin/admin-ajax.php(187): do_action('wp_ajax_force_r...')
+#5 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/plugins/force-refresh/includes/api/client/inc.get-version.php on line 25
+[07-Oct-2021 03:31:10 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 03:52:10 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 06:29:53 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 06:30:15 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 06:30:26 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 06:32:08 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[07-Oct-2021 06:37:43 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[07-Oct-2021 06:37:43 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[07-Oct-2021 06:37:43 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[07-Oct-2021 06:37:43 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[07-Oct-2021 06:50:48 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 09:07:44 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:07:44 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:07:44 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:07:44 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 09:11:55 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:11:55 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:11:55 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:11:55 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 09:16:10 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:16:10 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:16:10 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:16:10 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 09:16:13 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:16:13 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:16:13 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:16:13 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 09:16:20 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:16:20 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:16:20 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:16:20 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 09:22:14 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[08-Oct-2021 09:22:14 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[08-Oct-2021 09:22:14 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[08-Oct-2021 09:22:14 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[08-Oct-2021 10:26:12 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:26:18 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:46:45 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:16 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:24 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:28 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:38 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:40 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 10:47:50 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[08-Oct-2021 11:12:05 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:12:29 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:12:34 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:17:19 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:17:41 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:17:58 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:18:09 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:20:33 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:20:40 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:21:07 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:21:11 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[08-Oct-2021 11:21:26 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Post could not be converted to string in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php:177
+Stack trace:
+#0 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(772): require()
+#1 /Users/ritikagaikwad/Sites/CFR/wp-includes/template.php(716): load_template('/Users/ritikaga...', false, Array)
+#2 /Users/ritikagaikwad/Sites/CFR/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/category-blog.php(10): get_template_part('includes/sectio...', 'archive')
+#4 /Users/ritikagaikwad/Sites/CFR/wp-includes/template-loader.php(106): include('/Users/ritikaga...')
+#5 /Users/ritikagaikwad/Sites/CFR/wp-blog-header.php(19): require_once('/Users/ritikaga...')
+#6 /Users/ritikagaikwad/Sites/CFR/index.php(17): require('/Users/ritikaga...')
+#7 {main}
+  thrown in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 177
+[09-Oct-2021 02:20:35 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/ritikagaikwad/Sites/CFR/wp-includes/update.php on line 693
+[09-Oct-2021 03:39:00 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 179
+[09-Oct-2021 03:39:26 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 179
+[09-Oct-2021 03:39:33 UTC] PHP Notice:  Trying to get property 'ID' of non-object in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-archive.php on line 179
+[09-Oct-2021 03:44:52 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[09-Oct-2021 03:44:52 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[09-Oct-2021 03:44:52 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[09-Oct-2021 03:44:52 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[09-Oct-2021 04:04:23 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 04:19:00 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:01:41 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:04:18 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-blog-series-single.php on line 20
+[09-Oct-2021 11:04:18 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:04:22 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-blog-series-single.php on line 20
+[09-Oct-2021 11:04:22 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:04:45 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-blog-series-single.php on line 20
+[09-Oct-2021 11:04:45 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:04:49 UTC] PHP Notice:  Array to string conversion in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-blog-series-single.php on line 20
+[09-Oct-2021 11:04:49 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:05:32 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:06:45 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:06:49 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[09-Oct-2021 11:23:27 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[10-Oct-2021 05:51:10 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[10-Oct-2021 06:13:22 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[10-Oct-2021 06:51:04 UTC] PHP Parse error:  syntax error, unexpected ''">'' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ',' in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/blogs-archive/section-blog-series-archive.php on line 27
+[10-Oct-2021 07:04:05 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[10-Oct-2021 07:04:05 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[10-Oct-2021 07:04:05 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[10-Oct-2021 07:04:05 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[10-Oct-2021 17:55:23 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[11-Oct-2021 08:04:59 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[11-Oct-2021 08:04:59 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:04:59 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[11-Oct-2021 08:04:59 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:06:00 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 24
+[11-Oct-2021 08:06:00 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:06:00 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 27
+[11-Oct-2021 08:06:00 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:08:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:08:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:08:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:08:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:16:34 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:16:34 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:16:34 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:16:34 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:20:07 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:20:07 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:20:07 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:20:07 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:22:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:22:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:22:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:22:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:54:32 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:54:32 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:54:32 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:54:32 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:54:47 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:54:47 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:54:47 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:54:47 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:54:53 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:54:53 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:54:53 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:54:53 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:56:42 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:56:42 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:56:42 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:56:42 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:57:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:57:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:57:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:57:46 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:58:39 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:58:39 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:58:39 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:58:39 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 08:59:03 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 08:59:03 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 08:59:03 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 08:59:03 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 09:00:48 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 09:00:48 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 09:00:48 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 09:00:48 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 09:13:19 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[11-Oct-2021 09:14:21 UTC] PHP Deprecated:  Theme without comments.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a comments.php template in your theme. in /Users/ritikagaikwad/Sites/CFR/wp-includes/functions.php on line 5411
+[11-Oct-2021 09:16:31 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 09:16:31 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 09:16:31 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 09:16:31 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[11-Oct-2021 09:20:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[11-Oct-2021 09:20:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[11-Oct-2021 09:20:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[11-Oct-2021 09:20:09 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31
+[12-Oct-2021 03:57:58 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 26
+[12-Oct-2021 03:57:58 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 28
+[12-Oct-2021 03:57:58 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 29
+[12-Oct-2021 03:57:58 UTC] PHP Notice:  Undefined variable: i in /Users/ritikagaikwad/Sites/CFR/wp-content/themes/cfrtheme/includes/section-meet-the-team.php on line 31

@@ -6,6 +6,7 @@ $doc = new DOMXPath( $doc );
 ?>
 
 <section id="about-cfr">
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/aboutus-css/aboutcfr.css"); </style>
   <div class="about-cfr-container container">
     <div class="row">
       <div class="col-md-6 align-self-center">

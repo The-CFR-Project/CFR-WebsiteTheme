@@ -1,0 +1,60 @@
+/*
+
+CFR Metrics Section
+--------------------------------------------------------------------------------
+*/
+
+#our-metrics .col-md-4 {
+    width: 30%;
+  }
+  
+  #our-metrics h4 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  
+  #our-metrics .middle-col {
+    min-width: 80%;
+  }
+  
+  #our-metrics .middle-row img {
+    width: 120%;
+    min-width: 150px;
+  
+    transition: transform 0.2s ease-out;
+  }
+  
+  #our-metrics .middle-row > div:last-child {
+    text-align: right;
+  }
+  
+  #our-metrics .middle-row div:last-child img {
+    transform: rotate(-25deg) translate(62%, -35%);
+  }
+  
+  #our-metrics .middle-row div:last-child img:hover {
+    transform: rotate(-40deg) translate(42%, -35%);
+  }
+  
+  #our-metrics .middle-row div:first-child img {
+    transform: rotate(25deg) translateX(-20%);
+  }
+  
+  #our-metrics .middle-row div:first-child img:hover {
+    transform: rotate(40deg) translateX(0%);
+  }
+  
+  .our-metrics-container h4 {
+    font-size: 40px;
+  }
+  
+  .our-metrics-container .col-md-4 {
+    display: flex;
+    flex-direction: column;
+  
+    padding-bottom: 100px;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }

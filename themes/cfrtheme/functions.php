@@ -68,3 +68,34 @@ add_theme_support( 'custom-logo', array(
 	'flex-width'  => true,
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );
+
+
+// Custom Post Types
+function blogs_series_post_type(){ //Custom Post
+  $args = array(
+    'labels' => array (
+      'name' => 'Blog Series',
+      'singular_name' => 'Blog Series',
+    ),
+    'hierarchical' => false,
+    'menu-icon' => 'dashicons-images-alt2',
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+  );
+  register_post_type('blog_series', $args);
+}
+add_action('init', 'blogs_series_post_type');
+
+function blogs_series_title(){ //Custom Category 
+  $args = array(
+    'labels' => array(
+      'name' => 'Series Title',
+      'singular_name' => 'Series Title',
+    ),
+    'public' => true,
+    'hierarchical' => true,
+  );
+  register_taxonomy('series_name', array('blog_series'), $args);
+}
+add_action('init', 'blogs_series_title');

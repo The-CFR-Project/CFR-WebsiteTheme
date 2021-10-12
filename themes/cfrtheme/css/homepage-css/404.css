@@ -1,0 +1,76 @@
+/*
+
+The CFR 404 Page
+--------------------------------------------------------------------------------
+*/
+
+.main-404-container {
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    margin-top: 100px;
+  }
+  
+  .main-404-container h1 {
+    font-size: 80px;
+    font-weight: 900;
+  }
+  
+  .main-404-container p {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .main-404-container .row {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-404-container .col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 70%;
+  }
+  
+  .main-404-container .col-md-6:last-child {
+    flex-direction: column;
+  }
+  
+  .main-404-container .col-md-6:last-child div:last-child {
+    width: 70%;
+  }
+  
+  .beagle {
+    width: 100%;
+    min-width: 220px;
+  }
+  
+  @media (min-width: 768px) {
+    .main-404-container .col-md-6 {
+      width: 50%;
+    }
+  
+    .main-404-container .col-md-6:last-child {
+      align-items: flex-start;
+    }
+  
+    .main-404-container p {
+      text-align: justify;
+    }
+  
+    .main-404-container .col-md-6:last-child div:last-child {
+      width: 100%;
+    }
+  }
+  
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+  
+  }
+  
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  
+  }

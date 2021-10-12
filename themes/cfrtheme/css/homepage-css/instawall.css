@@ -1,0 +1,54 @@
+/*
+
+The CFR Social Media Insta Wall Located above the Footer
+--------------------------------------------------------------------------------
+*/
+.instawall-section-container {
+    position: relative;
+  }
+  
+  .instawall-section-container .heading-container {
+    height: 150px;
+  }
+  
+  .instawall-section-container #sbi_images :focus {
+    outline: 2px dashed var(--grey6) !important;
+  }
+  
+  .instawall-section-container #sbi_load {
+    margin-bottom: -100%;
+    z-index: 10;
+  }
+  
+  .instawall-section-container .sb_instagram_header {
+    display: none;
+  }
+  
+  .instawall-section-container .sbi_load_btn,
+  .instawall-section-container .sbi_follow_btn {
+    z-index: inherit;
+    transition: box-shadow 0.2s ease-out !important;
+  }
+  
+  .instawall-section-container .sbi_load_btn:hover,
+  .instawall-section-container .sbi_load_btn:focus-visible {
+    box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 5%) !important;
+  }
+  
+  .instawall-section-container .sbi_follow_btn a:hover,
+  .instawall-section-container .sbi_follow_btn a:focus-visible {
+    box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 20%) !important;
+  }
+  
+  .instawall-section-container .sbi_load_btn:focus-visible,
+  .instawall-section-container .sbi_follow_btn a:focus-visible {
+    outline: 2px dashed #fff !important;
+  }
+  
+  .instawall-section-container .sbi_follow_btn a {
+    background: var(--blue2) !important;
+  }
+  
+  .instawall-section-container .sbi_follow_btn {
+    position: relative;
+  }

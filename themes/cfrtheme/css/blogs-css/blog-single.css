@@ -1,0 +1,11 @@
+/*
+
+The CFR Blogs Single Page (Page when a specific blog is clicked from the archive)
+--------------------------------------------------------------------------------
+*/
+
+.blogs-single-container {
+    margin: 100px 0;
+    padding: 100px 200px;
+    background-color: var(--grey1);
+  }

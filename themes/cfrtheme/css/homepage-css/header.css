@@ -1,0 +1,272 @@
+/*
+
+The CFR Nv Located at the Top of the Screen
+--------------------------------------------------------------------------------
+*/
+
+header {
+    display: flex;
+  
+    background: #fff;
+  
+    width: 100%;
+    height: 100px;
+  
+    text-transform: uppercase;
+    position:fixed;
+    z-index:1000;
+    box-shadow: 0px 15px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0px 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  header h1 {
+    font-size: 1.25em;
+    font-weight: normal;
+  
+    margin: 0;
+    padding: 5px;
+  
+    transition: font-size 0.2s;
+  }
+  
+  header a {
+    text-decoration: none;
+  }
+  
+  header a::after {
+    display: block;
+  
+    height: 1.5px;
+    width: 0%;
+    content: "";
+  
+    transition: width 0.2s;
+  }
+  
+  header a:hover::after {
+    width: 100%;
+  }
+  
+  header .nav-logo-container .logo {
+    max-width: 70px;
+    height: auto;
+    padding: 10px;
+  
+    transition: max-width 0.2s;
+  }
+  
+  header .nav-header-container {
+    display: flex;
+  
+    width: 66%;
+  }
+  
+  header .nav-header-container a:focus-visible .logo {
+    max-width: 75px;
+  
+    border: 2px dashed var(--grey2);
+    background-color: var(--grey1);
+  }
+  
+  header .nav-header-container a:hover .logo {
+    max-width: 75px;
+  }
+  
+  /* header .nav-header-container:hover h1{
+    font-size: 19px;
+  } */
+  
+  header .nav-header-container a:focus-visible h1 {
+    border: 2px dashed var(--grey2);
+  }
+  
+  header .nav-logo-container {
+    width: 120px;
+  
+    display: flex;
+    justify-content: center;
+  
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  header .nav-title-container {
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  header .nav-title {
+    width: 50%;
+    height: 100%;
+  }
+  
+  header .nav-container {
+    display: flex;
+  
+    width: 50%;
+    padding-right: 50px;
+  }
+  
+  header .menu-navigation-bar-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  header .nav-bar {
+    list-style-type: none;
+    display: flex;
+  
+    justify-content: space-around;
+  
+    margin: 0;
+    padding: 0;
+  
+    width: 100%;
+    height: 100%;
+  }
+  
+  header .nav-bar li {
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+  }
+  
+  header .nav-bar li a {
+    color: var(--grey2);
+  
+    text-decoration: none;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.25rem;
+  
+    transition: color 0.1s, font-size 0.1s;
+    transition-timing-function: ease-out;
+  }
+  
+  header .nav-bar li:hover a,
+  header .nav-bar li:focus-within a {
+    color: var(--grey4);
+    font-size: 1.27rem;
+  }
+  
+  header .nav-bar > li > a::after {
+    background: var(--grey2);
+  }
+  
+  header .nav-bar .current-menu-item > a::after,
+  header .nav-bar .current-menu-ancestor > a::after {
+    background: #fff !important;
+  }
+  
+  header .nav-bar > li:hover > a::after,
+  header .nav-bar > li > a:focus::after {
+    width: 100%;
+    background: var(--grey4);
+  }
+  
+  header .nav-bar .current-menu-item,
+  header .nav-bar .current-menu-ancestor {
+    background-color: var(--blue2);
+    height: 100%;
+    z-index: 10;
+  
+    filter: brightness(100%);
+  
+    transition: filter 0.1s;
+    transition-timing-function: ease-out;
+  }
+  
+  header .nav-bar li .sub-menu .current-menu-item:only-child {
+    border-radius: 0.5rem;
+  }
+  
+  header .nav-bar li .sub-menu .current-menu-item:first-child:not(:only-child) {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  
+  header .nav-bar li .sub-menu .current-menu-item:last-child:not(:only-child) {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  
+  header .nav-bar .current-menu-item:hover,
+  header .nav-bar .current-menu-ancestor:hover,
+  header .nav-bar .current-menu-item:focus-within,
+  header .nav-bar .current-menu-ancestor:focus-within {
+    background-color: var(--blue2);
+    filter: brightness(110%);
+  }
+  
+  header .nav-bar .current-menu-item:hover > a,
+  header .nav-bar .current-menu-ancestor:hover > a,
+  header .nav-bar li .sub-menu .current-menu-item:hover a,
+  header .nav-bar .current-menu-item:focus-within > a,
+  header .nav-bar .current-menu-ancestor:focus-within > a,
+  header .nav-bar li .sub-menu .current-menu-item:focus-within a {
+    color: #fff;
+  }
+  
+  header .nav-bar .current-menu-item > a,
+  header .nav-bar .current-menu-ancestor > a,
+  header .nav-bar li .sub-menu .current-menu-item a {
+    color: #fff;
+    font-weight: normal;
+  }
+  
+  header .nav-bar li .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+  
+    top: 90%;
+    width: 180px;
+  
+    margin: 0;
+    padding: 0;
+    border-radius: 0.5rem;
+  
+    background: #fff;
+  
+    list-style-type: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  header .nav-bar li .sub-menu a {
+    color: var(--grey2);
+    padding: 0.5rem;
+  
+    font-size: 13px;
+  
+    display: block;
+    text-decoration: none;
+  }
+  
+  header .nav-bar li .sub-menu a:hover,
+  header .nav-bar li .sub-menu a:focus-visible {
+    color: #000;
+  }
+  
+  header .nav-bar .menu-item-has-children:hover .sub-menu,
+  header .nav-bar .menu-item-has-children:focus-within .sub-menu {
+    display: block;
+  }
+  
+  .nav-bar-blue-rectangle {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 20px;
+  
+    background-color: var(--blue2);
+  }
+  
+  .page-wrap {
+    padding: 2rem 0; /* Padding between the navigation bar and the content */
+  }

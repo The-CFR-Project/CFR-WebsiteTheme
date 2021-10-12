@@ -1,0 +1,106 @@
+/*
+
+CFR Meet the Team Section
+--------------------------------------------------------------------------------
+*/
+
+#meet-the-team p {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  #meet-the-team h6 {
+    text-transform: lowercase;
+    color: var(--red5);
+  }
+  
+  #meet-the-team .small-row h6 {
+    font-size: 15px;
+  }
+  
+  #meet-the-team .large-row p {
+    color: var(--blue2);
+  }
+  
+  #meet-the-team .medium-row p {
+    color: var(--red3);
+  }
+  
+  #meet-the-team .large-row,
+  #meet-the-team .medium-row,
+  #meet-the-team .small-row {
+    justify-content: center;
+  }
+  
+  #meet-the-team .large-row,
+  #meet-the-team .medium-row {
+    padding-bottom: 50px;
+  }
+  
+  #meet-the-team .small-row {
+    padding-bottom: 20px;
+  }
+  
+  #meet-the-team .col-md-3 > div,
+  #meet-the-team .col-md-2 > div {
+    overflow: hidden;
+  
+    text-align: center;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  
+    transition: transform 0.1s;
+  }
+  
+  #meet-the-team .col-md-3 > div > div:first-child,
+  #meet-the-team .col-md-2 > div > div:first-child {
+    overflow: hidden;
+  }
+  
+  #meet-the-team .large-row .col-md-3 > div > div:first-child {
+    height: 300px;
+  }
+  
+  #meet-the-team .col-md-3:hover div,
+  #meet-the-team .col-md-2:hover div {
+    transform: scale(1.02);
+  }
+  
+  #meet-the-team .medium-row .col-md-3 > div > div:first-child {
+    height: 200px;
+  }
+  
+  #meet-the-team .small-row .col-md-2 > div > div:first-child {
+    height: 100px;
+  }
+  
+  #meet-the-team .col-md-3 > div > div:last-child {
+    height: 100px
+  }
+  
+  #meet-the-team .col-md-2 > div > div:last-child {
+    height: 50px
+  }
+  
+  #meet-the-team .col-md-3 > div > div:last-child,
+  #meet-the-team .col-md-2 > div > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  #meet-the-team .dp {
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }

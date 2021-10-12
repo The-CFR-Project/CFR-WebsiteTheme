@@ -1,0 +1,24 @@
+#blogs-archive-series {
+    height: fit-content;
+  }
+  
+  .blogs-series-container {
+    position: relative;
+    padding: 100px 10%;
+  }
+  
+  .blogs-series-heading {
+    text-align: center;
+    color: var(--red5);
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: lowercase;
+    margin-bottom: 50px;
+  }
+  
+  .blogs-series-name {
+    text-transform:capitalize;
+    color: var(--blue4);
+    font-weight: 600;
+    font-size: 2rem;
+  }

@@ -1,5 +1,5 @@
   <div class="header-slideshow-container">
-
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/home-banner.css"); </style>
   <?php
 
   $bannerItems = wp_get_nav_menu_items(get_nav_menu_locations()['home-banner']);

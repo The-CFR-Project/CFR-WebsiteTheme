@@ -4,6 +4,7 @@
 </div>
 
 <section>
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/404.css"); </style>
   <div class="main-404-container instawall-section-container container">
     <div class="row">
       <div class="col-md-6 align-self-center">

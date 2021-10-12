@@ -6,6 +6,7 @@ $doc = new DOMXPath( $doc );
 ?>
 
 <section id="fact-cards">
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/cards.css"); </style>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
       <?php echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";?>

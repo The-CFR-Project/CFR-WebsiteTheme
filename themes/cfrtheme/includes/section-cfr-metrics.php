@@ -6,7 +6,7 @@ $doc = new DOMXPath( $doc );
 ?>
 
 <section id="our-metrics">
-
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/aboutus-css/cfrmetrics.css"); </style>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
     <?php

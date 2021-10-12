@@ -1,0 +1,148 @@
+/*
+
+The CFR Home Page Aircraft Section Located below the Banner
+--------------------------------------------------------------------------------
+*/
+.home-post form {
+  justify-content: center;
+}
+
+.home-post input {
+  background-color: var(--blue1);
+  color: #fff;
+
+  margin: auto;
+  display: block;
+  padding: 10px 40px;
+
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+  text-transform: lowercase;
+
+  transition: background-color 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.home-post input:hover,
+.home-post input:focus-visible {
+  background-color: var(--blue2);
+}
+
+.home-post input:focus-visible {
+  outline: 2px dashed var(--blue4);
+}
+
+.home-post p {
+  display: inline;
+  line-height: 200%;
+
+  color: var(--grey3);
+}
+
+.home-post a {
+  text-transform: lowercase;
+
+  padding: 8px;
+  color: var(--blue2) !important;
+
+  float: right;
+}
+
+.home-post img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.home-post a::after {
+  background: var(--blue2);
+  margin-top: 0px;
+  height: 1px;
+}
+
+.home-post .full-row {
+  width: 90%;
+  height: 130px;
+  position: relative;
+
+  margin-bottom: 70px;
+}
+
+.home-post .full-row div {
+  width: 100%;
+}
+
+.home-post .full-row img {
+  width: 120px;
+
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.home-post .col-md-6 {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.home-post .col-md-6 img {
+  display: block;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 20px;
+
+  height: 130%;
+  max-height: 470px;
+  min-height: 400px;
+
+  transition: height 0.2s, max-height 0.2s;
+}
+
+.home-post .col-md-6 a div {
+  position: absolute;
+
+  height: 40%;
+  max-height: 138px;
+  width: 150px;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  z-index: 1;
+
+  transform: translateX(22%);
+}
+
+.home-post .col-md-6 > div:hover + img,
+.home-post .col-md-6 > div:focus-within + img {
+  height: 140%;
+  max-height: 490px;
+}
+
+.home-post .col-md-6 > div:focus-within + img {
+  border: 2px dashed var(--grey2);
+}
+
+.home-post .col-para {
+  padding-right: 17%;
+}
+
+.home-post .col-para a:focus-visible {
+  border: 2px dashed var(--grey2);
+}
+
+.home-post .row .background-image img {
+  position: absolute;
+
+  z-index: -1;
+  left: 10px;
+  top: -130px;
+  width: 80%;
+}

@@ -1,0 +1,25 @@
+/*
+
+CFR About Us Page, About CFR Section
+--------------------------------------------------------------------------------
+*/
+
+#about-cfr {
+    font-size: 20px;
+  }
+  
+  .about-cfr-container {
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .about-cfr-container h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+  
+  .about-cfr-container img {
+    width: 100%;
+    padding-left: 50px;
+  }

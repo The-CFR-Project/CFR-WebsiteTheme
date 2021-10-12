@@ -6,6 +6,8 @@ $doc = new DOMXPath( $doc );
 ?>
 
 <section id="meet-the-team">
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/aboutus-css/meettheteam.css"); </style>
+
   <div class="meet-the-team-container container">
 
     <div class="heading-container">
