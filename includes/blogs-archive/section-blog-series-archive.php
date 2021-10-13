@@ -26,34 +26,39 @@
                     foreach ( $posts as $post ) : //Loops over all the posts
                         setup_postdata( $post ); 
                         if (get_post_meta($post->ID, 'blog_id', true) == 1): ?>
-                            <div class="row">
-                                <div class="col-lg-3">
+                            <div class="row blog-series-first-container">
+                                <div class="col-lg-4 blog-series-first-tn">
                                     <?php if(has_post_thumbnail()): ?>
                                         <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
                                     <?php endif; ?>
                                 </div>
-                                <div class="col-lg-9">
-                                    <?php the_title() ?> 
+                                <div class="col-lg-8 blog-series-first-text">
+                                    <?php echo '<h3>Part '.get_post_meta($post->ID, 'blog_id', true).' | '; echo the_title()."</h3>";?> 
                                     <?php the_excerpt(); ?>
-                                    <?php get_post_meta($post->ID, 'blog_id', true); // Gets the Blog ID?>
+                                    
                                     <a href=" <?php the_permalink() ?>">Read More</a>
                                 </div>
                             </div>
                         
                     <?php endif; endforeach;?>
-                    <div class="row" style='display:flex; justify-content:center;'>
-                    <?php
-                    foreach ( $posts as $post ) : 
-                        if (get_post_meta($post->ID, 'blog_id', true) != 1): ?>
-                            <div class="col-lg-<?php echo floor(12/($totalPosts-1)); ?>">
-                                <?php if(has_post_thumbnail()): ?>
-                                    <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
-                                <?php endif; ?>
-                                 <?php the_title() ?> 
-                                <?php get_post_meta($post->ID, 'blog_id', true); // Gets the Blog ID?>
-                                <a href=" <?php the_permalink() ?>">Read More</a>
-                            </div>     
-                <?php endif; endforeach; 
+                    <div class="row blog-series-rest-container" style='display:flex; justify-content:center;'>
+                        <?php
+                        foreach ( $posts as $post ) : 
+                            if (get_post_meta($post->ID, 'blog_id', true) != 1): ?>
+                                <div class="col-lg-<?php echo floor(12/($totalPosts-1)); ?> blog-series-rest">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <?php if(has_post_thumbnail()): ?>
+                                                <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid blog-series-rest-img">
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="blog-series-rest-text col-lg-12">
+                                            <h3>Part <?php echo get_post_meta($post->ID, 'blog_id', true); ?> | <?php echo the_title(); ?></h3>
+                                            <a href=" <?php the_permalink() ?>">Read More</a>
+                                        </div>
+                                    </div>    
+                                </div>     
+                        <?php endif; endforeach; 
                     echo '</div>';
                 }
 
