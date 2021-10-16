@@ -1,6 +1,11 @@
 <!---------------------- Single Blog Page ---------------------->
 
-<div class="blogs-single-container">   
+<div class="blogs-single-container">  
+        <!-- <div id="sidebar-primary" class="sidebar">
+        <?php //if ( is_active_sidebar( 'general-sidebar' ) ) : ?>
+                <?php //dynamic_sidebar( 'general-sidebar' ); ?>
+        <?php //endif; ?>
+        </div>  -->
     <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-single.css"); </style>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

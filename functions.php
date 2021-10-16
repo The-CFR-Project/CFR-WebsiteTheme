@@ -50,10 +50,10 @@ register_nav_menus(
 function my_sidebars() {
   register_sidebar(
     array (
-      'name' => 'Blogs Archive Sidebar',
-      'id' => 'blogs-archive-sidebar',
-      'before-title' => '<h4 class="widget-title">',
-      'after-title' => '</h4>', 
+      'name' => 'General Sidebar',
+      'id' => 'general-sidebar',
+      'before-title' => '<h4 class="sidebar-title">',
+      'after-title' => '</h4>',   
     )
     );
 }

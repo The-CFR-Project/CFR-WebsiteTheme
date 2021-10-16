@@ -5,7 +5,7 @@ $doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
 $doc = new DOMXPath( $doc );
 ?>
 
-<section>
+<section id='faqs'>
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/faqs.css"); </style>
   <div class="faq-container container-fluid">
 

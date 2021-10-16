@@ -8,7 +8,7 @@
   foreach ( $bannerItems as $navItem ) {
   ?>
     <div class="header-slide quick-fade">
-      <img src="<?php echo get_template_directory_uri();?>/images/header-slideshow-image<?php echo $i?>.jpg">
+      <img src="<?php echo get_template_directory_uri();?>/images/header-slideshow-image<?php echo $i?>.jpeg">
 
       <div>
         <h3><?php echo $navItem->title;?></h3>
