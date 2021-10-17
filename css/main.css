@@ -5,61 +5,61 @@
 } */
 
 :root {
-  --grey1: #f0f0f0;
-  --grey2: #ccc;
-  --grey3: #999;
-  --grey4: #666;
-  --grey5: #333;
-  --grey6: #282828;
+	--grey1: #f0f0f0;
+	--grey2: #ccc;
+	--grey3: #999;
+	--grey4: #666;
+	--grey5: #333;
+	--grey6: #282828;
 
-  --blue1: #b6e2df;
-  --blue2: #35b0ab;
-  --blue3: #246b81;
-  --blue4: #004c65;
+	--blue1: #b6e2df;
+	--blue2: #35b0ab;
+	--blue3: #246b81;
+	--blue4: #004c65;
 
-  --green1: #515760;
+	--green1: #515760;
 
-  --red1: #f7b595;
-  --red2: #f67280;
-  --red3: #c06c84;
-  --red4: #6f5980;
-  --red5: #3d2451;
+	--red1: #f7b595;
+	--red2: #f67280;
+	--red3: #c06c84;
+	--red4: #6f5980;
+	--red5: #3d2451;
 
-  --yellow1: #ffcc66;
+	--yellow1: #ffcc66;
 }
 
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 :focus-visible {
-  outline: none;
-  border: none;
+	outline: none;
+	border: none;
 }
 
 h1 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 h6 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 20px;
+	margin: 0;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 p {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 section:nth-child(odd) {
-  background-color: var(--grey1);
+	background-color: var(--grey1);
 }
 
 /*
@@ -69,79 +69,79 @@ Specific General Theme CSS
 */
 
 .red1 {
-  color: var(--red1);
+	color: var(--red1);
 }
 
 .red2 {
-  color: var(--red2);
+	color: var(--red2);
 }
 
 .red3 {
-  color: var(--red3);
+	color: var(--red3);
 }
 
 .red4 {
-  color: var(--red4);
+	color: var(--red4);
 }
 
 .red5 {
-  color: var(--red5);
+	color: var(--red5);
 }
 
 .blue1 {
-  color: var(--blue1);
+	color: var(--blue1);
 }
 
 .blue2 {
-  color: var(--blue2);
+	color: var(--blue2);
 }
 
 .blue3 {
-  color: var(--blue3);
+	color: var(--blue3);
 }
 
 .blue4 {
-  color: var(--blue4);
+	color: var(--blue4);
 }
 
 .blue5 {
-  color: var(--blue5);
+	color: var(--blue5);
 }
 
 .blue1 {
-  color: var(--grey1);
+	color: var(--grey1);
 }
 
 .grey2 {
-  color: var(--grey2);
+	color: var(--grey2);
 }
 
 .grey3 {
-  color: var(--grey3);
+	color: var(--grey3);
 }
 
 .grey4 {
-  color: var(--grey4);
+	color: var(--grey4);
 }
 
 .grey5 {
-  color: var(--grey5);
+	color: var(--grey5);
 }
 
 .green1 {
-  color: var(--green1);
+	color: var(--green1);
 }
 
 .text-justify {
-  text-align: justify;
+	text-align: justify;
 }
 
 .lowercase {
-  text-transform: lowercase;
+	text-transform: lowercase;
 }
 
 .uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 /*
@@ -151,119 +151,2200 @@ Layout General Theme CSS
 */
 
 .container-border-components {
-  height: 645px;
-  position: relative;
-  overflow: hidden;
+	height: 645px;
+	position: relative;
+	overflow: hidden;
 }
 
 .container-border-components .border-components-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: absolute;
 
-  height: 100%;
-  width: 100%;
-  top: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
 }
 
 .container-border-components .middle-row {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .container-border-components .edge-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
 }
 
 .container-border-components .full-row {
-  width: 100%;
+	width: 100%;
 }
 
 .container-border-components .full-row > img {
-  width: 100%;
+	width: 100%;
 }
 
 .container-border-components .edge-row .middle-col {
-  min-width: 200px;
+	min-width: 200px;
 }
 
 .container-border-components .middle-row .middle-col {
-  min-width: 45%;
-  max-width: 65%;
-  min-height: 360px;
+	min-width: 45%;
+	max-width: 65%;
+	min-height: 360px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
-  position: relative;
-  text-align: center;
+	position: relative;
+	text-align: center;
 }
 
+/*
+
+The CFR Nv Located at the Top of the Screen
+--------------------------------------------------------------------------------
+*/
+
+header {
+	display: flex;
+
+	background: #fff;
+
+	width: 100%;
+	height: 100px;
+
+	text-transform: uppercase;
+	position:fixed;
+	z-index:1000;
+	box-shadow: 0px 15px rgba(255, 255, 255, 0.4);
+	-webkit-box-shadow: 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+header h1 {
+	font-size: 1.25em;
+	font-weight: normal;
+
+	margin: 0;
+	padding: 5px;
+
+	transition: font-size 0.2s;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header a::after {
+	display: block;
+
+	height: 1.5px;
+	width: 0%;
+	content: "";
+
+	transition: width 0.2s;
+}
+
+header a:hover::after {
+	width: 100%;
+}
+
+header .nav-logo-container .logo {
+	max-width: 70px;
+	height: auto;
+	padding: 10px;
+
+	transition: max-width 0.2s;
+}
+
+header .nav-header-container {
+	display: flex;
+
+	width: 66%;
+}
+
+header .nav-header-container a:focus-visible .logo {
+	max-width: 75px;
+
+	border: 2px dashed var(--grey2);
+	background-color: var(--grey1);
+}
+
+header .nav-header-container a:hover .logo {
+	max-width: 75px;
+}
+
+/* header .nav-header-container:hover h1{
+	font-size: 19px;
+} */
+
+header .nav-header-container a:focus-visible h1 {
+	border: 2px dashed var(--grey2);
+}
+
+header .nav-logo-container {
+	width: 120px;
+
+	display: flex;
+	justify-content: center;
+
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+header .nav-title-container {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header .nav-title {
+	width: 50%;
+	height: 100%;
+}
+
+header .nav-container {
+	display: flex;
+
+	width: 50%;
+	padding-right: 50px;
+}
+
+header .menu-navigation-bar-container {
+	width: 100%;
+	height: 100%;
+}
+
+header .nav-bar {
+	list-style-type: none;
+	display: flex;
+
+	justify-content: space-around;
+
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+	height: 100%;
+}
+
+header .nav-bar li {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+}
+
+header .nav-bar li a {
+	color: var(--grey2);
+
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.25rem;
+
+	transition: color 0.1s, font-size 0.1s;
+	transition-timing-function: ease-out;
+}
+
+header .nav-bar li:hover a,
+header .nav-bar li:focus-within a {
+	color: var(--grey4);
+	font-size: 1.27rem;
+}
+
+header .nav-bar > li > a::after {
+	background: var(--grey2);
+}
+
+header .nav-bar .current-menu-item > a::after,
+header .nav-bar .current-menu-ancestor > a::after {
+	background: #fff !important;
+}
+
+header .nav-bar > li:hover > a::after,
+header .nav-bar > li > a:focus::after {
+	width: 100%;
+	background: var(--grey4);
+}
+
+header .nav-bar .current-menu-item,
+header .nav-bar .current-menu-ancestor {
+	background-color: var(--blue2);
+	height: 100%;
+	z-index: 10;
+
+	filter: brightness(100%);
+
+	transition: filter 0.1s;
+	transition-timing-function: ease-out;
+}
+
+header .nav-bar li .sub-menu .current-menu-item:only-child {
+	border-radius: 0.5rem;
+}
+
+header .nav-bar li .sub-menu .current-menu-item:first-child:not(:only-child) {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+header .nav-bar li .sub-menu .current-menu-item:last-child:not(:only-child) {
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+header .nav-bar .current-menu-item:hover,
+header .nav-bar .current-menu-ancestor:hover,
+header .nav-bar .current-menu-item:focus-within,
+header .nav-bar .current-menu-ancestor:focus-within {
+	background-color: var(--blue2);
+	filter: brightness(110%);
+}
+
+header .nav-bar .current-menu-item:hover > a,
+header .nav-bar .current-menu-ancestor:hover > a,
+header .nav-bar li .sub-menu .current-menu-item:hover a,
+header .nav-bar .current-menu-item:focus-within > a,
+header .nav-bar .current-menu-ancestor:focus-within > a,
+header .nav-bar li .sub-menu .current-menu-item:focus-within a {
+	color: #fff;
+}
+
+header .nav-bar .current-menu-item > a,
+header .nav-bar .current-menu-ancestor > a,
+header .nav-bar li .sub-menu .current-menu-item a {
+	color: #fff;
+	font-weight: normal;
+}
+
+header .nav-bar li .sub-menu {
+	display: none;
+	position: absolute;
+	z-index: 10;
+
+	top: 90%;
+	width: 180px;
+
+	margin: 0;
+	padding: 0;
+	border-radius: 0.5rem;
+
+	background: #fff;
+
+	list-style-type: none;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .nav-bar li .sub-menu a {
+	color: var(--grey2);
+	padding: 0.5rem;
+
+	font-size: 13px;
+
+	display: block;
+	text-decoration: none;
+}
+
+header .nav-bar li .sub-menu a:hover,
+header .nav-bar li .sub-menu a:focus-visible {
+	color: #000;
+}
+
+header .nav-bar .menu-item-has-children:hover .sub-menu,
+header .nav-bar .menu-item-has-children:focus-within .sub-menu {
+	display: block;
+}
+
+.nav-bar-blue-rectangle {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 20px;
+
+	background-color: var(--blue2);
+}
+
+.page-wrap {
+	padding: 2rem 0; /* Padding between the navigation bar and the content */
+}
+
+/*
+
+The CFR Banner Slideshow Located at the Top of the Screen
+--------------------------------------------------------------------------------
+*/
+
+.header-slideshow-container {
+	margin: 100px 0 50px;
+	width: 100%;
+	position: relative;
+	justify-content: center;
+}
+
+.header-slideshow-container img {
+	width: 100%;
+}
+
+.header-slideshow-container h3 {
+	margin-bottom: 30px;
+
+	text-transform: uppercase;
+	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+	font-size: 2.5em;
+	font-weight: 700;
+
+	color: #fff;
+}
+
+.header-slideshow-container input {
+	display: inline-block;
+
+	background-color: #fff;
+	color: var(--grey3);
+
+	width: 150px;
+	justify-content: center;
+	padding: 5px 0;
+
+	border-radius: 20px;
+	border: none;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+	transition: color 0.2s, background-color 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.header-slideshow-container input:hover {
+	color: var(--blue3);
+}
+
+.header-slideshow-container input:focus-visible {
+	background-color: var(--blue2);
+	outline: 2px dashed #fff;
+	color: #fff !important;
+}
+
+.header-slideshow-container .header-slide {
+	display: none;
+}
+
+.header-slideshow-container .header-slide > div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 110px;
+	text-align: center;
+}
+
+.header-slideshow-container .prev-slide,
+.header-slideshow-container .next-slide {
+	position: absolute;
+	top: 50%;
+
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+
+	cursor: pointer;
+	user-select: none;
+
+	color: white;
+	border-radius: 0 10px 10px 0;
+
+	font-weight: bold;
+	font-size: 2rem;
+	text-decoration: none;
+
+	transition: background-color 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.header-slideshow-container .next-slide {
+	right: 0;
+	border-radius: 10px 0 0 10px;
+}
+
+.header-slideshow-container .prev-slide:hover,
+.header-slideshow-container .next-slide:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-slideshow-container .slideshow-dots-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.header-slideshow-container .header-slideshow-dot {
+	margin: 10px 5px;
+	display: inline-block;
+
+	height: 1rem;
+	width: 1rem;
+
+	border: none;
+
+	cursor: pointer;
+
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+
+	transition: background-color 0.1s, width 0.2s, height 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.header-slideshow-dot-active,
+.header-slideshow-container .header-slideshow-dot:hover {
+	background-color: #fff !important;
+}
+
+.header-slideshow-container .header-slideshow-dot:focus-visible {
+	background-color: var(--blue2) !important;
+	outline: 2px dashed #fff;
+
+	height: 1.2rem;
+	width: 1.2rem;
+}
+
+/* Fading animation */
+.quick-fade {
+	-webkit-animation-name: quick-fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: quick-fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes quick-fade {
+	from {
+		opacity: 0.7;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes quick-fade {
+	from {
+		opacity: 0.7;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/*
+
+The CFR Home Page Aircraft Section Located below the Banner
+--------------------------------------------------------------------------------
+*/
+
 section:nth-child(odd) .heading-container {
-  height: 200px;
+	height: 200px;
 }
 
 section:nth-child(even) .heading-container {
-  height: 300px;
+	height: 300px;
 }
 
 .heading-container {
-  text-align: center;
-  font-weight: 700;
+	text-align: center;
+	font-weight: 700;
 
-  position: relative;
+	position: relative;
 }
 
 .heading-container img {
-  position: absolute;
+	position: absolute;
 
-  user-select: none;
+	user-select: none;
 
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 63%;
-  text-align: center;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 63%;
+	text-align: center;
 }
 
 .heading-overlay,
 .heading-watermark {
-  position: absolute;
+	position: absolute;
 
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .heading-watermark {
-  text-transform: uppercase;
-  user-select: none;
-  color: var(--grey1);
+	text-transform: uppercase;
+	user-select: none;
+	color: var(--grey1);
 
-  font-size: 200px;
+	font-size: 200px;
 }
 
 .heading-overlay {
-  text-transform: lowercase;
-  font-size: 30px;
+	text-transform: lowercase;
+	font-size: 30px;
 
-  z-index: 8;
+	z-index: 8;
 }
 
 section:nth-child(odd) .heading-overlay {
-  color: var(--red4);
+	color: var(--red4);
 }
 
 section:nth-child(even) .heading-overlay {
-  color: var(--blue3);
+	color: var(--blue3);
 }
 
+.home-post form {
+	justify-content: center;
+}
+
+.home-post input {
+	background-color: var(--blue1);
+	color: #fff;
+
+	margin: auto;
+	display: block;
+	padding: 10px 40px;
+
+	border-radius: 20px;
+	border: none;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+
+	text-transform: lowercase;
+
+	transition: background-color 0.2s;
+	transition-timing-function: ease-out;
+}
+
+.home-post input:hover,
+.home-post input:focus-visible {
+	background-color: var(--blue2);
+}
+
+.home-post input:focus-visible {
+	outline: 2px dashed var(--blue4);
+}
+
+.home-post p {
+	display: inline;
+	line-height: 200%;
+
+	color: var(--grey3);
+}
+
+.home-post a {
+	text-transform: lowercase;
+
+	padding: 8px;
+	color: var(--blue2) !important;
+
+	float: right;
+}
+
+.home-post img {
+	pointer-events: none;
+	user-select: none;
+}
+
+.home-post a::after {
+	background: var(--blue2);
+	margin-top: 0px;
+	height: 1px;
+}
+
+.home-post .full-row {
+	width: 90%;
+	height: 130px;
+	position: relative;
+
+	margin-bottom: 70px;
+}
+
+.home-post .full-row div {
+	width: 100%;
+}
+
+.home-post .full-row img {
+	width: 120px;
+
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.home-post .col-md-6 {
+	margin-bottom: 100px;
+	position: relative;
+}
+
+.home-post .col-md-6 img {
+	display: block;
+	position: absolute;
+
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding: 20px;
+
+	height: 130%;
+	max-height: 470px;
+	min-height: 400px;
+
+	transition: height 0.2s, max-height 0.2s;
+}
+
+.home-post .col-md-6 a div {
+	position: absolute;
+
+	height: 40%;
+	max-height: 138px;
+	width: 150px;
+
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+
+	z-index: 1;
+
+	transform: translateX(22%);
+}
+
+.home-post .col-md-6 > div:hover + img,
+.home-post .col-md-6 > div:focus-within + img {
+	height: 140%;
+	max-height: 490px;
+}
+
+.home-post .col-md-6 > div:focus-within + img {
+	border: 2px dashed var(--grey2);
+}
+
+.home-post .col-para {
+	padding-right: 17%;
+}
+
+.home-post .col-para a:focus-visible {
+	border: 2px dashed var(--grey2);
+}
+
+.home-post .row .background-image img {
+	position: absolute;
+
+	z-index: -1;
+	left: 10px;
+	top: -130px;
+	width: 80%;
+}
+
+/*
+
+The CFR Home Page Cards Section Located below the Aircrafts Section
+--------------------------------------------------------------------------------
+*/
+
+.magic-ball-container {
+	width: 100px;
+}
+
+.cards-heading {
+	margin-top: -10px;
+}
+
+.cards-bg-border {
+	width: 400px;
+}
+
+.cards-bg-stationary {
+	width: 150px;
+}
+
+.fact-card-display {
+	width: 240px;
+	background-color: white;
+	height: 100%;
+	border-left: 1px solid #ccc;
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+	border-radius: 30px;
+
+	position: absolute;
+	transition: all 0.2s ease-in-out;
+	transform: translateX(0px);
+	top: 10%;
+
+	display: none;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 110px;
+
+	animation: fadeIn ease 0.5s;
+	-webkit-animation: fadeIn ease 0.5s;
+	-moz-animation: fadeIn ease 0.5s;
+	-o-animation: fadeIn ease 0.5s;
+	-ms-animation: fadeIn ease 0.5s;
+}
+
+.magic-ball-container {
+	width: 100px;
+}
+
+div#\38 -dis-card.fact-card-display {
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+@media (max-width: 540px) {
+	.magic-ball-container {
+		display: none;
+	}
+
+	.cards-bg-discs {
+		display: none;
+	}
+
+	#fact-cards .middle-col {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.fact-card-display {
+		display: flex;
+	}
+
+	div#\31 -dis-card {
+		left: 0%;
+	}
+
+	div#\32 -dis-card {
+		left: 13%;
+	}
+
+	div#\33 -dis-card {
+		left: 26%;
+	}
+
+	div#\34 -dis-card {
+		left: 39%;
+	}
+
+	div#\35 -dis-card {
+		left: 52%;
+	}
+
+	div#\36 -dis-card {
+		left: 65%;
+	}
+
+	div#\37 -dis-card {
+		left: 78%;
+	}
+
+	div#\38 -dis-card.fact-card-display {
+		left: 91%;
+	}
+
+	.fact-card-open {
+		margin-left: -175px;
+	}
+}
+
+@media (min-width: 992px) {
+	.fact-card-open {
+		margin-left: -170px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.fact-card-open {
+		margin-left: -155px;
+	}
+}
+
+.fact-card-display:hover {
+	top: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.fact-card-hidden {
+	display: none;
+}
+
+.fact-card-fall {
+	/* falls down to disappear */
+	z-index: 4;
+	transform: translate(0, 400px);
+	transition: all 0.2s ease-in-out;
+}
+
+.fact-card-drop {
+	/* falls down to appear */
+	background-color: #000;
+}
+
+.card-suits {
+	color: transparent;
+	position: absolute;
+	font-size: 50px;
+	top: 10px;
+	left: 10px;
+	opacity: 0.8;
+}
+
+.card-suits-down {
+	opacity: 0.8;
+	color: transparent;
+	position: absolute;
+	font-size: 50px;
+	bottom: 0;
+	right: 10px;
+	transform: scale(1, -1);
+}
+
+.card-bg-logo {
+	width: 75px;
+	height: auto;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+
+.card-heading {
+	text-shadow: 1px 1px #eee;
+	font-weight: 700;
+	font-size: 120%;
+}
+
+.card-content {
+	font-size: 14px;
+	color: #999;
+	padding: 20px 0 0;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*
+
+The CFR FAQs Section Located above the Instagram Wall
+--------------------------------------------------------------------------------
+*/
+
+.faq-container {
+	width: 80%;
+	z-index: 10s;
+
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.faq-accordion-item {
+	display: flex;
+	align-items: center;
+
+	background-color: var(--grey1);
+	border-radius: 20px;
+
+	margin-bottom: 40px;
+}
+
+.faq-accordion-checkbox {
+	display: none;
+}
+
+.faq-accordion-link {
+	color: var(--grey3);
+	cursor: pointer;
+
+	width: 100%;
+	min-height: 80px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 10px 40px;
+	margin: 0;
+	transition: all 0.2s ease;
+}
+
+.faq-accordion-link .plus-icon,
+.faq-accordion-link .minus-icon {
+	transition: all 0.2s ease;
+}
+
+.faq-accordion-link:hover {
+	color: var(--grey6);
+}
+
+.faq-accordion-link:hover .plus-icon,
+.faq-accordion-link:hover .minus-icon {
+	filter: brightness(130%);
+	transform: scale(130%);
+}
+
+.faq-accordion-link .minus-icon {
+	display: none;
+}
+
+.faq-answer {
+	overflow: hidden;
+	max-height: 0;
+
+	position: relative;
+	background-color: #fff;
+	line-height: 32px;
+
+	transition: max-height 0.5s ease;
+}
+
+.faq-accordion-checkbox:checked + label > .faq-answer {
+	max-height: 400px !important;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link {
+	color: var(--blue2);
+	font-weight: 600;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link .minus-icon {
+	display: block;
+}
+
+.faq-accordion-checkbox:checked + label .faq-accordion-link .plus-icon {
+	display: none;
+}
+
+.faq-answer::before {
+	content: "";
+	background-color: var(--blue2);
+
+	position: absolute;
+	width: 5px;
+	height: 90%;
+	top: 50%;
+	left: 0;
+
+	transform: translateY(-50%);
+}
+
+.faq-answer p {
+	color: var(--grey4);
+
+	width: 90%;
+	padding: 20px 40px;
+	margin: 0;
+}
+
+/*
+
+The CFR Social Media Insta Wall Located above the Footer
+--------------------------------------------------------------------------------
+*/
+.instawall-section-container {
+	position: relative;
+}
+
+.instawall-section-container .heading-container {
+	height: 150px;
+}
+
+.instawall-section-container #sbi_images :focus {
+	outline: 2px dashed var(--grey6) !important;
+}
+
+.instawall-section-container #sbi_load {
+	margin-bottom: -100%;
+	z-index: 10;
+}
+
+.instawall-section-container .sb_instagram_header {
+	display: none;
+}
+
+.instawall-section-container .sbi_load_btn,
+.instawall-section-container .sbi_follow_btn {
+	z-index: inherit;
+	transition: box-shadow 0.2s ease-out !important;
+}
+
+.instawall-section-container .sbi_load_btn:hover,
+.instawall-section-container .sbi_load_btn:focus-visible {
+	box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 5%) !important;
+}
+
+.instawall-section-container .sbi_follow_btn a:hover,
+.instawall-section-container .sbi_follow_btn a:focus-visible {
+	box-shadow: inset 0 0 20px 20px rgb(255, 255, 255, 20%) !important;
+}
+
+.instawall-section-container .sbi_load_btn:focus-visible,
+.instawall-section-container .sbi_follow_btn a:focus-visible {
+	outline: 2px dashed #fff !important;
+}
+
+.instawall-section-container .sbi_follow_btn a {
+	background: var(--blue2) !important;
+}
+
+.instawall-section-container .sbi_follow_btn {
+	position: relative;
+}
+
+/*
+
+The CFR 404 Page
+--------------------------------------------------------------------------------
+*/
+
+.main-404-container {
+	width: 60%;
+	padding-top: 50px;
+	padding-bottom: 200px;
+	margin-top: 100px;
+}
+
+.main-404-container h1 {
+	font-size: 80px;
+	font-weight: 900;
+}
+
+.main-404-container p {
+	font-size: 20px;
+	text-align: center;
+}
+
+.main-404-container .row {
+	justify-content: center;
+	align-items: center;
+}
+
+.main-404-container .col-md-6 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 70%;
+}
+
+.main-404-container .col-md-6:last-child {
+	flex-direction: column;
+}
+
+.main-404-container .col-md-6:last-child div:last-child {
+	width: 70%;
+}
+
+.beagle {
+	width: 100%;
+	min-width: 220px;
+}
+
+@media (min-width: 768px) {
+	.main-404-container .col-md-6 {
+		width: 50%;
+	}
+
+	.main-404-container .col-md-6:last-child {
+		align-items: flex-start;
+	}
+
+	.main-404-container p {
+		text-align: justify;
+	}
+
+	.main-404-container .col-md-6:last-child div:last-child {
+		width: 100%;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/*
+
+The CFR Blogs Archive (Page when Blogs is clicked from the navbars)
+--------------------------------------------------------------------------------
+*/
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Archive Carousel */
+
+.archive-carousel-slides-container {
+	height: auto;
+	position: relative;
+	margin: 100px 0;
+}
+
+.archive-carousel-slides {
+	height: 650px;
+	position: relative;
+	color: #fff;
+}
+
+.archive-carousel-slide {
+	position: absolute;
+	height: auto;
+	width: 100%;
+	padding: 10% 10% 2%;
+
+	animation: fadeIn ease 1s;
+	-webkit-animation: fadeIn ease 1s;
+	-moz-animation: fadeIn ease 1s;
+	-o-animation: fadeIn ease 1s;
+	-ms-animation: fadeIn ease 1s;
+}
+
+.blogs-archive-slide-text {
+	z-index: 999;
+	position: relative;
+	text-shadow: 1px 1px var(--grey);
+}
+
+.archive-carousel-slide h1 {
+	font-weight: 700;
+	margin: 0 0 50px 0;
+	font-size: 4rem;
+	width: 80%;
+}
+
+.archive-carousel-slide p {
+	width: 50%;
+	min-width: 300px;
+	margin: 0 0 30px 0;
+	font-size: 1.5rem;
+}
+
+
+.archive-carousel-slide a {
+	color: #fff;
+	z-index: 2;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.blogs-carousel-readmore-arrow {
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid var(--grey1);
+	height: 0;
+	width: 0;
+	margin-left: 10px;
+}
+
+.archive-carousel-prevbtn,
+.archive-carousel-nextbtn {
+	position: absolute;
+	top: 45%;
+	font-size: 2rem;
+	margin: 0 20px;
+	color: #fff;
+	opacity: 0.5;
+	z-index: 2;
+}
+
+.archive-carousel-prevbtn:hover,
+.archive-carousel-nextbtn:hover {
+	color: #fff;
+	opacity: 1;
+	cursor:pointer;
+
+} 
+
+.archive-carousel-nextbtn {
+	right: 0;
+	border-radius: 10px 0 0 10px;
+}
+
+.archive-carousel-slide-indicators {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+}
+
+.archive-carousel-slide-indicator {
+	margin: 10px 5px;
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	opacity: 0.5;
+	background-color: #fff;
+	justify-content: center;
+}
+
+.archive-carousel-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	min-width: 700px;
+}
+
+
+/* Latest Blogs */
+
+#blogs-archive-latest {
+	padding: 0 100px 100px;
+}
+
+.blogs-archive-post {
+	padding-bottom: 100px;
+	border-bottom: 3px solid var(--grey3);
+}
+
+.blogs-archive-permalink,
+.blogs-archive-permalink:hover {
+	color: var(--grey5);
+}
+
+.blogs-archive-post-latest {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 50px;
+}
+
+.blogs-archive-post-latest-tn{
+	width: 60%;
+	height: auto;
+	margin-left: 10%;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blogs-archive-post-latest-excerpt {
+	height: auto;
+	width: 40%;
+	min-width: 400px;
+	background-color: var(--grey1);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+	position:relative;
+	left: -10%;
+	padding: 10px 25px 10px 50px;
+	line-height: 50px;
+	text-transform: uppercase;
+}
+
+.blogs-archive-post-latest-excerpt h3 {
+	font-size: 300%;
+	font-weight:500;
+	margin: 10px 0 20px;
+}
+
+.blogs-archive-post-latest-excerpt p {
+	font-size: 150%;
+	font-weight: 200;
+} 
+
+.blogs-archive-post-grid {
+	padding-left: 5%;
+	line-height: 50px;
+}
+
+.blogs-archive-post-grid img {
+	width: 90%;
+	height: 200px;
+	margin-top: 40px;
+	
+}
+
+.blogs-archive-post-text {
+	width: 100%;
+	padding-right: 5px;
+	position: relative;
+	word-wrap:break-word;
+}
+
+.blogs-archive-post-grid h3 {
+	padding-top: 20px;
+	color: var(--grey5);
+	font-size: 24px;
+	position: relative;
+}
+
+.blogs-archive-post-grid p {
+	color: var(--blue2);
+	font-size: 18px;
+	font-weight: 500;
+}
+
+
+/* Blogs Archive Sidebar	*/
+
+.blogs-archive-sidebar{
+	position: relative;
+	padding: 30px 0 50px;
+	display: flex;
+	
+	z-index: 2;
+}
+
+.blogs-sidebar-socials-icons{
+	width: fit-content;
+	height: fit-content;
+	border-right: 2px solid var(--grey3);
+	display: grid;
+}
+
+.blogs-sidebar-socials-icon{
+	transform: scale(1.5);
+	margin: 0 40px;
+	padding: 15px 0;
+}
+
+.blogs-sidebar-blogs {
+	width: 100%;
+	padding: 0 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.blogs-sidebar-blogs-title{
+	padding-left: 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 26px;
+}
+
+.blogs-sidebar-blogs-blog {
+	padding: 10px;
+}
+
+.blogs-sidebar-blogs-blog h3 {
+	font-weight: 500;
+	color: var(--grey6);
+	padding-bottom: 10px;
+}
+
+.blogs-sidebar-blogs-blog p {
+	font-weight: 500;
+	font-size: 22px;
+}
+
+
+/*
+
+The CFR Blogs Single Page (Page when a specific blog is clicked from the archive)
+--------------------------------------------------------------------------------
+*/
+
+.blogs-single-container {
+	margin: 100px 0;
+	padding: 100px 200px;
+	background-color: var(--grey1);
+}
+
+/*
+
+The CFR Footer Located at the bottom
+--------------------------------------------------------------------------------
+*/
+
+.bedrock-container {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.bedrock-img {
+	width: 100%;
+	min-width: 600px;
+	height: 400px;
+	position: absolute;
+
+	bottom: -100px;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+@media (min-width: 768px) {
+
+}
+
+#footer-container {
+	width: 100%;
+}
+
+.full-search-container {
+	height: 300px;
+	background-color: var(--grey6);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-search-container form {
+	height: 60px;
+	width: 70%;
+}
+
+.full-search-container form input {
+	height: 100%;
+	width: 90%;
+
+	padding-left: 20px;
+	float: left;
+
+	background-color: #fff;
+
+	border-radius: 30px 0 0 30px;
+	outline-offset: 10px;
+	border: none;
+}
+
+.full-search-container form input::placeholder {
+	color: var(--grey2);
+	opacity: 1; /* Firefox */
+}
+
+.full-search-container form button {
+	border-radius: 0 30px 30px 0;
+	border: none;
+
+	margin-left: -10px;
+	outline-offset: 10px;
+	float: left;
+
+	height: 100%;
+	width: 10%;
+
+	background-color: var(--blue2);
+	color: var(--blue3);
+
+	transition: filter 0.2s ease-out;
+}
+
+.full-search-container form button img {
+	transition: filter 0.2s ease-out;
+}
+
+.full-search-container form button:hover,
+.full-search-container form button:focus-visible {
+	filter: brightness(110%);
+}
+
+.full-search-container form button:hover img,
+.full-search-container form button:focus-visible img {
+	filter: invert();
+}
+
+.full-search-container form button:focus-visible {
+	outline: 2px dashed #fff;
+}
+
+.full-search-container form button img {
+	height: 50%;
+}
+
+.menu-footer-menu-container {
+	background-color: var(--grey6);
+
+	height: 40px;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: auto;
+
+	width: 100%;
+	height: 100%;
+
+	text-transform: capitalize;
+	list-style-type: none;
+}
+
+.footer li {
+	margin: 0 10px;
+}
+
+.footer li a {
+	color: #fff;
+	transition: color 0.2s ease-out;
+	outline-offset: 5px;
+}
+
+.footer li:hover a {
+	color: var(--blue1);
+}
+
+.footer li a:focus-visible {
+	color: var(--blue1);
+	outline: 2px dashed #fff;
+}
+
+#footer-social-bar {
+	background-color: var(--blue3);
+	height: 60px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footer-social-bar img {
+	margin: 0 5px;
+	width: 30px;
+
+	transition: filter 0.2s ease-out;
+}
+
+#footer-social-bar a:hover img,
+#footer-social-bar a:focus img {
+	filter: invert();
+}
+
+#copyright-bar {
+	height: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--blue2);
+	color: var(--blue4);
+}
+
+/*
+
+CFR About Us Page, About CFR Section
+--------------------------------------------------------------------------------
+*/
+
+#about-cfr {
+	font-size: 20px;
+}
+
+.about-cfr-container {
+	margin-top: 100px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.about-cfr-container h1 {
+	font-size: 60px;
+	text-transform: uppercase;
+}
+
+.about-cfr-container img {
+	width: 100%;
+	padding-left: 50px;
+}
+
+/*
+
+CFR Metrics Section
+--------------------------------------------------------------------------------
+*/
+
+#our-metrics .col-md-4 {
+	width: 30%;
+}
+
+#our-metrics h4 {
+	font-size: 40px;
+	font-weight: 800;
+}
+
+#our-metrics .middle-col {
+	min-width: 80%;
+}
+
+#our-metrics .middle-row img {
+	width: 120%;
+	min-width: 150px;
+
+	transition: transform 0.2s ease-out;
+}
+
+#our-metrics .middle-row > div:last-child {
+	text-align: right;
+}
+
+#our-metrics .middle-row div:last-child img {
+	transform: rotate(-25deg) translate(62%, -35%);
+}
+
+#our-metrics .middle-row div:last-child img:hover {
+	transform: rotate(-40deg) translate(42%, -35%);
+}
+
+#our-metrics .middle-row div:first-child img {
+	transform: rotate(25deg) translateX(-20%);
+}
+
+#our-metrics .middle-row div:first-child img:hover {
+	transform: rotate(40deg) translateX(0%);
+}
+
+.our-metrics-container h4 {
+	font-size: 40px;
+}
+
+.our-metrics-container .col-md-4 {
+	display: flex;
+	flex-direction: column;
+
+	padding-bottom: 100px;
+
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/*
+
+CFR Our Story Section
+--------------------------------------------------------------------------------
+*/
+
+#our-story {
+	padding-bottom: 100px;
+}
+
+.our-story-container img {
+	width: 80%;
+}
+
+.our-story-container .row {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.our-story-container .col-md-5 {
+	display: flex;
+	justify-content: space-around;
+}
+
+/*
+
+CFR Meet the Team Section
+--------------------------------------------------------------------------------
+*/
+
+#meet-the-team p {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#meet-the-team h6 {
+	text-transform: lowercase;
+	color: var(--red5);
+}
+
+#meet-the-team .small-row h6 {
+	font-size: 15px;
+}
+
+#meet-the-team .large-row p {
+	color: var(--blue2);
+}
+
+#meet-the-team .medium-row p {
+	color: var(--red3);
+}
+
+#meet-the-team .large-row,
+#meet-the-team .medium-row,
+#meet-the-team .small-row {
+	justify-content: center;
+}
+
+#meet-the-team .large-row,
+#meet-the-team .medium-row {
+	padding-bottom: 50px;
+}
+
+#meet-the-team .small-row {
+	padding-bottom: 20px;
+}
+
+#meet-the-team .col-md-3 > div,
+#meet-the-team .col-md-2 > div {
+	overflow: hidden;
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	background-color: #fff;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+	transition: transform 0.1s;
+}
+
+#meet-the-team .col-md-3 > div > div:first-child,
+#meet-the-team .col-md-2 > div > div:first-child {
+	overflow: hidden;
+}
+
+#meet-the-team .large-row .col-md-3 > div > div:first-child {
+	height: 300px;
+}
+
+#meet-the-team .col-md-3:hover div,
+#meet-the-team .col-md-2:hover div {
+	transform: scale(1.02);
+}
+
+#meet-the-team .medium-row .col-md-3 > div > div:first-child {
+	height: 200px;
+}
+
+#meet-the-team .small-row .col-md-2 > div > div:first-child {
+	height: 100px;
+}
+
+#meet-the-team .col-md-3 > div > div:last-child {
+	height: 100px
+}
+
+#meet-the-team .col-md-2 > div > div:last-child {
+	height: 50px
+}
+
+#meet-the-team .col-md-3 > div > div:last-child,
+#meet-the-team .col-md-2 > div > div:last-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#meet-the-team .dp {
+	min-height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*
+
+CFR Contact Us
+--------------------------------------------------------------------------------
+*/
+
+
+
+.contact-us-container{
+	position: relative;
+	height: auto;
+	padding-bottom: 100px;
+	margin: 100px 0;
+}
+
+.contactus-card-container{
+	justify-content: center;
+}
+
+.contactus-card {
+	margin: 50px 40px 20px;
+	padding: 30px 25px;
+	position: relative;
+
+	border-radius: 23px;
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease-in-out;
+
+	width: 275px;
+	height: 400px;
+
+	text-align: left;
+	font-size: 2rem;
+}
+
+.contactus-card:hover,
+.contactus-card:focus-within {
+	transform: scale(1.09);
+	transition: all 0.2s ease-in-out;
+}
+
+.contactus-card-1{
+	border-top: 15px solid var(--blue2);
+	color: var(--blue2);
+}
+
+.contactus-card-2{
+	border-top: 15px solid var(--red2);
+	color: var(--red2);
+}
+
+.contactus-card-3{
+	border-top: 15px solid var(--red3);
+	color: var(--red3);
+}
+
+.contactus-card-heading {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.contactus-card-text {
+	margin-top: 50px;
+	font-size: 19px;
+	font-weight: 300;
+	color: var(--grey5);
+}
+
+.contactus-card-button {
+	position: absolute;
+	border-radius: 100px;
+
+	padding: 8px;
+	margin-top: 60%;
+	bottom: 20px;
+	width: 80%;
+
+	background-color: #fff;
+	text-transform: capitalize;
+	font-size: 18px;
+	border-style: solid;
+}
+
+.contactus-card-button-1 {
+	border-color: var(--blue2);
+	color: var(--blue2);
+}
+
+.contactus-card-button-1:hover,
+.contactus-card-button-1:focus {
+	background-color: var(--blue2);
+	border-color: #fff;
+	color: #fff;
+	transform: scale(1.01);
+}
+
+.contactus-card-button-2 {
+	border-color: var(--red2);
+	color: var(--red2);
+	transform: scale(1.01);
+}
+
+.contactus-card-button-2:hover,
+.contactus-card-button-2:focus {
+	background-color: var(--red2);
+	border-color: #fff;
+	color: #fff;
+	transform: scale(1.01);
+}
+
+.contactus-card-button-3{
+	border-color: var(--red3);
+	color: var(--red3);
+	transform: scale(1.01);
+}
+
+.contactus-card-button-3:hover,
+.contactus-card-button-3:focus	{
+	background-color: var(--red3);
+	border-color: #fff;
+	color: #fff;
+}
+
+
+/*
+
+CFR Contact Us Form
+--------------------------------------------------------------------------------
+*/
+
+#contact-form {
+	position: relative;
+}
+
+#megaphone-container {
+	position: absolute;
+
+	height: 200px;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#megaphone-container div:first-child {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+#megaphone-container div:last-child {
+	width: 75%;
+	min-width: 500px;
+}
+
+#megaphone {
+	width: 150px;
+
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+#postbox-container {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#postbox-container div:first-child {
+	width: 60%;
+}
+
+#postbox {
+	width: 150px;
+	margin-bottom: 25px;
+}
+
+.nf-form-fields-required {
+	display: none;
+}
+
+#nf-form-title-1 {
+	display: none;
+}
+
+nf-fields-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+nf-field:nth-child(1) {
+	width: 95% !important;
+}
+
+nf-field:nth-child(2) {
+	width: 95% !important;
+}
+
+nf-field:nth-child(3) {
+	width: 95% !important;
+}
+
+nf-field:nth-child(4) {
+	width: 80% !important;
+}
+
+#contact-form input {
+	width: 100%;
+}
+
+.nf-pass.field-wrap .nf-field-element:after {
+	color: var(--blue2) !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div,
+.nf-form-content input,
+.nf-form-content textarea,
+#nf-field-1,
+#nf-field-2,
+#nf-field-3,
+#nf-field-4 {
+	border-radius: 30px !important;
+	border: 3px solid var(--red4) !important;
+	border-color: var(--red4) !important;
+}
+
+#nf-field-3-container .nf-field-element:after {
+	height: 198px;
+	border-radius: 0 23px 23px 0 !important;
+	line-height: 198px !important;
+}
+
+#nf-field-4 {
+	background: var(--red4) !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after {
+	border-radius: 0 50px 50px 0 !important;
+	background: var(--red4) !important;
+}
+
+.nf-after-form-content {
+	display: none;
+}
+
+.nf-response-msg {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.nf-response-msg p {
+	text-align: center;
+}
+
+.nf-response-msg p:first-child {
+	font-weight: 700;
+	color: var(--red3);
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+/* .nf-response-msg p:last-child {
+
+} */
+
+
+@media (min-width: 768px) {
+	nf-field:nth-child(1) {
+		width: 30% !important;
+	}
+
+	nf-field:nth-child(2) {
+		width: 60% !important;
+	}
+
+	nf-field:nth-child(4) {
+		width: 30% !important;
+	}
+}
 
 
 /*
@@ -273,12 +2354,12 @@ Bootstrap Overrides
 */
 
 .container-fluid {
-  padding: 0;
+	padding: 0;
 }
 
 .row {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 
-  position: relative;
+	position: relative;
 }

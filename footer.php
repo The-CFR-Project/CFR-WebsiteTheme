@@ -11,7 +11,7 @@
     <form action="action_page.php">
       <input type="text" placeholder="Search the CFR website..." name="search">
       <button type="submit">
-        <img src="<?php echo get_template_directory_uri();?>/images/search.svg">
+	 <img src="<?php echo get_template_directory_uri();?>/images/search.svg">
       </button>
     </form>
 
@@ -20,8 +20,8 @@
   <?php
     wp_nav_menu(
       array(
-        "theme_location" => "footer",
-        "menu_class" => "footer"
+	 "theme_location" => "footer",
+	 "menu_class" => "footer"
       )
     );
   ?>
@@ -41,17 +41,6 @@
 
 </div>
 
-<script type="text/javascript">
-jQuery(function($) {
-  $(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-});
-});
-</script>
-
+<script  type='text/javascript' src = "<?php echo get_template_directory_uri(); ?>/js/mobile.js"></script>
 </body>
 </html>
