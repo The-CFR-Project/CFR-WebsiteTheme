@@ -44,26 +44,19 @@ function mob_nav(x){
 			  var st = window.pageYOffset || document.documentElement.scrollTop;
 			  if (st > lastScrollTop){
 				   document.getElementById("topnav").style.top = "-100px";
-				   /*
-				   document.getElementById("topnav").style.position = "relative";
-				   document.getElementById("topnav").style.height = "0";
-				   document.getElementById("sidenav").style.height = "0";
-				   */
 			  }else {
 				   if (lastScrollTop - st > 30){
 					    document.getElementById("topnav").style.top = "0px";
-					    /*
-					    document.getElementById("topnav").style.position = "fixed";
-					    document.getElementById("topnav").style.height = "100px";
-					    document.getElementById("sidenav").style.height = "100px";
-					    */
-				   }
+						}
 			  if (document.body.scrollTop === 0){
 				   document.getElementById("topnav").style.top = "0px";
 			  }
 		    }
 		    lastScrollTop = st <= 0 ? 0 : st;
 		 }, false);
+	}
+	else{
+		document.getElementById('sidenav').className='hide collapse';
 	}
 }
 mob_nav(mediawatch);
