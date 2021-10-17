@@ -9,7 +9,7 @@
 </head>
 <body>
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/header.css"); </style>
-<header>
+<header id = "topnav">
   <div class="nav-header-container">
     <div class="nav-logo-container">
 
@@ -27,7 +27,7 @@
     <div class="nav-title-container">
 
       <a href="<?php echo home_url();?>">
-        <h1 class="green1">The Carbon Footprint Reduction Project</h1>
+        <h1 class="green1"  id = "navbar-title">The Carbon Footprint Reduction Project</h1>
       </a>
 
     </div>
@@ -46,5 +46,7 @@
 
 
 </header>
-
+<div id = "sidenav" class = "collapse hide">
+	<div class = "mobile-nav-container" id = "mobnavcont"></div>
+</div>
 <div class="container-fluid">
