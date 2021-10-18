@@ -4,8 +4,37 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 --------------------------------------------------------------------------------
 */
 
-.blogs-single-container {
-    margin: 100px 0;
-    padding: 100px 200px;
-    background-color: var(--grey1);
-  }
+.blog-single-header {
+  margin-top: 100px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: black;
+}
+
+.blog-single-header img {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.blog-single-header .text {
+  position: absolute;
+  padding: 0 150px;
+  color: #fff;
+  text-align: center;
+}
+
+.blog-single-header h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.blog-single-header p {
+  font-size: 1.5rem;
+  margin: 25px 0 0;
+  font-weight: 300;
+}

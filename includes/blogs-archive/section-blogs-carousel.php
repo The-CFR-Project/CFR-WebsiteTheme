@@ -29,11 +29,13 @@
                             endif;
                             echo "</div>";
                             echo "<div class='blogs-archive-slide-text'>";
-                                echo '<h1>';
-                                echo the_title();
-                                echo '</h1>';
-                                echo the_excerpt();
                                 echo '<a href="';
+                                echo the_permalink();
+                                echo '"><h1>';
+                                echo the_title();
+                                echo '</h1></a>';
+                                echo the_excerpt();
+                                echo '<a class="readmore" href="';
                                 echo the_permalink();
                                 echo '">Read More<div class="blogs-carousel-readmore-arrow"></div></a>';
                             echo "</div>";
