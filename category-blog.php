@@ -11,7 +11,7 @@ Template Name: Blog
 global $wpdb;
 $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}users", OBJECT );
 foreach ($results as $result) {
-  print_r($result);
+  print_r($result->display_name);
 }
 ?>
 
