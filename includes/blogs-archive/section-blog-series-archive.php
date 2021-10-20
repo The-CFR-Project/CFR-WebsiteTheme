@@ -28,15 +28,17 @@
                         if (get_post_meta($post->ID, 'blog_id', true) == 1): ?>
                             <div class="row blog-series-first-container">
                                 <div class="col-lg-4 blog-series-first-tn">
-                                    <?php if(has_post_thumbnail()): ?>
-                                        <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
-                                    <?php endif; ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php if(has_post_thumbnail()): ?>
+                                            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                                        <?php endif; ?>
+                                    </a>
                                 </div>
                                 <div class="col-lg-8 blog-series-first-text">
                                     <?php echo '<h3>Part '.get_post_meta($post->ID, 'blog_id', true).' | '; echo the_title()."</h3>";?> 
                                     <?php the_excerpt(); ?>
                                     
-                                    <a href=" <?php the_permalink() ?>">Read More</a>
+                                    <a href=" <?php the_permalink() ?>"><p>Read More</p></a>
                                 </div>
                             </div>
                         
@@ -48,13 +50,15 @@
                                 <div class="col-lg-<?php echo floor(12/($totalPosts-1)); ?> blog-series-rest">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <?php if(has_post_thumbnail()): ?>
-                                                <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid blog-series-rest-img">
-                                            <?php endif; ?>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php if(has_post_thumbnail()): ?>
+                                                    <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid blog-series-rest-img">
+                                                <?php endif; ?>
+                                            </a>
                                         </div>
                                         <div class="blog-series-rest-text col-lg-12">
                                             <h3>Part <?php echo get_post_meta($post->ID, 'blog_id', true); ?> | <?php echo the_title(); ?></h3>
-                                            <a href=" <?php the_permalink() ?>">Read More</a>
+                                            <a href=" <?php the_permalink() ?>"><p>Read More</p></a>
                                         </div>
                                     </div>    
                                 </div>     

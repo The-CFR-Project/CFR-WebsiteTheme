@@ -38,3 +38,26 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
   margin: 25px 0 0;
   font-weight: 300;
 }
+
+.blog-content {
+  padding: 50px 100px;
+  line-height: 30px;
+}
+
+.blog-content-text img {
+  position: relative;
+  width: 100%; /* 135% */
+  height: auto;
+  border-radius: 5px;
+  margin: 40px 0 0;
+  /* left: -35%; */
+}
+
+.blog-content h2,
+.blog-content h5{
+  margin: 40px 0;
+}
+
+.blog-content p {
+  font-size: 18px;
+}

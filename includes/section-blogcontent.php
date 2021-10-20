@@ -18,12 +18,22 @@
                 </div>
             </div>     
             
+            <div class="blog-content row">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-9">
+                            <div class="blog-content-text">
+                                <?php the_content(); ?>
+                                <?php echo get_the_date(); ?>   
+                            </div>
+                    </div>
+            </div>
             
-            <?php echo get_the_date(); ?>
 
 
 
-            <?php the_content(); ?>
+            
             
 
             <?php comments_template(); ?>

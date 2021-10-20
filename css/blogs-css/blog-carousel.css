@@ -94,12 +94,39 @@
   }
   
   
-  .archive-carousel-slide .readmore {
+  .readmore {
     color: #fff;
     z-index: 2;
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
+    width: fit-content;
+    position : relative;
+  }
+
+  .special-underline {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    position : relative;
+  }
+
+  .special-underline::after {
+    content : "";
+    position : absolute;
+    width : 100%;
+    height : 3px;
+    background-color: white;
+    bottom: 0; 
+    left: 0;
+    transform : scaleX(0);
+    transition : transform 0.25s linear;
+    transform-origin: bottom left;
+  }
+
+  .special-underline:hover::after {
+    color: #fff;
+    transform : scaleX(1);
+    transform-origin: bottom left;
   }
   
   .blogs-carousel-readmore-arrow {
@@ -109,18 +136,31 @@
     height: 0;
     width: 0;
     margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .readmore:hover > .blogs-carousel-readmore-arrow{
+    transform: translateX(25px);
+    transition: all 0.2s ease-in-out;
   }
   
   .archive-carousel-prevbtn,
   .archive-carousel-nextbtn {
     position: absolute;
-    top: 45%;
+    top: 43%;
     font-size: 2rem;
-    margin: 0 20px;
+    padding: 16px;
     color: #fff;
     opacity: 0.5;
     z-index: 2;
+    border-radius: 0 10px 10px 0;
   }
+
+  .archive-carousel-prevbtn:hover,
+  .archive-carousel-nextbtn:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+  } 
+  
   
   .archive-carousel-prevbtn:hover,
   .archive-carousel-nextbtn:hover {
@@ -154,6 +194,11 @@
     opacity: 0.5;
     background-color: #fff;
     justify-content: center;
+    cursor: pointer;
+  }
+
+  .archive-carousel-slide-indicator:hover {
+    opacity: 1 !important;
   }
   
   .archive-carousel-image {

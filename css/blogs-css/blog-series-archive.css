@@ -9,6 +9,10 @@ width: 100%;
 height: 100%;
 }
 
+#blogs-archive-series img:hover {
+  transform: scale(1.02);
+}
+
 #blogs-archive-series a {
 color: var(--red3);
 text-transform: lowercase;
@@ -62,7 +66,7 @@ display: flex;
   margin-bottom: 10px;
 }
 
-.blog-series-first-text a {
+.blog-series-first-text a p{
   font-size: 30px;
 }
 
@@ -78,6 +82,11 @@ display: flex;
   position:static;
 }
 
-.blog-series-rest-text a{
+.blog-series-rest-text a p{
   font-size: 25px;
 }
+
+.blog-series-first-text a p:hover,
+.blog-series-rest-text a p:hover{
+  color: var(--red2);
+}  

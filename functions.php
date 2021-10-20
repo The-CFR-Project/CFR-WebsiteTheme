@@ -83,7 +83,7 @@ function blogs_series_post_type(){ //Custom Post
     'menu-icon' => 'dashicons-images-alt2',
     'public' => true,
     'has_archive' => true,
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'comments')
   );
   register_post_type('blog_series', $args);
 }

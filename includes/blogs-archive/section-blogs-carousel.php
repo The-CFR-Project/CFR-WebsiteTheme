@@ -37,7 +37,7 @@
                                 echo the_excerpt();
                                 echo '<a class="readmore" href="';
                                 echo the_permalink();
-                                echo '">Read More<div class="blogs-carousel-readmore-arrow"></div></a>';
+                                echo '"><h4 class="special-underline">Read More</h4><div class="blogs-carousel-readmore-arrow"></div></a>';
                             echo "</div>";
 
                         echo '</div>';
@@ -58,6 +58,8 @@
     </div>
 
     <script>
+
+        // Carousel Functionality 
 
         const allSlides = document.getElementsByClassName("archive-carousel-slide");
         const allSlideIndicators = document.getElementsByClassName("archive-carousel-slide-indicator");
