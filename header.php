@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>The CFR Project</title>
 
 	<?php wp_head();?>
@@ -47,6 +48,6 @@
 
 </header>
 <div id = "sidenav" class = "collapse hide">
-	<div class = "mobile-nav-container" id = "mobnavcont"></div>
+	<div class = "mobile-nav-container" id = "mobile-nav-container"></div>
 </div>
 <div class="container-fluid">
