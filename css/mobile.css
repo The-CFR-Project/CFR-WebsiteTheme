@@ -47,7 +47,7 @@
 	}
 	#hamburger{
 		display: block;
-		padding: 17% 23% 31% 30%;		
+		padding: 13% 20% 40% 20%;		
 	}
 	#menu-navigation-bar{
 		display:inline-block;
@@ -152,39 +152,44 @@
 	color: var(--grey2);
 	display: flex;
 	transition: color 0.1s, font-size 0.1s;
-	white-space: pre;
+	white-space: nowrap;
+	position: relative;
 }
 
-#mobile-nav-container a:hover, #mobile-nav-container a:focus-visible{
+#mobile-nav-container > a:hover > span, #mobile-nav-container > a:focus-visible > span{
 	color: var(--grey4);
 	filter: brightness(111%);
 }
 	
-#mobile-nav-container a:after{
+#mobile-nav-container > a > span::after{
 	background: var(--grey4);
 	content: '';
-	bottom: -29px;
-	height: 0.1em;
-	left: 0;
+	height: 1.5px;
 	display: block;
 	transition: width 0.2s;
-	position: relative;
-	left: -32%;
+	position: absolute;
+	bottom: 15%;
 	width: 0;
 }
+#mobile-nav-container > a > span{
+	position: relative;
+	left: 2%;
+}
+#mobile-nav-container > a:focus-visible > span::after, #mobile-nav-container > a:hover > span::after{
+	width: 100%;
+}
 
-#mobile-nav-container a[aria-current="page"]:after{
+#mobile-nav-container > a[aria-current="page"] > span::after{
 	background: #fff;
 }
 
-#mobile-nav-container a:focus-visible::after, #mobile-nav-container a:hover::after{
-	width: 50%;
-}
-
-#mobile-nav-container a[aria-current="page"] {
+#mobile-nav-container a[aria-current="page"]{
 	background: var(--blue2);
+}
+#mobile-nav-container a[aria-current="page"] > span{
 	color: #fff !important;
 }
+
 .collapse {
   visibility: hidden;
 }

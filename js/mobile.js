@@ -23,38 +23,9 @@ setCFR(mediawatch);
 mediawatch.addListener(setCFR);
 var navlinks = document.getElementById("menu-navigation-bar").getElementsByTagName("li");
 for (let c = 0; c < navlinks.length; c++){
-	var linktext = navlinks[c].innerHTML;
-	document.getElementById("mobile-nav-container").innerHTML += "<span class = 'mobile-nav-link-container'>" + linktext + "</span>";
+	var navlink = navlinks[c];
+	var linktext = navlink.innerText;
+	var txt = '<span class = "mobile-nav-link-container">' + linktext + '</span>';
+	navlink.getElementsByTagName("a")[0].innerHTML = txt;
+	document.getElementById("mobile-nav-container").innerHTML += navlink.innerHTML;
 }
-jQuery(document).on('swipeleft', '#container-fluid', function(event){
-	changeHeaderSlideshow(-1);
-	console.log("Hello");
-});
-jQuery(document).on('swiperight', '#container-fluid', function(event){
-	changeHeaderSlideshow(1);
-});
-/*
-function mob_nav(x){
-	if (x.matches){
-		 var lastScrollTop = 0;
-		 window.addEventListener("scroll", function(){
-			  var st = window.pageYOffset || document.documentElement.scrollTop;
-			  if (st - lastScrollTop > 15){
-				   document.getElementById("topnav").style.top = "-100px";
-			  }else {
-				   if (lastScrollTop - st > 15){
-					    document.getElementById("topnav").style.top = "0px";
-						}
-			  if (document.body.scrollTop === 0){
-				   document.getElementById("topnav").style.top = "0px";
-			  }
-		    }
-		    lastScrollTop = st <= 0 ? 0 : st;
-		 }, false);
-	}
-	else{
-		document.getElementById('sidenav').className='hide collapse';
-	}
-}
-mob_nav(mediawatch);
-mediawatch.addListener(mob_nav);*/
