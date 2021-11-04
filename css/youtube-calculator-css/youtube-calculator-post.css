@@ -1,0 +1,29 @@
+#youtube-calculator-post .field {
+    text-align: center;
+}
+
+#youtube-calculator-post .fields {
+    margin-top: 30px;
+}
+
+#youtube-calculator-post .field-name {
+    font-size: 18.5px;
+    font-weight: 500;
+}
+
+#youtube-calculator-post .field-value {
+    font-size: 85px;
+    font-weight: 700;
+}
+
+#youtube-calculator-post .blue-text {
+    color: var(--blue2);
+}
+
+#youtube-calculator-post .pink-text {
+    color: var(--red2);
+}
+
+#youtube-calculator-post .purple-text {
+    color: var(--red4);
+}

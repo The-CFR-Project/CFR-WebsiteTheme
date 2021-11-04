@@ -1,0 +1,113 @@
+:root {
+    --grey1: #f0f0f0;
+    --grey2: #ccc;
+    --grey3: #999;
+    --grey4: #666;
+    --grey5: #333;
+    --grey6: #282828;
+
+    --blue1: #b6e2df;
+    --blue2: #35b0ab;
+    --blue3: #246b81;
+    --blue4: #004c65;
+
+    --green1: #515760;
+
+    --red1: #f7b595;
+    --red2: #f67280;
+    --red3: #c06c84;
+    --red4: #6f5980;
+    --red5: #3d2451;
+
+    --yellow1: #ffcc66;
+}
+
+.bar-chart {
+    margin-left: 200px; /* Temporary */
+    margin-top: 200px; /* Temporary */
+}
+
+.chart-x,
+.chart-y,
+.y-mark {
+    background-color: black !important;
+}
+
+/* y-axis */
+.chart-y {
+    display: grid;
+    grid-row-gap: 30px;
+    width: 5px;
+    height: 500px;
+}
+
+.y-mark {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 10px;
+    height: 1px;
+
+    background-color: black;
+}
+
+.mark-label {
+    transform: translateX(-30px);
+}
+
+/* x-axis */
+.chart-x {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    height: 5px;
+    width: 700px;
+}
+
+.x-label {
+    transform: translate(30px, 20px);
+    border-radius: 10px;
+    width: 100px;
+    height: 60px;
+}
+
+/* Bars */
+.chart-bars {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    width: 700px;
+}
+
+.bars-bar {
+    height: 50px;
+    width: 100px;
+
+    background-color: red; /* temporary */
+
+    transform: translate(50px, -55px);
+}
+
+/* Hover Boxes */
+.bars-bar .bar-hover-box {
+    opacity: 0 !important;
+    transition-duration: 0.3s !important;
+    background-color: white;
+    background-clip: padding-box;
+
+    width: 100px;
+
+    border-radius: 10px;
+    border-top: 5px solid var(--red4);
+    padding: 15px 0px 15px 10px;
+    font-size: 10px;
+
+    transition-duration: 0.5s;
+}
+
+.bars-bar:hover .bar-hover-box {
+    opacity: 100 !important;
+}
