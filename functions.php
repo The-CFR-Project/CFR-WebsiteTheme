@@ -30,6 +30,7 @@ add_action( "wp_enqueue_scripts", "load_js" );
 add_theme_support( "menus" );
 add_theme_support( "post-thumbnails" );
 add_theme_support( "widgets" );
+add_theme_support( "html5", array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption') );
 
 
 // Filters
@@ -57,7 +58,23 @@ function my_sidebars() {
       'before-title' => '<h4 class="sidebar-title">',
       'after-title' => '</h4>',   
     )
-    );
+  );
+  register_sidebar(
+    array (
+      'name' => 'Blog Single Sidebar',
+      'id' => 'blog-single-sidebar',
+      'before-title' => '<h4 class="sidebar-title">',
+      'after-title' => '</h4>',   
+    )
+  );
+  register_sidebar(
+    array (
+      'name' => 'Blog Series Sidebar',
+      'id' => 'blog-series-sidebar',
+      'before-title' => '<h4 class="sidebar-title">',
+      'after-title' => '</h4>',   
+    )
+  );
 }
 add_action('widgets_init', 'my_sidebars');
 
