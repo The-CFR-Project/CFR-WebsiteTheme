@@ -18,7 +18,7 @@ function setCFR(x) {
 		document.getElementById("navbar-title").innerHTML = "The Carbon Footprint Reduction Project";
 	}
 }
-var mediawatch = window.matchMedia("(max-width: 786px)");
+var mediawatch = window.matchMedia("(max-width: 980px)");
 setCFR(mediawatch);
 mediawatch.addListener(setCFR);
 var navlinks = document.getElementById("menu-navigation-bar").getElementsByTagName("li");
