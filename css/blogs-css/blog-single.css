@@ -85,7 +85,17 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-content p {
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.blog-content a {
+  color: var(--blue2);	
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;	
 }
 
 .blog-content blockquote {

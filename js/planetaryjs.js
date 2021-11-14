@@ -335,6 +335,107 @@
     };
   };
 
+  // Custom Plugin for points on map
+  planetaryjs.plugins.points = function(config) {
+    var points = [];
+    config = config || {};
+
+    var addPoint = function(lng, lat, options) {
+      options = options || {};
+      options.color = options.color || config.color || 'white';
+      options.angle = options.angle || config.angle || 5;
+      var p = { time: new Date(), options: options };
+      if (config.latitudeFirst) {
+        p.lat = lng;
+        p.lng = lat;
+      } else {
+        p.lng = lng;
+        p.lat = lat;
+      }
+      points.push(p);
+    };
+
+    var drawPoints = function(planet, context) {
+      for (var i = 0; i < points.length; i++) {
+        var p = points[i];
+        drawPoint(planet, context, p);
+      }
+    };
+
+    var drawPoint = function(planet, context, p) {
+      var color = d3.rgb(p.options.color);
+      color = "rgba(" + color.r + "," + color.g + "," + color.b + "," + 1 + ")";
+      context.fillStyle = color;
+      var circle = d3.geo.circle().origin([p.lng, p.lat])
+        .angle(p.options.angle)();
+      context.beginPath();
+      planet.path.context(context)(circle);
+      context.fill();
+    };
+
+    return function (planet) {
+      planet.plugins.points = {
+        add: addPoint
+      };
+
+      planet.onDraw(function() {
+        planet.withSavedContext(function(context) {
+          drawPoints(planet, context);
+        });
+      });
+    };
+  };
+
+  // Custom Plugin for line between 2 points
+  planetaryjs.plugins.lines = function(config) {
+    var lines = [];
+    config = config || {};
+
+    var addLine = function(cord1, cord2, options) {
+      
+      options = options || {};
+      options.color = options.color || config.color || 'red';
+      options.width = options.width || 1;
+      var line = { time: new Date(), options: options };
+      line.cord1 = cord1;
+      line.cord2 = cord2;
+      lines.push(line);
+    };
+
+    var drawLines = function(planet, context) {
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        drawLine(planet, context, line);
+      }
+    };
+
+    var drawLine = function(planet, context, line) {
+      var geoGenerator = d3.geo.path()
+      .projection(planet.projection)
+      .context(context);
+
+      var color = d3.rgb(line.options.color);
+      color = "rgba(" + color.r + "," + color.g + "," + color.b + "," + 1 + ")";
+      context.beginPath();
+      context.strokeStyle = color;
+      context.lineWidth = line.options.width;
+      geoGenerator({type: 'Feature', geometry: {type: 'LineString', coordinates: [line.cord1, line.cord2]}});
+      context.stroke();
+    };
+
+    return function (planet) {
+      planet.plugins.lines = {
+        add: addLine
+      };
+
+      planet.onDraw(function() {
+        planet.withSavedContext(function(context) {
+          drawLines(planet, context);
+        });
+      });
+    };
+  };
+
   planetaryjs.plugins.zoom = function (options) {
     options = options || {};
     var noop = function() {};
