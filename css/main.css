@@ -264,6 +264,38 @@ section:nth-child(even) .heading-overlay {
 	color: var(--blue3);
 }
 
+/* header a,
+.line-lmao {
+	text-decoration: none;
+} */
+
+header a::after
+.line-lmao::after {
+	display: block;
+
+	height: 1.5px;
+	content: "";
+
+	transition: width 0.2s;
+}
+
+header a:hover::after,
+.line-lmao:hover::after {
+	width: 100%;
+}
+
+.scale-1dot05 {
+	transform: scale(1.05);
+	transition: all 0.2s ease-in-out;
+}
+
+.rotate-8d {
+	transform: rotate(8deg);
+}
+
+.reset-rotate {
+	transform: rotate(0deg);
+}
 
 
 /*

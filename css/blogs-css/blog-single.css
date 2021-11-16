@@ -263,6 +263,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
   font-size: 20px;
   text-align: justify;
   font-weight: 500;
+  width: 100%;
 }
 
 .wp-block-latest-posts li:nth-child(1) div,

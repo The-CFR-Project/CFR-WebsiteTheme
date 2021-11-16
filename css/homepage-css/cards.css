@@ -186,7 +186,8 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
   .card-content {
     font-size: 14px;
     color: #999;
-    padding: 20px 0 0;
+    padding: 20px 20px 0;
+    text-align: justify;
   }
   
   @keyframes fadeIn {

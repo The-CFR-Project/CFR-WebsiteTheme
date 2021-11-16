@@ -100,7 +100,12 @@ The CFR Home Page Aircraft Section Located below the Banner
   max-height: 470px;
   min-height: 400px;
 
-  transition: height 0.2s, max-height 0.2s;
+  transition: all 0.2s ease-in-out;
+}
+
+.balloon1-container {
+  width: 100%;
+  height: 100%;
 }
 
 .home-post .col-md-6 a div {

@@ -29,11 +29,11 @@ $doc = new DOMXPath( $doc );
       <div class="col-md-6">
         <div>
           <a href="<?php echo $doc->query('//a')[1]->nodeValue;?>">
-            <div></div>
+            <div id='over-only-the-cat'></div>
           </a>
         </div>
+        <img src="<?php echo get_template_directory_uri();?>/images/balloon1.svg" id="flights-balloon1">
 
-        <img src="<?php echo get_template_directory_uri();?>/images/balloon1.svg">
       </div>
 
       <div class="col-md-6 col-para text-justify">
@@ -43,7 +43,7 @@ $doc = new DOMXPath( $doc );
           echo ($firstp ? "<p>" : "<br><br><p>") . $node->nodeValue . "</p>";
           $firstp = false;
         }?>
-        <a href="<?php echo get_permalink( $post )?>">Read More</a>
+        <a href="<?php echo get_permalink( $post )?>" class='line-lmao'>Read More</a>
       </div>
 
       <div class="background-image">
@@ -53,4 +53,17 @@ $doc = new DOMXPath( $doc );
     </div>
 
   </div>
+
+  <script>
+    var balloonImg = document.getElementById("flights-balloon1");
+    var overOnlyTheCatDiv = document.getElementById("over-only-the-cat");
+    overOnlyTheCatDiv.addEventListener('mouseover', function(){
+      balloonImg.className = '';
+      balloonImg.className += ' scale-1dot05 rotate-8d';
+    });
+    overOnlyTheCatDiv.addEventListener('mouseout', function(){
+      balloonImg.className = '';
+      balloonImg.className += ' reset-rotate';
+    });
+  </script>
 </section>

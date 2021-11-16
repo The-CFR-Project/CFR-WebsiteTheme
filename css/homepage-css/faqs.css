@@ -50,6 +50,7 @@ The CFR FAQs Section Located above the Instagram Wall
   .faq-accordion-link .plus-icon,
   .faq-accordion-link .minus-icon {
     transition: all 0.2s ease;
+    margin-left: 10px;
   }
   
   .faq-accordion-link:hover {
