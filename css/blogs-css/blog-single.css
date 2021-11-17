@@ -249,9 +249,10 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 
 .wp-post-image{
   width: 100% !important;
-  height: 150px !important;
+  /* height: 150px !important; */
   border-radius: 5px;
   margin: 10px 0 10px;
+  object-fit: cover;
 }
 
 .wp-block-latest-posts li {
@@ -261,9 +262,15 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 .wp-block-latest-posts li a {
   color: var(--grey6);
   font-size: 20px;
-  text-align: justify;
+  text-align: left;
   font-weight: 500;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
 }
 
 .wp-block-latest-posts li:nth-child(1) div,

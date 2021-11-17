@@ -60,6 +60,7 @@ header .nav-header-container a:hover .logo {
 
 header .nav-header-container a:focus-visible h1 {
 	border: 2px dashed var(--grey2);
+	margin: -2px;
 }
 
 header .nav-logo-container {

@@ -10,6 +10,7 @@
 }
 #hamburger:focus-visible{
 	border: 2px dashed var(--grey2);
+	margin: -2px;
 }
 @media screen and (max-width: 1000px){
 	header{

@@ -45,6 +45,17 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
     -moz-animation: fadeIn ease 0.5s;
     -o-animation: fadeIn ease 0.5s;
     -ms-animation: fadeIn ease 0.5s;
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
+  }
+
+  .cards-focusin-input {
+    opacity: 0;
   }
   
   .magic-ball-container {
@@ -157,6 +168,13 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
     top: 10px;
     left: 10px;
     opacity: 0.8;
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
   }
   
   .card-suits-down {
@@ -167,6 +185,13 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
     bottom: 0;
     right: 10px;
     transform: scale(1, -1);
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
   }
   
   .card-bg-logo {
@@ -175,6 +200,13 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
     position: absolute;
     top: 30px;
     right: 30px;
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
   }
   
   .card-heading {

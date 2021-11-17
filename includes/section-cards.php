@@ -78,6 +78,7 @@ $doc = new DOMXPath( $doc );
                   echo   "<div class='card-content'>";
                   echo     $card->nodeValue;
                   echo   "</div>";
+                  echo  '<input type="text" class="cards-focusin-input">';
                   echo "</div>";
 
                   $d++;
@@ -144,6 +145,7 @@ $doc = new DOMXPath( $doc );
       </div>
 
     </div>
+    
 
   <!-- JavaScript ------------------------------------->
   <script>
@@ -183,6 +185,24 @@ $doc = new DOMXPath( $doc );
         }
 
       }
+    }
+
+    function onCardFocus() {
+      const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
+      const card = this.parentNode
+
+      console.log(card.id);
+      for (j = 0; j < allDisplayedCards.length; j++) {
+        if (j < parseInt(card.id)) {
+          allDisplayedCards[j].className = "fact-card-display fact-card-stack fact-card-open";
+        }
+        else {
+          allDisplayedCards[j].className = "fact-card-display fact-card-stack";
+        }
+      }
+
+      // Press any key to play the card
+      card.addEventListener('keypress', onCardDoubleClick);
     }
 
     function onCardDoubleClick() {
@@ -227,10 +247,7 @@ $doc = new DOMXPath( $doc );
 
       for (i = 0; i < (allDisplayedCards.length - 1); i++) {
         allDisplayedCards[i].addEventListener('click', onCardClick);
-        allDisplayedCards[i].addEventListener("focus", function () {
-                                                this.style.top = "0";
-                                                this.style.transition = "all .4s ease-in-out"
-                                              });
+        allDisplayedCards[i].lastChild.addEventListener('focus', onCardFocus);
       }
       twiceClickedAnimation();
     }
