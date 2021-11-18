@@ -144,6 +144,15 @@ Specific General Theme CSS
 	text-transform: uppercase;
 }
 
+img {
+	-ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
+
 /*
 
 Layout General Theme CSS
@@ -246,12 +255,12 @@ section:nth-child(even) .heading-container {
 	user-select: none;
 	color: var(--grey1);
 
-	font-size: 200px;
+	font-size: max(15vw, 125px);
 }
 
 .heading-overlay {
 	text-transform: lowercase;
-	font-size: 30px;
+	font-size: 35px;
 
 	z-index: 8;
 }

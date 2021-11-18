@@ -47,6 +47,7 @@ $doc = new DOMXPath( $doc );
           echo "        <div class='faq-answer'>";
           echo "          <p class='text-justify'>";
           echo              $answers[$i]->nodeValue;
+          echo "            <input class='faqs-focusin-input'>";
           echo "        </div>";
           echo "      </label>";
           echo "  </div>";

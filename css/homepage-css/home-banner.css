@@ -113,6 +113,13 @@ The CFR Banner Slideshow Located at the Top of the Screen
     margin-right: auto;
     margin-bottom: 15px;
     text-align: center;
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
   }
   
   .header-slideshow-container .header-slideshow-dot {
@@ -131,6 +138,13 @@ The CFR Banner Slideshow Located at the Top of the Screen
   
     transition: background-color 0.1s, width 0.2s, height 0.2s;
     transition-timing-function: ease-out;
+
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select:none;
   }
   
   .header-slideshow-dot-active,

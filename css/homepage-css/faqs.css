@@ -78,10 +78,12 @@ The CFR FAQs Section Located above the Instagram Wall
     transition: max-height 0.5s ease;
   }
   
+  .faq-answer:focus-within,
   .faq-accordion-checkbox:checked + label > .faq-answer {
     max-height: 400px !important;
   }
   
+  .faq-answer:focus-within,
   .faq-accordion-checkbox:checked + label .faq-accordion-link {
     color: var(--blue2);
     font-weight: 600;
@@ -114,5 +116,17 @@ The CFR FAQs Section Located above the Instagram Wall
     width: 90%;
     padding: 20px 40px;
     margin: 0;
+  }
+
+  .faqs-focusin-input {
+    opacity: 0;
+    cursor: default;
+  }
+
+  @media (max-width: 540px) {
+    .faq-answer p {
+      text-align: left;
+      line-height: 28px;
+    }
   }
   

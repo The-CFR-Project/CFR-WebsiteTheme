@@ -95,6 +95,7 @@ The CFR Home Page Aircraft Section Located below the Banner
   right: 0;
   margin: auto;
   padding: 20px;
+  z-index: 10;
 
   height: 130%;
   max-height: 470px;
@@ -150,4 +151,40 @@ The CFR Home Page Aircraft Section Located below the Banner
   left: 10px;
   top: -130px;
   width: 80%;
+}
+
+@media (max-width: 770px) {
+  .home-post .col-para {
+    width: 100%;
+    padding: 0 50px;
+  }
+  
+  #flights-balloon1 {
+    padding: 0;
+    margin: auto;
+    bottom: -50px;
+    height: 120%;
+    min-height: 250px;
+  }
+  #over-only-the-cat{
+    padding: 0;
+    margin: auto;
+    bottom: -50px;
+    height: 100px;
+  }
+  .full-row {
+    margin: 0;
+    width: 100% !important;
+  }
+  .full-row img {
+    display: none;
+  }
+  .home-post input {
+    z-index: 999;
+    position: relative;
+  }
+  .home-post .row{
+    z-index: 1;
+    position: relative;
+  }
 }

@@ -2,7 +2,7 @@
 $post = get_page_by_path("social-introverts");
 ?>
 
-<section>
+<section id="instawall">
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/instawall.css"); </style>
   <div class="instawall-section-container container-fluid">
 
