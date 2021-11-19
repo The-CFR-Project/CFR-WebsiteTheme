@@ -3,19 +3,8 @@
 <?php wp_footer();?>
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/footer.css"); </style>
 <div id="footer-container">
-	<div class="full-search-container">
-
-		<!-- Load icon library -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<form action="action_page.php">
-			<input type="text" placeholder="Search the CFR website..." name="search">
-			<button type="submit">
-				<img src="<?php echo get_template_directory_uri();?>/images/search.svg">
-			</button>
-		</form>
-
-	</div>
+	
+	<?php get_search_form(); ?>
 
 	<?php
 	wp_nav_menu(
