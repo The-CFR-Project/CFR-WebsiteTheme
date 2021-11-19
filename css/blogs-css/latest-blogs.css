@@ -26,10 +26,14 @@
     height: auto;
     margin-left: 10%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
   }
 
   .blogs-archive-post-latest-tn:hover {
     transform: scale(1.02);
+    transition: all 0.2s ease;
+
+
   }
   
   .blogs-archive-post-latest-excerpt {
@@ -43,10 +47,12 @@
     padding: 10px 25px 10px 50px;
     line-height: 50px;
     text-transform: uppercase;
+    transition: all 0.2s ease;
   }
 
   .blogs-archive-post-latest-excerpt:hover {
     transform: scale(1.02);
+    transition: all 0.2s ease;
   }
   
   .blogs-archive-post-latest-excerpt h3 {
@@ -70,6 +76,7 @@
     transform: scale(1.02);
     transition: all 0.2 ease-in-out;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+    transition: all 0.2s ease;
   }
   
   .blogs-archive-post-grid img {

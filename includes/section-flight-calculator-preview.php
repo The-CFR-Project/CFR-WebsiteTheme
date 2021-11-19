@@ -43,7 +43,7 @@ $doc = new DOMXPath( $doc );
           echo ($firstp ? "<p>" : "<br><br><p>") . $node->nodeValue . "</p>";
           $firstp = false;
         }?>
-        <a href="<?php echo get_permalink( $post )?>" class='line-lmao'>Read More</a>
+        <!-- <a href="<?php echo get_permalink( $post )?>" class='line-lmao'>Read More</a> -->
       </div>
 
       <div class="background-image">

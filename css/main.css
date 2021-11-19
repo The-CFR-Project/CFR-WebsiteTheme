@@ -273,12 +273,12 @@ section:nth-child(even) .heading-overlay {
 	color: var(--blue3);
 }
 
-/* header a,
+header a,
 .line-lmao {
 	text-decoration: none;
-} */
+}
 
-header a::after
+header a::after,
 .line-lmao::after {
 	display: block;
 
@@ -286,6 +286,7 @@ header a::after
 	content: "";
 
 	transition: width 0.2s;
+	width: 0%;
 }
 
 header a:hover::after,

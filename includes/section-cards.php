@@ -42,12 +42,13 @@ $doc = new DOMXPath( $doc );
 
             $all_cards = $doc->query( "//p" );
             $numbers = range( 0, ( count( $all_cards ) / 2 - 1));
-            shuffle( $numbers );
+            // shuffle( $numbers );
             $displayed_cards = array_slice( $numbers, 0, 8 );
 
             $card_suits = array("♥", "♠", "♣", "♦");
-            $card_icon_colors = array('9B72AA', 'BD4B4B', 'DF711B',
-                                      '368B85', '3DB2FF', 'FFF47D');
+            // $card_icon_colors = array('9B72AA', 'BD4B4B', 'DF711B',
+            //                           '368B85', '3DB2FF', 'FFF47D');
+            $card_icon_colors = array('35b0ab', '246b81', '004c65', 'f67280', 'c06c84', '6f5980', '3d2451');
 
             foreach ( $all_cards as $card ) {
 

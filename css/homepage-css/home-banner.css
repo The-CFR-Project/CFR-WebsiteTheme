@@ -7,12 +7,15 @@ The CFR Banner Slideshow Located at the Top of the Screen
 .header-slideshow-container {
     margin: 100px 0 50px;
     width: 100%;
+    height: 500px;
     position: relative;
     justify-content: center;
   }
   
   .header-slideshow-container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .header-slideshow-container h3 {
@@ -56,6 +59,7 @@ The CFR Banner Slideshow Located at the Top of the Screen
   
   .header-slideshow-container .header-slide {
     display: none;
+    height: 100%;
   }
   
   .header-slideshow-container .header-slide > div {

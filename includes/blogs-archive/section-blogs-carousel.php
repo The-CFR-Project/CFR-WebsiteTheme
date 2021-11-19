@@ -1,107 +1,109 @@
 <section id="blogs-carousel">
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-carousel.css"); </style>
-    <div class="archive-carousel-container">
-        <div class="archive-carousel-slides-container">
-            <a class="archive-carousel-prevbtn" onclick="prevbtnClicked()">&#10094;</a>
-            <a class="archive-carousel-nextbtn" onclick="nextbtnClicked()">&#10095;</a>
-            <div class="archive-carousel-slides">
-                <?php 
-                $totalHandpicked = 0;
-                if ( have_posts() ) : while ( have_posts() ) : the_post();
-                    $handpicked = false;
-                    $postCategories = get_the_category(); // Gets categories of the post
-                    foreach ($postCategories as $cat){ // Loops through the categories of the current post
-                        if ($cat->name == "Banner-Blogs"){ // Checks if the category of the selected post is "Banner-Blogs"
-                            $handpicked = true; 
-                        }
-                    }
-                    if ($handpicked){
-                        $totalHandpicked ++;
-                        $colors = ["--red2", "--red3", "--blue2", "--blue3"];
-                        $randColor = array_rand($colors, 1);
-                
-                        echo '<div class="archive-carousel-slide" style="background-color:var('.$colors[$randColor].')">';
-                            echo "<div class='blogs-archive-slide-image'>";
-                            if(has_post_thumbnail()):
-                                echo '<img src="';
-                                echo the_post_thumbnail_url();
-                                echo '" class="archive-carousel-image">';
-                            endif;
-                            echo "</div>";
-                            echo "<div class='blogs-archive-slide-text'>";
-                                echo '<a href="';
-                                echo the_permalink();
-                                echo '"><h1>';
-                                echo the_title();
-                                echo '</h1></a>';
-                                echo the_excerpt();
-                                echo '<a class="readmore" href="';
-                                echo the_permalink();
-                                echo '"><h4 class="special-underline">Read More</h4><div class="blogs-carousel-readmore-arrow"></div></a>';
-                            echo "</div>";
+<div class="header-slideshow-container">
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-carousel.css"); </style>  
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/home-banner.css"); </style>
+  <?php
 
-                        echo '</div>';
+  $category_id = get_cat_ID('Banner-Blogs');
+  $q = 'cat=' . $category_id;
+  $bannerItems = (query_posts($q));
+  
 
-                    }
-                endwhile; endif;
-                ?>
+
 
   
-                <div class="archive-carousel-slide-indicators">
-                    <?php for($r=1; $r<=$totalHandpicked; $r++){
-                        echo '<div id="'.$r.'-archive-carousel-indicator" class="archive-carousel-slide-indicator"></div>';
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
+
+  $i = 0;
+  while (have_posts()) : the_post(); 
+  ?>
+    <div class="header-slide quick-fade">
+      
+      <?php if(has_post_thumbnail()): ?>
+        <img class="archive-carousel-image" src="<?php echo the_post_thumbnail_url(); ?>">
+      <?php endif; ?>
+      <div id="blogs-archive-slide-text">
+        <a href = "<?php the_permalink(); ?>"><h1><?php the_title();?></h1></a>
+        <p><?php echo the_excerpt(); ?></p>
+        <a href="<?php the_permalink(); ?>" class="readmore">
+          <h4 class="special-underline">Read More</h4>
+          <div class="blogs-carousel-readmore-arrow"></div>
+        </a>
+      </div>
+
+    </div>
+
+  <?php
+    $i += 1;
+    if ($i > 3) {
+      $i = 0;
+    }
+  endwhile;
+
+  ?>
+  
+
+    <a class="prev-slide" onclick="changeHeaderSlideshow(-1)">&#10094;</a>
+    <a class="next-slide" onclick="changeHeaderSlideshow(1)">&#10095;</a>
+
+    <div class="slideshow-dots-container">
+    <?php for ($i = 0; $i < sizeof($bannerItems); $i++) {?>
+      <button class="header-slideshow-dot<?php echo ($i == 0) ? ' header-slideshow-dot-active' : '';?>"
+        onclick="setHeaderSlideshow(<?php echo $i;?>)"></button>
+    <?php }?>
     </div>
 
     <script>
+      var headerSlideIndex = 0;
+      var resetCarousel = 0;
 
-        // Carousel Functionality 
+      reloadSlideshow(headerSlideIndex);
+      carousel();
 
-        const allSlides = document.getElementsByClassName("archive-carousel-slide");
-        const allSlideIndicators = document.getElementsByClassName("archive-carousel-slide-indicator");
-        var currentSlide = 0;
-        function prevbtnClicked(){
-            if (currentSlide == 0){
-                currentSlide = allSlides.length-1;
-            }else {
-                currentSlide -= 1;
-            }
-            displaySlide(currentSlide);
+      function changeHeaderSlideshow(n) {
+        reloadSlideshow(headerSlideIndex + n);
+        resetCarousel = 2;
+      }
+
+      function setHeaderSlideshow(n) {
+        reloadSlideshow(n);
+        resetCarousel = 2;
+      }
+
+      function reloadSlideshow(n) {
+        var i;
+        var headerSlides = document.getElementsByClassName("header-slide");
+        var headerSlideDots = document.getElementsByClassName("header-slideshow-dot");
+
+        if (n >= headerSlides.length) {
+          headerSlideIndex = 0;
         }
-        function nextbtnClicked(){
-            if (currentSlide == allSlides.length-1){
-                currentSlide = 0;
-            }else {
-                currentSlide += 1;
-            }
-            displaySlide(currentSlide);
+        else if (n < 0) {
+          headerSlideIndex = headerSlides.length - 1;
         }
-        function displaySlide(slide){
-            for (var i = 0; i <= allSlides.length-1; i++){
-                if (i != slide){
-                    allSlides[i].style.visibility = 'hidden';
-                    allSlideIndicators[i].style.opacity = "0.5";
-                }else {
-                    allSlides[i].style.visibility = 'visible';
-                    allSlideIndicators[i].style.opacity = "1";
-                }
-            }
+        else {
+          headerSlideIndex = n;
         }
 
-        for (f = 0; f < allSlideIndicators.length; f++){
-            allSlideIndicators[f].addEventListener('click', function(){
-                currentSlide = parseInt(this.id)-1;
-                displaySlide(currentSlide);
-            });
+        for (i = 0; i < headerSlides.length; i++) {
+          headerSlides[i].style.display = "none";
+          headerSlideDots[i].className = "header-slideshow-dot";
         }
-    displaySlide(currentSlide);
 
+        headerSlides[headerSlideIndex].style.display = "block";
+        headerSlideDots[headerSlideIndex].className += " header-slideshow-dot-active";
+      }
 
-
+      function carousel() {
+        if (resetCarousel > 0) {
+          resetCarousel -= 1;
+        }
+        else if (document.activeElement.id != "read-more") {
+          reloadSlideshow(headerSlideIndex + 1)
+        }
+        setTimeout(carousel, 6000); // Change image every 4 seconds
+      }
 
     </script>
+
+  </div>
 </section>

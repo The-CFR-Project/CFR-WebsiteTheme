@@ -16,7 +16,6 @@
         <form action=<?php echo $navItem->url;?>>
           <input id="read-more" type="submit" value="Read More" />
         </form>
-
       </div>
 
     </div>

@@ -63,6 +63,16 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
     display: flex;
   }
   
+  .cards-bg-scrabble {
+    width: 120px;
+    height: auto;
+  }
+
+  .cards-bg-magic-5 {
+    width: 80px;
+    height: auto;
+  }
+
   @media (max-width: 540px) {
     .magic-ball-container {
       display: none;
