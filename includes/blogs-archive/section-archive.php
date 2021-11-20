@@ -53,6 +53,7 @@
             <?php endif; ?> 
     
         <?php $i++; endwhile; endif;?>
+        <?php echo do_shortcode('[ajax_load_more container_type="div" post_type="post" posts_per_page="6" pause="true" images_loaded="true" scroll="false" transition_container_classes="row" button_label="Load More Blogs" button_loading_label="Loading..."]'); ?>
 
     </div>
 
