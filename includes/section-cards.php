@@ -79,7 +79,7 @@ $doc = new DOMXPath( $doc );
                   echo   "<div class='card-content'>";
                   echo     $card->nodeValue;
                   echo   "</div>";
-                  echo  '<input type="text" class="cards-focusin-input">';
+                  echo  '<input type="text" class="cards-focusin-input" disabled="disabled">';
                   echo "</div>";
 
                   $d++;
