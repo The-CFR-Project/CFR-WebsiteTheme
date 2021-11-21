@@ -49,6 +49,8 @@ The CFR Home Page Cards Section Located below the Aircrafts Section
 
   .cards-focusin-input {
     opacity: 0;
+    cursor: default;
+  
   }
   
   .magic-ball-container {
