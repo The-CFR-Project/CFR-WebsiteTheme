@@ -4,8 +4,7 @@
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/latest-blogs.css"); </style>
 <div class="blogs-archive-container">
 
-    <?php $count = 0; if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <?php $count++; endwhile; endif;?>
+    <?php $count = wp_count_posts()->publish;?>
 
     <!-- Latest Posts -->
     <div id="blogs-archive-latest">
@@ -66,41 +65,31 @@
                     }   
             ?>
         </div>
-        <div class="blogs-sidebar-blogs row">
+        <div class="blogs-sidebar-blogs-container">
             <h5 class='blogs-sidebar-blogs-title'>recommended</h5>    
-            <?php $i = 0; if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                
-                <?php if($i==$count-7): ?>
-                    <div class="blogs-sidebar-blogs-blog col-sm-4">
-                        <a href="<?php the_permalink(); ?>">
-                            <h3><?php the_title() ?></h3>
-                            <p style='color:var(--blue2)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
-                            <?php echo "<p style='color:var(--blue2)'>".get_the_date('d M')."</p>"; ?>
-                        </a>
-                    </div>
-                <?php endif; ?>   
+            <div class="blogs-sidebar-blogs">
+                <?php $query = new WP_Query( array ( 'orderby' => 'rand', 'posts_per_page' => '3' ) );?>
+                <?php 
+                //Create WordPress Query with 'orderby' set to 'rand' (Random)
+                $the_query = new WP_Query( array ( 'orderby' => 'rand', 'posts_per_page' => '3' ) );
+                // output the random post
+                while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <div class="blogs-sidebar-blogs-blog">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if(has_post_thumbnail()): ?>
+                            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                        <?php endif; ?>
+                        <h3><?php the_title() ?></h3>
+                        <p style='color:var(--red3)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
+                        <?php //echo "<p style='color:var(--red3)'>".get_the_date('d M')."</p>"; ?>
+                    </a>
+                </div>
+                <?php endwhile;
 
-                <?php if($i==$count-4): ?>
-                    <div class="blogs-sidebar-blogs-blog col-sm-4">
-                        <a href="<?php the_permalink(); ?>">
-                            <h3><?php the_title() ?></h3>
-                            <p style='color:var(--red2)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
-                            <?php echo "<p style='color:var(--red2)'>".get_the_date('d M')."</p>"; ?>
-                        </a>
-                    </div>
-                <?php endif; ?>  
-
-                <?php if($i==$count-2): ?>
-                    <div class="blogs-sidebar-blogs-blog col-sm-4">
-                        <a href="<?php the_permalink(); ?>">
-                            <h3><?php the_title() ?></h3>
-                            <p style='color:var(--red3)'><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") ;?></p>
-                            <?php echo "<p style='color:var(--red3)'>".get_the_date('d M')."</p>"; ?>
-                        </a>
-                    </div>
-                <?php endif; ?>   
-
-            <?php $i++;  endwhile; endif;?>
+                // Reset Post Data
+                wp_reset_postdata();
+                ?>
+            </div>
         </div>
 
     </div>
