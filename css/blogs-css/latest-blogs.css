@@ -179,7 +179,7 @@
     align-items: center;
   }
 
-  .blogs-loadmore-btn {
+  .blogs-load-more-btn {
     border-radius: 30px;
     color: var(--blue2);
     border-color: var(--blue2);
@@ -192,18 +192,18 @@
     height: 50px;
   }
 
-  .blogs-loadmore-btn:hover {
+  .blogs-load-more-btn:hover {
     color: #fff;
     border-color: var(--blue2);
     background-color: var(--blue2);
   }
 
-  .blogs-loadmore-btn:disabled {
+  .blogs-load-more-btn:disabled {
     color: var(--grey1);
     border-color: var(--grey1);
   }
 
-  .blogs-loadmore-btn:disabled:hover {
+  .blogs-load-more-btn:disabled:hover {
     color: #fff;
     background-color: var(--grey1);
   }
