@@ -179,7 +179,7 @@
     align-items: center;
   }
 
-  .alm-load-more-btn {
+  .blogs-loadmore-btn {
     border-radius: 30px;
     color: var(--blue2);
     border-color: var(--blue2);
@@ -192,18 +192,18 @@
     height: 50px;
   }
 
-  .alm-load-more-btn:hover {
+  .blogs-loadmore-btn:hover {
     color: #fff;
     border-color: var(--blue2);
     background-color: var(--blue2);
   }
 
-  .alm-load-more-btn:disabled {
+  .blogs-loadmore-btn:disabled {
     color: var(--grey1);
     border-color: var(--grey1);
   }
 
-  .alm-load-more-btn:disabled:hover {
+  .blogs-loadmore-btn:disabled:hover {
     color: #fff;
     background-color: var(--grey1);
   }
