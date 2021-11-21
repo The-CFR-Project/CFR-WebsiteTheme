@@ -179,7 +179,7 @@
     align-items: center;
   }
 
-  .ajax-load-more-wrap.blue .alm-load-more-btn {
+  .ajax-load-more-wrap.white .alm-load-more-btn {
     border-radius: 30px;
     color: var(--blue2);
     border-color: var(--blue2);
@@ -192,18 +192,18 @@
     height: 50px;
   }
 
-  .ajax-load-more-wrap.blue .alm-load-more-btn:hover {
+  .ajax-load-more-wrap.white .alm-load-more-btn:hover {
     color: #fff;
     border-color: var(--blue2);
     background-color: var(--blue2);
   }
 
-  .ajax-load-more-wrap.blue .alm-load-more-btn:disabled {
+  .ajax-load-more-wrap.white .alm-load-more-btn:disabled {
     color: var(--grey1);
     border-color: var(--grey1);
   }
 
-  .ajax-load-more-wrap.blue .alm-load-more-btn:disabled:hover {
+  .ajax-load-more-wrap.white .alm-load-more-btn:disabled:hover {
     color: #fff;
     background-color: var(--grey1);
   }
