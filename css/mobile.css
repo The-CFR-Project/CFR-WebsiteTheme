@@ -33,13 +33,14 @@
 		width: 20% !important;
 		justify-content: normal !important;
 	}
-	
+
 	header .nav-logo-container .logo{
 		padding:1px;
 		left: 10px;
 		position: relative;
 	}
 }
+
 @media screen and (max-width: 1000px) {
 	#hamburger-container {
 		display: flex;
@@ -50,7 +51,7 @@
 	}
 	#hamburger{
 		display: block;
-		padding: 19px 7px 35px 9px;		
+		padding: 19px 7px 35px 9px;
 	}
 	#menu-navigation-bar{
 		display:inline-block;
@@ -82,7 +83,7 @@
 	.prev-slide, .next-slide{
 		display:none;
 	} */
-	
+
 	header .nav-logo-container{
 		position: relative;
 	}
@@ -167,7 +168,7 @@
 	color: var(--grey4);
 	filter: brightness(111%);
 }
-	
+
 #mobile-nav-container > a > span::after{
 	background: var(--grey4);
 	content: '';

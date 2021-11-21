@@ -6,113 +6,112 @@ The CFR FAQs Section Located above the Instagram Wall
 
 .faq-container {
     width: 80%;
-    z-index: 10s;
-  
     margin: 0 auto;
     margin-bottom: 100px;
   }
-  
+
   .faq-accordion-item {
     display: flex;
     align-items: center;
-  
+
     background-color: var(--grey1);
     border-radius: 20px;
-  
+
     margin-bottom: 40px;
   }
 
   .faq-accordion-btn {
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
-  
+
   .faq-accordion-checkbox {
     display: none;
   }
-  
+
   .faq-accordion-link {
     color: var(--grey3);
     cursor: pointer;
-  
+
     width: 100%;
     min-height: 80px;
-  
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+
     padding: 10px 40px;
     margin: 0;
     transition: all 0.2s ease;
   }
-  
+
   .faq-accordion-link .plus-icon,
   .faq-accordion-link .minus-icon {
     transition: all 0.2s ease;
     margin-left: 10px;
   }
-  
+
   .faq-accordion-link:hover {
     color: var(--grey6);
   }
-  
+
   .faq-accordion-link:hover .plus-icon,
   .faq-accordion-link:hover .minus-icon {
     filter: brightness(130%);
     transform: scale(130%);
   }
-  
+
   .faq-accordion-link .minus-icon {
     display: none;
   }
-  
+
   .faq-answer {
     overflow: hidden;
     max-height: 0;
-  
+
     position: relative;
     background-color: #fff;
     line-height: 32px;
-  
+
     transition: max-height 0.5s ease;
   }
-  
+
   .faq-answer:focus-within,
   .faq-accordion-checkbox:checked + label > .faq-answer {
-    max-height: 400px !important;
+    max-height: 1000px;
   }
-  
+
   .faq-answer:focus-within,
   .faq-accordion-checkbox:checked + label .faq-accordion-link {
     color: var(--blue2);
     font-weight: 600;
   }
-  
+
   .faq-accordion-checkbox:checked + label .faq-accordion-link .minus-icon {
     display: block;
   }
-  
+
   .faq-accordion-checkbox:checked + label .faq-accordion-link .plus-icon {
     display: none;
   }
-  
+
   .faq-answer::before {
     content: "";
     background-color: var(--blue2);
-  
+
     position: absolute;
     width: 5px;
     height: 90%;
     top: 50%;
     left: 0;
-  
+
     transform: translateY(-50%);
   }
-  
+
   .faq-answer p {
     color: var(--grey4);
-  
+
     width: 90%;
     padding: 20px 40px;
     margin: 0;
@@ -128,5 +127,14 @@ The CFR FAQs Section Located above the Instagram Wall
       text-align: left;
       line-height: 28px;
     }
+
+    .faq-accordion-link .plus-icon,
+    .faq-accordion-link .minus-icon {
+      display: none;
+    }
+
+    .faq-accordion-link {
+      padding: 10px 20px;
+    }
+
   }
-  
