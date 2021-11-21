@@ -188,6 +188,20 @@ $doc = new DOMXPath( $doc );
       }
     }
 
+    function oneCardDblClick(query) {
+      const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
+      if (query.matches) { // If media query matches
+        for (j = 0; j < allDisplayedCards.length; j++) {
+          allDisplayedCards[j].addEventListener('click', onCardDoubleClick);
+        }
+      } else {
+        for (j = 0; j < allDisplayedCards.length; j++) {
+          allDisplayedCards[j].removeEventListener('click', onCardDoubleClick);
+        }
+      }
+    }
+        
+
     function onCardFocus() {
       const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
       const card = this.parentNode
@@ -246,11 +260,16 @@ $doc = new DOMXPath( $doc );
     function onceClickedAnimation() {
       const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
 
+      
       for (i = 0; i < (allDisplayedCards.length - 1); i++) {
+        allDisplayedCards[i].removeEventListener("click", onCardDoubleClick);
         allDisplayedCards[i].addEventListener('click', onCardClick);
         allDisplayedCards[i].lastChild.addEventListener('focus', onCardFocus);
       }
       twiceClickedAnimation();
+      var query = window.matchMedia("(max-width: 760px)")
+      oneCardDblClick(query) // Call listener function at run time
+      query.addListener(oneCardDblClick) // Attach listener function on state changes
     }
 
     // Makes cards drop down when double-clicked
@@ -258,7 +277,7 @@ $doc = new DOMXPath( $doc );
       const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
 
       for (i = 0; i < allDisplayedCards.length; i++) {
-          allDisplayedCards[i].addEventListener('dblclick', onCardDoubleClick);
+        allDisplayedCards[i].addEventListener('dblclick', onCardDoubleClick);
       }
     }
 
@@ -266,6 +285,8 @@ $doc = new DOMXPath( $doc );
 
     firstCard = document.getElementById("1-dis-card");
     firstCard.classList += " fact-card-open";
+
+
 
 
   </script>
