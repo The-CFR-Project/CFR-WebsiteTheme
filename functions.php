@@ -100,7 +100,8 @@ function blogs_series_post_type(){ //Custom Post
     'menu-icon' => 'dashicons-images-alt2',
     'public' => true,
     'has_archive' => true,
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'comments')
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'comments'),
+    'exclude_from_search'   => false,
   );
   register_post_type('blog_series', $args);
 }
@@ -118,3 +119,16 @@ function blogs_series_title(){ //Custom Category
   register_taxonomy('series_name', array('blog_series'), $args);
 }
 add_action('init', 'blogs_series_title');
+
+/**
+ * This function modifies the main WordPress query to include an array of 
+ * post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ */
+function tg_include_custom_post_types_in_search_results( $query ) {
+  if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+      $query->set( 'post_type', array( 'post', 'blog_series' ) );
+  }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );
