@@ -139,3 +139,49 @@
     margin-top: 100px;
     padding-bottom: 100px;
 }
+
+#youtube-calculator-video-search .videos-selected-container {
+    display: grid;
+    margin-top: 200px;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+#youtube-calculator-video-search .video-selected {
+    width: 250px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#youtube-calculator-video-search .video-selected-remove-wrapper {
+    float: right;
+}
+
+#youtube-calculator-video-search .video-selected-remove {
+    box-shadow: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+    transform: translate(5px, -150px);
+    margin: 0px;
+    color: black;
+    font-weight: 900;
+    transition-duration: 300ms;
+    font-size: 25px;
+}
+
+#youtube-calculator-video-search .video-selected-remove:hover {
+    font-size: 27.5px;
+}
+
+#youtube-calculator-video-search .video-selected-image {
+    width: 100%;
+}
+
+#youtube-calculator-video-search .video-selected-title {
+    font-weight: bold;
+    padding: 10px 7.5px 0px 7.5px;
+}
