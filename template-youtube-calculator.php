@@ -1,7 +1,7 @@
 <?php
-/**
- * Template Name: Youtube Calculator
- */
+/*
+Template Name: Youtube Calculator
+*/
 ?>
 
 <?php get_header(); ?>

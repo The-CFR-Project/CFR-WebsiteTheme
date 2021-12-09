@@ -47,6 +47,16 @@
         <div class="charts-container">
             <div id="bar-chart"></div>
         </div>
+
+        <div id="videos-selected" class="videos-selected-container">
+            <div class="video-selected">
+                <img class="video-selected-image" src="https://i.ytimg.com/vi/oX3GVz4Bnzg/mqdefault.jpg" alt="thumbnail"></img>
+                <div class="video-selected-remove-wrapper">
+                    <button class="video-selected-remove">&times;</button>
+                </div>
+                <div class="video-selected-title">Title</div>
+            </div>
+        </div>
     </div>
 
     <br>
