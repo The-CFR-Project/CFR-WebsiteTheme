@@ -3,7 +3,7 @@
 <section id="search-container">
     <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-search.css"); </style>
 
-    <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="multiselect" ]' ); ?>
+    <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="multiselect" class="my-precious"]' ); ?>
 
     <?php if (get_search_query() != ''): ?>
     <?php echo '<h1>Search Results for "'.get_search_query().'"</h1>';?>
