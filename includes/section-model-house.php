@@ -1,1 +1,10 @@
-<?php echo do_shortcode('[vrm360 canvas_name=r1 model_url='.echo get_template_directory_uri().'/house-renders/Low.Poly.Car.obj]'); ?>
+<?php
+$post = get_page_by_path("model-house");
+$doc = new DOMDocument();
+$doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
+$doc = new DOMXPath( $doc );
+
+$model = $doc->query( "//p" );
+echo $model[0];
+echo do_shortcode($model[0]);
+?>

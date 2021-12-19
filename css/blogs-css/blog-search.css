@@ -1,5 +1,111 @@
 /* Search Page for Blogs */
 
 #search-container {
-    margin-top: 100px;
+    margin: 100px 0 0;
+    position: relative;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin: 50px 0 100px;
+}
+
+.search-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Search Textbox */
+.searchandfilter li:first-child {
+  padding: 0;
+  margin: 0;
+}
+
+.searchandfilter li:first-child input {
+  width: 40vw;
+  height: 60px;
+  min-width: 225px;
+  border-radius: 30px 0 0 30px;
+  border: 0;
+  background-color: var(--grey1);
+  padding: 0 25px;
+  color: var(--grey4);
+}
+
+/* Submit Button */
+.searchandfilter li:nth-child(2) {
+  padding: 0;
+  margin: 0;
+}
+
+.searchandfilter li:nth-child(2) input {
+  height: 60px;
+  width: 10vw;
+  margin: 50px 0;
+  min-width: 65px;
+  border-radius: 0 30px 30px 0;
+  border: 0;
+  background-color: var(--blue2);
+  color: #fff;
+  text-transform: uppercase;
+  content: 'Search';
+}
+
+
+/* All Tags Dropdown */
+.dropdown-container {
+    margin: 0 0 50px;
+}
+
+.dropdown-container li {
+    position: relative;
+}
+
+.dropdown-container li::after {
+  content: "\25bc";
+  font-size: 1rem;
+  top: 18px;
+  right: 20px;
+  position: absolute;
+  color: var(--grey3);
+}
+
+.dropdown-container select{
+  width: 24vw;
+  height: 60px;
+  padding: 0 25px;
+  margin: 0 0 50px;
+  border-radius: 30px;
+  border: 0;
+  background-color: var(--grey1);
+  position: relative;
+  right: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--grey4);
+}
+
+.dropdown-container li:nth-child(2) select{
+  margin-left: 2vw;
+}
+
+.dropdown-container select > option {
+  font-weight: bold !important;
+}
+
+/* Results  */
+.results-heading {
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--red4);
+  font-weight: 700;
+  margin: 0 0 50px;
+}
+
+.blogs-sidebar-blogs {
+  margin: 0 0 100px;
 }

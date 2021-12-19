@@ -1,23 +1,23 @@
 <section id="blogs-carousel">
 <div class="header-slideshow-container">
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-carousel.css"); </style>  
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/home-banner.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-carousel.css"); </style>
   <?php
 
   $category_id = get_cat_ID('Banner-Blogs');
   $q = 'cat=' . $category_id;
   $bannerItems = (query_posts($q));
-  
 
 
 
-  
+
+
 
   $i = 0;
-  while (have_posts()) : the_post(); 
+  while (have_posts()) : the_post();
   ?>
     <div class="header-slide quick-fade">
-      
+
       <?php if(has_post_thumbnail()): ?>
         <img class="archive-carousel-image" src="<?php echo the_post_thumbnail_url(); ?>">
       <?php endif; ?>
@@ -26,6 +26,7 @@
         <p><?php echo the_excerpt(); ?></p>
         <a href="<?php the_permalink(); ?>" class="readmore">
           <h4 class="special-underline">Read More</h4>
+          <div class="blogs-carousel-readmore-arrow-line"></div>
           <div class="blogs-carousel-readmore-arrow"></div>
         </a>
       </div>
@@ -40,7 +41,7 @@
   endwhile;
 
   ?>
-  
+
 
     <a class="prev-slide" onclick="changeHeaderSlideshow(-1)">&#10094;</a>
     <a class="next-slide" onclick="changeHeaderSlideshow(1)">&#10095;</a>

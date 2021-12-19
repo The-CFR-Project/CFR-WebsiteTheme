@@ -1,24 +1,64 @@
 <?php get_header(); ?>
+<section>
 
-<section id="search-container">
+</section>
+ <section id="search-container">
     <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-search.css"); </style>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/latest-blogs.css"); </style>
 
-    <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="multiselect" class="my-precious"]' ); ?>
+    <div class="heading-container">
+      <?php
+        echo "<div class='heading-overlay'>search for a blog</div>";
+        echo "<div class='heading-watermark'>search</div>";
+      ?>
+    </div>
+
+    <div class="search-container">
+        <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="select" class="my-precious" submit_label="Go!"]' ); ?>
+    </div>
 
     <?php if (get_search_query() != ''): ?>
-    <?php echo '<h1>Search Results for "'.get_search_query().'"</h1>';?>
+      <?php echo '<h1 class="results-heading">Search Results for "'.get_search_query().'"</div>'; ?>
+        <div class="blogs-sidebar-blogs">
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-        <?php if(has_post_thumbnail()): ?>
-            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
-        <?php endif; ?>
-        <?php the_title(); ?>
-        <?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?>
-    <?php endwhile; endif;?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+
+            <div class="blogs-sidebar-blogs-blog" style="width: auto;">
+                <?php if(has_post_thumbnail()): ?>
+                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
+                <?php endif; ?>
+                <div class="blogs-archive-post-text">
+                    <h3><?php the_title(); ?></h3>
+                    <p><?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?></p>
+                </div>
+            </div>
+            <?php endwhile; endif;?>
+        </div>
     <?php endif; ?>
-
-
 </section>
 
 
 <?php get_footer(); ?>
+<script>
+    function swapSibling(node1, node2) {
+        node1.parentNode.replaceChild(node1, node2);
+        node1.parentNode.insertBefore(node2, node1);
+    }
+
+    window.onload = () => {
+        const searchForm = document.getElementsByClassName("my-precious")[0];
+        swapSibling(searchForm.childNodes[1].childNodes[1].childNodes[2], searchForm.childNodes[1].childNodes[1].childNodes[3])
+        swapSibling(searchForm.childNodes[1].childNodes[1].childNodes[1], searchForm.childNodes[1].childNodes[1].childNodes[2])
+
+        const dropdownContainer = document.createElement("div");
+        dropdownContainer.classList.add("dropdown-container");
+        dropdownContainer.appendChild(searchForm.childNodes[1].childNodes[1].childNodes[2]);
+        dropdownContainer.appendChild(searchForm.childNodes[1].childNodes[1].childNodes[2]);
+        searchForm.childNodes[1].childNodes[1].appendChild(dropdownContainer);
+    }
+
+    var commonSearchBar = document.getElementsByClassName("full-search-container")[0];
+    //console.log(commonSearchBar);
+    commonSearchBar.style.display = 'none';
+
+</script>
