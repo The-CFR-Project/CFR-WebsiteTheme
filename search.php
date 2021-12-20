@@ -24,13 +24,15 @@
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
             <div class="blogs-sidebar-blogs-blog" style="width: auto;">
+              <a href="<?php the_permalink(); ?>">
                 <?php if(has_post_thumbnail()): ?>
                     <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
                 <?php endif; ?>
                 <div class="blogs-archive-post-text">
                     <h3><?php the_title(); ?></h3>
-                    <p><?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?></p>
+                    <p style="color:var(--grey6);"><?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?></p>
                 </div>
+              </a>
             </div>
             <?php endwhile; endif;?>
         </div>
