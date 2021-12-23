@@ -10,7 +10,11 @@
     <div id="blogs-archive-latest">
     <?php $i = 1; ?>
     <div class="row blogs-archive-post">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+        <?php
+        $category_id = get_cat_ID('Blog');
+        $q = 'cat=' . $category_id;
+        $blogs = (query_posts($q));
+        if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
             <!--  If the post is the latest one  -->
             <?php if($i == 1): ?>
