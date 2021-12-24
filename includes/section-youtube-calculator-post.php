@@ -12,15 +12,15 @@
 
     <div class="row fields">
         <div class="col field">
-            <div class="field-value blue-text" id="total-video-carbon-footprint">100</div>
+            <div class="field-value blue-text" id="total-video-carbon-footprint">NaN</div>
             <div class="field-name">Grams of CO<sub>2</sub> emitted</div>
         </div>
         <div class="col field">
-            <div class="field-value pink-text" id="total-video-size">5.5</div>
+            <div class="field-value pink-text" id="total-video-size">NaN</div>
             <div class="field-name">MB of data used</div>
         </div>
         <div class="col field">
-            <div class="field-value purple-text" id="total-video-duration">63</div>
+            <div class="field-value purple-text" id="total-video-duration">NaN</div>
             <div class="field-name">Minutes Total</div>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="heading-container">
             <?php echo "<div class='heading-overlay blue-text'>" . $post->post_title . "</div>"; ?>
         </div>
-        <div style="padding-left: 100px; padding-right: 100px;">
+        <div style="padding-left: 100px; padding-right: 100px; line-height: 30px;">
             <?php
                 foreach ($doc->query('//p[not(a)]') as $node) {
                     echo $node->nodeValue;

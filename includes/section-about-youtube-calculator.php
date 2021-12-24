@@ -25,7 +25,7 @@
                 <img src="<?php echo get_template_directory_uri();?>/images/video-emissions-title-graphic.svg" width="500px" height="500px" style="margin: 75px;">
             </div>
 
-            <div class="col-md-6 col-para text-justify">
+            <div class="col-md-6 col-para text-justify" style="line-height: 40px;">
                 <?php
                     foreach ($doc->query('//p[not(a)]') as $node) {
                         echo $node->nodeValue;
