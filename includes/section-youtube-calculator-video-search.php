@@ -15,9 +15,12 @@
 
         <div class="video-stats-container">
             <div class="row">
-                <div class="col">
+                <div class="col" id="inputs-col">
+                    <div style="background-color: rgba(173, 173, 173, 0.25); display: flex; justify-content: center; align-items: center; position: absolute; height: 185px; width: 46.75%;"></div>
                     <img src="<?php echo get_template_directory_uri() ?>/images/placeholder-image.svg" alt="" id="thumbnail-img" class="thumbnail-img">
-                    <input type="range" min="0" max="100" value="100" class="duration-video-watched" id="video-watched">
+                    <input type="range" min="0" max="100" value="0" class="duration-video-watched" id="video-watched" onmousedown="showValueOnThumbnail(this)" onmouseup="showValueOnThumbnail(this)">
+                    <input type="range" min="0" max="100" value="100" class="duration-video-watched-from-end" id="video-watched-from-end" onmousedown="showValueOnThumbnail(this)" onmouseup="showValueOnThumbnail(this)">
+                    <div id="slider"></div>
                     <button class="add-to-calculations-button" onclick="addVideoToCalculations()">Add to Calculations</button>
                 </div>
                 <div class="col">
@@ -44,20 +47,11 @@
         <div id="chart-heading" class="heading-container" style="width: 100vh; display: none;">
             <div class="heading-overlay">Carbon Footprint (gCO<sub>2</sub>)</div>
         </div>
-        <div class="charts-container">
-            <div id="bar-chart"></div>
-        </div>
+        
+        <div id="graph"></div>
 
         <div id="videos-selected" class="videos-selected-container">
             <div class="video-selected">
-                <img class="video-selected-image" src="https://i.ytimg.com/vi/oX3GVz4Bnzg/mqdefault.jpg" alt="thumbnail"></img>
-                <div class="video-selected-remove-wrapper">
-                    <button class="video-selected-remove">&times;</button>
-                </div>
-                <div class="video-selected-title">Title</div>
-            </div>
-        </div>
-    </div>
 
     <br>
     <br>
