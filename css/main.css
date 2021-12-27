@@ -260,7 +260,7 @@ section:nth-child(even) .heading-container {
 
 .heading-overlay {
 	text-transform: lowercase;
-	font-size: 35px;
+	font-size: 40px;
 
 	z-index: 8;
 }
