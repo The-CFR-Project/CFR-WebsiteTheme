@@ -14,7 +14,8 @@
     </div>
 
     <div class="search-container">
-        <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="select" class="my-precious" submit_label="Go!"]' ); ?>
+        <?php // Add `,post_tag,series_name` to `fields` after blog series completion ?>
+        <?php echo do_shortcode( '[searchandfilter fields="search" types="select" class="my-precious" submit_label="Go!"]' ); ?>
     </div>
 
     <?php if (get_search_query() != ''): ?>
