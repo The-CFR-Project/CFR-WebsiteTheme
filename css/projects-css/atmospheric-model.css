@@ -93,17 +93,25 @@
   /* background-color: #fff; */
 }
 
-/* #background {
+#background {
   background-color: #fff;
   position: absolute;
+  left: 13vw;
+  width: 800px;
+  height: 500px;
+  z-index: 9;
+}
 
-} */
+#amp-map-svg {
+  z-index: 99;
+}
 
 .altitude-slider-container {
   /* width: 400px; */
   position: absolute;
-  width: 200px;
-  right: 16vw;
+  width: 300px;
+  right: 10vw;
+  z-index: 99;
 }
 
 input#myRange {
