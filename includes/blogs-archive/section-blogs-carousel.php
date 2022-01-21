@@ -25,7 +25,7 @@
         <a href = "<?php the_permalink(); ?>"><h1><?php the_title();?></h1></a>
         <p><?php echo the_excerpt(); ?></p>
         <a href="<?php the_permalink(); ?>" class="readmore">
-          <h4 class="special-underline">Read More</h4>
+          <h4 class="special-underline read-more-precious">Read More</h4>
           <div class="blogs-carousel-readmore-arrow-line"></div>
           <div class="blogs-carousel-readmore-arrow"></div>
         </a>

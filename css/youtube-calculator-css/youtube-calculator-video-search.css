@@ -165,12 +165,13 @@
     height: 40px;
     text-align: center;
     background-color: transparent;
-    transform: translate(5px, -150px);
+    transform: translate(5px, -145px);
     margin: 0px;
     color: black;
     font-weight: 900;
     transition-duration: 300ms;
     font-size: 25px;
+    z-index: 50;
 }
 
 #youtube-calculator-video-search .video-selected-remove:hover {

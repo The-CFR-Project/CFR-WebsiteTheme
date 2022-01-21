@@ -37,7 +37,7 @@
 .chart-y {
     display: grid;
     grid-row-gap: 30px;
-    width: 5px;
+    width: 2px;
     height: 500px;
 }
 
@@ -63,7 +63,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
 
-    height: 5px;
+    height: 2px;
     width: 700px;
 }
 
@@ -86,7 +86,7 @@
     height: 50px;
     width: 100px;
 
-    background-color: red; /* temporary */
+    /* background-color: var(--red5); */ /* temporary */
 
     transform: translate(50px, -55px);
 }
@@ -110,4 +110,20 @@
 
 .bars-bar:hover .bar-hover-box {
     opacity: 100 !important;
+}
+
+.bg-red5 {
+    background-color: var(--red5);
+}
+
+.bg-red4 {
+    background-color: var(--red4);
+}
+
+.bg-red2 {
+    background-color: var(--red2);
+}
+
+.bg-blue2 {
+    background-color: var(--blue2);
 }
