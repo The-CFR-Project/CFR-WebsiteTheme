@@ -17,7 +17,7 @@
 
 <script>
     // Defining constants
-    const cord1 = [11, 48]; // Dubai
+    const cord1 = [11, 48]; // Munich
     const cord2 = [74, 16]; // Mumbai
 
     // Making an instance of a globe

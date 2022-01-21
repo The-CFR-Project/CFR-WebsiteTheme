@@ -1,0 +1,70 @@
+#gameshow-about {
+    margin: 100px 0 0;
+    padding: 100px 0 0;
+}
+
+.trailer-embed-container{
+    padding: 0 25px 0 100px;
+    position: relative;
+}
+
+.about-gameshow-container {
+    padding: 7vw 14vw 0 25px; /* 7vw */
+}
+
+.about-gameshow-tv {
+    width: 35vw;
+    height: auto;
+    position: absolute;
+    right: 25px;
+    z-index: 2;
+}
+
+iframe {
+    width: 25vw;
+    height: 16vw;
+    position: absolute;
+    right: 11vw;
+    top: 8vw;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.about-gameshow-container h1 {
+    font-size: 2rem;
+    color: var(--blue2);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-gameshow-container p{
+    text-align: justify;
+    color: var(--grey3);
+    line-height: 32px;
+}
+
+
+/* Media Queries  */
+@media (max-width: 765px) {
+    #gameshow-about {
+        padding-bottom: 0;
+    }
+    .trailer-embed-container {
+        padding: 0;
+    }
+    .about-gameshow-container {
+        padding: 75px 50px;
+    }
+    .about-gameshow-tv {
+        width: 80vw;
+        margin: 0 14vw;
+        position: relative;
+    }
+    iframe {
+        width: 55vw;
+        right: auto;
+        left: 13vw;
+        height: 38vw;
+        top: 17vw;
+    }
+  }

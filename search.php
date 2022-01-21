@@ -14,27 +14,37 @@
     </div>
 
     <div class="search-container">
-        <?php echo do_shortcode( '[searchandfilter fields="search,post_tag,series_name" types="select" class="my-precious" submit_label="Go!"]' ); ?>
+        <?php // Add `,post_tag,series_name` to `fields` after blog series completion ?>
+        <?php echo do_shortcode( '[searchandfilter fields="search" types="select" class="my-precious" submit_label="Go!"]' ); ?>
     </div>
 
     <?php if (get_search_query() != ''): ?>
       <?php echo '<h1 class="results-heading">Search Results for "'.get_search_query().'"</div>'; ?>
-        <div class="blogs-sidebar-blogs">
-
+        <div class="blogs-sidebar-blogs" style="display:block;">
+          <?php $counter = 0 ?>
+          
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-            <div class="blogs-sidebar-blogs-blog" style="width: auto;">
-              <a href="<?php the_permalink(); ?>">
-                <?php if(has_post_thumbnail()): ?>
-                    <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
-                <?php endif; ?>
-                <div class="blogs-archive-post-text">
-                    <h3><?php the_title(); ?></h3>
-                    <p style="color:var(--grey6);"><?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?></p>
+              <?php if ($counter == 0): ?>
+                <div class="row" style="display:flex;align-items:center;justify-content:center;">
+              <?php endif; $counter += 1; ?>
+                  <div class="blogs-sidebar-blogs-blog col-sm-3" style="width:auto !important;">
+                    <a href="<?php the_permalink(); ?>">
+                      <?php if(has_post_thumbnail()): ?>
+                          <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
+                      <?php endif; ?>
+                      <div class="blogs-archive-post-text">
+                          <h3><?php the_title(); ?></h3>
+                          <p style="color:var(--grey6);"><?php echo get_the_author_meta("first_name")." ".get_the_author_meta("last_name");?></p>
+                      </div>
+                    </a>
+                  </div>
+              <?php if ($counter == 4): ?>    
                 </div>
-              </a>
-            </div>
+              <?php  $counter = 0; endif; ?>
+            
             <?php endwhile; endif;?>
+          
         </div>
     <?php endif; ?>
 </section>
