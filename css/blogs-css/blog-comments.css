@@ -139,7 +139,7 @@ a.url {
     background-color: var(--grey1);
     border-radius: 10px;
     margin-right: 5%;
-    padding: 5px;
+    padding:  5px 10px;
 }
 
 .comment-form-email {
@@ -152,7 +152,7 @@ a.url {
     background-color: var(--grey1);
     border-radius: 10px;
     margin-left: 5%;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 .comment-form-cookies-consent {
@@ -189,6 +189,10 @@ a.url {
 #submit:hover {
     background-color: var(--red4);
     color: #fff;
+}
+
+b.fn {
+    margin-left: 100px;
 }
 
 /* reply */
