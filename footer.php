@@ -1,7 +1,7 @@
 </div>
 
 <?php wp_footer();?>
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/footer.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/footer.css"); </style>
 <div id="footer-container">
 	
 	<?php get_search_form(); ?>
@@ -19,7 +19,7 @@
 		<?php
 			$socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
 			foreach ( $socialItems as $footerItem ) {
-			  echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/images/" . $footerItem->title . "-icon.svg'></a>";
+			  echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg'></a>";
 			}
 		?>
 	</div>
@@ -30,6 +30,6 @@
 
 </div>
 
-<script  type='text/javascript' src = "<?php echo get_template_directory_uri(); ?>/js/mobile.js"></script>
+<script  type='text/javascript' src = "<?php echo get_template_directory_uri(); ?>/assets/js/mobile.js"></script>
 </body>
 </html>

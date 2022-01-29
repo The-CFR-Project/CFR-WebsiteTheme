@@ -1,0 +1,216 @@
+.globe-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globe-section-container > div {
+    display: flex;
+}
+
+.globe-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.total-statistics-container {
+    flex-direction: column;
+}
+
+.total-statistics-container > div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10%;
+}
+
+.total-statistics-container h3 {
+    font-weight: 700;
+    color: var(--blue3);
+}
+
+.total-statistics-container p {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.total-statistics-container > div:nth-child(odd) p {
+    color: var(--blue2);
+}
+
+.total-statistics-container > div:nth-child(even) p {
+    color: var(--red2);
+}
+
+#flight-calculator-globe {
+    padding-bottom: 50px;
+}
+
+#globe {
+    width: 100%;
+    height: 100%;
+    cursor: move;
+}
+
+#flight-calculator-inputs-form {
+    padding-bottom: 80px;
+}
+
+#flight-calculator-inputs-form label {
+    color: var(--grey3);
+    font-size: 13px;
+    font-weight: 400;
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#flight-calculator-inputs-form button {
+    background-color: var(--red4);
+    border-color: var(--red4);
+
+    color: white;
+    margin-top: 27px
+}
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+  }
+#flight-calculator-inputs-form .col-md-4 {
+    flex-direction: column;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#flight-calculator-inputs-form select:hover,
+#flight-calculator-inputs-form input:hover,
+#flight-calculator-inputs-form button:hover {
+    border-color: var(--red4);
+}
+
+#flight-calculator-inputs-form select,
+#flight-calculator-inputs-form input,
+#flight-calculator-inputs-form button {
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    color: var(--red4);
+
+    height: 50px;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    transition: all 0.2s ease;
+}
+
+#flight-calculator-inputs-form .code-input input {
+    width: 45px;
+    margin-right: 2px;
+
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.flight-list-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.flight-list-container .faq-accordion-link {
+    padding-left: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flight-data {
+    display: flex
+}
+
+.flight-data img {
+    margin-right: 10px;
+}
+
+.flight-data div {
+    margin-left: 10px;
+}
+
+.flight-route {
+    font-weight: 700;
+    color: var(--red4);
+}
+
+.flight-airline {
+    font-weight: 700;
+}
+
+.flight-cf {
+    font-weight: 700;
+    color: var(--red3);
+}
+
+.flight-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-image-container > div {
+    height: 90%;
+    background-color: var(--grey1)
+}
+
+.flight-image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.flight-list-data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 20px 3%;
+    padding-right: 0;
+
+    white-space: nowrap;
+}
+
+.flight-list-data-container .col-md-5 {
+    font-weight: 700;
+    color: var(--grey4);
+    width: 42%;
+    min-width: 90px;
+    max-width: 200px;
+}
+
+.flight-list-data-container .col-md-7 {
+    color: var(--grey3);
+    width: 58%;
+}
+
+.flight-list-container input {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    border-width: 0;
+}
+
+#flight-calculator-writing {
+    margin-top: 200px;
+}
+
+#flight-calculator-writing .row {
+    margin-bottom: 60px;
+}
