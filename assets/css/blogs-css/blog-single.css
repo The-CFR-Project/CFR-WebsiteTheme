@@ -129,7 +129,7 @@
     height: 190px;
     border-radius: 100%;
     overflow: hidden;
-    margin: 40px 0 30px;
+    margin: 40px auto 30px;
   }
 
   .blog-author-pic img {
@@ -142,6 +142,7 @@
     width: 190px;
     height: fit-content;
     text-align: center;
+    margin: 0 auto;
   }
 
   .blog-sidebar .status {
@@ -166,6 +167,7 @@
     align-items: center;
     position: relative;
     padding: 0 20px;
+    margin: auto;
   }
 
   #share-copy-link {
@@ -213,9 +215,8 @@
   #sidebar-primary {
     list-style-type: none;
     text-align: left;
-    position: absolute;
-    bottom: 0;
-    padding: 0 20px 0 0;
+    position: relative;
+    padding: 100px 0 50px;
   }
 
   #block-9{
