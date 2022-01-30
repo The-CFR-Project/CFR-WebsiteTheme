@@ -10,7 +10,7 @@
 
 </head>
 <body onscroll="document.getElementById('sidenav').className='hide collapse';">
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/header.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/header.css"); </style>
 <header id = "topnav">
 	<div class="nav-header-container">
 		<div class="nav-logo-container">
