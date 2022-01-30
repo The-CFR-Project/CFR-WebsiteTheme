@@ -27,7 +27,7 @@
                         setup_postdata( $post ); 
                         if (get_post_meta($post->ID, 'blog_id', true) == 1): ?>
                             <div class="row blog-series-first-container">
-                                <div class="col-lg-4 blog-series-first-tn">
+                                <div class="col-lg-4 blog-series-tn">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php if(has_post_thumbnail()): ?>
                                             <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
@@ -43,13 +43,13 @@
                             </div>
                         
                     <?php endif; endforeach;?>
-                    <div class="row blog-series-rest-container" style='display:flex; justify-content:center;'>
+                    <div class="row blog-series-rest-container" style='display:flex;'>
                         <?php
                         foreach ( $posts as $post ) : 
                             if (get_post_meta($post->ID, 'blog_id', true) != 1): ?>
-                                <div class="col-lg-<?php echo floor(12/($totalPosts-1)); ?> blog-series-rest">
+                                <div class="col-lg-3 blog-series-rest"><?php //echo floor(12/($totalPosts-1)); ?>
                                     <div class="row">
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-12 blog-series-tn">
                                             <a href="<?php the_permalink(); ?>">
                                                 <?php if(has_post_thumbnail()): ?>
                                                     <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid blog-series-rest-img">
