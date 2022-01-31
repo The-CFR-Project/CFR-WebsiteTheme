@@ -77,30 +77,37 @@ function newBarChart(chartBase, data) {
         barsBar.style.transform = `translate(28.5px, -${
             values[i] * chartIncrementInPx + 2
         }px)`;
+        const barsBarBarHoverBox = document.createElement("div");
 
         if (prevColor === "var(--red4)") {
             barsBar.classList.remove("bg-red4");
             barsBar.classList.add("bg-blue2");
+            barsBarBarHoverBox.classList.add("border-top-blue");
             prevColor = "var(--blue2)";
         } else if (prevColor === "var(--blue2)") {
             barsBar.classList.remove("bg-blue2");
             barsBar.classList.add("bg-red2");
+            barsBarBarHoverBox.classList.add("border-top-pink");
             prevColor = "var(--red2)";
         } else if (prevColor === "var(--red2)") {
             barsBar.classList.remove("bg-red2");
             barsBar.classList.add("bg-red4");
+            barsBarBarHoverBox.classList.add("border-top-purple");
             prevColor = "var(--red4)";
         }
 
         // Hover Boxes
-        const barsBarBarHoverBox = document.createElement("div");
         barsBarBarHoverBox.classList.add("bar-hover-box");
         const hoverBoxTable = document.createElement("table");
         for (let j = 0; j < hoverBoxData[i].length; j++) {
             const tableRow = document.createElement("tr");
             const tableResolutionsCol = document.createElement("td");
-            if (hoverBoxData[i][j].resolution === "1920x1080") {
+            if (hoverBoxData[i][j].resolution === "1920x1080" || hoverBoxData[i][j].resolution === "1920x960") {
                 tableResolutionsCol.innerHTML = `<b>1080p</b>`;
+            } else if (hoverBoxData[i][j].resolution === "2560x1280") {
+                tableResolutionsCol.innerHTML = `<b>1440p</b>`;
+            } else if (hoverBoxData[i][j].resolution === "3840x1920") {
+                tableResolutionsCol.innerHTML = `<b>2160p</b>`;
             } else {
                 tableResolutionsCol.innerHTML = `<b>${hoverBoxData[i][j].resolution}</b>`;
             }

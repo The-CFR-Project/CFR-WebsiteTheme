@@ -95,7 +95,7 @@
 .bars-bar .bar-hover-box {
     opacity: 0 !important;
     transition-duration: 0.3s !important;
-    background-color: white;
+    background-color: var(--grey1);
     background-clip: padding-box;
 
     width: 100px;
@@ -106,6 +106,18 @@
     font-size: 10px;
 
     transition-duration: 0.5s;
+}
+
+.border-top-blue {
+    border-top: 5px solid var(--blue2) !important;
+}
+
+.border-top-pink {
+    border-top: 5px solid var(--red2) !important;
+}
+
+.border-top-purple {
+    border-top: 5px solid var(--red4) !important;
 }
 
 .bars-bar:hover .bar-hover-box {

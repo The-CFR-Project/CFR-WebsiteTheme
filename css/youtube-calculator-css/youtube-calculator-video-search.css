@@ -15,15 +15,14 @@
     height: 45px;
     border: none;
     appearance: none;
-    background-color: white;
+    background-color: var(--grey1);
     border-top-left-radius: 25px;
-    margin-bottom: 20px;
     padding: 25px;
 }
 
 #youtube-calculator-video-search .search-button {
     width: 125px;
-    height: 45px;
+    height: 50px;
     border: none;
     appearance: none;
     background-color: var(--red4);
@@ -70,8 +69,8 @@
 #youtube-calculator-video-search .add-to-calculations-button {
     border: none;
     appearance: none;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: 17.5px;
+    height: 35px;
     width: 100%;
     background-color: var(--red4);
     margin-top: 30px;
@@ -93,14 +92,14 @@
     appearance: none;
     width: 100%;
     text-align: center;
-    background-color: white;
+    background-color: var(--grey1);
     margin-top: 20px;
     color: var(--red4);
     border-radius: 17.5px;
     background-image: linear-gradient(var(--grey1), var(--grey1)),
-        linear-gradient(-130deg, transparent 50%, var(--red4) 50%),
-        linear-gradient(-230deg, transparent 50%, var(--red4) 50%),
-        linear-gradient(var(--red4) 42%, var(--grey1) 42%);
+        linear-gradient(242deg, transparent 50%, var(--red4) 50%),
+        linear-gradient(117deg, transparent 50%, var(--red4) 50%),
+        linear-gradient(var(--red4) 42%, var(--grey1) 43%);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
     background-position: right 20px center, right bottom, right bottom,

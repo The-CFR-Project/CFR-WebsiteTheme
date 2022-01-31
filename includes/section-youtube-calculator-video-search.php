@@ -49,13 +49,6 @@
         <div id="graph"></div>
 
         <div id="videos-selected" class="videos-selected-container">
-            <div class="video-selected">
-                <img src="https://i.ytimg.com/vi/oX3GVz4Bnzg/mqdefault.jpg" alt="" class="video-selected-image">
-                <div class="video-selected-remove-wrapper">
-                    <button class="video-selected-remove">&times;</button>
-                </div>
-                <div class="video-selected-title">HELLO</div>
-            </div>
         </div>
 
     <br>
