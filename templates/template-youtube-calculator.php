@@ -6,16 +6,16 @@ Template Name: Youtube Calculator
 
 <?php get_header(); ?>
 
-<style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/css/AVCharts.css"); </style>
-<style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/css/omni-slider.css"); </style>
+<style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/assets/css/AVCharts.css"); </style>
+<style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/assets/css/omni-slider.css"); </style>
 <script src="<?php echo get_template_directory_uri(); ?>/js/AVCharts.js"></script>
 
-<script src="<?php echo get_template_directory_uri() ?>/js/d3.v4.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/d3.v4.min.js"></script>
 <?php get_template_part("template-parts/section", "about-youtube-calculator"); ?>
 <?php get_template_part("template-parts/section", "youtube-calculator-video-search"); ?>
 <?php get_template_part("template-parts/section", "youtube-calculator-post"); ?>
 <!-- <script src="<?php echo get_template_directory_uri() ?>/js/jquery-3.6.0.js"></script> -->
-<script src="<?php echo get_template_directory_uri() ?>/js/omni-slider.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/omni-slider.min.js"></script>
 <script>
     // TODO: Make the Chart class work with functions (edits required in constructor)
 

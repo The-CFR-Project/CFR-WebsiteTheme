@@ -8,7 +8,7 @@
 ?>
 
 <section id="youtube-calculator-post">
-    <style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/css/youtube-calculator-css/youtube-calculator-post.css"); </style>
+    <style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/assets/css/youtube-calculator-css/youtube-calculator-post.css"); </style>
 
     <div class="row fields">
         <div class="col field">
