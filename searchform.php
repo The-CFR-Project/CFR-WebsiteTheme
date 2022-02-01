@@ -5,7 +5,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <form method = "get">
+<<<<<<< HEAD
     <input type="text" placeholder="Search the CFR Blogs..." name="s" value="<?php the_search_query(); ?>" action = "<?php echo get_site_url() ?>">
+=======
+    <input type="text" placeholder="Search the CFR Blogs..." name="s" value="<?php the_search_query(); ?>">
+>>>>>>> origin/main
     <button type="submit" formaction = "/">
         <img src="<?php echo get_template_directory_uri();?>/images/search.svg">
     </button>

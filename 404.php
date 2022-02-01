@@ -4,11 +4,11 @@
 </div>
 
 <section>
-  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/404.css"); </style>
+  <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/404.css"); </style>
   <div class="main-404-container instawall-section-container container">
     <div class="row">
       <div class="col-md-6 align-self-center">
-        <img class="beagle" src="<?php echo get_template_directory_uri();?>/images/beagle.png">
+        <img class="beagle" src="<?php echo get_template_directory_uri();?>/assets/images/beagle.png">
       </div>
 
       <div class="col-md-6 align-self-center">
@@ -26,7 +26,7 @@
   <div class="instawall-section-container container-fluid">
     <div class="bedrock-container">
       <div>
-        <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/404rock.svg">
+        <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/assets/images/404rock.svg">
       </div>
     </div>
   </div>
