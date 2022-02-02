@@ -1,7 +1,7 @@
 function getHeight(element) {
     element.style.visibility = "hidden";
     document.body.appendChild(element);
-    var height = element.offsetHeight + 0;
+    let height = element.offsetHeight + 0;
     document.body.removeChild(element);
     element.style.visibility = "visible";
     return height;
@@ -13,14 +13,14 @@ function newBarChart(chartBase, data) {
     const values = data.values;
     const hoverBoxData = data.hoverBoxData;
 
-    var largestValue = values[0];
-    for (var i = 0; i < values.length; i++) {
+    let largestValue = values[0];
+    for (let i = 0; i < values.length; i++) {
         if (values[i] > largestValue) {
             largestValue = values[i];
         }
     }
     const largestDataPoint = largestValue + 15;
-    var dataPoints = [
+    let dataPoints = [
         Math.round(largestDataPoint),
         Math.round((largestDataPoint / 7) * 6),
         Math.round((largestDataPoint / 7) * 5),
@@ -35,7 +35,7 @@ function newBarChart(chartBase, data) {
     chartYE.classList.add("chart-y");
     chartYE.style.gridRowGap = `${largestDataPoint / 7 - 0.5}px`;
 
-    for (var i = 0; i < dataPoints.length; i++) {
+    for (let i = 0; i < dataPoints.length; i++) {
         const yMarkE = document.createElement("div");
         yMarkE.classList.add("y-mark");
         const markLabelE = document.createElement("div");
@@ -50,7 +50,7 @@ function newBarChart(chartBase, data) {
     chartXE.classList.add("chart-x");
     chartXE.style.gridTemplateColumns = "auto ".repeat(labels.length);
 
-    for (var i = 0; i < labels.length; i++) {
+    for (let i = 0; i < labels.length; i++) {
         const xLabelE = document.createElement("img");
         xLabelE.classList.add("x-label");
         xLabelE.setAttribute("src", labels[i]);
@@ -69,37 +69,48 @@ function newBarChart(chartBase, data) {
     chartBarsE.classList.add("chart-bars");
     chartBarsE.style.gridTemplateColumns = "auto ".repeat(labels.length);
 
-    var prevColor = "var(--red5)";
-    for (var i = 0; i < values.length; i++) {
+    let prevColor = "var(--red4)";
+    for (let i = 0; i < values.length; i++) {
         const barsBar = document.createElement("div");
         barsBar.classList.add("bars-bar");
         barsBar.style.height = `${values[i] * chartIncrementInPx}px`;
         barsBar.style.transform = `translate(28.5px, -${
-            values[i] * chartIncrementInPx + 5
+            values[i] * chartIncrementInPx + 2
         }px)`;
+        const barsBarBarHoverBox = document.createElement("div");
 
-        if (prevColor == "var(--red5)") {
-            barsBar.style.backgroundColor = "var(--blue2)";
+        if (prevColor === "var(--red4)") {
+            barsBar.classList.remove("bg-red4");
+            barsBar.classList.add("bg-blue2");
+            barsBarBarHoverBox.classList.add("border-top-blue");
             prevColor = "var(--blue2)";
-        } else if (prevColor == "var(--blue2)") {
-            barsBar.style.backgroundColor = "var(--red2)";
+        } else if (prevColor === "var(--blue2)") {
+            barsBar.classList.remove("bg-blue2");
+            barsBar.classList.add("bg-red2");
+            barsBarBarHoverBox.classList.add("border-top-pink");
             prevColor = "var(--red2)";
-        } else if (prevColor == "var(--red2)") {
-            barsBar.style.backgroundColor = "var(--red4)";
+        } else if (prevColor === "var(--red2)") {
+            barsBar.classList.remove("bg-red2");
+            barsBar.classList.add("bg-red4");
+            barsBarBarHoverBox.classList.add("border-top-purple");
             prevColor = "var(--red4)";
-        } else if (prevColor == "var(--red4)") {
-            barsBar.style.backgroundColor = "#c06d85ff";
-            prevColor = "var(--red5)";
         }
 
         // Hover Boxes
-        const barsBarBarHoverBox = document.createElement("div");
         barsBarBarHoverBox.classList.add("bar-hover-box");
         const hoverBoxTable = document.createElement("table");
-        for (var j = 0; j < hoverBoxData[i].length; j++) {
+        for (let j = 0; j < hoverBoxData[i].length; j++) {
             const tableRow = document.createElement("tr");
             const tableResolutionsCol = document.createElement("td");
-            tableResolutionsCol.innerHTML = `<b>${hoverBoxData[i][j].resolution}</b>`;
+            if (hoverBoxData[i][j].resolution === "1920x1080" || hoverBoxData[i][j].resolution === "1920x960") {
+                tableResolutionsCol.innerHTML = `<b>1080p</b>`;
+            } else if (hoverBoxData[i][j].resolution === "2560x1280") {
+                tableResolutionsCol.innerHTML = `<b>1440p</b>`;
+            } else if (hoverBoxData[i][j].resolution === "3840x1920") {
+                tableResolutionsCol.innerHTML = `<b>2160p</b>`;
+            } else {
+                tableResolutionsCol.innerHTML = `<b>${hoverBoxData[i][j].resolution}</b>`;
+            }
             const tableCarbonFootprintCol = document.createElement("td");
             tableCarbonFootprintCol.innerHTML = `${hoverBoxData[i][j].carbonFootprint} kg`;
             tableRow.appendChild(tableResolutionsCol);

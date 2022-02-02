@@ -9,6 +9,6 @@ Template Name: Flight Calc
 
 <h1><?php the_title();?></h1>
 
-<?php get_template_part( "template-parts/section", "flight-calculator-input" );?>
+<?php get_template_part( "template-parts/projects/section", "flight-calculator-input" );?>
 
 <?php get_footer();?>
