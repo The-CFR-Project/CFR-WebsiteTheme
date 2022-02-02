@@ -1,5 +1,5 @@
 <div class="full-search-container">
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/footer.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/footer.css"); </style>
 
 <!-- Load icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

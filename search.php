@@ -3,8 +3,8 @@
 
 </section>
  <section id="search-container">
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-search.css"); </style>
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/latest-blogs.css"); </style>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/blog-search.css"); </style>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/latest-blogs.css"); </style>
 
     <div class="heading-container">
       <?php
