@@ -22,5 +22,6 @@ Template Name: Blog
 <?php get_template_part( "template-parts/blogs-archive/section", "archive" );?>
 <?php get_template_part( "template-parts/blogs-archive/section", "blog-series-archive" );?>
 <?php get_template_part( "template-parts/section", "instawall" );?>
+<?php get_template_part( "template-parts/blogs-archive/section", "blog-series-archive" );?>
 
 <?php get_footer();?>
