@@ -1,7 +1,7 @@
 <section id="blogs-carousel">
 <div class="header-slideshow-container">
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/homepage-css/home-banner.css"); </style>
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-carousel.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/home-banner.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/blog-carousel.css"); </style>
   <?php
 
   $category_id = get_cat_ID('Banner-Blogs');
