@@ -1,12 +1,12 @@
 <?php if (post_password_required()){return;} ?>
 
 <div id="comments" class='comments-container'>
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-comments.css"); </style>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/blog-comments.css"); </style>
 
     <div class="comment-form-container">
         <?php comment_form(); ?>
         <div class="comments-graphics">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-comments-envelope.svg" alt="" class="open-close-envelope">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-comments-envelope.svg" alt="" class="open-close-envelope">
         </div>
     </div>
     

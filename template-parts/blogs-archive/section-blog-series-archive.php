@@ -1,5 +1,5 @@
 <section id="blogs-archive-series">
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-series-archive.css"); </style>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/blog-series-archive.css"); </style>
     <div class="blogs-series-container">
         <div class="blogs-series-heading">series</div>
         <?php

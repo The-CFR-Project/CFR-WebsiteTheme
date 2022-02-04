@@ -1,7 +1,7 @@
 <!---------------------- Blogs Archive Page ---------------------->
 
 <section id="blogs-archive">
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/latest-blogs.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/latest-blogs.css"); </style>
 <div class="blogs-archive-container">
 
     <?php $count = wp_count_posts()->publish;?>
@@ -65,7 +65,7 @@
             <?php
                 $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
                     foreach ( $socialItems as $footerItem ) {
-                    echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/images/" . $footerItem->title . "-icon.svg' class='blogs-sidebar-socials-icon'></a>";
+                    echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='blogs-sidebar-socials-icon'></a>";
                     }
             ?>
         </div>

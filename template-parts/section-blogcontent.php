@@ -3,8 +3,8 @@
   
 </section>
 <section id="blogs-single">
-        <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/blog-single.css"); </style>
-        <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/css/blogs-css/latest-blogs.css"); </style>
+        <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/blog-single.css"); </style>
+        <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/latest-blogs.css"); </style>
 
         <div class="blogs-single-container">
 
@@ -31,14 +31,14 @@
                         <div class="col-lg-3 blog-sidebar">
                                 <div class="author-info">
                                         <?php echo '<div class="blog-author-pic" style="background-color:'.$post_color.'"> '; ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/author-placeholder.svg" alt="author">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/author-placeholder.svg" alt="author">
                                         <?php echo '</div>' ?>
                                         <div class="blog-info-container">
                                                 <?php echo "<p class='status'>".get_post_status()."ed</p>"; ?>
                                                 <?php echo "<p class='date'>".get_the_date('j M. Y')."</p>"; ?>
                                         </div>
                                         <div class="share-like-container">
-                                                <div id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/images/share-icon.svg" alt="share"></div>
+                                                <div id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-icon.svg" alt="share"></div>
                                                 <div id="like-heart">&#9829;</div>
                                         </div>
                                 </div>
