@@ -165,6 +165,7 @@
     width: 190px;
     height: fit-content;
     align-items: center;
+    justify-content: center;
     position: relative;
     padding: 0 20px;
     margin: auto;
@@ -177,7 +178,7 @@
     border-radius: 100%;
     align-items: center;
     cursor: pointer;
-    float: left;
+    text-align: center;
   }
 
   #share-copy-link img {
@@ -246,11 +247,12 @@
   #sidebar-primary .blogs ul {
     list-style: none;
     padding: 0 20px 0 0;
-    border-right: 3px solid var(--grey3);
+    border-left: 3px solid var(--grey3);
   }
 
   #sidebar-primary .blogs li {
     margin: 2rem 0;
+    padding-left: 25px;
   }
 
   #sidebar-primary .blogs img {

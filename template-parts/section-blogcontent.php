@@ -28,6 +28,11 @@
                 </div>
 
                 <div class="blog-content row">
+                        <div class="col-lg-9">
+                                <div class="blog-content-text">
+                                <?php the_content(); ?>
+                                </div>
+                        </div>
                         <div class="col-lg-3 blog-sidebar">
                                 <div class="author-info">
                                         <?php echo '<div class="blog-author-pic" style="background-color:'.$post_color.'"> '; ?>
@@ -39,7 +44,7 @@
                                         </div>
                                         <div class="share-like-container">
                                                 <div id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-icon.svg" alt="share"></div>
-                                                <div id="like-heart">&#9829;</div>
+                                                <!-- <div id="like-heart">&#9829;</div> -->
                                         </div>
                                 </div>
 
@@ -47,12 +52,6 @@
                                 <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
                                         <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
                                 <?php endif; ?>
-                                </div>
-                        </div>
-                        <?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="col-lg-9">
-                                <div class="blog-content-text">
-                                <?php the_content(); ?>
                                 </div>
                         </div>
                 </div>
@@ -85,16 +84,16 @@
                                 });
                         }
 
-                var heart = document.getElementById('like-heart');
-                var click = 0;
-                heart.addEventListener('click', function(){
-                        click += 1;
-                        if (click % 2 == 1) {
-                                heart.style.color = "var(--red2)";
-                        } else {
-                                heart.style.color = "black";
-                        }
-                });
+                // var heart = document.getElementById('like-heart');
+                // var click = 0;
+                // heart.addEventListener('click', function(){
+                //         click += 1;
+                //         if (click % 2 == 1) {
+                //                 heart.style.color = "var(--red2)";
+                //         } else {
+                //                 heart.style.color = "black";
+                //         }
+                // });
 
         </script>
 

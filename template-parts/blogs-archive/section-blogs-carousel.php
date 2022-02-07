@@ -35,7 +35,7 @@
 
   <?php
     $i += 1;
-    if ($i > 3) {
+    if ($i > (count($bannerItems)-1)) {
       $i = 0;
     }
   endwhile;
@@ -99,7 +99,7 @@
           resetCarousel -= 1;
         }
         else if (document.activeElement.id != "read-more") {
-          reloadSlideshow(headerSlideIndex + 1)
+          reloadSlideshow(headerSlideIndex + 1);
         }
         setTimeout(carousel, 6000); // Change image every 4 seconds
       }

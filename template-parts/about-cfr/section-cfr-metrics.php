@@ -38,7 +38,7 @@ $doc = new DOMXPath( $doc );
 
             <div class="col-md-4">
               <div class="red2">
-                <h4><?php echo $doc->query( "//h3" )[1]->nodeValue;?></h4>
+                <h4 id='date'></h4>
               </div>
 
               <div>
@@ -67,4 +67,16 @@ $doc = new DOMXPath( $doc );
       </div>
     </div>
   </div>
+
+  <script>
+    var dateE = document.getElementById("date");
+    var today = new Date(); 
+    var foundedDate = new Date("06/11/2020");
+
+    var difference= Math.abs(today-foundedDate);
+    days = difference/(1000 * 3600 * 24);
+
+    dateE.innerHTML = (Number(Math.round(parseFloat(days/365 + 'e' + 1)) + 'e-' + 1)).toString() + " years";
+  </script>
+
 </section>

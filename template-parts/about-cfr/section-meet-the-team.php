@@ -94,7 +94,7 @@ function handleGesture() {
 }
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX;
-})
+});
 /*slider.addEventListener('touchmove', e => {
 	console.log(e.changedTouches[0].screenX);
 	let px = e.changedTouches[0].screenX - touchstartX;
@@ -103,6 +103,6 @@ slider.addEventListener('touchstart', e => {
 slider.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX;
   handleGesture();
-})
+});
 
 </script>

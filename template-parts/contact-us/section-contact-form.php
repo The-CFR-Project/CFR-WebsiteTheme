@@ -22,14 +22,14 @@ $post = get_page_by_path("contact-form");
     </div>
 
     <div>
-      <img id="postbox" src="<?php echo get_template_directory_uri();?>/images/postbox.svg">
+      <img id="postbox" src="<?php echo get_template_directory_uri();?>/assets/images/postbox.svg">
     </div>
   </div>
 
   <div class="instawall-section-container container-fluid">
     <div class="bedrock-container">
         <div>
-            <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/images/instarock.svg">
+            <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/assets/images/instarock.svg">
         </div>
    </div>
 </div>

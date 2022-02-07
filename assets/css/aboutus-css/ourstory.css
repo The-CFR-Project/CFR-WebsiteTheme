@@ -7,9 +7,26 @@ CFR Our Story Section
 #our-story {
     padding-bottom: 100px;
   }
+
+  .col-md-5:nth-child(0):focus-within img,
+  .col-md-5:nth-child(1):focus-within img,
+  .col-md-5:nth-child(2):focus-within img {
+    border: 2px dashed var(--grey3);
+  }
+
+  input#0:focus + img {
+    border: 2px dashed var(--grey3);
+  }
   
   .our-story-container img {
     width: 80%;
+  }
+
+  .our-story-container input {
+    opacity: 0;
+    cursor: default;
+    position: absolute;
+    bottom: 0;
   }
   
   .our-story-container .row {

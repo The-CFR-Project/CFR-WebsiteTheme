@@ -25,7 +25,8 @@ $doc = new DOMXPath( $doc );
       echo "<div class='row'>";
       if ($i % 2) {
         echo "<div class='col-md-5 align-self-center'>";
-        echo    "<img src=" . get_template_directory_uri() . "/assets/images/our-story" . $i % 3 . ".svg>";
+        echo    "<img class='images' src=" . get_template_directory_uri() . "/assets/images/our-story" . $i % 3 . ".svg>";
+        echo    "<input id='". $i ."' type='text'>";
         echo "</div>";
 
         echo "<div class='col-md-7 align-self-center'>";
@@ -44,7 +45,8 @@ $doc = new DOMXPath( $doc );
         echo "</p></div></div>";
 
         echo "<div class='col-md-5 align-self-center'>";
-        echo    "<img src=" . get_template_directory_uri() . "/assets/images/our-story" . $i % 3 . ".svg>";
+        echo    "<img class='images' src=" . get_template_directory_uri() . "/assets/images/our-story" . $i % 3 . ".svg>";
+        echo    "<input id='". $i ."' type='text'>";
         echo "</div>";
       }
       echo "</div>";
@@ -52,4 +54,5 @@ $doc = new DOMXPath( $doc );
     }?>
 
   </div>
+
 </section>
