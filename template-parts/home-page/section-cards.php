@@ -204,7 +204,7 @@ $doc = new DOMXPath( $doc );
 
     function onCardFocus() {
       const allDisplayedCards = sortArray(document.getElementsByClassName('fact-card-display'));
-      const card = this.parentNode
+      const card = this.parentNode;
 
       console.log(card.id);
       for (j = 0; j < allDisplayedCards.length; j++) {
@@ -267,9 +267,9 @@ $doc = new DOMXPath( $doc );
         allDisplayedCards[i].lastChild.addEventListener('focus', onCardFocus);
       }
       twiceClickedAnimation();
-      var query = window.matchMedia("(max-width: 760px)")
-      oneCardDblClick(query) // Call listener function at run time
-      query.addListener(oneCardDblClick) // Attach listener function on state changes
+      var query = window.matchMedia("(max-width: 760px)");
+      oneCardDblClick(query); // Call listener function at run time
+      query.addListener(oneCardDblClick); // Attach listener function on state changes
     }
 
     // Makes cards drop down when double-clicked
