@@ -460,7 +460,7 @@ function addVideoToCalculations() {
 
 }
 
-function showValueOnThumbnail(element) {
+/*function showValueOnThumbnail(element) {
     const value = element.value;
     const inputsCol = document.getElementById("inputs-col");
 
@@ -471,7 +471,7 @@ function showValueOnThumbnail(element) {
     timeDiv.innerHTML = `<div style="font-weight: bold; font-size: 50px;">${value}%</div>`;
 
     inputsCol.style.height = `${originalHeightInputsCol}px`;
-}
+}*/
 
 /* function hideValueOnThumbnail(element) {
     const inputsCol = document.getElementById("inputs-col");
