@@ -1,0 +1,61 @@
+.arrows {
+    --arrow-size: 50px;
+    padding: 102px 0px;
+}
+
+.arrows button {
+    border: none;
+    transition-duration: 0.3s;
+}
+
+.arrows button:hover {
+    transform: scale(1.25);
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+
+    border-right: var(--arrow-size) solid white;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: var(--arrow-size) solid transparent;
+    border-bottom: var(--arrow-size) solid transparent;
+
+    border-left: var(--arrow-size) solid white;
+}
+
+.guests {
+    display: flex;
+    justify-content: center;
+}
+
+.guest {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    transform: translate(0, -175px);
+}
+
+.guest-pfp {
+    width: 70%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.guest-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+.guest-description {
+    font-size: 19px;
+    text-align: justify;
+}

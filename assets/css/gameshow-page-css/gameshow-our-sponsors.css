@@ -1,0 +1,10 @@
+.sponsors-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sponsor-img {
+    padding: 0 70px;
+}
