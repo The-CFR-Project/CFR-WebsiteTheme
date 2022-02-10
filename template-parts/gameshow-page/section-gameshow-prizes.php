@@ -22,7 +22,7 @@ $doc = new DOMXPath( $doc );
             <div class="col-md-6 col-para text-justify">
                 <?php
                     $para_no = 1;
-                    foreach ($doc->query('//p') as $node) {
+                    foreach ($doc->query('//p[not(a)]') as $node) {
                         if ($para_no == 1) {
                             echo "<div class='gold' style='text-transform: uppercase'><b>1st place</b></div>";
                         } else if ($para_no == 2) {
