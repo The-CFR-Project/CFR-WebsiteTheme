@@ -88,6 +88,10 @@ The CFR FAQs Section Located above the Instagram Wall
     font-weight: 600;
   }
 
+  .faq-answer:focus-within {
+    border: 2px dashed var(--grey3);
+  }
+
   .faq-accordion-checkbox:checked + label .faq-accordion-link .minus-icon {
     display: block;
   }

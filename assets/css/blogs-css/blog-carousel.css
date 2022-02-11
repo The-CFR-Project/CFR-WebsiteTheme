@@ -123,6 +123,11 @@
     font-weight: 500;
 }
 
+.readmore:focus,
+.blogs-archive-slide-header-link:focus h1 {
+    border: 2px dashed var(--grey2);
+}
+
 .special-underline {
     color: #fff;
     font-size: 2rem;

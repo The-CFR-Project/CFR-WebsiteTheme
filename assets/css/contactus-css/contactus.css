@@ -38,6 +38,12 @@ CFR Contact Us
     transform: scale(1.09);
     transition: all 0.2s ease-in-out;
   }
+
+  .contactus-card:focus-within {
+    border-right: 2px dashed var(--grey3);
+    border-left: 2px dashed var(--grey3);
+    border-bottom: 2px dashed var(--grey3);
+  }
   
   .contactus-card-1{
     border-top: 15px solid var(--blue2);
@@ -79,7 +85,16 @@ CFR Contact Us
     text-transform: capitalize;
     font-size: 18px;
     border-style: solid;
+
+    transition: background-color 0.2s ease;
+    transition: border 0.2s ease;
+    transition: color 0.2s ease;
   }
+
+  /* .contactus-card-button:focus {
+    border: none;
+    border: 2px dashed var(--grey3);
+  } */
   
   .contactus-card-button-1 {
     border-color: var(--blue2);

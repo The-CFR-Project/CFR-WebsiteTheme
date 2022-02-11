@@ -18,30 +18,31 @@
 
             <!--  If the post is the latest one  -->
             <?php if($i == 1): ?>
-                <a href="<?php the_permalink(); ?>" class="blogs-archive-permalink">
                     <div class="blogs-archive-post-latest">
 
-                        <div class="blogs-archive-post-latest-tn col-md-3">
-                            <?php if(has_post_thumbnail()): ?>
-                                <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
-                            <?php endif; ?>
-                        </div>
-
-                        <div class="blogs-archive-post-latest-excerpt col-md-6">
-                            <p>Spotlighted</p>
-                            <h3><?php the_title();?></h3>
-                            <?php echo "<p>" . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . "</p>";?>
-                            <?php echo "<p>".get_the_date('j M Y')."</p>"; ?>
-                        </div>
+                        <a href="<?php the_permalink(); ?>" class="blogs-archive-permalink blogs-archive-post-latest-tn-link">
+                            <div class="blogs-archive-post-latest-tn col-md-3">
+                                <?php if(has_post_thumbnail()): ?>
+                                    <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                                <?php endif; ?>
+                            </div>
+                        </a>    
+                        <a href="<?php the_permalink(); ?>" class="blogs-archive-permalink blogs-archive-post-latest-excerpt-link">
+                            <div class="blogs-archive-post-latest-excerpt col-md-6">
+                                <p>Spotlighted</p>
+                                <h3><?php the_title();?></h3>
+                                <?php echo "<p>" . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . "</p>";?>
+                                <?php echo "<p>".get_the_date('j M Y')."</p>"; ?>
+                            </div>
+                        </a>
 
                     </div>
-                </a>
             <?php endif; ?>
 
             <!--  Loops over next 9 latest posts  -->
             <?php if($i >= 2 && $i <= 10): ?>
 
-                <a href="<?php the_permalink(); ?>" class="col-md-4">
+                <a href="<?php the_permalink(); ?>" class="col-md-4 blogs-archive-post-grid-container">
                     <?php  echo "<div class='blogs-archive-post-grid-". ($i-1) ." blogs-archive-post-grid'>" ?>
                         <?php if(has_post_thumbnail()): ?>
                             <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
@@ -65,7 +66,7 @@
             <?php
                 $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
                     foreach ( $socialItems as $footerItem ) {
-                    echo "<a href='" . $footerItem->url . "'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='blogs-sidebar-socials-icon'></a>";
+                    echo "<a href='" . $footerItem->url . "' class='blogs-sidebar-socials-icon-link'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='blogs-sidebar-socials-icon'></a>";
                     }
             ?>
         </div>
