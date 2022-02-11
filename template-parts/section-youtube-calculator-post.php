@@ -1,10 +1,10 @@
 <!---------------------- Youtube Calculator About Section ---------------------->
 
 <?php
-    $post = get_page_by_path("youtube-calculator-post");
-    $doc = new DOMDocument();
-    $doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
-    $doc = new DOMXPath( $doc );
+$post = get_page_by_path("youtube-calculator-post");
+$doc = new DOMDocument();
+$doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
+$doc = new DOMXPath( $doc );
 ?>
 
 <section id="youtube-calculator-post">
@@ -31,10 +31,10 @@
         </div>
         <div style="padding-left: 100px; padding-right: 100px; line-height: 30px;">
             <?php
-                foreach ($doc->query('//p[not(a)]') as $node) {
-                    echo $node->nodeValue;
-                    echo "<br>";
-                }
+            foreach ($doc->query('//p[not(a)]') as $node) {
+                echo $node->nodeValue;
+                echo "<br>";
+            }
             ?>
         </div>
     </div>
