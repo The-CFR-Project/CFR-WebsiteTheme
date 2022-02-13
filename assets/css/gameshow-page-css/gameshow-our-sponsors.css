@@ -6,5 +6,7 @@
 }
 
 .sponsor-img {
+    display: flex;
+    align-items: center;
     padding: 0 70px;
 }
