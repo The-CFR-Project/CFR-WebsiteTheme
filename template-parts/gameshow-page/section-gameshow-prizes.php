@@ -24,13 +24,13 @@ $doc = new DOMXPath( $doc );
                     $para_no = 1;
                     foreach ($doc->query('//p[not(a)]') as $node) {
                         if ($para_no == 1) {
-                            echo "<div class='gold' style='text-transform: uppercase'><b>1st place</b></div>";
+                            echo "<div class='gold' style='text-transform: uppercase; font-size: 23px;'><b>1st place</b></div>";
                         } else if ($para_no == 2) {
-                            echo "<div class='silver' style='text-transform: uppercase'><b>2nd place</b></div>";
+                            echo "<div class='silver' style='text-transform: uppercase; font-size: 23px;'><b>2nd place</b></div>";
                         } else if ($para_no == 3) {
-                            echo "<div class='bronze' style='text-transform: uppercase'><b>3rd place</b></div>";
+                            echo "<div class='bronze' style='text-transform: uppercase; font-size: 23px;'><b>3rd place</b></div>";
                         } else if ($para_no == 4) {
-                            echo "<div class='green2' style='text-transform: uppercase'><b>Runner-ups</b></div>";
+                            echo "<div class='green2' style='text-transform: uppercase; font-size: 23px;'><b>Runner-ups</b></div>";
                         }
                         echo "<p>" . $node->nodeValue . "</p><br><br>";
                         $para_no = $para_no+1;

@@ -9,7 +9,7 @@
         <div class="search-container">
             <input type="text" class="search-bar" id="videoURL" placeholder="Enter the URL of your YouTube video"/>
             <button type="submit" class="search-button" onclick="getVideoData()">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/search.svg" style="filter: brightness(0) invert(1);" id="thumbnail-img">
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/search.svg" style="filter: brightness(0) invert(1);">
             </button>
         </div>
 

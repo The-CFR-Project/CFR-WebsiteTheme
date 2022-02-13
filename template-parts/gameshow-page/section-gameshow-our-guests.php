@@ -49,26 +49,36 @@ $doc = new DOMXPath( $doc );
                             <div class='guest-role'>" . get_text_from_node(($doc->query("//h4"))[$i]) . "</div>
                             <div class='guest-description'>" . get_text_from_node(($doc->query("//h5"))[$i]) . "</div>
                             <div class='row guest-socials'>
+                ";
+                echo "
                                 <div class='col'>
                                     <a href='" . get_text_from_node(($doc->query("//a"))[$i*4]) . "' target='_blank'>
                                         <img src='" . get_template_directory_uri() . "/assets/images/facebook-icon.svg' alt='' width='35px'>
                                     </a>
-                                </div>
+                                </div>               
+                ";
+                echo "
                                 <div class='col'>
                                     <a href='" . get_text_from_node(($doc->query("//a"))[($i*4) + 1]) . "' target='_blank'>
                                         <img src='" . get_template_directory_uri() . "/assets/images/linkedin-icon.svg' alt='' width='35px'>
                                     </a>
                                 </div>
+                ";
+                echo "
                                 <div class='col'>
                                     <a href='" . get_text_from_node(($doc->query("//a"))[($i*4) + 2]) . "' target='_blank'>
                                         <img src='" . get_template_directory_uri() . "/assets/images/instagram-icon.svg' alt='' width='35px'>
                                     </a>
                                 </div>
+                ";
+                echo "
                                 <div class='col'>
                                     <a href='" . get_text_from_node(($doc->query("//a"))[($i*4) + 3]) . "' target='_blank'>
                                         <img src='" . get_template_directory_uri() . "/assets/images/twitter-icon.svg' alt='' width='35px'>
                                     </a>
                                 </div>
+                ";
+                echo "
                             </div>
                         </div>
                     </div>            

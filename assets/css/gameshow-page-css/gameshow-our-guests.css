@@ -5,6 +5,24 @@
     padding-bottom: 100px;
 }
 
+@media (min-width: 1000px) and (max-width: 1600px) {
+    .guests {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+    .guests {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    .guests {
+        grid-template-columns: 100%;
+    }
+}
+
 .guest {
     display: flex;
     flex-direction: column;
