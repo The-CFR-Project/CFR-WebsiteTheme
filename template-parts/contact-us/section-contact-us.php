@@ -17,19 +17,19 @@ $doc = new DOMXPath( $doc );
     <div class='row contactus-card-container'>
     <?php
       for ($i = 0; $i <= 2; $i++):
-      echo "<div class='contactus-card contactus-card-" . ($i+1) . " col-md-3 card'>";
-        echo "<h3 class='contactus-card-heading'>" . $doc->query("//h3")[$i]->nodeValue . "</h3>";
-        echo "<p class='contactus-card-text'>" . $doc->query("//p")[$i]->nodeValue . "</p>";
-        if ($i == 0){
-          echo "<a href='" . $doc->query("//a")[0]->nodeValue . "'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
-        }
-        else if ($i == 1){
-          echo "<a href='#contact-form'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
-        }else if ($i == 2) {
-          echo "<a href='". $doc->query("//a")[1]->nodeValue ."'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
-        }
+        echo "<div class='contactus-card contactus-card-" . ($i+1) . " col-md-3 card'>";
+          echo "<h3 class='contactus-card-heading'>" . $doc->query("//h3")[$i]->nodeValue . "</h3>";
+          echo "<p class='contactus-card-text'>" . $doc->query("//p")[$i]->nodeValue . "</p>";
+          if ($i == 0){
+            echo "<a href='" . $doc->query("//a")[0]->nodeValue . "'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
+          }
+          else if ($i == 1){
+            echo "<a href='#contact-form'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
+          }else if ($i == 2) {
+            echo "<a href='". $doc->query("//a")[1]->nodeValue ."'><input type='button' class='contactus-card-button contactus-card-button-". ($i+1) ."' value='". $doc->query("//h4")[$i]->nodeValue ."'></a>";
+          }
 
-      echo "</div>";
+        echo "</div>";
       endfor;
     ?>
     </div>

@@ -22,7 +22,7 @@
         <img class="archive-carousel-image" src="<?php echo the_post_thumbnail_url(); ?>">
       <?php endif; ?>
       <div id="blogs-archive-slide-text">
-        <a href = "<?php the_permalink(); ?>"><h1><?php the_title();?></h1></a>
+        <a href = "<?php the_permalink(); ?>" class='blogs-archive-slide-header-link'><h1><?php the_title();?></h1></a>
         <p><?php echo the_excerpt(); ?></p>
         <a href="<?php the_permalink(); ?>" class="readmore">
           <h4 class="special-underline read-more-precious">Read More</h4>

@@ -22,18 +22,17 @@
   }
 
   .blogs-archive-post-latest-tn{
-    width: 60%;
+    width: 100%;
     height: auto;
     margin-left: 10%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
   }
 
+  .blogs-archive-post-latest-tn-link:focus .blogs-archive-post-latest-tn,
   .blogs-archive-post-latest-tn:hover {
     transform: scale(1.02);
     transition: all 0.2s ease;
-
-
   }
 
   .blogs-archive-post-latest-excerpt {
@@ -43,13 +42,13 @@
     background-color: var(--grey1);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     position:relative;
-    left: -10%;
     padding: 10px 25px 10px 50px;
     line-height: 50px;
     text-transform: uppercase;
     transition: all 0.2s ease;
   }
 
+  .blogs-archive-post-latest-excerpt-link:focus .blogs-archive-post-latest-excerpt, 
   .blogs-archive-post-latest-excerpt:hover {
     transform: scale(1.02);
     transition: all 0.2s ease;
@@ -73,11 +72,20 @@
     height: 390px;
   }
 
+  .blogs-archive-post-grid-container:focus .blogs-archive-post-grid,
   .blogs-archive-post-grid:hover {
     transform: scale(1.02);
     transition: all 0.2 ease-in-out;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 10%);
     transition: all 0.2s ease;
+  }
+
+
+  .blogs-archive-post-latest-tn-link:focus .blogs-archive-post-latest-tn,
+  .blogs-archive-post-grid-container:focus .blogs-archive-post-grid,
+  .blogs-archive-post-latest-excerpt-link:focus .blogs-archive-post-latest-excerpt,
+  .blogs-sidebar-blogs-blog:focus-within {
+    border: 2px dashed var(--grey2);
   }
 
   .blogs-archive-post-grid img {
@@ -142,6 +150,7 @@
     filter: invert(30%);
   }
 
+  .blogs-sidebar-socials-icon-link:focus .blogs-sidebar-socials-icon,
   .blogs-sidebar-socials-icon:hover {
     filter: invert(0);
   }
@@ -174,6 +183,7 @@
     width:33%
   }
 
+  .blogs-sidebar-blogs-blog:focus-within, 
   .blogs-sidebar-blogs-blog:hover {
     /* transform: scale(1.02); */
     /* transition: all 0.2 ease-in-out;
@@ -232,6 +242,7 @@
     height: 50px;
   }
 
+  .alm-load-more-btn:focus, 
   .alm-load-more-btn:hover {
     color: #fff;
     border-color: var(--blue2);
@@ -243,6 +254,7 @@
     border-color: var(--grey3);
   }
 
+  .alm-load-more-btn:disabled:focus, 
   .alm-load-more-btn:disabled:hover {
     color: var(--grey3);
     border-color: var(--grey3);

@@ -10,8 +10,7 @@ CFR About Us Page, About CFR Section
   
 .about-cfr-container {
 	margin-top: 100px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding: 100px 50px;
 }
   
 .about-cfr-container h1 {
@@ -21,5 +20,14 @@ CFR About Us Page, About CFR Section
   
 .about-cfr-container img {
 	width: 100%;
-	padding-left: 50px;
+}
+
+@media (max-width: 770px) {
+	.about-cfr-container img {
+		margin-top: 50px;
+	}
+
+	.about-cfr-container p {
+		text-align: justify;
+	}
 }

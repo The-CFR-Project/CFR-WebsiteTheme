@@ -17,6 +17,7 @@
                                 <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid">
                         <?php endif; ?>
                         <div class="text">
+                                <input type="text" class='blog-single-header-accessibility-input'>
                                 <h3><?php the_title();?></h3>
                                 <div class="line-lmao"></div>
                                 <p><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name"); ?></p>
@@ -43,15 +44,23 @@
                                                 <?php echo "<p class='date'>".get_the_date('j M. Y')."</p>"; ?>
                                         </div>
                                         <div class="share-like-container">
-                                                <div id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-icon.svg" alt="share"></div>
+                                                <button id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-icon.svg" alt="share"></button>
                                                 <!-- <div id="like-heart">&#9829;</div> -->
                                         </div>
                                 </div>
 
                                 <div id="sidebar-primary" class="sidebar">
-                                <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
-                                        <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
-                                <?php endif; ?>
+                                        <div class="socials">
+                                        <?php
+                                                $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
+                                                foreach ( $socialItems as $footerItem ) {
+                                                        echo "<a href='" . $footerItem->url . "' class='social-icon-link'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='sidebar-social-icon'></a>";
+                                                }
+                                                ?>
+                                        </div>       
+                                        <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
+                                                <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
+                                        <?php endif; ?>
                                 </div>
                         </div>
                 </div>
@@ -82,7 +91,7 @@
                                         alert.style.content = "There was a problem, couldn't copy link :("
                                         alert.style.display = 'flex';
                                 });
-                        }
+                        }      
 
                 // var heart = document.getElementById('like-heart');
                 // var click = 0;
