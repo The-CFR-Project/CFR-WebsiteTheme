@@ -71,7 +71,7 @@ $doc = new DOMXPath( $doc );
   <script>
     var dateE = document.getElementById("date");
     var today = new Date(); 
-    var foundedDate = new Date("06/11/2020");
+    var foundedDate = new Date("06/11/2021");
 
     var difference= Math.abs(today-foundedDate);
     days = difference/(1000 * 3600 * 24);

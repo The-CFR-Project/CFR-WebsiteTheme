@@ -1,7 +1,7 @@
 /// Input Handling ///
 // Functions 
 function getValue(element) {
-    console.log(element.value);
+    // console.log(element.value);
     return element.value;
 }
 
@@ -43,12 +43,16 @@ if(parent){
         el.oninput = function() {
             let slide1 = parseFloat(rangeSlide[0].value);
             numberSlide[0].value = slide1;
+            const left = ((rangeSlide[0].value - 0) / (18000 - 0)) * ((rangeSlide[0].offsetWidth) - 50);
+            numberSlide[0].style.bottom = left + 'px';
         }
     });
     numberSlide.forEach(function(el) {
         el.oninput = function() {
             let number1 = parseFloat(numberSlide[0].value);
             rangeSlide[0].value = number1;
+            const left = ((rangeSlide[0].value - 0) / (18000 - 0)) * ((rangeSlide[0].offsetWidth) - 50);
+            numberSlide[0].style.bottom = left + 'px';
         }
     });
 }
@@ -101,48 +105,48 @@ drawMapSVG();
 
 
 
-function runBackupCode(){
-    const geojson = '<?php echo get_template_directory_uri();?>/js/world-110m.json';
-    const projection = d3.geoEquirectangular();
-    const geoGenerator = d3.geoPath()
-                        .projection(projection);
-    let canvas = d3.select('#amp-map')
-            .selectAll('path')
-            .attr('d', geoGenerator)
-            .data(geojson.objects)
-            .join('path');
-    var context = canvas.getContext("2d");
-    context.beginPath();
-}
+// function runBackupCode(){
+//     const geojson = '<?php echo get_template_directory_uri();?>/js/world-110m.json';
+//     const projection = d3.geoEquirectangular();
+//     const geoGenerator = d3.geoPath()
+//                         .projection(projection);
+//     let canvas = d3.select('#amp-map')
+//             .selectAll('path')
+//             .attr('d', geoGenerator)
+//             .data(geojson.objects)
+//             .join('path');
+//     var context = canvas.getContext("2d");
+//     context.beginPath();
+// }
 
-function drawMapCanvas() {
-    var canvas = document.getElementById('amp-map');
+// function drawMapCanvas() {
+//     var canvas = document.getElementById('amp-map');
 
-    var width = canvas.offsetWidth;
-    var height = canvas.offsetHeight;
+//     var width = canvas.offsetWidth;
+//     var height = canvas.offsetHeight;
 
-    var projection = d3.geoEquirectangular()
-        .scale(width / 1.3 / Math.PI)
-        .translate([width / 2, height / 2]);
+//     var projection = d3.geoEquirectangular()
+//         .scale(width / 1.3 / Math.PI)
+//         .translate([width / 2, height / 2]);
 
-    var ctx = canvas.getContext('2d');
+//     var ctx = canvas.getContext('2d');
 
-    const pathGenerator = d3.geoPath(projection, ctx);
+//     const pathGenerator = d3.geoPath(projection, ctx);
 
-    d3.json('<?php echo get_template_directory_uri();?>/js/world-110m.json', function(data){
+//     d3.json('<?php echo get_template_directory_uri();?>/js/world-110m.json', function(data){
 
-    // initialize the path
-    ctx.beginPath();
+//     // initialize the path
+//     ctx.beginPath();
 
-    // Got the positions of the path
-    pathGenerator(data.objects);
+//     // Got the positions of the path
+//     pathGenerator(data.objects);
 
-    // Fill the paths
-    ctx.fillStyle = "#999";
-    ctx.fill();
+//     // Fill the paths
+//     ctx.fillStyle = "#999";
+//     ctx.fill();
 
-    // Add stroke
-    ctx.strokeStyle = "#69b3a2";
-    ctx.stroke();
-    })
-}
+//     // Add stroke
+//     ctx.strokeStyle = "#69b3a2";
+//     ctx.stroke();
+//     })
+// }

@@ -61,7 +61,7 @@
     </div>
     <div class="altitude-slider-container">
       <input type="range" min="0" max="18000" step="10" value="100" class="altitude-slider" id="myRange">
-      <input type="number" value="100" min="0" max="18000"/>
+      <input type="number" value="100" min="0" max="18000" id="number"/>
     </div>
   </div>
 

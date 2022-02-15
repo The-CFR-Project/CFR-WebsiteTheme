@@ -7,10 +7,19 @@ $doc = new DOMXPath( $doc );
 $trailerLink = $doc->query('//a')[0]->nodeValue;
 $description = $doc->query('//h3')[0]->nodeValue;
 ?>
-<section>
-
+<section id='gameshow-banner'>
+<style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/assets/css/gameshow-page-css/about-gameshow.css"); </style>
+    <div class='gameshow-banner-container'>
+        <div class="gameshow-banner-text">
+            <h1>Getting Played</h1>
+            <h3>The CFR Gameshow</h3>
+            <a href='#about-gameshow'><button>Learn More</button></a>
+        </div>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gameshow-banner-img.jpeg" alt="gameshow-banner-img">
+    </div>
 </section>
-<section id="gameshow-about">
+
+<section id="about-gameshow">
 <style type="text/css"> @import url("<?php echo get_template_directory_uri(); ?>/assets/css/gameshow-page-css/about-gameshow.css"); </style>
 <div class="row">
     <div class="col-md-6 trailer-embed-container">

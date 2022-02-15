@@ -1,5 +1,78 @@
-#gameshow-about {
-    margin: 100px 0 0;
+#gameshow-banner {
+    background-color: black;
+    margin-top: 100px;
+}
+
+.gameshow-banner-container {
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameshow-banner-text {
+    z-index: 99;
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.gameshow-banner-text h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.gameshow-banner-text h3 {
+    font-size: 2rem;
+    color: #fff;    
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 10px 0 50px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gameshow-banner-text button {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: var(--blue2);
+    font-weight: 500;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 175px;
+    height: 40px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.gameshow-banner-text button:hover {
+    border: 2px solid var(--blue2);
+    background-color: var(--blue2);
+    color: #fff;
+}
+
+.gameshow-banner-container img {
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#about-gameshow {
+    margin: 0;
     padding: 100px 0 0;
 }
 
@@ -9,7 +82,7 @@
 }
 
 .about-gameshow-container {
-    padding: 7vw 14vw 0 25px; /* 7vw */
+    padding: 7vw 175px 0 25px; /* 7vw */
 }
 
 .about-gameshow-tv {

@@ -7,6 +7,15 @@ $doc = new DOMXPath( $doc );
 
 <section id="flight-calculator">
     <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/flights-calc.css"); </style>
+    <style>
+        #flight-calculator .row {
+            margin: 0 !important;
+            padding: 0 125px;
+        }
+        .home-post .col-para {
+            padding: 50px 0 0;
+        }
+    </style>
     <div class="home-post container-fluid">
         <div class="heading-container">
             <?php
