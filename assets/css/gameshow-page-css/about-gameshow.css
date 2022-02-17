@@ -25,8 +25,7 @@
 }
 
 .gameshow-banner-text:hover + img{
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    opacity: 0.6;
 }
 
 .gameshow-banner-text:hover > h1 {

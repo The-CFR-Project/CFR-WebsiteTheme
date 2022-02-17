@@ -24,7 +24,7 @@ $doc = new DOMXPath( $doc );
             ?>
         </div>
 
-        <div class="row" style="padding-top: 100px;">
+        <div class="row">
             <div class="col-md-6">
                 <img src="<?php echo get_template_directory_uri();?>/assets/images/gameshow-trophy.svg" width="100%" style="margin-bottom: 10%;">
             </div>
