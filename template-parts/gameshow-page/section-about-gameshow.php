@@ -24,7 +24,7 @@ $description = $doc->query('//h3')[0]->nodeValue;
 <div class="row">
     <div class="col-md-6 trailer-embed-container">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Old_TV_Plain.svg" alt="" class="about-gameshow-tv">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/XqZsoesa55w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+        <iframe width="560" height="315" src="<?php echo $trailerLink; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
     </div>
     <div class="col-md-6 about-gameshow-container">
         <p><?php echo $description; ?></p>

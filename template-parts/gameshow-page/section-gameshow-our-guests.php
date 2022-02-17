@@ -10,6 +10,7 @@ $doc = new DOMXPath( $doc );
     <div class="heading-container">
         <?php
             echo "<div class='heading-overlay'>" . $doc->query("//h2")[1]->nodeValue . "</div>";
+            echo "<div class='heading-watermark'>experts</div>";
         ?>
     </div>
 
