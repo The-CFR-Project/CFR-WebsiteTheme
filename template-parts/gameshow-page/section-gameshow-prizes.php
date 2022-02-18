@@ -33,7 +33,7 @@ $doc = new DOMXPath( $doc );
 
         <div class="row">
             <div class="col-md-6">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/gameshow-trophy.svg" width="100%" style="margin-bottom: 10%;">
+                <img src="<?php echo get_template_directory_uri();?>/assets/images/gameshow-trophy.svg" width="100%" style="margin-right: 10%;">
             </div>
             <div class="col-md-6 col-para text-justify">
                 <?php

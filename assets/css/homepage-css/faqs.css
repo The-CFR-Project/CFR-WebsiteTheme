@@ -124,6 +124,7 @@ The CFR FAQs Section Located above the Instagram Wall
   .faqs-focusin-input {
     opacity: 0;
     cursor: default;
+    position: absolute;
   }
 
   @media (max-width: 540px) {
