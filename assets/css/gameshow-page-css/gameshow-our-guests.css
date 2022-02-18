@@ -35,7 +35,7 @@
 
 .episode-color {
     width: 100%;
-    height: 125px;
+    height: 150px;
     background: red;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -45,11 +45,14 @@
     display: flex;
     flex-direction: column;
     bottom: 50px;
-    transform: translate(0, -65px);
+    transform: translate(0, -100px);
 }
 
 .guest-pfp {
-    width: 45%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
     align-self: center;
     margin-bottom: 20px;
 }

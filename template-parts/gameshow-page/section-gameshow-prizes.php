@@ -13,7 +13,14 @@ $doc = new DOMXPath( $doc );
             padding: 0 125px;
         }
         .home-post .col-para {
-            padding: 50px 0 0;
+            padding: 50px 0 0;q
+        }
+
+        .home-post .col-md-6 {
+            margin-bottom: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
     </style>
     <div class="home-post container-fluid">
@@ -24,7 +31,7 @@ $doc = new DOMXPath( $doc );
             ?>
         </div>
 
-        <div class="row" style="padding-top: 100px;">
+        <div class="row">
             <div class="col-md-6">
                 <img src="<?php echo get_template_directory_uri();?>/assets/images/gameshow-trophy.svg" width="100%" style="margin-bottom: 10%;">
             </div>

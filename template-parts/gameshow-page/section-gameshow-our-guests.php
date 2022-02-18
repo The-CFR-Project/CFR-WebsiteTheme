@@ -44,7 +44,7 @@ $doc = new DOMXPath( $doc );
                 }
                 echo "
                         <div class='about-guest'>
-                            <img src='" . get_template_directory_uri() . "/assets/images/author-placeholder.svg' alt='' class='guest-pfp'>
+                            <img src='" . ($doc->query("//img")[$i])->getAttribute("src") . "' alt='' class='guest-pfp'/>
                             <div class='guest-name'>" . get_text_from_node(($doc->query("//h3"))[$i]) . "</div>
                             <div class='guest-role'>" . get_text_from_node(($doc->query("//h4"))[$i]) . "</div>
                             <div class='guest-description'>" . get_text_from_node(($doc->query("//h5"))[$i]) . "</div>
