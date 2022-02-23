@@ -48,6 +48,10 @@
     display: flex;
 }
 
+b {
+    margin-left: 110px;
+}
+
 .comment-metadata {
     display: flex;
     justify-content: center;
