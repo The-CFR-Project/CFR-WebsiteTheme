@@ -85,3 +85,9 @@
     transform: translate(0, 15px);
     padding: 20px 30px 0 30px;
 }
+
+.guest-socials .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
