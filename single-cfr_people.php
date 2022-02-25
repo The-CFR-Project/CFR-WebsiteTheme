@@ -61,7 +61,7 @@ function get_other_paragraphs(): string {
             <div class="col-md-8">
                 <div class="heading-container">
                     <?php
-                    echo "<div class='heading-overlay'>" . "bhavye mathur" . "</div>";
+                    echo "<div class='heading-overlay'>" . $post->post_title . "</div>";
                     echo "<div class='heading-watermark'>CFR</div>";
                     ?>
                 </div>
