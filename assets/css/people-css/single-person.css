@@ -1,0 +1,113 @@
+#person-section {
+    margin-bottom: 50px;
+}
+
+.banner {
+    width: 100%;
+    aspect-ratio: 7/3;
+    object-fit: cover;
+    filter: hue-rotate(300deg);
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-row {
+    position: absolute;
+    transform: translateY(-70%);
+    width: 97%;
+}
+
+.dp-container {
+    width: 100%;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 15px solid white;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--grey2);
+}
+
+.email-container {
+    display: flex;
+    justify-content: center;
+
+    text-transform: lowercase;
+    font-size: 15px;
+    color: var(--grey2);
+    margin-top: 10px;
+}
+
+p {
+    text-align: justify;
+    color: var(--grey3);
+    line-height: 2;
+}
+
+.social-icon-container {
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+.social-icon-container img {
+    padding: 15%;
+    width: 60%;
+
+    background-color: var(--grey1);
+    border-radius: 20%;
+}
+
+.social-icon-container a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.work-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+
+.work-tags-container div {
+    margin: 5px;
+    padding: 10px;
+
+    background-color: var(--red2);
+    color: white;
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.description-container {
+    width: 70%;
+}
+
+.description-container p {
+    margin-bottom: 25px;
+    color: var(--grey4);
+}
