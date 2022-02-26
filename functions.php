@@ -38,6 +38,10 @@ add_filter( 'excerpt_length', 'your_prefix_excerpt_length' );
 function your_prefix_excerpt_length() {
     return 25;
 }
+add_filter('excerpt_more', 'new_excerpt_more');
+function new_excerpt_more($more) {
+   return '...';  // add your string or symbol you want here...
+}
 
 // Menus
 register_nav_menus(

@@ -135,6 +135,11 @@
     position: relative;
 }
 
+.line-lmao::after {
+    height: 3px;
+	background-color: #fff;
+}
+
 .blogs-carousel-readmore-arrow-line {
     content: "";
     width: 40px;

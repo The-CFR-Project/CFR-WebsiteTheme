@@ -14,7 +14,11 @@
         <h3><?php echo $navItem->title;?></h3>
 
         <form action=<?php echo $navItem->url;?>>
-          <input id="read-more" type="submit" value="Read More" />
+          <?php if ($navItem->title == 'register for our gameshow'): ?>
+            <input id="read-more" type="submit" value="Register" />
+          <?php else: ?>
+            <input id="read-more" type="submit" value="Read More" />
+          <?php endif; ?>  
         </form>
       </div>
 
