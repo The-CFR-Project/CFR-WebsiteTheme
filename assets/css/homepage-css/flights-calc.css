@@ -3,8 +3,14 @@
 The CFR Home Page Aircraft Section Located below the Banner
 --------------------------------------------------------------------------------
 */
+
+.heading-container img {
+  top: 80%;
+}
+
 .home-post form {
   justify-content: center;
+  margin-top: 20px;
 }
 
 .home-post input {

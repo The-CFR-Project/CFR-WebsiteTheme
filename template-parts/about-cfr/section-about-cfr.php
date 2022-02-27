@@ -9,14 +9,14 @@ $doc = new DOMXPath( $doc );
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/aboutus-css/aboutcfr.css"); </style>
   <div class="about-cfr-container container">
     <div class="row">
-      <div class="col-md-6 align-self-center">
+      <div class="col-md-6 align-self-center about-cfr-text-container">
         <h1 class="blue2">
           <?php echo $doc->query( "//h1" )[0]->nodeValue;?>
         </h1>
         <p><?php echo $doc->query( "//h3" )[0]->nodeValue;?></p>
       </div>
 
-      <div class="col-md-6 align-self-center">
+      <div class="col-md-6 align-self-center about-cfr-image-container">
         <img class="about-cfr-img" src="<?php echo get_template_directory_uri();?>/assets/images/about-cfr-graphic.svg">
       </div>
     </div>
