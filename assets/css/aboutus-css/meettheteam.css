@@ -42,6 +42,11 @@ CFR Meet the Team Section
 	padding-bottom: 20px;
 }
 
+#meet-the-team .col-md-2 {
+	margin-bottom: 50px;
+}
+
+
 #meet-the-team .col-md-3 > div,
 #meet-the-team .col-md-2 > div {
 	overflow: hidden;

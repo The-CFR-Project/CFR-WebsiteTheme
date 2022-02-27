@@ -1,5 +1,5 @@
 <?php
-$post = get_page_by_path("wanna-play-cards");
+$post = get_page_by_path("about-us-cards");
 $doc = new DOMDocument();
 $doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
 $doc = new DOMXPath( $doc );
@@ -9,7 +9,7 @@ $doc = new DOMXPath( $doc );
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/cards.css"); </style>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
-      <?php echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";?>
+      <?php echo "<div class='heading-overlay cards-heading'>wanna play cards?</div>";?>
     </div>
 
     <!-- Background images and formatting -->
@@ -149,7 +149,9 @@ $doc = new DOMXPath( $doc );
     
 
   <!-- JavaScript ------------------------------------->
+
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/cards.js"></script>
+
 
   </div>
 </section>
