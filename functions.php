@@ -142,6 +142,80 @@ function blogs_series_title(){ //Custom Category
 add_action('init', 'blogs_series_title');
 
 
+/**
+ * Register the custom CFR post types
+ */
+function register_cfr_post_types() {
+    register_post_type( 'cfr_people', [
+        'labels' => array('name' => __('CFR People', 'textdomain'), 'singular_name' => __('CFR Person', 'textdomain') ),
+        'description' => 'Individuals associated with the CFR Project',
+        'public' => true,
+        'menu_icon' => 'dashicons-groups',
+        'rewrite' => array( 'slug' => 'people' ),
+        'supports' => array( 'title', 'editor', 'custom-fields', 'author' ),
+        'taxonomies' => array( 'cfr_role' )
+    ] );
+
+    register_post_type( 'cfr_events', [
+        'labels' => array('name' => __('CFR Events', 'textdomain'), 'singular_name' => __('CFR Event', 'textdomain') ),
+        'description' => 'Events planned by the CFR Project',
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar',
+        'rewrite' => array( 'slug' => 'events' ),
+        'supports' => array( 'title', 'editor', 'custom-fields', 'author' ),
+        'taxonomies' => array( 'cfr_event_type' )
+    ] );
+}
+
+function register_cfr_taxonomies() {
+    register_taxonomy("cfr_role", "cfr_people", array(
+        // Hierarchical taxonomy (like categories)
+        'hierarchical' => true,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'CFR Role', 'taxonomy general name' ),
+            'singular_name' => _x( 'CFR Role', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Search Roles' ),
+            'all_items' => __( 'All Roles' ),
+            'parent_item' => __( 'Parent Role' ),
+            'parent_item_colon' => __( 'Parent Role:' ),
+            'edit_item' => __( 'Edit Role' ),
+            'update_item' => __( 'Update Role' ),
+            'add_new_item' => __( 'Add New Role' ),
+            'new_item_name' => __( 'New Role Name' ),
+            'menu_name' => __( 'CFR Roles' )
+        ),
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'roles',
+            'with_front' => false,
+            'hierarchical' => true
+        ),));
+
+    register_taxonomy("cfr_event_type", "cfr_event", array(
+        'hierarchical' => false,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'CFR Event', 'taxonomy general name' ),
+            'singular_name' => _x( 'CFR Event', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Search Events' ),
+            'all_items' => __( 'All Events' ),
+            'edit_item' => __( 'Edit Event' ),
+            'update_item' => __( 'Update Event' ),
+            'add_new_item' => __( 'Add New Event' ),
+            'new_item_name' => __( 'New Event Name' ),
+            'menu_name' => __( 'CFR Events' )
+        ),
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'events',
+            'with_front' => false,
+        ),));
+}
+
+add_action( 'init', 'register_cfr_post_types' );
+add_action( 'init', 'register_cfr_taxonomies', 0 );
+
 
 /**
  * This function modifies the main WordPress query to include an array of 
