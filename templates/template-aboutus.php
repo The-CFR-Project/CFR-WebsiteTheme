@@ -50,13 +50,15 @@ Template Name: About Us
                 <?php
                 for ($i = 0; $i < (array_count_values($role_priority)[0] ?? 0) + (array_count_values($role_priority)[1] ?? 0); $i++) {?>
                     <div class="col-md-4">
-                        <div class="dp-container">
-                            <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
-                        </div>
-                        <div class="title-container">
-                            <h6><?php echo get_the_title( $members[$i + $offset] );?></h6>
-                            <p><?php the_field( "position", $members[$i + $offset] );?></p>
-                        </div>
+                        <a href="<?php echo get_permalink( $members[$i + $offset] )?>">
+                            <div class="dp-container">
+                                <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
+                            </div>
+                            <div class="title-container">
+                                <h6><?php echo get_the_title( $members[$i + $offset] );?></h6>
+                                <p><?php the_field( "position", $members[$i + $offset] );?></p>
+                            </div>
+                        </a>
                     </div>
                 <?php }
                 $offset += $i;
@@ -66,13 +68,15 @@ Template Name: About Us
                 <?php
                 for ($i = 0; $i < (array_count_values($role_priority)[2] ?? 0); $i++) {?>
                     <div class="col-6 col-md-3">
-                        <div class="dp-container">
-                            <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
-                        </div>
-                        <div class="title-container">
-                            <h6><?php echo get_the_title( $members[$i + $offset] );?></h6>
-                            <p><?php the_field( "position", $members[$i + $offset] );?></p>
-                        </div>
+                        <a href="<?php echo get_permalink( $members[$i + $offset] )?>">
+                            <div class="dp-container">
+                                <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
+                            </div>
+                            <div class="title-container">
+                                <h6><?php echo get_the_title( $members[$i + $offset] );?></h6>
+                                <p><?php the_field( "position", $members[$i + $offset] );?></p>
+                            </div>
+                        </a>
                     </div>
                 <?php }
                 $offset += $i;
@@ -83,13 +87,15 @@ Template Name: About Us
                 <?php
                 for ($i = 0; $i < (array_count_values($role_priority)[3] ?? 0); $i++) {?>
                     <div class="col-6 col-sm-4 col-md-2">
-                        <div class="dp-container">
-                            <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
-                        </div>
-                        <div class="title-container">
-                            <h6><?php echo explode(' ', get_the_title( $members[$i + $offset] ) )[0];?></h6>
-                            <p><?php the_field( "position", $members[$i + $offset] );?></p>
-                        </div>
+                        <a href="<?php echo get_permalink( $members[$i + $offset] )?>">
+                            <div class="dp-container">
+                                <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">
+                            </div>
+                            <div class="title-container">
+                                <h6><?php echo explode(' ', get_the_title( $members[$i + $offset] ) )[0];?></h6>
+                                <p><?php the_field( "position", $members[$i + $offset] );?></p>
+                            </div>
+                        </a>
                     </div>
                 <?php }
                 $offset += $i;

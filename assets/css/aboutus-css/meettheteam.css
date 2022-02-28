@@ -12,7 +12,6 @@ CFR Meet the Team Section
 
 #meet-the-team h6 {
 	text-transform: lowercase;
-	color: var(--red5);
 	margin-bottom: 5px;
 }
 
@@ -24,14 +23,42 @@ CFR Meet the Team Section
 	color: var(--blue2);
 }
 
+.large-row h6 {
+	color: var(--blue4);
+}
+
 .medium-row p {
 	color: var(--red3);
+}
+
+.medium-row h6 {
+	color: var(--red5);
+}
+
+.small-row p,
+.small-row h6 {
+	color: black;
 }
 
 #meet-the-team .col-md-4,
 #meet-the-team .col-md-3,
 #meet-the-team .col-md-2 {
 	margin-bottom: 40px;
+	transition: all 0.2s ease-out;
+}
+
+#meet-the-team .col-md-4:hover,
+#meet-the-team .col-md-3:hover,
+#meet-the-team .col-md-2:hover {
+	transform: scale(1.03);
+}
+
+#meet-the-team .col-md-4:focus-within,
+#meet-the-team .col-md-3:focus-within,
+#meet-the-team .col-md-2:focus-within {
+	transform: scale(1.03);
+	outline: 2px dashed var(--grey2);
+	outline-offset: 15px;
 }
 
 .large-row .dp-container {
