@@ -99,37 +99,6 @@
 	header .nav-title-container{
 		width: 60%;
 	}
-	#meet-the-team .medium-row > *{
-		max-width: 75%;
-	}
-	#meet-the-team .small-row .col-md-2{
-		display: none;
-		width: 75%;
-		transition: all 2s;
-	}
-	#meet-the-team .col-md-3{
-		--bs-gutter-y: 5px;
-	}
-	#meet-the-team .small-row .arrow{
-		cursor: pointer;
-		position: absolute;
-		top: 40%;
-		color: darkgray;
-		user-select: none;
-		width: 10px;
-		display: block !important;
-	}
-	#meet-the-team .small-row .prev{
-		left: 0;
-		right: 90%;
-	}
-	#meet-the-team .small-row .next{
-		right: 0;
-		left: 90%;
-	}
-	#meet-the-team .small-row .col-md-2 > div > div:first-child {
-		height: 20rem !important;
-	}
 }
 
 @media screen and (min-width: 1000px){
