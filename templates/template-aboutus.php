@@ -13,7 +13,7 @@ Template Name: About Us
 <section id="meet-the-team">
     <?php
     wp_reset_query();
-    $loop = new WP_Query(array('post_type' => 'cfr_people', 'tax_query' => array( array(
+    $loop = new WP_Query(array('posts_per_page'   => -1, 'post_type' => 'cfr_people', 'tax_query' => array( array(
             'taxonomy' => 'cfr_role',
             'field' => 'slug',
             'terms' => get_term_by( "name", "CFR Member", "cfr_role" )->slug ) ) ) );
