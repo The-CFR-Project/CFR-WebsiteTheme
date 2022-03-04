@@ -116,6 +116,12 @@ iframe {
     z-index: 999;
 }
 
+.about-gameshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about-gameshow-container h1 {
     font-size: 2rem;
     font-weight: 600;
