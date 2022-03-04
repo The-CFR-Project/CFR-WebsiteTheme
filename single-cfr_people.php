@@ -12,7 +12,7 @@ function get_other_paragraphs(): string {
 }
 ?>
 
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/people-css/single-person.css"); </style>
+<style type="text/css">@import url("<?php echo get_template_directory_uri(); ?>/assets/css/people-css/single-person.css");</style>
 
 <section id="person-section">
     <div class="banner-container">

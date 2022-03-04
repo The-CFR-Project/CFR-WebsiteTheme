@@ -63,6 +63,20 @@ a {
 	text-decoration: none;
 }
 
+p a {
+	color: var(--grey4);
+	font-weight: 500;
+}
+
+p a:hover {
+	color: var(--grey5);
+}
+
+p a:focus {
+	color: var(--grey5);
+	border-bottom: 2px dashed var(--grey5);
+}
+
 section:nth-child(odd) {
 	background-color: var(--grey1);
 }

@@ -1,0 +1,265 @@
+#gameshow-banner {
+    margin-top: 100px;
+}
+
+#gameshow-banner img {
+    object-fit: cover;
+
+    width: 100%;
+    height: 110%;
+
+    filter: brightness(0.5) blur(5px);
+}
+
+.gameshow-banner-container {
+    height: 600px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: -10px;
+}
+
+.gameshow-banner-text {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2s ease-out;
+    z-index: 1;
+}
+
+.gameshow-banner-text h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    transition: all 0.2s ease;
+}
+
+.gameshow-banner-text:hover h1 {
+    font-size: 63px;
+}
+
+.gameshow-banner-text h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    margin: 10px 0 50px;
+}
+
+.gameshow-banner-text button {
+    width: 175px;
+    height: 40px;
+
+    background-color: #fff;
+    color: var(--blue2);
+
+    border: 2px solid #fff;
+    border-radius: 20px;
+
+    font-weight: 500;
+    font-size: 18px;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.gameshow-banner-text button:hover {
+    border: 2px solid var(--blue2);
+    background-color: var(--blue2);
+
+    color: #fff;
+}
+
+#about-gameshow {
+    padding: 100px 0;
+}
+
+.trailer-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+
+.trailer-embed-container div {
+    position: relative;
+    width: 70%;
+}
+
+iframe {
+    width: 70%;
+    height: 63%;
+
+    position: absolute;
+    left: 4%;
+    bottom: 6%;
+
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.about-gameshow-container h1 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+    color: var(--blue2);
+}
+
+.about-gameshow-container p {
+    text-align: justify;
+    color: var(--grey3);
+    line-height: 2;
+}
+
+#our-guests .col-12 {
+    padding: 15px;
+}
+
+#our-guests .col-12 > div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
+
+    transition: all 0.2s ease-out;
+
+    background: white;
+    border-radius: 15px;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+#our-guests .col-12:hover > div {
+    transform: scale(1.03);
+}
+
+.episode-color {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.about-guest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50%;
+    height: 60%;
+}
+
+.guest-pfp {
+    width: 70%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+
+    margin: auto;
+    background: white;
+
+    transform: translateY(50%);
+}
+
+.guest-pfp img {
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+
+    margin: 5%;
+}
+
+.guest-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 95%;
+}
+
+.guest-name a {
+    color: black
+}
+
+.guest-name a:hover {
+    color: var(--grey5);
+}
+
+.guest-name a:focus {
+    color: var(--grey5);
+    border-bottom: 2px dashed var(--grey5);
+}
+
+.guest-role {
+    font-weight: 500;
+    text-transform: lowercase;
+
+    width: 95%;
+
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.guest-description {
+    font-size: 19px;
+    text-align: justify;
+
+    width: 90%;
+}
+
+.guest-socials {
+    width: 100%;
+    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.guest-socials .col-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.guest-socials .col-3 img {
+    transition: all 0.2s ease-out;
+}
+
+.guest-socials .col-3:hover img {
+    opacity: 70%;
+}
+
+.sponsors .row {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sponsors .row > div {
+    aspect-ratio: 1.5;
+    display: flex;
+    align-items: center;
+
+    transition: all 0.2s ease-out;
+}
+
+.sponsors .row > div:hover {
+    transform: scale(1.03);
+}
+
+.sponsors img {
+    margin-bottom: 20px;
+}

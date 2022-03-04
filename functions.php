@@ -165,6 +165,15 @@ function register_cfr_post_types() {
         'supports' => array( 'title', 'editor', 'custom-fields', 'author' ),
         'taxonomies' => array( 'cfr_event_type' )
     ] );
+
+    register_post_type( 'cfr_sponsors', [
+        'labels' => array('name' => __('CFR Sponsors', 'textdomain'), 'singular_name' => __('CFR Sponsor', 'textdomain') ),
+        'description' => 'Organisations that Sponsor the Project',
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar',
+        'rewrite' => array( 'slug' => 'sponsors' ),
+        'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
+    ] );
 }
 
 function register_cfr_taxonomies() {
@@ -192,7 +201,7 @@ function register_cfr_taxonomies() {
             'hierarchical' => true
         ),));
 
-    register_taxonomy("cfr_event_type", "cfr_event", array(
+    register_taxonomy("cfr_event_type", "cfr_events", array(
         'hierarchical' => false,
         // This array of options controls the labels displayed in the WordPress Admin UI
         'labels' => array(
@@ -213,7 +222,7 @@ function register_cfr_taxonomies() {
         ),));
 }
 
-add_action( 'init', 'register_cfr_post_types' );
+add_action( 'init', 'register_cfr_post_types', 0 );
 add_action( 'init', 'register_cfr_taxonomies', 0 );
 
 
