@@ -23,13 +23,13 @@
                 'style' => 'ul', 
                 'type' => 'all', 
                 'reverse_top_level' => true,
-                'echo' => true
+                'echo' => false
             );
-            wp_list_comments($args); 
+            echo wp_list_comments($args);
             ?>
         </div>
 
-    <?php endif;    ?>
+    <?php endif;?>
 
     
 

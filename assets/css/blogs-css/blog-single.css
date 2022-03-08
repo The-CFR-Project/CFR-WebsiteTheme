@@ -385,8 +385,17 @@
       display: none;
     }
     .blog-sidebar {
-      display:none;
+      display: block;
     }
+	.blog-author-pic{
+		display: none;
+	}
+	#sidebar-primary{
+		padding: 0 0 50px;
+	}
+	#sidebar-primary .widget_recent_entries{
+		display: none;
+	}
     .blog-single-header img {
       width: 100%;
       height: 100%;

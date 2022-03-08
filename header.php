@@ -17,7 +17,7 @@
 	<?php wp_head();?>
 
 </head>
-<body onscroll="document.getElementById('sidenav').className='hide collapse';">
+<body onscroll="$('.nav-container').collapse('hide')">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4GJH55"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -46,7 +46,7 @@
 
 		</div>
 	</div>
-
+  <div id = "hamburger-container"><button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".nav-container" id = "hamburger">≡</button></div>
   <div class="nav-container">
 	<?php
 	  wp_nav_menu(
@@ -56,11 +56,28 @@
 		)
 	  );
 	?>
+	
   </div>
 
 
 </header>
-<div id = "sidenav" class = "collapse hide">
-	<div class = "mobile-nav-container" id = "mobile-nav-container"></div>
-</div>
+<script  type='text/javascript'>
+var $ = jQuery;
+var m = window.matchMedia("(max-width: 980px)");
+function f(x) {
+	if(x.matches){ // If screen is small
+		$("#navbar-title").html("CFR Project");
+		$("#menu-navigation-bar")[0].id = "mobile-nav-container";
+		$(".nav-container").addClass("collapse");
+	}else{
+		$("#navbar-title").html("The Carbon Footprint Reduction Project");
+		try{
+			$("#mobile-nav-container")[0].id = "menu-navigation-bar";
+			$(".nav-container").removeClass("collapse");
+		}catch{}
+	}
+}
+f(m);
+m.addListener(f);
+</script>
 <div class="container-fluid">

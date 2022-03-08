@@ -50,6 +50,10 @@ a:focus .background img {
     align-content: center;
 }
 
+#cfr-zoom .col-md-6{
+	position: relative;
+}
+
 @media screen and (max-width: 768px){
     .col-md-7 {
         display: none;
