@@ -77,7 +77,7 @@ p a:focus {
 	border-bottom: 2px dashed var(--grey5);
 }
 
-section:nth-child(odd) {
+#fact-cards, #instawall{
 	background-color: var(--grey1);
 }
 

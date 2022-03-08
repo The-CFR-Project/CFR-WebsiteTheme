@@ -207,16 +207,12 @@ header .nav-bar li .sub-menu {
 	display: none;
 	position: absolute;
 	z-index: 10;
-
 	top: 90%;
 	width: 180px;
-
 	margin: 0;
 	padding: 0;
 	border-radius: 0.5rem;
-
 	background: #fff;
-
 	list-style-type: none;
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
@@ -224,9 +220,7 @@ header .nav-bar li .sub-menu {
 header .nav-bar li .sub-menu a {
 	color: var(--grey2);
 	padding: 0.5rem;
-
 	font-size: 13px;
-
 	display: block;
 	text-decoration: none;
 }
@@ -246,7 +240,6 @@ header .nav-bar .menu-item-has-children:focus-within .sub-menu {
 	z-index: 1;
 	width: 100%;
 	height: 20px;
-
 	background-color: var(--blue2);
 }
 
@@ -298,11 +291,11 @@ header .nav-bar .menu-item-has-children:focus-within .sub-menu {
 	.nav-header-container{
 		width:100% !important;
 	}
-	header .nav-title-container a{
-		align-self: center;
-	}
 	header .nav-title-container{
 		width: 60%;
+	}
+	header .nav-title-container a{
+		align-self: center;
 	}
 	header .nav-bar li .sub-menu{
 		display: block;

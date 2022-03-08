@@ -15,7 +15,6 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-single-header img {
-	/* width: 100%; */
 	opacity: 0.7;
 	object-fit: cover;
 }
@@ -403,20 +402,19 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 		width: 100%;
 		height: 100%;
 	}
-	
-}
-
-@media (max-width: 910px) {
 	.blog-single-header .line-lmao {
 		display: none;
 	}
 	.blog-single-header p {
-		display: none;
+		text-align: right;
 	}
 	.blog-single-header h3 {
 		font-size: 3rem;
 	}
 	.blog-content {
 		padding: 50px;
+	}
+	.blog-single-header .text {
+		padding: 0 3vw 0 8vw;
 	}
 }
