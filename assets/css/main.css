@@ -363,3 +363,41 @@ Bootstrap Overrides
 
 	position: relative;
 }
+
+#hamburger{
+	display:none;
+	line-height:0;
+	font-size:4em;
+	position:relative;
+	color: var(--green1);
+}
+#hamburger{
+	display:none;
+	line-height:0;
+	font-size:4em;
+	position:relative;
+	color: var(--green1);
+}
+#hamburger:focus{
+	box-shadow: none !important;
+}
+#hamburger:focus-visible{
+	border: 2px dashed var(--grey2);
+	margin: -2px;
+}
+@media screen and (max-width: 1000px) {
+	#hamburger-container {
+			display: flex;
+			position: absolute;
+			margin-top: 22px;
+			margin-bottom: 22px;
+			right: 10px;
+		}
+	#hamburger{
+		display: block;
+		padding: 19px 7px 35px 9px;
+		color: var(--green1);
+		background-color: white;
+		border-color: white;
+	}
+}
