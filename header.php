@@ -63,7 +63,7 @@
 </header>
 <script  type='text/javascript'>
 var $ = jQuery;
-var m = window.matchMedia("(max-width: 980px)");
+var m = window.matchMedia("(max-width: 1000px)");
 function f(x) {
 	if(x.matches){ // If screen is small
 		$("#navbar-title").html("CFR Project");

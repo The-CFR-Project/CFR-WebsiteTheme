@@ -280,7 +280,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 
 .wp-block-latest-posts {
 	margin: 40px 0 0;
-	border-left: 3px solid var(--grey3);
+	border-right: 3px solid var(--grey3);
 }
 
 .wp-post-image{

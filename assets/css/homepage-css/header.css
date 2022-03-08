@@ -297,6 +297,9 @@ header .nav-bar .menu-item-has-children:focus-within .sub-menu {
 	header .nav-title-container a{
 		align-self: center;
 	}
+	header .nav-bar li{
+		border-radius: 0 !important;
+	}
 	header .nav-bar li .sub-menu{
 		display: block;
 		position: relative;
@@ -304,8 +307,11 @@ header .nav-bar .menu-item-has-children:focus-within .sub-menu {
 		box-shadow: none;
 		width: 100%;
 	}
+	header .nav-bar .current-menu-ancestor{
+		background-color: #fff;
+	}
 	#wpadminbar{
-		position: fixed;
+		position: fixed !important;
 	}
 	.sub-menu {
 		border-radius: 0 !important;

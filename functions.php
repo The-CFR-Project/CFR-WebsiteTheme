@@ -7,8 +7,8 @@ function load_css() {
 
   wp_register_style( "main", get_template_directory_uri() . "/assets/css/main.css", array(), false, "all" );
   wp_enqueue_style( "main" );
-  wp_register_style( "mobile", get_template_directory_uri() . "/assets/css/mobile.css", array(), false, "all" );
-  wp_enqueue_style("mobile");
+  
+  wp_dequeue_style( "wp-block-library" );
 }
 
 // Load Javascript
@@ -24,7 +24,6 @@ function load_js() {
 
 add_action( "wp_enqueue_scripts", "load_css" );
 add_action( "wp_enqueue_scripts", "load_js" );
-
 
 // Theme Options
 add_theme_support( "menus" );
