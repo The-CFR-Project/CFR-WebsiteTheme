@@ -18,27 +18,38 @@
         }
     </script>
     <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/flight-calc-input.css"); </style>
+    <style>
+      table, th, td {
+        border-collapse: collapse;
+      }
+	  table {
+		  margin-left: auto;
+		  margin-right: auto;
+	  }
+    </style>
     <!-- First Part -->
     <body>
-    <h1>Pick a plane</h1>
-    <form id="flight-calculator-inputs-form">
+    <h1 style="margin:100px;">Pick a plane</h1>
+    <form id="flight-calculator-inputs-form" method="post" action="">
         <div class="row" style="justify-content: center">
             <div style="width: 20%">
                 <label for="aircraft-type">Aircraft Type</label><br>
                 <input list="aircraft-type" name="aircraft_type" /></label>
                 <datalist id="aircraft-type">
 				<?php
+				// iterates through a database query to show the results. Only for drop down menus with many options
 				global $wpdb;
 				$results = array_splice($wpdb->get_results( "SELECT DISTINCT aircraft_type FROM {$wpdb->prefix}ae" ),1);
 				sort($results);
 				foreach ($results as $row) {
-					echo "<option value=$row->aircraft_type>"; }
+                    echo "<option>". $row->aircraft_type . "</option>";
+				}
 				?>
 				</datalist>
 			</div>
 			<div style="width: 20%">
 				<label>Aircraft Category</label><br>
-				<input list="aircraft-category" name="aircraft_category" /></label>
+				<input list="aircraft-category" name="aircraft_category" />
 				<datalist id="aircraft-category">
                     <option>Amphibian</option>
                     <option>Gyrocopter</option>
@@ -50,18 +61,17 @@
 			</div>
 			<div style="width: 20%">
 				<label>Engine Manufacturer</label><br>
-				<input list="engine-manufacturer" name="engine_manufacturer" /></label>
+				<input list="engine-manufacturer" name="engine_manufacturer" />
 				<datalist id="engine-manufacturer">
 				<?php
 				global $wpdb;
-				$results = array_splice($wpdb->get_results( "SELECT DISTINCT engine_manufacturer FROM {$wpdb->prefix}ae" ),1);
-				sort($results);
-				foreach ($results as $row) {
-                    $stuff = $row->engine_manufacturer;
-                    if (strpos($stuff, ";") === false) {
-                        echo "<option value=$stuff>"; 
+				$results = $wpdb->get_results( "SELECT DISTINCT engine_manufacturer FROM {$wpdb->prefix}ae ORDER BY engine_manufacturer ASC" );
+                foreach($results as $result) {
+                    $stuff = $result->engine_manufacturer;
+                    if (strpos($stuff, ';') === false) {
+                        echo "<option>". $stuff . "</option>";
                     }
-				}
+                }
 				?>
 				</datalist>
 			</div>
@@ -74,25 +84,25 @@
 	<br>
 	<!-- Second Part -->
 	<div id="second-part">
-		<!-- First Row -->		
+		<!-- First Row -->
 		<div class="row" style="justify-content: center">
 			<div style="width: 20%">
 			<label for="manufacturer">Manufacturer</label><br>
-			<input list="manufacturer" name="aircraft_manufacturer" /></label>
+			<input list="manufacturer" name="aircraft_manufacturer" />
 				<datalist id="manufacturer">
 				<?php
 				global $wpdb;
 				$results = array_splice($wpdb->get_results( "SELECT DISTINCT manufacturer FROM {$wpdb->prefix}ae" ),1);
 				sort($results);
 				foreach ($results as $row) {
-					echo "<option value=$row->manufacturer>";
+					echo "<option>". $row->manufacturer . "</option>";
 				}
 				?>
 				</datalist>
 			</div>
 			<div style="width: 20%">
 			<label for="body-type">Body Type</label><br>
-			<input list="body-type" name="body_type" /></label>
+			<input list="body-type" name="body_type" />
 				<datalist id="body-type">
                     <option>Freighter</option>
                     <option>Gyrocopter</option>
@@ -108,7 +118,7 @@
 			</div>
 			<div style="width: 20%">
 			<label for="maximum-seats">Maximum Seats</label><br>
-			<input list="maximum-seats" name="maximum_seats" /></label>
+			<input list="maximum-seats" name="maximum_seats" />
 				<datalist id="maximum-seats">
                     <option>0</option>
                     <option>1</option>
@@ -142,7 +152,7 @@
 		<div class="row" style="justify-content: center">
 				<div style="width: 20%">
 				<label for="engine-type">Engine Type</label><br>
-				<input list="engine-type" name="engine_type" /></label>
+				<input list="engine-type" name="engine_type" />
 					<datalist id="engine-type">
                         <option>Electric</option>
                         <option>Jet</option>
@@ -153,48 +163,101 @@
 				<div style="width: 20%">
 					<label for="engine-count">Engine Count</label><br>
                         <div class="code-input" id="engine-count">
-                            <input list="ec-1" name="ec1" maxlength="1" />
+                            <input list="ec-1" name="ec1" />
                                 <datalist id="ec-1">
                                     <option>0</option>
                                     <option>1</option>
                                 </datalist>
-                            <input list="ec-2" name="ec2" maxlength="1" />
+                            <input list="ec-2" name="ec2" />
                                 <datalist id="ec-2">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
                                     <option>4</option>
                                     <option>6</option>
-                                    <option>6</option>
                                 </datalist>
                         </div>
-				</div>
-				<div style="width: 20%">
-					<label for="wake-turbulence">Wake Turbulence Category</label><br>
-					<input type="text" id="wake-turbulence" name="wake-turbulence">
 				</div>
 		</div>
 	</div>
     <div class="row" style="justify-content: center">
-        <input type="submit" onsubmit="func()">
+        <input type="submit" name="submitbtn">
     </div>
-        <div class="row" style="justify-content: center">
-            <table style="display: none" id="results-table">
-                <thead>
-                <tr>
-                    <th>Aircraft Type</th>
-                    <th>Aircraft Category</th>
-                    <th>Engine Manufacturer</th>
-                    <th>Manufacturer</th>
-                    <th>Body Type</th>
-                    <th>Maximum Seats</th>
-                    <th>Engine Type</th>
-                    <th>Engine Count</th>
-                    <th>Wake Turbulence Category</th>
-                </tr>
-                </thead>
-            </table>
-        </div>
 	</form>
-    </body>
+	<?php
+	if (isset($_POST['submitbtn'])) {
+		// collecting the data on submitting the button
+        global $wpdb;
+		$aircraft_type=$_POST['aircraft_type'];
+		$aircraft_category=$_POST['aircraft_category'];
+		$engine_manufacturer=$_POST['engine_manufacturer'];
+		$aircraft_manufacturer=$_POST['aircraft_manufacturer'];
+		$body_type=$_POST['body_type'];
+		$maximum_seats=$_POST['maximum_seats'];
+		$engine_type=$_POST['engine_type'];
+        $engine_count=$_POST['ec1'].$_POST['ec2'];
+		$query = "SELECT * FROM {$wpdb->prefix}ae WHERE ";
+		$subqueries = [];
+        // if conditions to check if the values are not empty and add part of
+        // an sql query to the main one
+        if( !empty( $aircraft_type )) {
+			$subquery = "aircraft_type=\"$aircraft_type\" ";
+			array_push($subqueries, $subquery);
+        }
+        if( !empty( $aircraft_category )) {
+			$subquery = "aircraft_category=\"$aircraft_category\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $engine_manufacturer )) {
+			$subquery = "engine_manufacturer=\"$engine_manufacturer\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $aircraft_manufacturer )) {
+			$subquery = "manufacturer=\"$aircraft_manufacturer\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $body_type )) {
+			$subquery = "body_type=\"$body_type\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $maximum_seats )) {
+			$subquery = "max_seats=\"$maximum_seat\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $engine_type )) {
+			$subquery = "engine_type=\"$engine_type\" ";
+			array_push($subqueries, $subquery);
+        } 
+        if( !empty( $engine_count )) {
+			$subquery = "engine_count=\"$engine_count\" ";
+			array_push($subqueries, $subquery);
+        } 
+		$fq = join("AND ", $subqueries);
+		echo "<table>";
+		echo "<tr>";
+		echo "<th style=\"background-color: #35B0AB;\">Model</th>";
+		echo "<th style=\"background-color: #EC7E8A;\">Manufacturer</th>";
+		echo "<th style=\"background-color: #35B0AB;\">Engine Manufacturer</th>";
+		echo "<th style=\"background-color: #6F5980;\">Engine Model</th>";
+		echo "<th style=\"background-color: #C06D85;\">Description</th>";
+		echo "<th style=\"background-color: #C06D85;\">Max Seats</th>";
+		echo "<th style=\"background-color: #EC7E8A;\">Body Type</th>";
+		echo "</tr>";
+		global $wpdb;
+		$results = $wpdb->get_results($query.$fq);
+		foreach ($results as $data ) {
+			echo "<tr>";
+			echo "<td>";echo $data->model;echo "</td>";
+			echo "<td>";echo $data->manufacturer;echo "</td>";
+			echo "<td>";echo $data->engine_manufacturer;echo "</td>";
+			echo "<td>";echo $data->engine_model;echo "</td>";
+			echo "<td>Description</td>";
+			echo "<td>";echo $data->max_seats;echo "</td>";
+			echo "<td>";echo $data->body_type;echo "</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+	?>
+	</body>
 </section>
