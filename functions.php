@@ -20,6 +20,9 @@ function load_js() {
 
   wp_register_script( "planetary", get_template_directory_uri() . "/assets/js/planetaryjs.js", array(), false, true );
   wp_enqueue_script( "planetary" );
+  
+  remove_action( "wp_head", "print_emoji_detection_script", 7 );
+  remove_action( "wp_print_styles", "print_emoji_styles" );
 }
 
 add_action( "wp_enqueue_scripts", "load_css" );

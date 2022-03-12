@@ -71,7 +71,6 @@ a.url {
     color: var(--grey6);
     text-transform: uppercase;
     cursor: default;
-    margin-left: 110px;
     font-size: 18px;
 }
 
@@ -239,4 +238,10 @@ a.url {
     #comments {
         padding: 100px 10%;
     }
+}
+
+@media (max-width: 1000px) {
+	b, .comment-content, .reply a{
+		margin-left: 90px;
+	}
 }
