@@ -12,7 +12,7 @@
     <div class="row blogs-archive-post">
         <?php
         $category_id = get_cat_ID('Blog');
-        $q = 'cat=' . $category_id;
+        $q = ['cat' => $category_id, 'post_status' => 'publish'];
         $blogs = (query_posts($q));
         if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
@@ -45,7 +45,9 @@
                 <a href="<?php the_permalink(); ?>" class="col-md-4 blogs-archive-post-grid-container">
                     <?php  echo "<div class='blogs-archive-post-grid-". ($i-1) ." blogs-archive-post-grid'>" ?>
                         <?php if(has_post_thumbnail()): ?>
-                            <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                            <div class="blogs-archive-post-grid-img-container">
+                                <img src="<?php the_post_thumbnail_url(); ?>" class= "img-fluid">
+                            </div>
                         <?php endif; ?>
                         <div class="blogs-archive-post-text">
                             <h3><?php the_title();?></h3>

@@ -10,16 +10,26 @@ CFR About Us Page, About CFR Section
   
 .about-cfr-container {
 	margin-top: 100px;
-	padding: 100px 50px;
+	padding: 75px 100px;
 }
   
 .about-cfr-container h1 {
-	font-size: 60px;
+	font-size: 50px;
 	text-transform: uppercase;
 }
+
+.about-cfr-container p {
+	font-size: 20px;
+}
   
-.about-cfr-container img {
-	width: 100%;
+.about-cfr-image-container {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+.about-cfr-image-container img {
+	width: 80%;
 }
 
 @media (max-width: 770px) {
@@ -29,5 +39,18 @@ CFR About Us Page, About CFR Section
 
 	.about-cfr-container p {
 		text-align: justify;
+	}
+}
+
+@media (max-width: 1000px){
+	.about-cfr-container{
+		padding: 30px;
+	}
+	.about-cfr-container h1{
+		font-size: 40px;
+		text-align: center;
+	}
+	.about-cfr-image-container{
+		justify-content: center;
 	}
 }

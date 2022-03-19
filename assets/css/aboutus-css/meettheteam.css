@@ -12,98 +12,94 @@ CFR Meet the Team Section
 
 #meet-the-team h6 {
 	text-transform: lowercase;
-	color: var(--red5);
+	margin-bottom: 5px;
 }
 
-#meet-the-team .small-row h6 {
+.small-row h6 {
 	font-size: 15px;
 }
 
-#meet-the-team .large-row p {
+.large-row p {
 	color: var(--blue2);
 }
 
-#meet-the-team .medium-row p {
+.large-row h6 {
+	color: var(--blue4);
+}
+
+.medium-row p {
 	color: var(--red3);
 }
 
-#meet-the-team .large-row,
-#meet-the-team .medium-row,
-#meet-the-team .small-row {
-	justify-content: center;
+.medium-row h6 {
+	color: var(--red5);
 }
 
-#meet-the-team .large-row,
-#meet-the-team .medium-row {
-	padding-bottom: 50px;
+.small-row p,
+.small-row h6 {
+	color: black;
 }
 
-#meet-the-team .small-row {
-	padding-bottom: 20px;
+#meet-the-team .col-md-4,
+#meet-the-team .col-md-3,
+#meet-the-team .col-md-2 {
+	margin-bottom: 40px;
+	transition: all 0.2s ease-out;
 }
 
-#meet-the-team .col-md-3 > div,
-#meet-the-team .col-md-2 > div {
-	overflow: hidden;
-
-	text-align: center;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-
-	background-color: #fff;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
-	transition: transform 0.1s;
+#meet-the-team .col-md-4:hover,
+#meet-the-team .col-md-3:hover,
+#meet-the-team .col-md-2:hover {
+	transform: scale(1.03);
 }
 
-#meet-the-team .col-md-3 > div > div:first-child,
-#meet-the-team .col-md-2 > div > div:first-child {
-	overflow: hidden;
+#meet-the-team .col-md-4:focus-within,
+#meet-the-team .col-md-3:focus-within,
+#meet-the-team .col-md-2:focus-within {
+	transform: scale(1.03);
+	outline: 2px dashed var(--grey2);
+	outline-offset: 15px;
 }
 
-#meet-the-team .large-row .col-md-3 > div > div:first-child {
+.large-row .dp-container {
 	height: 300px;
 }
 
-#meet-the-team .col-md-3:hover div,
-#meet-the-team .col-md-2:hover div {
-	transform: scale(1.02);
-}
-
-#meet-the-team .medium-row .col-md-3 > div > div:first-child {
+.medium-row .dp-container {
 	height: 200px;
 }
 
-#meet-the-team .small-row .col-md-2 > div > div:first-child {
+.small-row .dp-container {
 	height: 100px;
 }
 
-#meet-the-team .col-md-3 > div > div:last-child {
-	height: 100px
+.large-row .title-container {
+	height: 80px;
 }
 
-#meet-the-team .col-md-2 > div > div:last-child {
-	height: 50px
+.medium-row .title-container {
+	height: 80px;
 }
 
-#meet-the-team .col-md-3 > div > div:last-child,
-#meet-the-team .col-md-2 > div > div:last-child {
+.small-row .title-container {
+	height: 60px;
+}
+
+.title-container {
+	background-color: white;
+
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-
-	padding-top: 25px;
-	padding-bottom: 25px;
+	justify-content: center;
+	align-items: center;
 }
 
-#meet-the-team .dp {
-	min-height: 100%;
-	width: 100%;
+.dp {
 	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
-#meet-the-team .small-row .arrow{
-	display: none;
+
+.meet-the-team-container a{
+	text-decoration: none !important;
 }

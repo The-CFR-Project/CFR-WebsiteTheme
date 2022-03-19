@@ -23,11 +23,15 @@
       <?php endif; ?>
       <div id="blogs-archive-slide-text">
         <a href = "<?php the_permalink(); ?>" class='blogs-archive-slide-header-link'><h1><?php the_title();?></h1></a>
-        <p><?php echo the_excerpt(); ?></p>
+        <?php if (get_post_meta(get_the_ID(), 'description', true) != ''): ?>
+          <p><?php echo get_post_meta(get_the_ID(), 'description', true); ?></p>
+        <?php else: ?>
+          <p><?php echo the_excerpt(); ?></p>
+        <?php endif; ?>  
         <a href="<?php the_permalink(); ?>" class="readmore">
-          <h4 class="special-underline read-more-precious">Read More</h4>
-          <div class="blogs-carousel-readmore-arrow-line"></div>
-          <div class="blogs-carousel-readmore-arrow"></div>
+          <h4 class="special-underline line-lmao read-more-precious">Read More</h4>
+          <!-- <div class="blogs-carousel-readmore-arrow-line"></div>
+          <div class="blogs-carousel-readmore-arrow"></div> -->
         </a>
       </div>
 

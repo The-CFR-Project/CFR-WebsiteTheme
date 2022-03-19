@@ -1,0 +1,87 @@
+h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 9vw;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    opacity: 30%;
+    font-weight: 900;
+    font-size: 30px;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    padding-top: 80px;
+}
+
+h3 {
+    opacity: 50%;
+    font-weight: 900;
+    font-size: 2.2vw;
+
+    margin-top: 20px;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#episode-banner {
+    margin-top: 100px;
+    height: 400px;
+}
+
+#episode-banner .container-fluid,
+#episode-banner .container-fluid > .row {
+    height: 100%;
+}
+
+#episode-banner .container-fluid > .row {
+    overflow: hidden;
+}
+
+#episode-banner .col-sm-2 {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+}
+
+#episode-banner .col-sm-8 {
+    min-width: 320px;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cross-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.cross-container img {
+    font-size: 150px;
+    margin: -10px !important;
+    opacity: 50%;
+    mix-blend-mode: color-burn;
+    max-width: none;
+}
+
+@media screen and (max-width: 576px) {
+    .cross-container-n {
+        display: none;
+    }
+
+    #episode-banner .col-sm-2:last-child {
+        display: none;
+    }
+
+    h2 {
+        padding-top: 0;
+    }
+}
