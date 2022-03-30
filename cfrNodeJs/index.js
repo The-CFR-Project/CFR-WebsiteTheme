@@ -9,7 +9,7 @@ app.use(cors());
 app.get("/", (req, res, next) => {
     // Executing the command to get data
     exec(
-        `${__dirname + "./youtube-dl.exe"} -F ${req.query.videoURL}`,
+        `${__dirname + "/youtube-dl.exe"} -F ${req.query.videoURL}`,
         (error, stdout, stderr) => {
             // Error logging
             if (error) {

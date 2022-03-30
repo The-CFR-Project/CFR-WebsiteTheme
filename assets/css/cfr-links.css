@@ -29,25 +29,29 @@ a:focus .background img {
     outline: 2px dashed var(--blue4);
 }
 
-.col-md-4,
-.col-md-6 {
+#cfr-discord .col-md-4,
+#cfr-discord .col-md-6 {
     padding: 30px;
     position: relative;
 }
 
-.col-md-4 > div,
-.col-md-6 > div {
+#cfr-discord .col-md-4 > div,
+#cfr-discord .col-md-6 > div {
     border-radius: inherit;
     background-size: cover;
 }
 
-.col-md-5,
-.col-md-6,
-.col-md-7 {
+#cfr-discord .col-md-5,
+#cfr-discord .col-md-6,
+#cfr-discord .col-md-7 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+#cfr-zoom .col-md-6{
+	position: relative;
 }
 
 @media screen and (max-width: 768px){

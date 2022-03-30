@@ -30,13 +30,6 @@
             </div>
 
             <div class="blog-content row">
-
-                    <div class="col-lg-9">
-                            <div class="blog-content-text">
-                            <?php the_content(); ?>
-                            </div>
-                    </div>  
-
                     <div class="col-lg-3 blog-sidebar">
                             <div class="author-info">
                                     <?php echo '<div class="blog-author-pic" style="background-color:'.$post_color.'"> '; ?>
@@ -123,7 +116,11 @@
                                 </div>
                             </div>
                     </div>
-                    
+                    <div class="col-lg-9">
+                            <div class="blog-content-text">
+                            <?php the_content(); ?>
+                            </div>
+                    </div>
             </div>
 
             <div class="comments-section-container">

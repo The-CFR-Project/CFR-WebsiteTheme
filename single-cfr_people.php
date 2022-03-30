@@ -12,7 +12,7 @@ function get_other_paragraphs(): string {
 }
 ?>
 
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/people-css/single-person.css"); </style>
+<style type="text/css">@import url("<?php echo get_template_directory_uri(); ?>/assets/css/people-css/single-person.css");</style>
 
 <section id="person-section">
     <div class="banner-container">
@@ -24,7 +24,6 @@ function get_other_paragraphs(): string {
                     <div class="dp-container">
                         <img class="profile-picture" src="<?php the_field('photo');?>">
                     </div>
-
                 </div>
                 <div class="col-md-8"></div>
             </div>
@@ -32,7 +31,7 @@ function get_other_paragraphs(): string {
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="heading-row row">
             <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center">
                 <div class="title-container">
                     <?php
@@ -45,9 +44,6 @@ function get_other_paragraphs(): string {
                         echo $taxonomy;
                         $member = false;
                     }
-
-                    $gameshow_expert = in_array( "Gameshow Guest", get_the_terms( get_the_ID(), "cfr_role") ) and !$member;
-                    $gameshow_member = in_array( "Gameshow Guest", get_the_terms( get_the_ID(), "cfr_role") ) and $member
                     ?>
                 </div>
                 <div class="email-container">
@@ -60,10 +56,8 @@ function get_other_paragraphs(): string {
             </div>
             <div class="col-md-8">
                 <div class="heading-container">
-                    <?php
-                    echo "<div class='heading-overlay'>" . $post->post_title . "</div>";
-                    echo "<div class='heading-watermark'>CFR</div>";
-                    ?>
+                    <?php echo "<div class='heading-overlay'>" . $post->post_title . "</div>";?>
+                    <div class='heading-watermark'>CFR</div>
                 </div>
             </div>
         </div>
@@ -72,29 +66,19 @@ function get_other_paragraphs(): string {
             <div class="col-md-4" style="display: flex; justify-content: center; align-items: center">
                 <div>
                     <div class="row">
-                        <div class="col-md-6 social-icon-container">
-                            <a href="<?php the_field('linkedin');?>">
-                            <img class="social-icon" src="<?php echo get_template_directory_uri();?>/assets/images/linkedin-icon.svg">
-                            </a>
-                        </div>
-                        <div class="col-md-6 social-icon-container">
-                            <a href="<?php the_field('instagram');?>">
-                            <img class="social-icon" src="<?php echo get_template_directory_uri();?>/assets/images/instagram-icon.svg">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6 social-icon-container">
-                            <a href="<?php the_field('facebook');?>">
-                            <img class="social-icon" src="<?php echo get_template_directory_uri();?>/assets/images/facebook-icon.svg">
-                            </a>
-                        </div>
-                        <div class="col-md-6 social-icon-container">
-                            <a href="<?php the_field('website');?>">
-                            <img class="social-icon" src="<?php echo get_template_directory_uri();?>/assets/images/share-icon.svg">
-                            </a>
-                        </div>
+                        <?php
+                        foreach (["linkedin", "instagram", "facebook", "website"] as $site) {
+                            $value = get_field( $site );
+                            if ( strlen( $value ) > 0 ) {?>
+                                <div class="col col-md-6 social-icon-container">
+                                    <a href="<?php echo $value;?>">
+                                        <img class="social-icon" src="<?php echo get_template_directory_uri();?>/assets/images/<?php echo $site?>-icon.svg">
+                                    </a>
+                                </div>
+                                <?php
+                            }
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -115,17 +99,110 @@ function get_other_paragraphs(): string {
     </div>
 </section>
 
-<section>
-    <div class="heading-container">
-        <?php
-        echo "<div class='heading-overlay'>" . "know more!" . "</div>";
-        ?>
+<?php
+if ( has_term( "Gameshow Guest", "cfr_role" ) ) {
+?>
+<section id="gameshow" style="background-color: white">
+    <div class="heading-container" style="height: 150px;">
+        <div class='heading-overlay'>the cfr gameshow</div>
     </div>
 
-    <div class="container description-container">
-        <?php echo get_other_paragraphs();?>
-    </div>
+    <div class="container">
+        <div class="row justify-content-evenly">
+            <?php
+            if ( $member and get_field( "is_host" ) ) {
+                foreach ( get_field( "hosted_episodes" ) as $episode ) {
+                    $s = strtotime( get_field( "start_time", $episode ) );
+                    $date = date('j F Y', $s);
 
+                    $pieces = explode(' ', get_the_title( $episode));
+                    $title = array_pop($pieces);?>
+                    <div class="col-md-3 episode-container" onclick="location.href='<?php echo get_permalink( $episode )?>';"
+                         style="background-color: <?php echo get_field( "colour1", $episode );?>">
+                        <h2>HOST</h2>
+                        <h3>the one with</h3>
+                        <h1><?php echo $title;?></h1>
+                        <h3><?php echo $date;?></h3>
+                    </div>
+                <?php
+                }
+            }
+
+            if ( $member and get_field( "is_guest" ) ) {
+                foreach ( get_field( "guest_episodes" ) as $episode ) {
+                    $s = strtotime( get_field( "start_time", $episode ) );
+                    $date = date('j F Y', $s);
+
+                    $pieces = explode(' ', get_the_title( $episode));
+                    $title = array_pop($pieces);?>
+                    <div class="col-md-3 episode-container">
+                        <div style="height: 40%">
+                            <h2 style="color: <?php echo get_field( "colour1", $episode );?>">GUEST</h2>
+                        </div>
+                        <div onclick="location.href='<?php echo get_permalink( $episode )?>';"
+                             style="background-color: <?php echo get_field( "colour1", $episode );?>; height:60%; width: 100%; border-radius: 0 0 20px 20px">
+                            <h3>the one with</h3>
+                            <h1><?php echo $title;?></h1>
+                            <h3><?php echo $date;?></h3>
+                        </div>
+                    </div>
+                <?php
+                }
+            }
+
+            if ( !$member ) {
+                foreach ( get_field( "episodes" ) as $episode ) {
+                    $s = strtotime( get_field( "start_time", $episode ) );
+                    $date = date('j F Y', $s);
+
+                    $pieces = explode(' ', get_the_title( $episode));
+                    $title = array_pop($pieces);?>
+                <div class="col-md-3 episode-container">
+                    <div style="height: 40%">
+                        <h2 style="color: <?php echo get_field( "colour1", $episode );?>">EXPERT</h2>
+                    </div>
+                    <div onclick="location.href='<?php echo get_permalink( $episode )?>';"
+                         style="background-color: <?php echo get_field( "colour1", $episode );?>; height:60%; width: 100%; border-radius: 0 0 20px 20px">
+                        <h3>the one with</h3>
+                        <h1><?php echo $title;?></h1>
+                        <h3><?php echo $date;?></h3>
+                    </div>
+                </div>
+                <?php
+                }
+            }
+            ?>
+        </div>
+    </div>
+</section>
+<section></section>
+
+<?php
+}
+$bio = get_other_paragraphs();
+if ( strlen( $bio ) > 10) {?>
+    <section>
+        <div class="heading-container">
+            <?php
+            echo "<div class='heading-overlay'>" . "know more!" . "</div>";
+            ?>
+        </div>
+
+        <div class="container description-container">
+            <?php echo $bio;?>
+        </div>
+
+        <div class="instawall-section-container container-fluid" style="margin-top: 200px;">
+            <div class="bedrock-container">
+                <div>
+                    <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/assets/images/404rock.svg">
+                </div>
+            </div>
+        </div>
+
+    </section>
+<?php }
+else {?>
     <div class="instawall-section-container container-fluid" style="margin-top: 200px;">
         <div class="bedrock-container">
             <div>
@@ -133,6 +210,5 @@ function get_other_paragraphs(): string {
             </div>
         </div>
     </div>
-</section>
-
-<?php get_footer();?>
+<?php }
+get_footer();?>

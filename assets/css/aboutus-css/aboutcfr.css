@@ -41,3 +41,16 @@ CFR About Us Page, About CFR Section
 		text-align: justify;
 	}
 }
+
+@media (max-width: 1000px){
+	.about-cfr-container{
+		padding: 30px;
+	}
+	.about-cfr-container h1{
+		font-size: 40px;
+		text-align: center;
+	}
+	.about-cfr-image-container{
+		justify-content: center;
+	}
+}

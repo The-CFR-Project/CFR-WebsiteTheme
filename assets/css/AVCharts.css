@@ -38,7 +38,7 @@
     display: grid;
     grid-row-gap: 30px;
     width: 2px;
-    height: 500px;
+    height: 550px;
 }
 
 .y-mark {
@@ -98,7 +98,7 @@
     background-color: var(--grey1);
     background-clip: padding-box;
 
-    width: 100px;
+    width: 120px;
 
     border-radius: 10px;
     border-top: 5px solid var(--red4);

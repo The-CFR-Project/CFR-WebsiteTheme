@@ -13,7 +13,7 @@ class BarGraph {
     constructor(height, width, minimumValue, maximumValue, data) {
         console.log(data);
         // set the dimensions and margins of the graph
-        const margin = {top: 100, right: 30, bottom: 70, left: 60};
+        const margin = { top: 100, right: 30, bottom: 70, left: 60 };
         width = width - margin.left - margin.right;
         height = height - margin.top - margin.bottom;
 
@@ -22,24 +22,31 @@ class BarGraph {
         const graph = d3.select("#graph");
 
         // append the svg object to the body of the page
-        let svg = d3.select("#graph")
+        let svg = d3
+            .select("#graph")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
-
+            .attr(
+                "transform",
+                "translate(" + margin.left + "," + margin.top + ")"
+            );
 
         // sort data
-        data.sort(function(b, a) {
+        data.sort(function (b, a) {
             return a.carbonFootprint - b.carbonFootprint;
         });
 
         // X axis
-        let x = d3.scaleBand()
-            .range([ 0, width ])
-            .domain(data.map(function(d) { return data.indexOf(d); }))
+        let x = d3
+            .scaleBand()
+            .range([0, width])
+            .domain(
+                data.map(function (d) {
+                    return data.indexOf(d);
+                })
+            )
             .padding(0.2);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -47,23 +54,21 @@ class BarGraph {
             .selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end")
-            .style("display", "none")
+            .style("display", "none");
 
         console.log(x(0));
 
         // Label Images
-        const imagesDiv = graph
-            .append("div")
-            .attr(
-                "style",
-                `
+        const imagesDiv = graph.append("div").attr(
+            "style",
+            `
                     transform: translate(${margin.left}px, -${margin.bottom}px);
                     width: ${width}px;
                     height: 20px;
                 `
-            )
+        );
 
-        for(let i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             imagesDiv
                 .append("img")
                 .attr("src", data[i].thumbnail)
@@ -74,27 +79,35 @@ class BarGraph {
                         width: 120px;
                         height: 67.5px;
                         top: 10px;
-                        left: calc(${(100/(data.length+1))*(i+1)}% - 60px);
+                        left: calc(${
+                            (100 / (data.length + 1)) * (i + 1)
+                        }% - 60px);
                     `
-                )
+                );
         }
 
         // Add Y axis
-        let y = d3.scaleLinear()
+        let y = d3
+            .scaleLinear()
             .domain([minimumValue, maximumValue])
-            .range([ height, 0]);
-        svg.append("g")
-            .call(d3.axisLeft(y));
- 
+            .range([height, 0]);
+        svg.append("g").call(d3.axisLeft(y));
+
         // Bars
         svg.selectAll("bar")
             .data(data)
             .enter()
             .append("rect")
-            .attr("x", (d) => { return x(data.indexOf(d)); })
-            .attr("y", (d) => { return y(d.carbonFootprint); })
+            .attr("x", (d) => {
+                return x(data.indexOf(d));
+            })
+            .attr("y", (d) => {
+                return y(d.carbonFootprint);
+            })
             .attr("width", x.bandwidth())
-            .attr("height", (d) => { return height - y(d.carbonFootprint); })
+            .attr("height", (d) => {
+                return height - y(d.carbonFootprint);
+            })
             .attr("fill", "#69b3a2")
             .attr("class", "bar");
     }
@@ -103,33 +116,40 @@ class BarGraph {
         document.getElementById("graph").innerHTML = "";
 
         // set the dimensions and margins of the graph
-        const margin = {top: 100, right: 30, bottom: 70, left: 60};
+        const margin = { top: 100, right: 30, bottom: 70, left: 60 };
         const width = width - margin.left - margin.right;
         const height = height - margin.top - margin.bottom;
 
         const graph = d3.select("#graph");
 
         // append the svg object to the body of the page
-        let svg = d3.select("#graph")
+        let svg = d3
+            .select("#graph")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
+            .attr(
+                "transform",
+                "translate(" + margin.left + "," + margin.top + ")"
+            );
 
         // Parse the Data
-        d3.json(dataPath, function(data) {
-
+        d3.json(dataPath, function (data) {
             // sort data
-            data.sort(function(b, a) {
+            data.sort(function (b, a) {
                 return a.carbonFootprint - b.carbonFootprint;
             });
 
             // X axis
-            let x = d3.scaleBand()
-                .range([ 0, width ])
-                .domain(data.map(function(d) { return data.indexOf(d); }))
+            let x = d3
+                .scaleBand()
+                .range([0, width])
+                .domain(
+                    data.map(function (d) {
+                        return data.indexOf(d);
+                    })
+                )
                 .padding(0.2);
             svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
@@ -137,61 +157,67 @@ class BarGraph {
                 .selectAll("text")
                 .attr("transform", "translate(-10,0)rotate(-45)")
                 .style("text-anchor", "end")
-                .style("display", "none")
+                .style("display", "none");
 
             console.log(x(0));
 
             // Label Images
-            const imagesDiv = graph
-                .append("div")
-                .attr(
-                    "style",
-                    `
+            const imagesDiv = graph.append("div").attr(
+                "style",
+                `
                                 transform: translate(0px, -${margin.bottom}px);
                                 width: ${width}px;
                             `
-                )
+            );
 
-            for(let i = 0; i < data.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                 imagesDiv
                     .append("img")
-                    .attr("src", "https://i.ytimg.com/vi/oX3GVz4Bnzg/mqdefault.jpg")
+                    .attr(
+                        "src",
+                        "https://i.ytimg.com/vi/oX3GVz4Bnzg/mqdefault.jpg"
+                    )
                     .attr(
                         "style",
                         `   
                                     position: relative;
                                     width: 120px;
                                     height: 67.5px;
-                                    left: ${27.5*i}px;
+                                    left: ${27.5 * i}px;
                                     top: 10px;
                                     transform: translateX(87.5px);
                                 `
-                    )
+                    );
             }
 
             // Add Y axis
-            let y = d3.scaleLinear()
+            let y = d3
+                .scaleLinear()
                 .domain([minimumValue, maximumValue])
-                .range([ height, 0]);
-            svg.append("g")
-                .call(d3.axisLeft(y));
+                .range([height, 0]);
+            svg.append("g").call(d3.axisLeft(y));
 
             // Bars
             svg.selectAll("bar")
                 .data(data)
                 .enter()
                 .append("rect")
-                .attr("x", (d) => { return x(data.indexOf(d)); })
-                .attr("y", (d) => { console.log(d.carbonFootprint); return y(d.carbonFootprint); })
+                .attr("x", (d) => {
+                    return x(data.indexOf(d));
+                })
+                .attr("y", (d) => {
+                    console.log(d.carbonFootprint);
+                    return y(d.carbonFootprint);
+                })
                 .attr("width", x.bandwidth())
-                .attr("height", (d) => { return height - y(d.carbonFootprint); })
+                .attr("height", (d) => {
+                    return height - y(d.carbonFootprint);
+                })
                 .attr("fill", "#69b3a2")
                 .attr("class", "bar");
-
-        })
+        });
     }
 }
-
 
 const videoUrlInput = document.getElementById("videoURL");
 const resolution = document.getElementById("resolution");
@@ -280,8 +306,8 @@ function updatePageDetails() {
         thumbnails.push(videoDetailsList[i].thumbnail);
         carbonFootprints.push(videoDetailsList[i].carbonFootprint);
         hoverBoxData.push(videoDetailsList[i].carbonFootprintInDiffResolutions);
-        
-        let videoSelectedE = document.createElement("div")
+
+        let videoSelectedE = document.createElement("div");
         videoSelectedE.classList.add("video-selected");
         videoSelectedE.innerHTML = `
             <img src="${videoDetailsList[i].thumbnail}" alt="" class="video-selected-image">
@@ -292,9 +318,11 @@ function updatePageDetails() {
                 ">&times;</button>
             </div>
             <div class="video-selected-title">${videoDetailsList[i].title}</div>
-        `
+        `;
 
-        videosSelectedEInnerHtml = videosSelectedEInnerHtml+`
+        videosSelectedEInnerHtml =
+            videosSelectedEInnerHtml +
+            `
             <div class='video-selected'>
                 <img src="${videoDetailsList[i].thumbnail}" alt="" class="video-selected-image">
                 <div class="video-selected-remove-wrapper">
@@ -322,7 +350,11 @@ function updatePageDetails() {
     document.getElementById("graph").innerHTML = "";
     if (videoDetailsList.length > 0) {
         document.getElementById("chart-heading").style.display = "block";
-        newBarChart(document.getElementById("graph"), {values: carbonFootprints, labels: thumbnails, hoverBoxData: hoverBoxData});
+        newBarChart(document.getElementById("graph"), {
+            values: carbonFootprints,
+            labels: thumbnails,
+            hoverBoxData: hoverBoxData,
+        });
     } else {
         document.getElementById("chart-heading").style.display = "none";
     }
@@ -332,7 +364,8 @@ let currentVideoCFRYoutubeAPIData = {};
 let currentVideoYoutubeAPIData = {};
 
 function getVideoData() {
-    document.getElementById("youtube-calculator-video-search").style.cursor = "wait";
+    document.getElementById("youtube-calculator-video-search").style.cursor =
+        "wait";
     fetchData(
         `http://cfrproject.test/cfr-youtube-API/?videoURL=${videoUrlInput.value}`,
         (http) => {
@@ -363,25 +396,26 @@ function getVideoData() {
                     videoTitleE.innerHTML = videoTitle;
                     channelTitleE.innerHTML = channelTitle;
                     thumbnailImg.setAttribute("src", thumbnailURL);
-                    document.getElementById("youtube-calculator-video-search").style.cursor = "default";
+                    document.getElementById(
+                        "youtube-calculator-video-search"
+                    ).style.cursor = "default";
                 }
             );
         }
     );
 }
 
-const element = document.getElementById('slider');
+const element = document.getElementById("slider");
 const options = {
     min: 0,
-    max: 100
+    max: 100,
 };
 const mySlider = new Slider(element, options);
 
 function addVideoToCalculations() {
     const data = currentVideoCFRYoutubeAPIData;
     console.log(data);
-    const durationPercent =
-        mySlider.getInfo().right - mySlider.getInfo().left;
+    const durationPercent = mySlider.getInfo().right - mySlider.getInfo().left;
     const selectedResolution = resolution.selectedIndex;
     const audioSizes = [];
     for (let i = 0; i < data.data.videoAudio.length; i++) {
@@ -401,12 +435,12 @@ function addVideoToCalculations() {
         Math.max(...audioSizes),
         audioSizes
     );
-    const videoFileSize = ((videoVideoFileSize + videoAudioFileSize) / 100) * durationPercent;
+    const videoFileSize =
+        ((videoVideoFileSize + videoAudioFileSize) / 100) * durationPercent;
 
     const videoCarbonFootprintDiffResolutions = [];
     for (let i = 0; i < data.data.videoVideo.length; i++) {
-        const videoVideoFileSize =
-            data.data.videoVideo[i].fileSize.size;
+        const videoVideoFileSize = data.data.videoVideo[i].fileSize.size;
         const videoAudioFileSize = getAudioSize(
             videoVideoFileSize,
             Math.min(...videoSizes),
@@ -427,16 +461,13 @@ function addVideoToCalculations() {
     let videoDuration;
     const youtubeData = currentVideoYoutubeAPIData;
     console.log(currentVideoYoutubeAPIData);
-    videoDuration =
-        youtubeData.items[0].contentDetails.duration;
+    videoDuration = youtubeData.items[0].contentDetails.duration;
     videoDuration = videoDuration.replace("PT", "");
     videoDuration = videoDuration.replace("S", "");
     videoDuration = videoDuration.split("M");
     videoDuration =
-        parseInt(videoDuration[0]) +
-        parseInt(videoDuration[1]) / 60;
-    const thumbnailURL =
-        youtubeData.items[0].snippet.thumbnails.medium.url;
+        parseInt(videoDuration[0]) + parseInt(videoDuration[1]) / 60;
+    const thumbnailURL = youtubeData.items[0].snippet.thumbnails.medium.url;
 
     console.log(videoDuration);
 
@@ -447,8 +478,7 @@ function addVideoToCalculations() {
         carbonFootprint: videoFileSize * 1.219,
         duration: videoDuration,
         thumbnail: thumbnailURL,
-        carbonFootprintInDiffResolutions:
-        videoCarbonFootprintDiffResolutions,
+        carbonFootprintInDiffResolutions: videoCarbonFootprintDiffResolutions,
     };
 
     videoDetailsList = videoDetailsList.concat([video]);
@@ -456,8 +486,6 @@ function addVideoToCalculations() {
     updatePageDetails();
 
     graph.scrollIntoView();
-
-
 }
 
 /*function showValueOnThumbnail(element) {
