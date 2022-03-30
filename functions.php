@@ -54,15 +54,7 @@ register_nav_menus(
 );
 
 // Register Sidebars
-function my_sidebars() {
-  register_sidebar(
-    array (
-      'name' => 'General Sidebar',
-      'id' => 'general-sidebar',
-      'before-title' => '<h4 class="sidebar-title">',
-      'after-title' => '</h4>',   
-    )
-  );
+function cfr_sidebars() {
   register_sidebar(
     array (
       'name' => 'Blog Single Sidebar',
@@ -73,14 +65,14 @@ function my_sidebars() {
   );
   register_sidebar(
     array (
-      'name' => 'Blog Series Sidebar',
-      'id' => 'blog-series-sidebar',
+      'name' => 'Tumbleweed Subscription Form',
+      'id' => 'tw-subscription-form',
       'before-title' => '<h4 class="sidebar-title">',
       'after-title' => '</h4>',   
     )
   );
 }
-add_action('widgets_init', 'my_sidebars');
+add_action('widgets_init', 'cfr_sidebars');
 
 // Logos
 

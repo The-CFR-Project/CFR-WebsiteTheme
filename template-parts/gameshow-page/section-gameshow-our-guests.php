@@ -57,7 +57,7 @@
                                     <img src='" . wp_get_attachment_image_src(get_post_meta($guest->ID, 'photo', true))[0] . "' alt='' class='guest-pfp'/>
                                     <div class='guest-name'>" . get_post_field( 'post_title', $guest->ID ) . "</div>
                                     <div class='guest-role'>" . get_post_meta($guest->ID, 'organisation', true) . "</div>
-                                    <div class='guest-description'>" . get_post_meta($guest->ID, 'description', true) . "</div>
+                                    <div class='guest-description'>" . get_post_field( 'post_content', $guest->ID ) . "</div>
                                     <div class='row guest-socials'>
                         ";
 
