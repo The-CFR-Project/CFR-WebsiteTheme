@@ -8,25 +8,11 @@
                 x.style.display = "none";
             }
         }
-        function tablefolding() {
-            var x = document.getElementById("results-table");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
     </script>
-    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/flight-calc-input.css"); </style>
-    <style>
-      table, th, td {
-        border-collapse: collapse;
-      }
-	  table {
-		  margin-left: auto;
-		  margin-right: auto;
-	  }
-    </style>
+    <!-- THIS LINE -->
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/jquery-3.6.0.js"></script>
+    <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/projects-css/flight-calc-input.css"); </style>
     <!-- First Part -->
     <body>
     <h1 style="margin:100px;">Pick a plane</h1>
@@ -181,83 +167,90 @@
 		</div>
 	</div>
     <div class="row" style="justify-content: center">
-        <input type="submit" name="submitbtn">
-    </div>
-	</form>
+		<input type="submit" name="submitbtn">
+	</div>
+</form>	
 	<?php
-	if (isset($_POST['submitbtn'])) {
-		// collecting the data on submitting the button
-        global $wpdb;
-		$aircraft_type=$_POST['aircraft_type'];
-		$aircraft_category=$_POST['aircraft_category'];
-		$engine_manufacturer=$_POST['engine_manufacturer'];
-		$aircraft_manufacturer=$_POST['aircraft_manufacturer'];
-		$body_type=$_POST['body_type'];
-		$maximum_seats=$_POST['maximum_seats'];
-		$engine_type=$_POST['engine_type'];
-        $engine_count=$_POST['ec1'].$_POST['ec2'];
-		$query = "SELECT * FROM {$wpdb->prefix}ae WHERE ";
-		$subqueries = [];
-        // if conditions to check if the values are not empty and add part of
-        // an sql query to the main one
-        if( !empty( $aircraft_type )) {
-			$subquery = "aircraft_type=\"$aircraft_type\" ";
-			array_push($subqueries, $subquery);
-        }
-        if( !empty( $aircraft_category )) {
-			$subquery = "aircraft_category=\"$aircraft_category\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $engine_manufacturer )) {
-			$subquery = "engine_manufacturer=\"$engine_manufacturer\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $aircraft_manufacturer )) {
-			$subquery = "manufacturer=\"$aircraft_manufacturer\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $body_type )) {
-			$subquery = "body_type=\"$body_type\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $maximum_seats )) {
-			$subquery = "max_seats=\"$maximum_seat\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $engine_type )) {
-			$subquery = "engine_type=\"$engine_type\" ";
-			array_push($subqueries, $subquery);
-        } 
-        if( !empty( $engine_count )) {
-			$subquery = "engine_count=\"$engine_count\" ";
-			array_push($subqueries, $subquery);
-        } 
-		$fq = join("AND ", $subqueries);
-		echo "<table>";
-		echo "<tr>";
-		echo "<th style=\"background-color: #35B0AB;\">Model</th>";
-		echo "<th style=\"background-color: #EC7E8A;\">Manufacturer</th>";
-		echo "<th style=\"background-color: #35B0AB;\">Engine Manufacturer</th>";
-		echo "<th style=\"background-color: #6F5980;\">Engine Model</th>";
-		echo "<th style=\"background-color: #C06D85;\">Description</th>";
-		echo "<th style=\"background-color: #C06D85;\">Max Seats</th>";
-		echo "<th style=\"background-color: #EC7E8A;\">Body Type</th>";
-		echo "</tr>";
-		global $wpdb;
-		$results = $wpdb->get_results($query.$fq);
-		foreach ($results as $data ) {
+		if (isset($_POST['submitbtn'])) {
+			// collecting the data on submitting the button
+			global $wpdb;
+			$aircraft_type=$_POST['aircraft_type'];
+			$aircraft_category=$_POST['aircraft_category'];
+			$engine_manufacturer=$_POST['engine_manufacturer'];
+			$aircraft_manufacturer=$_POST['aircraft_manufacturer'];
+			$body_type=$_POST['body_type'];
+			$maximum_seats=$_POST['maximum_seats'];
+			$engine_type=$_POST['engine_type'];
+			$engine_count=$_POST['ec1'].$_POST['ec2'];
+			$query = "SELECT * FROM {$wpdb->prefix}ae WHERE ";
+			$subqueries = [];
+			// if conditions to check if the values are not empty and add part of
+			// an sql query to the main one
+			if( !empty( $aircraft_type )) {
+				$subquery = "aircraft_type=\"$aircraft_type\" ";
+				array_push($subqueries, $subquery);
+			}
+			if( !empty( $aircraft_category )) {
+				$subquery = "aircraft_category=\"$aircraft_category\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $engine_manufacturer )) {
+				$subquery = "engine_manufacturer=\"$engine_manufacturer\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $aircraft_manufacturer )) {
+				$subquery = "manufacturer=\"$aircraft_manufacturer\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $body_type )) {
+				$subquery = "body_type=\"$body_type\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $maximum_seats )) {
+				$subquery = "max_seats=\"$maximum_seat\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $engine_type )) {
+				$subquery = "engine_type=\"$engine_type\" ";
+				array_push($subqueries, $subquery);
+			} 
+			if( !empty( $engine_count )) {
+				$subquery = "engine_count=\"$engine_count\" ";
+				array_push($subqueries, $subquery);
+			} 
+			$fq = join("AND ", $subqueries);
+			$results = $wpdb->get_results($query.$fq);
+			echo "<table class=\"results-table\">";
 			echo "<tr>";
-			echo "<td>";echo $data->model;echo "</td>";
-			echo "<td>";echo $data->manufacturer;echo "</td>";
-			echo "<td>";echo $data->engine_manufacturer;echo "</td>";
-			echo "<td>";echo $data->engine_model;echo "</td>";
-			echo "<td>Description</td>";
-			echo "<td>";echo $data->max_seats;echo "</td>";
-			echo "<td>";echo $data->body_type;echo "</td>";
+			echo "<th style=\"background-color: #35B0AB;\">Model</th>";
+			echo "<th style=\"background-color: #EC7E8A;\">Manufacturer</th>";
+			echo "<th style=\"background-color: #35B0AB;\">Engine Manufacturer</th>";
+			echo "<th style=\"background-color: #6F5980;\">Engine Model</th>";
+			echo "<th style=\"background-color: #C06D85;\">Description</th>";
+			echo "<th style=\"background-color: #C06D85;\">Max Seats</th>";
+			echo "<th style=\"background-color: #EC7E8A;\">Body Type</th>";
 			echo "</tr>";
+			for ($i=0; $i < count($results); $i++) {
+                $hidden = 'demo'.strval($i);
+                $id = '#demo'.strval($i);
+				echo "<tr data-bs-toggle='collapse' data-bs-target=$id class='accordion-toggle'>";
+				echo "<td>";echo $results[$i]->model;echo "</td>";
+				echo "<td>";echo $results[$i]->manufacturer;echo "</td>";
+				echo "<td>";echo $results[$i]->engine_manufacturer;echo "</td>";
+				echo "<td>";echo $results[$i]->engine_model;echo "</td>";
+				echo "<td>Description</td>";
+				echo "<td>";echo $results[$i]->max_seats;echo "</td>";
+				echo "<td>";echo $results[$i]->body_type;echo "</td>";
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td colspan='7'>";
+                echo "<div class='accordion-body collapse' id=$hidden>";
+                echo "More information about the plane";
+                echo "</div>";
+                echo "</td>";
+                echo "</tr>";
+			}
+			echo "</table>";
 		}
-		echo "</table>";
-	}
 	?>
-	</body>
 </section>
