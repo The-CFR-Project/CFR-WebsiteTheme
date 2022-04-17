@@ -17,7 +17,8 @@
 	<?php wp_head();?>
 
 </head>
-<body onscroll="$('.nav-container').collapse('hide')">
+<!-- <body onscroll="$('.nav-container').collapse('hide')"> -->
+<body>	
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4GJH55"
 				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

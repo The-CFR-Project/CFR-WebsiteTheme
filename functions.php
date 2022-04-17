@@ -105,24 +105,9 @@ function blogs_series_post_type(){ //Custom Post
 }
 add_action('init', 'blogs_series_post_type');
 
-function people_post_type(){ //Custom Post
-    $args = array(
-        'labels' => array (
-            'name' => 'People',
-            'singular_name' => 'Person',
-        ),
-        'hierarchical' => false,
-        'menu-icon' => 'dashicons-images-alt2',
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'comments'),
-        'exclude_from_search'   => false,
-    );
-    register_post_type('blog_series', $args);
-}
-add_action('init', 'blogs_series_post_type');
 
-function blogs_series_title(){ //Custom Category 
+// Custom Categories 
+function blogs_series_title(){ //For Blog Series 
   $args = array(
     'labels' => array(
       'name' => 'Series Title',
@@ -136,9 +121,9 @@ function blogs_series_title(){ //Custom Category
 add_action('init', 'blogs_series_title');
 
 
-/**
- * Register the custom CFR post types
- */
+/*
+Register the custom CFR post types
+*/
 function register_cfr_post_types() {
     register_post_type( 'cfr_people', [
         'labels' => array('name' => __('CFR People', 'textdomain'), 'singular_name' => __('CFR Person', 'textdomain') ),
@@ -167,6 +152,22 @@ function register_cfr_post_types() {
         'menu_icon' => 'dashicons-calendar',
         'rewrite' => array( 'slug' => 'sponsors' ),
         'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
+    ] );
+
+    register_post_type( 'cfr_newsletters', [
+      'labels'      => array(
+        'name'          => __('CFR Newsletters', 'textdomain'),
+        'singular_name' => __('CFR Newsletter', 'textdomain')
+      ),
+      'description' => 'Tumbleweed - CFRs Official Newsletter',
+      'public' => true,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'has_archive' => true,
+      'supports' => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail'),
+      'hierarchical' => true,
+      'exclude_from_search' => true,
+      'menu_icon' => 'dashicons-media-document',
     ] );
 }
 
@@ -213,6 +214,28 @@ function register_cfr_taxonomies() {
         'rewrite' => array(
             'slug' => 'events',
             'with_front' => false,
+        ),));
+
+    register_taxonomy("newsletter_edition", "cfr_newsletters", array(
+        // Hierarchical taxonomy (like categories)
+        'hierarchical' => true,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'Editions', 'taxonomy general name' ),
+            'singular_name' => _x( 'Edition', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Search Editions' ),
+            'all_items' => __( 'All Editions' ),
+            'edit_item' => __( 'Edit Edition' ),
+            'update_item' => __( 'Update Edition' ),
+            'add_new_item' => __( 'Add New Edition' ),
+            'new_item_name' => __( 'New Edition Name' ),
+            'menu_name' => __( 'Editions' )
+        ),
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'edition',
+            'with_front' => false,
+            'hierarchical' => true
         ),));
 }
 

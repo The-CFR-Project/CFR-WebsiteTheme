@@ -1,0 +1,338 @@
+/**************************************************/
+/*************** Latest Newsletter  ***************/ 
+/**************************************************/
+#latest-newsletter-container {
+    margin: 100px 0 0 0;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20vw;
+}
+
+.latest-newsletter-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    min-width: 850px;
+    filter: brightness(80%)
+}
+
+.latest-newsletter-heading {
+    color: var(--grey1);
+    text-shadow: 1px 2px 2px rgb(0 0 0 / 50%);
+}
+
+.latest-newsletter-heading h3 {
+    font-size: 1.5rem;
+}
+
+.latest-newsletter-heading h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.latest-newsletter-download {
+    height: 50px;
+    width: 15vw;
+    margin: 30px 0 35px;
+}
+
+.latest-newsletter-download button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: var(--yellow1);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    letter-spacing: 2px;
+}
+
+.latest-newsletter-content {
+    color: var(--grey1);
+    font-weight: 100;
+    text-align: justify;
+    font-size: 17px;
+}
+
+
+
+/********************************************/
+/************ Subscription Form  ************/
+/********************************************/
+#subscription-form-container {
+    background-color: var(--blue5);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscription-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscription-form-text {
+    margin-right: 10vw;
+    color: var(--grey1);
+    width: 40vw;
+    text-align: center;
+}
+
+.subscription-form-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.subscription-form-text h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.subscription-form-image {
+    float: left;
+    margin-left: 10vw;
+    width: 30vw;
+    /* text-align: center; */
+}
+
+#subscription-form-container li {
+    list-style: none;
+    padding: 0;
+}
+
+.form-sidebar-container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-sidebar-container form .newsletter-email-input {
+    width: 40vw;
+}
+
+.form-sidebar-container form .newsletter-email-input input {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.form-sidebar-container form .newsletter-subscribe-btn {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-sidebar-container form .newsletter-subscribe-btn input {
+    width: 50%;
+    border: none;
+    height: 50px;
+    background-color: var(--yellow1);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+#mailpoet_form_2 .mailpoet_paragraph {
+    margin-bottom: 0;
+}
+
+/**************************************************/
+/*************** Newsletter Stats *****************/
+/**************************************************/
+#newsletter-stats-container {
+    height: fit-content;
+    padding: 100px 0;
+}
+
+.stats {
+    position: relative;
+    padding: 50px 100px;
+    margin: 50px 0 0 0;
+}
+
+.stats .col-md-4 {
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 80%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    letter-spacing: 1px;
+}
+
+.editions-stat {
+    background-color: var(--yellow1);
+}
+
+.articles-stat {
+    background-color: var(--blue5);
+    margin: 0 20px;
+}
+
+.words-stat {
+    background-color: var(--blue6);
+}
+
+.stat h3 {
+    font-size: 4rem;
+}
+
+.stat p {
+    font-size: 2rem;
+}
+
+
+/****************************************************/
+/**************** Newsletter Archive ****************/
+/****************************************************/
+#newsletter-archive-container {
+    padding: 100px;
+}
+
+
+.newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter {
+    background-color: var(--grey1);
+    border-radius: 10px;
+    width: 30vw;
+    margin-top: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.newsletter-tn {
+    border-radius: 10px 10px 0 0;
+}
+
+.newsletter-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.download-newsletter-btn {
+    border: none;
+
+}
+
+.download-newsletter-btn img {
+    height: 50px;
+}
+
+.newsletter-text {
+    color: var(--blue6);
+    margin-left: 20px;
+}
+
+.newsletter-content h4 {
+    font-size: 26px;
+}
+
+.newsletter-text p {
+    letter-spacing: 1px;
+}
+
+
+/*************************************************/
+/********** Newsletter Authors Carousel **********/
+/*************************************************/
+#newsletter-authors-container {
+    background-color: var(--grey1);
+}
+
+.authors-container {
+    position: relative;
+    padding: 0 100px 0 100px;
+    margin: 0 0 100px;
+}
+
+.authors-container button#prev-author,
+.authors-container button#next-author {
+    position: absolute;
+    top: 45%;
+    border: none;
+    font-size: 35px;
+    color: var(--grey3);
+}
+
+.authors-container button#next-author {
+    right: 100px;
+}
+
+.authors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.author {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 20px;
+    width: 20vw;
+    overflow: hidden;
+}
+
+.author img {
+    width: 100%;
+}
+
+.author-deets {
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+.author-deets h3 {
+    font-weight: 200;
+    font-size: 28px;
+    color: var(--grey6);
+}
+
+.author-deets p {
+    color: var(--blue2);
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.visible-authors {
+    display: block;
+}
+
+.hidden-authors {
+    display: none;
+}
