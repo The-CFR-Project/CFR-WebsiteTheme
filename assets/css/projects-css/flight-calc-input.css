@@ -217,14 +217,27 @@
 	margin-bottom: 60px;
 }
 
-table,
-th,
-td {
-	border-collapse: collapse;
-	border: 1px solid black;
+th {
+	text-transform: lowercase;
+	color: white;
+	padding: 0px 5px 0 5px;
+	background-clip: content-box;
+	text-indent: 7px;
+	border: none;
 }
-
-table {
+td {
+	padding: 0 5px 0 5px;
+	text-indent: 7px;
+	border: none;
+}
+.table-results {
 	margin-left: auto;
 	margin-right: auto;
+	width: 90%;
+	border: none;
+	border-collapse: collapse;
+}
+.table {
+	padding-bottom:10px;
+	outline: none;
 }
