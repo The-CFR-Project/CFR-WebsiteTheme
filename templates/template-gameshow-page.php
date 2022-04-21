@@ -32,13 +32,13 @@ function get_first_paragraph(): string {
 <section id="about-gameshow">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 trailer-embed-container">
+            <div class="col-xl-6 trailer-embed-container">
                 <div>
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/old-tv.svg" class="about-gameshow-tv">
+                    <img class="tv-img" src="<?php echo get_template_directory_uri();?>/assets/images/old-tv.svg" class="about-gameshow-tv">
                     <iframe width="560" height="315" src="<?php the_field( "video_url" );?>" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-lg-6 about-gameshow-container">
+            <div class="col-xl-6 about-gameshow-container">
                 <?php echo get_first_paragraph();?>
             </div>
         </div>

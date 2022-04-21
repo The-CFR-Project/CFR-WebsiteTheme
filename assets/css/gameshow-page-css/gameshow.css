@@ -95,7 +95,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-bottom: 50px;
 }
 
@@ -103,9 +102,11 @@
     position: relative;
     width: 70%;
 }
-
+.tv-img{
+    width: 130%;
+}
 iframe {
-    width: 70%;
+    width: 100%;
     height: 63%;
 
     position: absolute;
@@ -120,6 +121,7 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 90px;
 }
 
 .about-gameshow-container h1 {
@@ -135,7 +137,10 @@ iframe {
     color: var(--grey3);
     line-height: 2;
 }
-
+.about-gameshow-container p{
+    margin:60px 0 0 15%;
+    width: 80%;
+}
 #our-guests .col-12 {
     padding: 15px;
 }
@@ -161,6 +166,7 @@ iframe {
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
+
 
 .about-guest {
     display: flex;
@@ -268,4 +274,68 @@ iframe {
 
 .sponsors img {
     margin-bottom: 20px;
+}
+@media only screen and (max-width:1400px) {
+    .about-gameshow-container p{
+        width: 110%;
+        margin-top: 40px;
+        padding-right: 20%;
+        margin-left: 0;
+    }
+
+    .trailer-embed-container div{
+        margin-right: 22%;
+    }
+}
+@media only screen and (max-width:1199px) {
+ .tv-img{
+    width: 100%;
+ }
+
+ .about-gameshow-container p{
+     margin-top: 0;
+     width: 70%;
+     margin-left: 10%;
+     padding-right: 0;
+ }
+ iframe{
+     width: 75%;
+ }
+ .trailer-embed-container div{
+     margin-right: 0;
+ }
+}
+@media only screen and (max-width:991px){
+    iframe{
+        width: 100%;
+    }
+    .trailer-embed-container div{
+        margin-right:18%;
+    }
+    .tv-img{
+        width: 130%;
+    }
+    .about-gameshow-container p{
+        width: 90%;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width:767px){
+    .about-gameshow-container p{
+        width: 100%;
+    }
+    .about-gameshow-container{
+        padding-left: 10%;
+    }
+}
+@media only screen and (max-width:575px){
+    .trailer-embed-container{
+        margin-right: 10%;
+    }
+    iframe{
+        width: 100%;
+    }
+    .about-gameshow-container p{
+        padding-right: 20px;
+    }
 }
