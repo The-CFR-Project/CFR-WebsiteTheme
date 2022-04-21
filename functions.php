@@ -168,7 +168,7 @@ function register_cfr_post_types() {
       'hierarchical' => true,
       'exclude_from_search' => true,
       'menu_icon' => 'dashicons-media-document',
-
+	] );
 	/*register_post_type( 'model-house', [
         'labels' => array('name' => __('Model House', 'textdomain'),
 										'singular_name' => __('Model House', 'textdomain')),
