@@ -168,6 +168,24 @@ function register_cfr_post_types() {
       'hierarchical' => true,
       'exclude_from_search' => true,
       'menu_icon' => 'dashicons-media-document',
+
+	/*register_post_type( 'model-house', [
+        'labels' => array('name' => __('Model House', 'textdomain'),
+										'singular_name' => __('Model House', 'textdomain')),
+        'description' => 'Solutions from the CFR Model House',
+        'public' => true,
+        'menu_icon' => 'dashicons-admin-tools',
+        'rewrite' => array( 'slug' => 'model-house' ),
+        'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
+    ] );*/
+	register_post_type( 'quiz', [
+        'labels' => array('name' => __('Quizzes', 'textdomain'),
+										'singular_name' => __('Quiz', 'textdomain')),
+        'description' => 'CFR Climate Quizzes',
+        'public' => true,
+        'menu_icon' => 'dashicons-lightbulb',
+        'rewrite' => array( 'slug' => 'quiz' ),
+        'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
     ] );
 }
 
@@ -237,6 +255,8 @@ function register_cfr_taxonomies() {
             'with_front' => false,
             'hierarchical' => true
         ),));
+	//register_taxonomy( "model-house", array('hierarchical' => false) );
+	register_taxonomy( "quiz", array('hierarchical' => false) );
 }
 
 add_action( 'init', 'register_cfr_post_types', 0 );

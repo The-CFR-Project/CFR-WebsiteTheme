@@ -1,5 +1,3 @@
-</div>
-
 <?php wp_footer();?>
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/footer.css"); </style>
 <div id="footer-container">

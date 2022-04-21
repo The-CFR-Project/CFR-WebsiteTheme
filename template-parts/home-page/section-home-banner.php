@@ -1,3 +1,4 @@
+<div class="container-fluid">
   <div class="header-slideshow-container">
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/home-banner.css"); </style>
   <?php
@@ -96,3 +97,4 @@
     </script>
 
   </div>
+</div>
