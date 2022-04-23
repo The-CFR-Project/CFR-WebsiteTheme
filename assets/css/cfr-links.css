@@ -12,7 +12,8 @@
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 5%;
-
+    width: 100%;
+    max-width: 432px;
     filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 50%)) brightness(0.2) contrast(0.5);
     transition: all 0.1s ease;
 }
@@ -30,32 +31,49 @@ a:focus .background img {
 }
 
 #cfr-discord .col-md-4,
-#cfr-discord .col-md-6 {
+#cfr-discord .col-md-6,
+#cfr-discord .col-lg-6 {
     padding: 30px;
     position: relative;
 }
 
 #cfr-discord .col-md-4 > div,
-#cfr-discord .col-md-6 > div {
+#cfr-discord .col-md-6 > div,
+#cfr-discord .col-lg-6 > div {
     border-radius: inherit;
     background-size: cover;
 }
 
 #cfr-discord .col-md-5,
+#cfr-discord .col-lg-5,
 #cfr-discord .col-md-6,
-#cfr-discord .col-md-7 {
+#cfr-discord .col-lg-6,
+#cfr-discord .col-md-7,
+#cfr-discord .col-lg-7 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
 }
 
-#cfr-zoom .col-md-6{
-	position: relative;
+#cfr-zoom .col-md-6,
+#cfr-zoom .col-lg-6{
+    position: relative;
+
+}
+
+.social-media-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
 }
 
 .zoom-container{
-    width: 431px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     justify-self: center;
     align-self: center;
 }
@@ -63,8 +81,13 @@ a:focus .background img {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-left: 3%;
+    align-items: center;
 }
+.about-zoom-container div{
+    justify-content: center;
+    padding-left: 100px;
+}
+
 .zoom-fg{
     display: flex;
     align-content: center;
@@ -73,34 +96,40 @@ a:focus .background img {
     align-self: center;
 }
 .zoom-fg div{
+    display: flex;
     justify-self: center;
     align-self: center;
     justify-content: center;
     align-content: center;
-    padding-left: 2%;
+    width: 100%;
 }
-.zoom-fg img{
-    min-width: 400px;
-    padding-right: 4%;
-    padding-left: 12%;
 
-}
 .justify-center{
     display: flex;
     justify-content: center;
 }
 
+@media screen and (max-width:992px){
+    .about-zoom-container{
+        justify-content: center;
 
+    }
+    .about-zoom-container div{
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 60px;
+    }
+    .about-zoom-container p{
+        text-align: center;
+    }
+}
 @media screen and (max-width: 768px){
     .col-md-7 {
         display: none;
     }
 }
-@media screen and (max-width:575px){
-    .zoom-container{
-        margin-right: 20%;
-    }
-}
+
 
 .foreground {
     width: 100%;
@@ -114,8 +143,9 @@ a:focus .background img {
 }
 
 .foreground img {
-    width: 60%;
+    width: 75%;
     object-fit: contain;
+    max-width: 320px;
 }
 
 h3 {
@@ -148,6 +178,7 @@ strong {
 
 #cfr-discord {
     padding-bottom: 100px;
+    background-color: var(--grey1);
 }
 
 .discord-header {

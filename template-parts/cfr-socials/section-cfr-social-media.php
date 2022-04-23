@@ -48,9 +48,9 @@ $doc = new DOMXPath( $doc );
         ?>
     </div>
 
-    <div class="container socials-grid">
+    <div class="container socials-grid" style="padding-top:3%">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 social-media-container">
                 <a href="https://www.instagram.com/cfrproject">
                     <div class="background">
                         <img src="<?php echo get_template_directory_uri();?>/assets/images/social-images/cfr-insta.jpg">
@@ -63,7 +63,7 @@ $doc = new DOMXPath( $doc );
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-4 social-media-container">
                 <a href="https://www.youtube.com/channel/UCC4Pbxf1OppMBmg3jLomAag">
                     <div class="background">
                         <img src="<?php echo get_template_directory_uri();?>/assets/images/social-images/cfr-youtube.jpg">
@@ -75,7 +75,8 @@ $doc = new DOMXPath( $doc );
                 </a>
             </div>
 
-            <div class="col-md-4">
+
+            <div class="col-md-4 social-media-container">
                 <a href="https://github.com/The-CFR-Project">
                     <div class="background">
                         <img src="<?php echo get_template_directory_uri();?>/assets/images/social-images/cfr-github.jpg">

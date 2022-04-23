@@ -14,9 +14,9 @@ $doc = new DOMXPath( $doc );
         ?>
     </div>
 
-    <div class="container">
+    <div class="container" style="padding-top:100px">
         <div class="row justify-center">
-            <div class="col-md-6 zoom-container">
+            <div class="col-lg-6 zoom-container">
                 <?php
                 $times = $doc->query("//h4");
                 $events = $doc->query("//p");
@@ -35,7 +35,7 @@ $doc = new DOMXPath( $doc );
                 </a>
             </div>
             
-            <div class="col-md-6 about-zoom-container">
+            <div class="col-lg-6 about-zoom-container">
                 <div>
                     <h3><?php echo $doc->query("//h2")[0]->nodeValue;?></h3>
                     <p><?php echo $doc->query("//h3")[0]->nodeValue;?></p>
