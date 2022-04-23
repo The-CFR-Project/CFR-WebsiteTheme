@@ -212,9 +212,7 @@ Template Name: Tumbleweed Newsletter
             }
         }
         function showAuthors(visibleAuthors){
-            console.log("executed showAuthors");
             authors = document.getElementsByClassName("author");
-            // console.log(authors[0], authors[1], authors[2]);
             for (i=0;i<authors.length;i++){
                 if (i < visibleAuthors){
                     authors[i].classList.remove("hidden-authors");
@@ -225,15 +223,13 @@ Template Name: Tumbleweed Newsletter
                 }
             }
         }
-        function nextAuthor(){               
-            authorsContainer.firstChild.before(authorsContainer.lastChild);
+        function nextAuthor(){              
+            authorsContainer.firstElementChild.before(authorsContainer.lastElementChild);
             showAuthors(visibleAuthors);
-            console.log(authors);
         }
         function prevAuthor(){
-            authorsContainer.lastChild.after(authorsContainer.firstChild);
+            authorsContainer.lastElementChild.after(authorsContainer.firstElementChild);
             showAuthors(visibleAuthors);
-            console.log(authors);
         }
         
         // Main
