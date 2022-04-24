@@ -274,6 +274,7 @@ iframe {
 
 .sponsors img {
     margin-bottom: 20px;
+    width: 100%;
 }
 @media only screen and (max-width:1400px) {
     .about-gameshow-container p{

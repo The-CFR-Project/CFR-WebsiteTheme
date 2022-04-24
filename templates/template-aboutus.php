@@ -10,7 +10,7 @@ Template Name: About Us
 <section></section>
 <?php get_template_part( "template-parts/about-cfr/section", "about-cfr" );?>
 
-<section id="meet-the-team">
+<section id="meet-the-team" class="grey-section">
     <?php
     wp_reset_query();
     $loop = new WP_Query(array('posts_per_page'   => -1, 'post_type' => 'cfr_people', 'tax_query' => array( array(
@@ -64,7 +64,7 @@ Template Name: About Us
                 $offset += $i;
                 ?>
             </div>
-            <div class="row medium-row justify-content-evenly">
+            <div class="row medium-row justify-content-evenly" style="transform:scale(0.9)">
                 <?php
                 for ($i = 0; $i < (array_count_values($role_priority)[2] ?? 0); $i++) {?>
                     <div class="col-6 col-md-3">
@@ -86,7 +86,7 @@ Template Name: About Us
             <div class="row small-row justify-content-evenly">
                 <?php
                 for ($i = 0; $i < (array_count_values($role_priority)[3] ?? 0); $i++) {?>
-                    <div class="col-6 col-sm-4 col-md-2">
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
                         <a href="<?php echo get_permalink( $members[$i + $offset] )?>">
                             <div class="dp-container">
                                 <img class="dp" src="<?php the_field( "photo", $members[$i + $offset] );?>">

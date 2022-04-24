@@ -48,7 +48,7 @@ $doc = new DOMXPath( $doc );
         ?>
     </div>
 
-    <div class="container socials-grid" style="padding-top:3%">
+    <div class="container socials-grid">
         <div class="row">
             <div class="col-md-4 social-media-container">
                 <a href="https://www.instagram.com/cfrproject">

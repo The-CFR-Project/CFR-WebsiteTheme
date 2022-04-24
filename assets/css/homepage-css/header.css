@@ -206,7 +206,7 @@ header .nav-bar li .sub-menu .current-menu-item a {
 header .nav-bar li .sub-menu {
 	display: none;
 	position: absolute;
-	z-index: 10;
+	z-index: 999;
 	top: 90%;
 	width: 180px;
 	margin: 0;

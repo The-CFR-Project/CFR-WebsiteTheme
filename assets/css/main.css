@@ -200,6 +200,10 @@ Layout General Theme CSS
 --------------------------------------------------------------------------------
 */
 
+.grey-section{
+	background-color: var(--grey1);
+}
+
 .container-border-components {
 	height: 645px;
 	position: relative;
@@ -296,7 +300,7 @@ section:nth-child(even) .heading-container {
 	user-select: none;
 	color: var(--grey1);
 
-	font-size: max(15vw, 125px);
+	font-size: min(15vw, 150px);
 }
 
 .heading-overlay {

@@ -14,7 +14,7 @@ $doc = new DOMXPath( $doc );
         ?>
     </div>
 
-    <div class="container" style="padding-top:100px">
+    <div class="container">
         <div class="row justify-center">
             <div class="col-lg-6 zoom-container">
                 <?php

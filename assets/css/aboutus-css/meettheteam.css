@@ -45,6 +45,8 @@ CFR Meet the Team Section
 #meet-the-team .col-md-2 {
 	margin-bottom: 40px;
 	transition: all 0.2s ease-out;
+	display: flex;
+	justify-content: center;
 }
 
 #meet-the-team .col-md-4:hover,
@@ -62,19 +64,21 @@ CFR Meet the Team Section
 }
 
 .large-row .dp-container {
-	height: 300px;
+	aspect-ratio: 1;
+	max-width: 300px;
 }
 
 .medium-row .dp-container {
-	height: 200px;
+	aspect-ratio: 1;
 }
 
 .small-row .dp-container {
-	height: 100px;
+	aspect-ratio: 1;
 }
 
 .large-row .title-container {
 	height: 80px;
+	max-width: 300px;
 }
 
 .medium-row .title-container {

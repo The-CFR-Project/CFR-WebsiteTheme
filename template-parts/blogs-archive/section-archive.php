@@ -27,6 +27,7 @@
                                 <?php endif; ?>
                             </div>
                         </a>    
+
                         <a href="<?php the_permalink(); ?>" class="blogs-archive-permalink blogs-archive-post-latest-excerpt-link">
                             <div class="blogs-archive-post-latest-excerpt col-md-6">
                                 <p>Spotlighted</p>
@@ -42,7 +43,7 @@
             <!--  Loops over next 9 latest posts  -->
             <?php if($i >= 2 && $i <= 10): ?>
 
-                <a href="<?php the_permalink(); ?>" class="col-md-4 blogs-archive-post-grid-container">
+                <a href="<?php the_permalink(); ?>" class="col-xl-4 blogs-archive-post-grid-container">
                     <?php  echo "<div class='blogs-archive-post-grid-". ($i-1) ." blogs-archive-post-grid'>" ?>
                         <?php if(has_post_thumbnail()): ?>
                             <div class="blogs-archive-post-grid-img-container">

@@ -25,7 +25,7 @@ $doc = new DOMXPath( $doc );
           <img src="<?php echo get_template_directory_uri();?>/assets/images/about-cfr-easel0.svg">
         </div>
 
-        <div class="middle-col align-self-center">
+        <div class="middle-col align-self-center row">
             <div class="col-md-4">
               <div class="blue2">
                 <h4><?php echo $doc->query( "//h3" )[0]->nodeValue;?></h4>

@@ -2,7 +2,7 @@
 $post = get_page_by_path("contact-form");
 ?>
 
-<section id="contact-form">
+<section id="contact-form" class="grey-section">
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/contactus-css/contactusform.css"); </style>
   <div class="container-fluid">
 
@@ -16,7 +16,7 @@ $post = get_page_by_path("contact-form");
 
 <section></section>
 
-<section>
+<section class="grey-section">
   <div id="postbox-container">
     <div>
     </div>
