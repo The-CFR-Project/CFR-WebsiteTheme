@@ -7,7 +7,6 @@ Template Name: Tumbleweed Newsletter
 <?php 
         $newsletters = get_posts([
             'post_type' => 'cfr_newsletters',
-            'post_status' => 'publish',
             'numberposts' => -1,
             ]);   
 
@@ -110,18 +109,21 @@ Template Name: Tumbleweed Newsletter
             <div class="stat editions-stat">
                 <h3><?php echo $total_newsletters; ?></h3>
                 <p>editions</p>
+                <a href="#newsletter-stats-container" style="position:absolute;"></a>
             </div>
         </div>
         <div class="col-md-4">
             <div class="stat articles-stat">
                 <h3><?php echo $total_articles; ?></h3>
                 <p>articles</p>
+                <a href="#newsletter-stats-container" style="position:absolute;"></a>
             </div>
         </div>
         <div class="col-md-4">
             <div class="stat words-stat">
                 <h3><?php echo $total_words; ?></h3>
                 <p>words</p>
+                <a href="#newsletter-stats-container" style="position:absolute;"></a>
             </div>
         </div>
     </div>
@@ -136,7 +138,7 @@ Template Name: Tumbleweed Newsletter
 
 <section id="newsletter-archive-container">
     <div class="heading-container">
-        <div class="heading-overlay">you checkin' me out?</div>
+        <div class="heading-overlay" style="color:var(--blue3)">you checkin' me out?</div>
         <div class="heading-watermark">editions</div>
     </div>
     <div class="row">
@@ -144,7 +146,7 @@ Template Name: Tumbleweed Newsletter
 
                 <div class="col-md-6 newsletter-container">
                     <div class="newsletter">
-                        <img src="<?php echo $all_images[$i]; ?>" style="width:100%;" class="newsletter-tn">
+                        <img src="<?php echo $all_images[$i]; ?>" class="newsletter-tn">
                         <div class="newsletter-content">
                             <a download='<?php echo $all_titles[$i]; ?>-CFR-Newsletter' href='<?php echo wp_get_attachment_url($all_pdfs[$i]); ?>'>
                                 <button class="download-newsletter-btn">
@@ -169,21 +171,26 @@ Template Name: Tumbleweed Newsletter
 <section id="newsletter-authors-container">
 
     <div class="heading-container">
-        <div class="heading-overlay">our wordsmiths</div>
+        <div class="heading-overlay" style="color:var(--red4)">our wordsmiths</div>
     </div>
 
     <div class="authors-container">
         <div class="authors" id="authors">
-            <?php foreach ($authors as $authorID): ?>
-                <div class="author">
-                    <img src="<?php echo wp_get_attachment_image_src(get_post_meta($authorID, 'photo', true))[0]; ?>" alt="">
-                    <div class="author-deets">
-                        <h3><?php echo get_the_title($authorID); ?></h3>
-                        <p>Editor</p>
-                    </div>
 
-                </div>
+            <?php foreach ($authors as $authorID): ?>
+
+                <a href="<?php echo get_the_permalink($authorID); ?>" class="author-permalink">
+                    <div class="author">
+                        <img src="<?php echo wp_get_attachment_image_src(get_post_meta($authorID, 'photo', true))[0]; ?>" alt="">
+                        <div class="author-deets">
+                            <h3><?php echo get_the_title($authorID); ?></h3>
+                            <p>Editor</p>
+                        </div>
+                    </div>
+                </a>
+
             <?php endforeach; ?>
+
         </div>
         <button id="prev-author" onclick='prevAuthor()'>&#10094;</button>
         <button id="next-author" onclick='nextAuthor()'>&#10095;</button>
@@ -235,6 +242,18 @@ Template Name: Tumbleweed Newsletter
         // Main
         hideAuthors(); 
         showAuthors(visibleAuthors);
+
+        window.addEventListener('resize', () => {
+            console.log(window.innerWidth);
+            if (window.innerWidth <= 900) {
+                visibleAuthors = 1;
+                showAuthors(visibleAuthors);
+            } else {
+                visibleAuthors = 3;
+                showAuthors(visibleAuthors);
+            }
+        }, true);
+
 
     </script>
 
