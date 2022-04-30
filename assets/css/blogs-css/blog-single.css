@@ -15,7 +15,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-single-header img {
-	opacity: 0.7;
+	opacity: 0.4;
 	object-fit: cover;
 }
 
@@ -33,6 +33,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-single-header h3 {
+	margin-top: 25px;
 	font-size: 3.5rem;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -59,42 +60,52 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 .blog-single-header p {
 	font-size: 2rem;
 	margin: 50px 0 0;
-	font-weight: 300;
+	font-weight: 500;
 	text-transform: capitalize;
 }
 
 .blog-content {
 	padding: 50px 100px;
 	line-height: 30px;
-	text-align: justify;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-size: 16px;
 }
 
 .blog-content-text img {
-	position: relative;
-	width: 100%; /* 135% */
+	width: 50%;
 	height: auto;
 	border-radius: 5px;
-	margin: 30px 0 0;
-	/* left: -35%; */
+	margin: 30px 0;
+	transform: translateX(50%);
+}
+
+.blog-content-text h4 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.blog-content-text h5 {
+	font-size: 20px;
+	margin-bottom: 20px;
 }
 
 .blog-content-text p {
 	margin: 0 0 25px;
+	line-height: 31px;
+	text-indent: 30px;
 }
 
-.blog-content h2,
-.blog-content h5{
+.blog-content h2 {
 	margin: 40px 0;
 }
 
 .blog-content em{
 	font-size: 20px;
 	font-weight: 300;
-}
-
-.blog-content p {
-	font-size: 20px;
-	line-height: 31px;
 }
 
 .blog-content a {
@@ -128,12 +139,17 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	position: relative;
 }
 
+.author-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .blog-author-pic {
 	width: 190px;
 	height: 190px;
 	border-radius: 100%;
 	overflow: hidden;
-	margin: 40px auto 30px;
 }
 
 .blog-author-pic img {
@@ -143,10 +159,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-info-container {
-	width: 190px;
-	height: fit-content;
-	text-align: center;
-	margin: 0 auto;
+	margin-left: 60px;
 }
 
 .blog-sidebar .status {
@@ -154,14 +167,12 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	font-weight: 700;
 	color: var(--grey2);
 	font-size: 2rem;
-	/* text-align: center; */
 }
 
 .blog-sidebar .date {
 	font-weight: 400;
 	font-size: 25px;
-	margin: 20px 0;
-	/* text-align: center; */
+	margin-top: 20px;
 }
 
 .share-like-container {
@@ -204,39 +215,14 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	filter: invert(0.6) sepia(1) saturate(6) hue-rotate(180deg);
 }
 
-#like-heart {
-	height: 50px;
-	width: 50px;
+.socials {
+	width: 200px;
+	padding-left: 50px;
+}
+
+.socials div {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	font-size: 42px;
-	border-radius: 100%;
-	position: absolute;
-	right: 20px;
-	cursor: pointer;
-	font-weight: 200;
-	transition: color 0.2s;
-	transition-timing-function: ease-out;
-}
-
-#like-heart:hover {
-	color: var(--red2);
-}
-
-#sidebar-primary {
-	list-style-type: none;
-	text-align: left;
-	position: relative;
-	padding: 100px 0 50px;
-}
-
-#sidebar-primary .socials{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-bottom: 2px solid var(--grey3);
-	padding: 20px 0;
 }
 
 .sidebar-social-icon {
@@ -251,16 +237,6 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	transform: scale(1.1);
 	transition: transform .2s ease;
 }
-
-/* #block-9, 
-#block-6 {
-	width: 90%;
-	height: fit-content;
-	display: grid;
-	align-items: center;
-	justify-content: center;
-	border-bottom: 2px solid var(--grey2);
-} */
 
 .wp-social-link {
 	font-size: 2.5rem;
@@ -387,15 +363,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	.blog-sidebar {
 		display: block;
 	}
-	.blog-author-pic{
-		display: none;
-	}
-	.blog-content p{
-		font-size: 16.5px;
-	}
-	#sidebar-primary{
-		padding: 0 0 50px;
-	}
+
 	#sidebar-primary .widget_recent_entries{
 		display: none;
 	}

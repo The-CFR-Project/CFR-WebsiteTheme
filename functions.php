@@ -131,8 +131,17 @@ function register_cfr_post_types() {
         'public' => true,
         'menu_icon' => 'dashicons-groups',
         'rewrite' => array( 'slug' => 'people' ),
-        'supports' => array( 'title', 'editor', 'custom-fields', 'author' ),
+        'supports' => array( 'title', 'editor', 'custom-fields'),
         'taxonomies' => array( 'cfr_role' )
+    ] );
+
+    register_post_type( 'cfr_facts', [
+        'labels' => array('name' => __('CFR Facts', 'textdomain'), 'singular_name' => __('CFR Fact', 'textdomain') ),
+        'description' => 'Facts about the CFR Project',
+        'public' => true,
+        'menu_icon' => 'dashicons-tag',
+        'exclude_from_search' => true,
+        'supports' => array( 'editor' ),
     ] );
 
     register_post_type( 'cfr_events', [
@@ -141,7 +150,7 @@ function register_cfr_post_types() {
         'public' => true,
         'menu_icon' => 'dashicons-calendar',
         'rewrite' => array( 'slug' => 'events' ),
-        'supports' => array( 'title', 'editor', 'custom-fields', 'author' ),
+        'supports' => array( 'title', 'editor', 'custom-fields'),
         'taxonomies' => array( 'cfr_event_type' )
     ] );
 
@@ -151,7 +160,7 @@ function register_cfr_post_types() {
         'public' => true,
         'menu_icon' => 'dashicons-calendar',
         'rewrite' => array( 'slug' => 'sponsors' ),
-        'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
+        'supports' => array( 'title', 'editor', 'custom-fields')
     ] );
 
     register_post_type( 'cfr_newsletters', [
@@ -164,10 +173,11 @@ function register_cfr_post_types() {
       'show_ui' => true,
       'show_in_menu' => true,
       'has_archive' => true,
-      'supports' => array( 'title', 'editor', 'custom-fields', 'author', 'thumbnail'),
-      'hierarchical' => true,
+      'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail'),
+      'hierarchical' => false,
       'exclude_from_search' => true,
       'menu_icon' => 'dashicons-media-document',
+      'rewrite' => array( 'slug' => 'newsletter' ),
 	] );
 	/*register_post_type( 'model-house', [
         'labels' => array('name' => __('Model House', 'textdomain'),

@@ -1,15 +1,8 @@
-<?php
-$post = get_page_by_path("wanna-play-cards");
-$doc = new DOMDocument();
-$doc->loadHTML( apply_filters( 'the_content', $post->post_content ) );
-$doc = new DOMXPath( $doc );
-?>
-
 <section id="fact-cards">
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/cards.css"); </style>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
-      <?php echo "<div class='heading-overlay cards-heading'>" . $post->post_title . "</div>";?>
+      <div class='heading-overlay cards-heading'>wanna play cards?</div>
     </div>
 
     <!-- Background images and formatting -->
@@ -40,86 +33,59 @@ $doc = new DOMXPath( $doc );
             $d = 0;
             $h = 0;
 
-            $all_cards = $doc->query( "//p" );
-            $numbers = range( 0, ( count( $all_cards ) / 2 - 1));
-            // shuffle( $numbers );
+            $all_cards = array();
+            foreach (get_posts( array('numberposts' => -1, 'post_type' => 'cfr_facts') ) as $post) {
+                array_push($all_cards, apply_filters( 'the_content', $post->post_content ) );
+            }
+
+            $numbers = range( 0, count( $all_cards ));
             $displayed_cards = array_slice( $numbers, 0, 8 );
 
             $card_suits = array("♥", "♠", "♣", "♦");
-            // $card_icon_colors = array('9B72AA', 'BD4B4B', 'DF711B',
-            //                           '368B85', '3DB2FF', 'FFF47D');
             $card_icon_colors = array('35b0ab', '246b81', '004c65', 'f67280', 'c06c84', '6f5980', '3d2451');
 
             foreach ( $all_cards as $card ) {
-
-              if ( in_array( intdiv( $i, 2 ), $displayed_cards )){
-
-                if ( $i % 2 == 0 ) { // Card Title
+              if ( in_array( $i, $displayed_cards )){
                   $rand_suit = $card_suits[ array_rand( $card_suits ) ];
                   $rand_color = $card_icon_colors[ array_rand( $card_icon_colors ) ];
-
-                  echo "<div class='fact-card-display' id='" . ( $d + 1 ) . "-dis-card' style='z-index: " . ( $d + 1 ) . "'>";
-
-                  echo "<div class='card-suits' style='text-shadow: 0 0 0 #" . $rand_color . "'>";
-                  echo    $rand_suit;
-                  echo "</div>";
-
-                  echo "<div class='card-suits-down' style='text-shadow: 0 0 0 #" . $rand_color . "'>";
-                  echo    $rand_suit;
-                  echo "</div>";
-
-                  echo "<img src='".get_template_directory_uri()."/assets/images/card-icons/CFR-logo.png' class='card-bg-logo'>";
-
-                  echo "<div class='card-heading' style='color: #" . $rand_color . "'>";
-                  echo    $card->nodeValue;
-                  echo "</div>";
-                }
-                else { // Card Content
-
-                  echo   "<div class='card-content'>";
-                  echo     $card->nodeValue;
-                  echo   "</div>";
-                  echo  '<input type="button" class="cards-focusin-input">';
-                  echo "</div>";
-
                   $d++;
-                }
+                  ?>
+                  <div class='fact-card-display' id='<?php echo $d?>-dis-card' style='z-index: "<?php echo $d?>"'>
+                    <div class='card-suits' style='text-shadow: 0 0 0 #<?php echo $rand_color?>'>
+                        <?php echo $rand_suit;?>
+                    </div>
+                    <div class='card-suits-down' style='text-shadow: 0 0 0 #<?php echo $rand_color?>'>
+                        <?php echo $rand_suit;?>
+                    </div>
+                    <img src='<?php echo get_template_directory_uri()?>/assets/images/card-icons/CFR-logo.png' class='card-bg-logo'>
+                    <div class='card-heading' style='color: #<?php echo $rand_color?>'>Did you know?</div>
+                    <div class='card-content'>
+                      <?php echo $card?>
+                    </div>
+                    <input type="button" class="cards-focusin-input">
+                  </div>
 
-              }
-              else {
-                if ( $i % 2 == 0 ) { // Card Title
-
+              <?php } else {
                   $rand_suit = $card_suits[ array_rand( $card_suits ) ];
                   $rand_color = $card_icon_colors[ array_rand( $card_icon_colors ) ];
-
-                  echo ("<div class='fact-card-hidden' id='" . ( $h + 1 ) . "-hid-card'>");
-
-                  echo "<div class='card-suits' style='text-shadow: 0 0 0 #" . $rand_color . "'>";
-                  echo    $rand_suit;
-                  echo "</div>";
-
-                  echo "<div class='card-suits-down' style='text-shadow: 0 0 0 #" . $rand_color . "'>";
-                  echo    $rand_suit;
-                  echo "</div>";
-
-                  echo "<img src='".get_template_directory_uri()."/assets/images/card-icons/CFR-logo.png' class='card-bg-logo'>";
-
-                  echo "<div class='card-heading' style='color: #" . $rand_color . "'>";
-                  echo    $card->nodeValue;
-                  echo "</div>";
-
-                }
-                else { // Card Content
-                  echo    "<div class='card-content'>";
-                  echo      $card->nodeValue;
-                  echo    "</div>";
-                  echo "</div>";
-
                   $h++;
-                }
+                  ?>
+                  <div class='fact-card-hidden' id='<?php echo $h;?>-hid-card'>
+                    <div class='card-suits' style='text-shadow: 0 0 0 #<?php echo $rand_color?>'>
+                        <?php echo $rand_suit;?>
+                      </div>
+                    <div class='card-suits-down' style='text-shadow: 0 0 0 #<?php echo $rand_color?>'>
+                          <?php echo $rand_suit;?>
+                      </div>
+                    <img src='<?php echo get_template_directory_uri()?>/assets/images/card-icons/CFR-logo.png' class='card-bg-logo'>
+                    <div class='card-heading' style='color: #<?php echo $rand_color?>'>Did you know?</div>
+                    <div class='card-content'>
+                       <?php echo $card?>
+                    </div>
+                  </div>
+                    <?php
               }
-
-            $i++;
+              $i++;
             }
           ?>
 
