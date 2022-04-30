@@ -23,10 +23,6 @@
                         <p><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name"); ?></p>
                     </div>
                 </div>
-                <div id="link-copied-alert">
-                    <strong>Link Copied To Clipboard!</strong>
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                </div>
 
                 <div class="blog-sidebar">
                     <div class="author-info">
@@ -69,29 +65,7 @@
                     endif;
                     ?>
                 </div>
-
-
             <?php endwhile; endif; ?>
-
-            <script>
-                var alert = document.getElementById("link-copied-alert");
-                alert.style.display = 'none';
-
-                var shareButton = document.getElementById('share-copy-link');
-                shareButton.onclick = function() {
-                    let text = document.getElementById("the-permalink").value;
-                    navigator.clipboard.writeText(text)
-                        .then(() => {
-                            alert.style.display = 'flex';
-                        })
-                        .catch(err => {
-                            alert.style.content = "There was a problem, couldn't copy link :("
-                            alert.style.display = 'flex';
-                        });
-                }
-
-            </script>
-
         </div>
     </section>
 

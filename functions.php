@@ -57,14 +57,14 @@ register_nav_menus(
 
 // Register Sidebars
 function cfr_sidebars() {
-  register_sidebar(
-    array (
-      'name' => 'Blog Single Sidebar',
-      'id' => 'blog-single-sidebar',
-      'before-title' => '<h4 class="sidebar-title">',
-      'after-title' => '</h4>',   
-    )
-  );
+//  register_sidebar(
+//    array (
+//      'name' => 'Blog Single Sidebar',
+//      'id' => 'blog-single-sidebar',
+//      'before-title' => '<h4 class="sidebar-title">',
+//      'after-title' => '</h4>',
+//    )
+//  );
   register_sidebar(
     array (
       'name' => 'Tumbleweed Subscription Form',
