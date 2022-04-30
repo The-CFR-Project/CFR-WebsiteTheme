@@ -140,7 +140,9 @@ Template Name: Tumbleweed Newsletter
 
                 <div class="col-md-6 newsletter-container">
                     <div class="newsletter">
-                        <img src="<?php echo $all_images[$i]; ?>" class="newsletter-tn">
+                        <div class="newsletter-tn">
+                            <img src="<?php echo $all_images[$i]; ?>">
+                        </div>
                         <div class="newsletter-content">
                             <a download='<?php echo $all_titles[$i]; ?>-CFR-Newsletter' href='<?php echo wp_get_attachment_url($all_pdfs[$i]); ?>'>
                                 <button class="download-newsletter-btn">

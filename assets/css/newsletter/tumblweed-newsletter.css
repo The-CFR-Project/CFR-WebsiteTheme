@@ -24,6 +24,7 @@
     min-width: 1010px;
     filter: brightness(80%);
     transition: filter 0.2s ease;
+    width: 100%;
 }
 
 .latest-newsletter-heading {
@@ -291,6 +292,12 @@
     border-radius: 10px 10px 0 0;
     height: 250px;
     width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.newsletter-tn img  {
+    width: 100%;
 }
 
 .newsletter-content {
@@ -388,6 +395,7 @@
 
 .author img {
     height: 300px;
+    width: 100%;
 }
 
 .author-deets {
