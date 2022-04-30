@@ -47,9 +47,6 @@
                                 }
                                 ?>
                             </div>
-                            <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
-                                <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
-                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

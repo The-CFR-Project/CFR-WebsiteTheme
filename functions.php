@@ -177,7 +177,7 @@ function register_cfr_post_types() {
       'hierarchical' => false,
       'exclude_from_search' => true,
       'menu_icon' => 'dashicons-media-document',
-      'rewrite' => array( 'slug' => 'newsletter' ),
+      'rewrite' => array( 'slug' => 'cfr_newsletter' ),
 	] );
 	/*register_post_type( 'model-house', [
         'labels' => array('name' => __('Model House', 'textdomain'),
@@ -244,27 +244,6 @@ function register_cfr_taxonomies() {
             'with_front' => false,
         ),));
 
-    register_taxonomy("newsletter_edition", "cfr_newsletters", array(
-        // Hierarchical taxonomy (like categories)
-        'hierarchical' => true,
-        // This array of options controls the labels displayed in the WordPress Admin UI
-        'labels' => array(
-            'name' => _x( 'Editions', 'taxonomy general name' ),
-            'singular_name' => _x( 'Edition', 'taxonomy singular name' ),
-            'search_items' =>  __( 'Search Editions' ),
-            'all_items' => __( 'All Editions' ),
-            'edit_item' => __( 'Edit Edition' ),
-            'update_item' => __( 'Update Edition' ),
-            'add_new_item' => __( 'Add New Edition' ),
-            'new_item_name' => __( 'New Edition Name' ),
-            'menu_name' => __( 'Editions' )
-        ),
-        // Control the slugs used for this taxonomy
-        'rewrite' => array(
-            'slug' => 'edition',
-            'with_front' => false,
-            'hierarchical' => true
-        ),));
 	//register_taxonomy( "model-house", array('hierarchical' => false) );
 	register_taxonomy( "quiz", array('hierarchical' => false) );
 }
