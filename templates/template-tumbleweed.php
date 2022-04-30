@@ -1,10 +1,7 @@
-<?php 
+<?php
 /*
 Template Name: Tumbleweed Newsletter
 */
-?>
-
-<?php 
         $newsletters = get_posts([
             'post_type' => 'cfr_newsletters',
             'numberposts' => -1,
@@ -44,7 +41,7 @@ Template Name: Tumbleweed Newsletter
         wp_reset_query();
 ?>
 
-<?php get_header();?>
+<?php get_header('cfrtheme', ['Tumbleweed - The CFR Project Newsletter']);?>
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/newsletter/tumblweed-newsletter.css"); </style>
 <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/instawall.css"); </style>
 
@@ -66,9 +63,6 @@ Template Name: Tumbleweed Newsletter
         <p><?php echo $all_content[0]; ?></p>
     </div>
 </section>
-
-
-
 
 <section id="subscription-form-container">
 

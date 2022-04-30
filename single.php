@@ -9,8 +9,6 @@
         <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/blogs-css/latest-blogs.css"); </style>
 
         <div class="blogs-single-container">
-
-            <textarea id="the-permalink" style="display:none;"><?php the_permalink(); ?></textarea>
             <?php $colors = ['#f7b595', '#f67280', '#c06c84', '#6f5980', '#35b0ab', '#246b81', '#004c65', '#ffcc66'] ?>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <?php $post_color = $colors[ array_rand( $colors ) ]; ?>
@@ -30,39 +28,35 @@
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                 </div>
 
-                <div class="blog-content">
-                    <div class="blog-sidebar">
-                        <div class="author-info">
-                            <?php echo '<div class="blog-author-pic" style="background-color:'.$post_color.'"> '; ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/author-placeholder.svg" alt="author">
-                            <?php echo '</div>' ?>
-                            <div class="blog-info-container">
-                                <?php echo "<p class='status'>".get_post_status()."ed</p>"; ?>
-                                <?php echo "<p class='date'>".get_the_date('j M. Y')."</p>"; ?>
-                            </div>
-                            <!--
-                            <div class="share-like-container">
-                                <button id="share-copy-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/share-icon.svg" alt="share"></button>
-                                <div id="like-heart">&#9829;</div>
-                            </div>-->
+                <div class="blog-sidebar">
+                    <div class="author-info">
+                        <?php echo '<div class="blog-author-pic" style="background-color:'.$post_color.'"> '; ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/author-placeholder.svg" alt="author">
+                        <?php echo '</div>' ?>
+                        <div class="blog-info-container">
+                            <?php echo "<p class='status'>".get_post_status()."ed</p>"; ?>
+                            <?php echo "<p class='date'>".get_the_date('j M. Y')."</p>"; ?>
+                        </div>
 
-                            <div id="sidebar-primary" class="sidebar">
-                                <div class="socials row">
-                                    <?php
-                                    $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
-                                    foreach ( $socialItems as $footerItem ) {
-                                        echo "<div class='col-md-6'><a href='" . $footerItem->url . "' class='social-icon-link'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='sidebar-social-icon'></a></div>";
-                                    }
-                                    ?>
-                                </div>
-                                <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
-                                    <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
-                                <?php endif; ?>
+                        <div id="sidebar-primary" class="sidebar">
+                            <div class="socials row">
+                                <?php
+                                $socialItems = wp_get_nav_menu_items(get_nav_menu_locations()['footer-social']);
+                                foreach ( $socialItems as $footerItem ) {
+                                    echo "<div class='col-3 col-md-6'><a href='" . $footerItem->url . "' class='social-icon-link'><img src='" . get_template_directory_uri() . "/assets/images/" . $footerItem->title . "-icon.svg' class='sidebar-social-icon'></a></div>";
+                                }
+                                ?>
                             </div>
+                            <?php if ( is_active_sidebar( 'blog-single-sidebar' ) ) : ?>
+                                <?php dynamic_sidebar( 'blog-single-sidebar' ); ?>
+                            <?php endif; ?>
                         </div>
                     </div>
-                    <hr style="width: 80%;margin: 50px auto;height: 2px;">
-                    <div style="width: 80%;">
+                </div>
+
+                <div class="blog-content">
+                    <hr style="max-width: 900px; width: 80%;margin: 50px auto;height: 2px;">
+                    <div style="max-width: 900px;">
                         <div class="blog-content-text">
                             <h4><?php the_title();?></h4>
                             <h5><?php echo get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name");?></h5>
@@ -103,5 +97,13 @@
 
         </div>
     </section>
+
+    <div class="instawall-section-container container-fluid" style="margin-top: 200px;">
+        <div class="bedrock-container">
+            <div>
+                <img class="bedrock-img" src="<?php echo get_template_directory_uri();?>/assets/images/404rock.svg">
+            </div>
+        </div>
+    </div>
 
 <?php get_footer();?>

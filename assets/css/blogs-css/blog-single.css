@@ -65,7 +65,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-content {
-	padding: 50px 100px;
+	padding: 0 100px;
 	line-height: 30px;
 
 	display: flex;
@@ -137,12 +137,14 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 .blog-sidebar {
 	justify-content: center;
 	position: relative;
+	margin-top: 100px;
 }
 
 .author-info {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .blog-author-pic {
@@ -159,7 +161,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .blog-info-container {
-	margin-left: 60px;
+	margin: 20px 60px;
 }
 
 .blog-sidebar .status {
@@ -175,49 +177,8 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	margin-top: 20px;
 }
 
-.share-like-container {
-	display: flex;
-	width: 190px;
-	height: fit-content;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	padding: 0 20px;
-	margin: auto;
-}
-
-#share-copy-link {
-	display: flex;
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	align-items: center;
-	cursor: pointer;
-	text-align: center;
-	border: none;
-	background-color: #fff;
-}
-
-.share-copy-link-button {
-	opacity: 0;
-}
-
-#share-copy-link img {
-	height: 60%;
-	width: 60%;
-	margin: 0 auto;
-	transition: filter 0.2s;
-	transition-timing-function: ease-out;
-}
-
-#share-copy-link:focus >img,
-#share-copy-link:hover > img {
-	filter: invert(0.6) sepia(1) saturate(6) hue-rotate(180deg);
-}
-
 .socials {
-	width: 200px;
-	padding-left: 50px;
+	width: 130px;
 }
 
 .socials div {
@@ -226,7 +187,7 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 }
 
 .sidebar-social-icon {
-	width: 50px;
+	width: 65px;
 	height: auto;
 	margin: 0 10px;
 	transition: transform .2s ease;
@@ -316,74 +277,24 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 	font-size: 16px;
 }
 
-/* Alert	*/
-
-#link-copied-alert {
-	width: 100%;
-	height: 50px;
-	position:fixed;
-	z-index: 999;
-	color: white;
-	top: 100px;
-	background-color: var(--blue2);
-	display: flex;
-	align-items: center;
-	z-index: 9999;
-	padding: 0 40px;
-	transition: 0.3s;
-}
-
-.closebtn {
-	color: white;
-	font-weight: bold;
-	float: right;
-	font-size: 22px;
-	line-height: 20px;
-	cursor: pointer;
-	transition: 0.3s;
-	position: absolute;
-	right: 40px;
-}
-
-/* Media Queries */
-
-@media (max-width: 1200px) {
-	.wp-post-image {
-		display: none;
-	}
-}
-
-@media (max-width: 1000px) {
-	#block-11 {
-		display: none;
-	}
-	#block-9 {
-		display: none;
-	}
-	.blog-sidebar {
-		display: block;
+@media (max-width: 576px) {
+	.blog-single-header .text {
+		padding: 0 3vw 0 8vw;
 	}
 
-	#sidebar-primary .widget_recent_entries{
-		display: none;
-	}
 	.blog-single-header img {
-		width: 100%;
 		height: 100%;
-	}
-	.blog-single-header .line-lmao {
-		display: none;
-	}
-	.blog-single-header p {
-		text-align: right;
 	}
 	.blog-single-header h3 {
 		font-size: 3rem;
 	}
+
 	.blog-content {
-		padding: 50px;
+		padding: 0 50px;
 	}
-	.blog-single-header .text {
-		padding: 0 3vw 0 8vw;
+
+	.blog-content-text img {
+		width: 100%;
+		transform: none;
 	}
 }
