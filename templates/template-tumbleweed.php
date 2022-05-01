@@ -2,43 +2,50 @@
 /*
 Template Name: Tumbleweed Newsletter
 */
-        $newsletters = get_posts([
+$newsletters = get_posts([
             'post_type' => 'cfr_newsletters',
             'numberposts' => -1,
             ]);   
 
-        $all_titles = [];
-        $all_content = [];
-        $all_pdfs = [];
-        $all_editions = [];
-        $all_images = [];
+$all_titles = [];
+$all_content = [];
+$all_pdfs = [];
+$all_editions = [];
+$all_images = [];
 
-        $total_newsletters = count($newsletters);
-        $total_articles = 0;
-        $total_words = 0;
+$total_newsletters = count($newsletters);
+$total_articles = 0;
+$total_words = 0;
 
-        if ($newsletters):
-            foreach ($newsletters as $newsletter):
+if ($newsletters):
+    foreach ($newsletters as $newsletter):
+        setup_postdata( $newsletter );
 
-                setup_postdata( $newsletter ); 
+        array_push($all_titles, get_the_title($newsletter));
+        array_push($all_content, get_the_content());
+        array_push($all_pdfs, get_post_meta($newsletter->ID, 'upload-newsletter', true));
+        array_push($all_editions, get_post_meta($newsletter->ID, 'edition', true));
+        array_push($all_images, get_the_post_thumbnail_url($newsletter->ID, 'full'));
 
-                array_push($all_titles, get_the_title($newsletter));
-                array_push($all_content, get_the_content());
-                array_push($all_pdfs, get_post_meta($newsletter->ID, 'upload-newsletter', true));
-                array_push($all_editions, get_post_meta($newsletter->ID, 'edition', true));
-                array_push($all_images, get_the_post_thumbnail_url($newsletter->ID, 'full'));
+        $total_articles += get_post_meta($newsletter->ID, 'number_of_articles', true);
+        $total_words += get_post_meta($newsletter->ID, 'number_of_words', true);
 
-                $total_articles += get_post_meta($newsletter->ID, 'number_of_articles', true);
-                $total_words += get_post_meta($newsletter->ID, 'number_of_words', true);
-
-                wp_reset_query();
-
-            endforeach;
-        endif; 
-        
-        global $post;   
-        $authors = get_post_meta(get_the_ID(), 'authors', true);
         wp_reset_query();
+    endforeach;
+endif;
+
+global $post;
+
+$authors = array();
+$roles = array();
+foreach (array("chief-editor", "editor", "writer", "designer", "artist", "producer") as $role) {
+    $temp = get_post_meta( get_the_ID(), $role, true );
+    if ($temp){
+        $authors = array_merge( $authors, $temp );
+        $roles = array_merge( $roles, array_fill(0, count( $temp ), ucwords( str_replace("-", " ", $role ) ) ) );
+    }
+}
+wp_reset_query();
 ?>
 
 <?php get_header('cfrtheme', ['Tumbleweed - The CFR Project Newsletter']);?>
@@ -162,19 +169,22 @@ Template Name: Tumbleweed Newsletter
     <div class="authors-container">
         <div class="authors" id="authors">
 
-            <?php foreach ($authors as $authorID): ?>
+            <?php
+            $i = 0;
+            foreach ($authors as $authorID): ?>
 
-                <a href="<?php echo get_the_permalink($authorID); ?>" class="author-permalink">
+                <a href="<?php echo get_the_permalink($authorID);?>" class="author-permalink">
                     <div class="author">
                         <img src="<?php echo wp_get_attachment_image_src(get_post_meta($authorID, 'photo', true))[0]; ?>" alt="">
                         <div class="author-deets">
-                            <h3><?php echo get_the_title($authorID); ?></h3>
-                            <p>Editor</p>
+                            <h3><?php echo get_the_title($authorID);?></h3>
+                            <p><?php echo $roles[$i];?></p>
                         </div>
                     </div>
                 </a>
-
-            <?php endforeach; ?>
+            <?php
+                $i++;
+            endforeach;?>
 
         </div>
         <button id="prev-author" onclick='prevAuthor()'>&#10094;</button>
@@ -215,11 +225,11 @@ Template Name: Tumbleweed Newsletter
                 }
             }
         }
-        function nextAuthor(){              
+        function prevAuthor(){
             authorsContainer.firstElementChild.before(authorsContainer.lastElementChild);
             showAuthors(visibleAuthors);
         }
-        function prevAuthor(){
+        function nextAuthor(){
             authorsContainer.lastElementChild.after(authorsContainer.firstElementChild);
             showAuthors(visibleAuthors);
         }
