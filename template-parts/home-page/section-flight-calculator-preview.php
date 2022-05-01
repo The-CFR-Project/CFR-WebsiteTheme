@@ -10,7 +10,7 @@ $doc = new DOMXPath( $doc );
   <div class="home-post container-fluid">
     <div class="heading-container">
     <?php
-      echo "<div class='heading-overlay'>calculator</div>";
+      echo "<div class='heading-overlay heading-overlay-white'>calculator</div>";
       echo "<div class='heading-watermark'>" . $doc->query("//h1")[0]->nodeValue . "</div>";
     ?>
       <img src="<?php echo get_template_directory_uri();?>/assets/images/flight-symbol.svg">

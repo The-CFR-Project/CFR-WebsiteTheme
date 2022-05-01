@@ -7,7 +7,6 @@ Template Name: About Us
 
 <?php get_header();?>
 
-<section></section>
 <?php get_template_part( "template-parts/about-cfr/section", "about-cfr" );?>
 
 <section id="meet-the-team" class="grey-section">
@@ -43,7 +42,7 @@ Template Name: About Us
         <style type="text/css">@import url("<?php echo get_template_directory_uri(); ?>/assets/css/aboutus-css/meettheteam.css");</style>
         <div class="meet-the-team-container container">
             <div class="heading-container">
-                <div class='heading-overlay'>meet our team!</div>
+                <div class='heading-overlay heading-overlay-grey'>meet our team!</div>
             </div>
 
             <div class="row large-row justify-content-evenly">
@@ -106,9 +105,8 @@ Template Name: About Us
 </section>
 
 <?php get_template_part( "template-parts/about-cfr/section", "cfr-metrics" );?>
-<?php get_template_part( "template-parts/about-cfr/section", "aboutus-cards" );?>
+<?php get_template_part( "template-parts/home-page/section", "cards" );?>
 <?php get_template_part( "template-parts/about-cfr/section", "our-story" );?>
-<section></section>
 <?php get_template_part( "template-parts/home-page/section", "faqs" );?>
 
 <!-- Bedrock Image -->

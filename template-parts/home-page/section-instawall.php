@@ -7,7 +7,7 @@ $post = get_page_by_path("social-introverts");
   <div class="instawall-section-container container-fluid">
 
     <div class="heading-container">
-      <?php echo "<div class='heading-overlay'>" . $post->post_title . "</div>";?>
+      <?php echo "<div class='heading-overlay heading-overlay-grey'>" . $post->post_title . "</div>";?>
     </div>
 
     <?php echo apply_filters( 'the_content', $post->post_content );?>

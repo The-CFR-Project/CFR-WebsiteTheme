@@ -1,11 +1,11 @@
 /**************************************************/
-/*************** Latest Newsletter  ***************/ 
+/*************** Latest Newsletter  ***************/
 /**************************************************/
 #latest-newsletter-container {
-    margin: 100px 0 0 0;
+    margin-top: 100px;
     position: relative;
     overflow: hidden;
-    height: fit-content;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,17 +14,17 @@
 }
 
 #latest-newsletter-container:hover > .latest-newsletter-img {
-    filter: brightness(70%);
-    transition: filter 0.2s ease;
+    filter: brightness(50%);
 }
 
 .latest-newsletter-img {
     position: absolute;
     z-index: -1;
-    min-width: 1010px;
-    filter: brightness(80%);
-    transition: filter 0.2s ease;
+    filter: brightness(40%);
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
 }
 
 .latest-newsletter-heading {
@@ -55,15 +55,15 @@
     height: 100%;
     width: 100%;
     border: none;
-    background-color: var(--yellow1);
+    background-color: var(--yellow2);
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     text-transform: uppercase;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     letter-spacing: 1px;
     transition: all 0.2s ease;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .latest-newsletter-download:focus > button,
@@ -107,7 +107,8 @@
 
 .subscription-form-text h1 {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: none;
 }
 
 .subscription-form-text h3 {
@@ -192,19 +193,13 @@
 /**************************************************/
 /*************** Newsletter Stats *****************/
 /**************************************************/
-#newsletter-stats-container {
-    height: fit-content;
-    padding: 60px 0;
-}
-
-.stats {
-    position: relative;
-    padding: 100px 100px 50px;
+.stats-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 
 .stats .col-md-4 {
-    padding: 0 !important;
-    margin: 0 !important;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -258,8 +253,9 @@
 /****************************************************/
 /**************** Newsletter Archive ****************/
 /****************************************************/
+
 #newsletter-archive-container {
-    padding: 50px 100px 100px;
+    display: none
 }
 
 #newsletter-archive-container .row {
@@ -396,6 +392,7 @@
 .author img {
     height: 300px;
     width: 100%;
+    object-fit: cover;
 }
 
 .author-deets {

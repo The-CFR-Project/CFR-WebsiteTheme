@@ -7,10 +7,10 @@ $doc = new DOMXPath( $doc );
 
 <section id="our-metrics">
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/aboutus-css/cfrmetrics.css"); </style>
-  <div class="container-border-components container-fluid">
+  <div class="container-border-components container-fluid" style="height: 500px;">
     <div class="heading-container">
     <?php
-    echo "<div class='heading-overlay'>" . $doc->query( "//h2" )[0]->nodeValue . "</div>";
+    echo "<div class='heading-overlay heading-overlay-white'>" . $doc->query( "//h2" )[0]->nodeValue . "</div>";
     echo "<div class='heading-watermark'>" . $doc->query( "//h1" )[0]->nodeValue . "</div>";?>
     </div>
 

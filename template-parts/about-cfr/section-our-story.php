@@ -11,7 +11,7 @@ $doc = new DOMXPath( $doc );
 
     <div class="heading-container">
     <?php
-    echo "<div class='heading-overlay'>" . $doc->query( "//h2" )[0]->nodeValue . "</div>";
+    echo "<div class='heading-overlay heading-overlay-white'>" . $doc->query( "//h2" )[0]->nodeValue . "</div>";
     echo "<div class='heading-watermark'>" . $doc->query( "//h1" )[0]->nodeValue . "</div>";?>
     </div>
 

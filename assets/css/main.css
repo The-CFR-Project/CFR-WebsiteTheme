@@ -29,6 +29,7 @@
 	--red5: #3d2451;
 
 	--yellow1: #ffcc66;
+	--yellow2: #ffbd59;
 
 	--silver: #c0c0c0;
 	--bronze: #9f7a34;
@@ -217,6 +218,7 @@ Layout General Theme CSS
 	position: absolute;
 
 	width: 100%;
+	height: 100%;
 	top: 0;
 }
 
@@ -309,12 +311,12 @@ section:nth-child(even) .heading-container {
 	z-index: 8;
 }
 
-section:nth-child(odd) .heading-overlay {
+.heading-overlay-grey {
 	color: var(--red4);
 }
 
-section:nth-child(even) .heading-overlay {
-	color: var(--blue3);
+.heading-overlay-white {
+	color: var(--blue4);
 }
 
 header a,

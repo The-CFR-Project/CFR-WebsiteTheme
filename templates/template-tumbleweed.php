@@ -42,18 +42,17 @@ Template Name: Tumbleweed Newsletter
 ?>
 
 <?php get_header('cfrtheme', ['Tumbleweed - The CFR Project Newsletter']);?>
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/newsletter/tumblweed-newsletter.css"); </style>
-<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/instawall.css"); </style>
+<style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/newsletter/tumbleweed-newsletter.css"); </style>
 
 <section id="latest-newsletter-container">
-    <img src="<?php echo $all_images[0]; ?>" alt="" class="latest-newsletter-img">
+    <img src="<?php echo $all_images[0];?>" class="latest-newsletter-img">
 
     <div class="latest-newsletter-heading">
-        <h3>#1 <?php echo $all_editions[0]; ?></h3>
-        <h1><?php echo $all_titles[0]; ?></h1>
+        <h3><?php echo $all_editions[0];?> Edition</h3>
+        <h1><?php echo $all_titles[0];?></h1>
     </div>
 
-    <a download='<?php echo $all_titles[0]; ?>-CFR-Newsletter' href='<?php echo wp_get_attachment_url($all_pdfs[0]); ?>' class="latest-newsletter-download">
+    <a download='<?php echo $all_titles[0];?>-CFR-Newsletter' href='<?php echo wp_get_attachment_url($all_pdfs[0]); ?>' class="latest-newsletter-download">
         <button>
             download
         </button>
@@ -72,7 +71,6 @@ Template Name: Tumbleweed Newsletter
             <h3>Subscribe to CFR's Newsletter</h3>
         </div>
         <div class="subscription-form-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder-image.svg" alt="tumbleweed-logo">
         </div>
     </div>
 
@@ -89,50 +87,44 @@ Template Name: Tumbleweed Newsletter
 
 </section>
 
-
-
 <section id="newsletter-stats-container">
     
     <div class="heading-container">
-        <div class="heading-overlay">we've worked hard</div>
+        <div class="heading-overlay heading-overlay-white">we've worked hard</div>
         <div class="heading-watermark">stats</div>
     </div>
 
-    <div class="stats row">
-        <div class="col-md-4">
-            <div class="stat editions-stat">
-                <h3><?php echo $total_newsletters; ?></h3>
-                <p>editions</p>
-                <a href="#newsletter-stats-container" style="position:absolute;"></a>
+    <div class="stats-container">
+        <div class="stats row">
+            <div class="col-md-4">
+                <div class="stat editions-stat">
+                    <h3><?php echo $total_newsletters; ?></h3>
+                    <p>editions</p>
+                    <a href="#newsletter-stats-container" style="position:absolute;"></a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="stat articles-stat">
-                <h3><?php echo $total_articles; ?></h3>
-                <p>articles</p>
-                <a href="#newsletter-stats-container" style="position:absolute;"></a>
+            <div class="col-md-4">
+                <div class="stat articles-stat">
+                    <h3><?php echo $total_articles; ?></h3>
+                    <p>articles</p>
+                    <a href="#newsletter-stats-container" style="position:absolute;"></a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="stat words-stat">
-                <h3><?php echo $total_words; ?></h3>
-                <p>words</p>
-                <a href="#newsletter-stats-container" style="position:absolute;"></a>
+            <div class="col-md-4">
+                <div class="stat words-stat">
+                    <h3><?php echo $total_words; ?></h3>
+                    <p>words</p>
+                    <a href="#newsletter-stats-container" style="position:absolute;"></a>
+                </div>
             </div>
         </div>
     </div>
 
 </section>
 
-
-
-<section></section>
-
-
-
 <section id="newsletter-archive-container">
     <div class="heading-container">
-        <div class="heading-overlay" style="color:var(--blue3)">you checkin' me out?</div>
+        <div class="heading-overlay heading-overlay-white">you checkin' me out?</div>
         <div class="heading-watermark">editions</div>
     </div>
     <div class="row">
@@ -160,9 +152,6 @@ Template Name: Tumbleweed Newsletter
         <?php endfor; ?>    
     </div>
 </section>
-
-
-
 
 <section id="newsletter-authors-container">
 

@@ -2,7 +2,7 @@
   <style type="text/css">   @import url("<?php echo get_template_directory_uri(); ?>/assets/css/homepage-css/cards.css"); </style>
   <div class="container-border-components container-fluid">
     <div class="heading-container">
-      <div class='heading-overlay cards-heading'>wanna play cards?</div>
+      <div class='heading-overlay cards-heading heading-overlay-grey'>wanna play cards?</div>
     </div>
 
     <!-- Background images and formatting -->
