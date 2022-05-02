@@ -67,7 +67,7 @@ $recent_posts = new WP_Query( $recent_args );
         <div class="container blog-archive">
             <div class="row">
             <?php else:?>
-                <a href="<?php the_permalink();?>" class="col-md-4 blog-post">
+                <a href="<?php the_permalink();?>" class="col-sm-6 col-md-4 blog-post">
                     <?php the_post_thumbnail();?>
                     <p><?php echo the_author_meta("first_name") . 'Bhavye Mathur' . get_the_author_meta("last_name");?></p>
                     <h3><?php the_title();?></h3>
