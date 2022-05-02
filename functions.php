@@ -195,7 +195,7 @@ function register_cfr_post_types() {
         'public' => true,
         'menu_icon' => 'dashicons-lightbulb',
         'rewrite' => array( 'slug' => 'quiz' ),
-        'supports' => array( 'title', 'editor', 'custom-fields', 'author' )
+        'supports' => array( 'title', 'custom-fields' )
     ] );
 }
 

@@ -25,6 +25,7 @@ The CFR Banner Slideshow Located at the Top of the Screen
 	font-size: 2.5em;
 	font-weight: 700;
 	color: #fff;
+	width: 80%;
 }
 
 .header-slideshow-container input {
@@ -63,12 +64,14 @@ The CFR Banner Slideshow Located at the Top of the Screen
 .header-slideshow-container .header-slide > div {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 110px;
 	text-align: center;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
 }
 
 .header-slideshow-container .prev-slide,
@@ -183,28 +186,5 @@ The CFR Banner Slideshow Located at the Top of the Screen
 	}
 	to {
 		opacity: 1;
-	}
-}
-
-@media screen and (max-width: 1000px){
-	#read-more{
-		margin: 50px 0 0;
-	}
-	.header-slideshow-container{
-		margin: 0;
-	}
-	.header-slideshow-container h3{
-		margin-bottom:0;
-	}
-	.header-slideshow-container img {
-		width: 100%;
-		height: 100%;
-	}
-	.header-slideshow-container h3{
-		font-size:2.2em;
-		position:relative;
-		vertical-align:top;
-		margin-left:5%;
-		margin-right:5%;
 	}
 }

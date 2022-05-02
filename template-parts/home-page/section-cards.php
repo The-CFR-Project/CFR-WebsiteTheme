@@ -112,9 +112,7 @@
       </div>
 
     </div>
-    
 
-  <!-- JavaScript ------------------------------------->
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/cards.js"></script>
 
   </div>

@@ -17,6 +17,8 @@ The CFR Blogs Single Page (Page when a specific blog is clicked from the archive
 .blog-single-header img {
 	opacity: 0.4;
 	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 .blog-single-header .text {
