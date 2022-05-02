@@ -19,7 +19,7 @@ The CFR Banner Slideshow Located at the Top of the Screen
 }
 
 .header-slideshow-container h3 {
-	margin-bottom: 30px;
+	margin: 0 10% 30px 10%;
 	text-transform: uppercase;
 	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 	font-size: 2.5em;
