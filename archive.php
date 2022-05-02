@@ -60,7 +60,7 @@ $recent_posts = new WP_Query( $recent_args );
                 <div><a href="<?php the_permalink();?>">
                     <h2>Spotlighted</h2>
                     <h3><?php the_title();?></h3>
-                    <h4><?php echo the_author_meta("first_name") . 'Bhavye Mathur' . get_the_author_meta("last_name");?></h4>
+                    <h4><?php echo the_author_meta("first_name") . ' ' . get_the_author_meta("last_name");?></h4>
                 </a></div>
             </div>
         </div>
@@ -69,7 +69,7 @@ $recent_posts = new WP_Query( $recent_args );
             <?php else:?>
                 <a href="<?php the_permalink();?>" class="col-sm-6 col-md-4 blog-post">
                     <?php the_post_thumbnail();?>
-                    <p><?php echo the_author_meta("first_name") . 'Bhavye Mathur' . get_the_author_meta("last_name");?></p>
+                    <p><?php echo the_author_meta("first_name") . ' ' . get_the_author_meta("last_name");?></p>
                     <h3><?php the_title();?></h3>
                 </a>
         <?php endif;?>
