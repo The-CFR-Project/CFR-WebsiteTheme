@@ -58,8 +58,8 @@
 #flight-calculator-inputs-form label {
 	color: var(--grey3);
 	font-size: 13px;
-	font-weight: 400;
-
+	font-weight: bolder;
+	color: var(--red4);
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
@@ -69,7 +69,6 @@
 	border-color: var(--red4);
 
 	color: white;
-	margin-top: 27px
 }
 
 .vertical-center {
@@ -92,12 +91,13 @@
 #flight-calculator-inputs-form input:hover,
 #flight-calculator-inputs-form button:hover {
 	border-color: var(--red4);
+	border-width: 5px;
 }
 
 #flight-calculator-inputs-form select,
 #flight-calculator-inputs-form input,
 #flight-calculator-inputs-form button {
-	border-width: 2px;
+	border-width: 0;
 	border-radius: 7px;
 	border-color: white;
 	border-style: solid;
@@ -238,6 +238,99 @@ td {
 	border-collapse: collapse;
 }
 .table {
-	padding-bottom:10px;
+	padding-bottom:50px;
 	outline: none;
+}
+.aircraft-options{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+}
+.aircraft-options div{
+	text-align: center;
+}
+
+.aircraft-options input{
+	margin: auto;
+}
+
+.text-align-center{
+	text-align: center;	
+}
+.inline{
+	display: inline;
+}
+.aircraft-option-container{
+margin:0 1%;
+}
+.grey-bg{
+	background-color: var(--grey1);
+	margin-bottom: 50px;
+}
+.justify-center{
+	justify-content: center;
+	display: flex;
+}
+.submit-btn{
+	background-color: var(--red4) !important;
+	color: white !important;
+	border: 0 !important;
+	text-transform: lowercase;
+	margin-top: 30px;
+}
+.plane-header{
+	margin: 100px;
+	text-transform: lowercase;
+	color: var(--red4);
+
+}
+.advanced-btn{
+	width: 154px;
+	height: 30px !important;
+	font-size: 12px;
+	background-color: #d5d5d5 !important;
+	color: white !important;
+	border: 0 !important;
+	text-transform: lowercase;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+.advanced-btn:hover{
+	background-color: #c0c0c0 !important;
+}
+.results-display{
+	border-bottom-width: 0px !important;
+}
+.aircraft-description{
+	margin-top: 30px;
+}
+.large-letter{
+	color:#FFFFFF;
+	display: flex;
+	justify-content: center;
+	text-align: center !important;
+	width: 25%;
+	font-size: 60px;
+	height: 80px;
+	align-content: center;
+	background-color:#9079A2;
+	align-self: center;
+}
+.aircraft-description-part{
+	display: flex;
+	margin-top: 18px;
+}
+.text-align-center{
+	text-align: center;
+}
+.align-center{
+	align-self: center;
+}
+.large-letter p{
+	margin-left: -5px;
+
+}
+.no-border{
+	border: 0 !important;
 }
