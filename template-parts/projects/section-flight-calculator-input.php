@@ -1,11 +1,21 @@
-<section id="flight-calculator-input">
 	<script>
 		function folding() {
 			var x = document.getElementById("second-part");
+			var y = document.getElementById("advanced-btn");
+			
+			function advancedOptionsTransition(){
+				x.style.setProperty("margin-top","0px","important")
+			}
+			
 			if (x.style.display === "none") {
 				x.style.display = "block";
+				y.style.setProperty("background-color", "rgb(144, 143, 143)", "important");
+				setTimeout(advancedOptionsTransition, 100)
 			} else {
 				x.style.display = "none";
+				y.style.setProperty("background-color", "rgb(213, 213, 213)", "important");
+				x.style.setProperty("margin-top","-50px","important")
+
 			}
 		}
 	</script>
@@ -19,13 +29,15 @@
 
 	<body>
 		<section class="grey-bg">
-			<h1 class="text-align-center plane-header">pick a plane</h1>
+		<div class="heading-container">	
+			<div class="heading-overlay heading-overlay-gr" style="color:#9079A2;">pick a plane</div>
+		</div>
 			<form id="flight-calculator-inputs-form" method="post" action="">
 				<div class="row justify-center">
 					<div class="aircraft-options">
 						<div class="aircraft-option-container">
 							<label for="aircraft-type">Aircraft Type</label><br>
-							<input list="aircraft-type" name="aircraft_type" /></label>
+							<input list="aircraft-type" name="aircraft_type" tabindex="0" />
 							<datalist id="aircraft-type">
 								<?php
 								// iterates through a database query to show the results. Only for drop down menus with many options
@@ -40,7 +52,7 @@
 						</div>
 						<div class="aircraft-option-container">
 								<label>Aircraft Category</label><br>
-								<input list="aircraft-category" name="aircraft_category" />
+								<input list="aircraft-category" name="aircraft_category" tabindex="0"/>
 								<datalist id="aircraft-category">
 									<option>Amphibian</option>
 									<option>Gyrocopter</option>
@@ -52,7 +64,7 @@
 						</div>
 						<div class="aircraft-option-container">
 							<label>Engine Manufacturer</label><br>
-							<input list="engine-manufacturer" name="engine_manufacturer" />
+							<input list="engine-manufacturer" name="engine_manufacturer" tabindex="0"/>
 							<datalist id="engine-manufacturer">
 								<?php
 								global $wpdb;
@@ -72,17 +84,17 @@
 				<br>
 				<div class="row" style="justify-content: center">
 					<!-- Advanced Options -->
-					<button class="advanced-btn" type="button" onclick="folding()">Advanced Options</button>
+						<button class="advanced-btn" tabindex="0" role="button" id="advanced-btn" type="button" onclick="folding()">Advanced Options</button>
 				</div>
 				<br>
 				<!-- Second Part -->
-				<div id="second-part" style="display:none">
+				<div id="second-part" style="display:none; margin-bottom:20px;">
 					<!-- First Row -->
 					<div class="row justify-center">
 						<div class="aircraft-options">
 							<div class="aircraft-option-container">
 								<label for="manufacturer">Manufacturer</label><br>
-								<input list="manufacturer" name="aircraft_manufacturer" />
+								<input list="manufacturer" name="aircraft_manufacturer" tabindex="0"/>
 								<datalist id="manufacturer">
 									<?php
 									global $wpdb;
@@ -96,7 +108,7 @@
 							</div>
 							<div class="aircraft-option-container">
 								<label for="body-type">Body Type</label><br>
-								<input list="body-type" name="body_type" />
+								<input list="body-type" name="body_type" tabindex="0"/>
 								<datalist id="body-type">
 									<option>Freighter</option>
 									<option>Gyrocopter</option>
@@ -112,7 +124,7 @@
 							</div>
 							<div class="aircraft-option-container">
 								<label for="maximum-seats">Maximum Seats</label><br>
-								<input list="maximum-seats" name="maximum_seats" />
+								<input list="maximum-seats" name="maximum_seats" tabindex="0"/>
 								<datalist id="maximum-seats">
 									<option>0</option>
 									<option>1</option>
@@ -148,7 +160,7 @@
 						<div class="aircraft-options">
 							<div class="aircraft-option-container">
 								<label for="engine-type">Engine Type</label><br>
-								<input list="engine-type" name="engine_type" />
+								<input list="engine-type" name="engine_type" tabindex="0"/>
 								<datalist id="engine-type">
 									<option>Electric</option>
 									<option>Jet</option>
@@ -159,7 +171,7 @@
 								<div class="aircraft-option-container">
 								<label for="engine-count">Engine Count</label><br>
 
-									<input list="ec-1" name="ec1" />
+									<input list="ec-1" name="ec1" tabindex="0"/>
 									<datalist id="ec-1">
 										<option>0</option>
 										<option>1</option>
@@ -171,7 +183,7 @@
 				</div>
 				<br>
 				<div class="row" style="justify-content: center">
-					<input class="submit-btn" type="submit" name="submitbtn">
+					<input class="submit-btn" type="submit" name="submitbtn" tabindex="0">
 				</div>
 			</form>
 		</section>	
@@ -309,4 +321,3 @@
 		</table>
 		</div>
 	</body>
-</section>

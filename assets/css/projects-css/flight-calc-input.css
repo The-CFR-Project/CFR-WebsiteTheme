@@ -246,6 +246,7 @@ td {
 	justify-content: center;
 	align-content: center;
 	width: 100%;
+	flex-wrap: wrap;
 }
 .aircraft-options div{
 	text-align: center;
@@ -277,7 +278,13 @@ margin:0 1%;
 	color: white !important;
 	border: 0 !important;
 	text-transform: lowercase;
-	margin-top: 30px;
+}
+.submit-btn:hover{
+	background-color: #684980 !important;
+}
+.submit-btn:focus{
+	background-color: #684980 !important;
+
 }
 .plane-header{
 	margin: 100px;
@@ -297,6 +304,10 @@ margin:0 1%;
 	margin-bottom: 25px;
 }
 .advanced-btn:hover{
+	background-color: #c0c0c0 !important;
+}
+.advanced-btn:focus{
+	color: black;
 	background-color: #c0c0c0 !important;
 }
 .results-display{
@@ -333,4 +344,14 @@ margin:0 1%;
 }
 .no-border{
 	border: 0 !important;
+}
+input::-webkit-calendar-picker-indicator {
+	display: none !important;
+  }
+input{
+	text-align: center;
+}
+#second-part{
+	margin-top: -50px !important;
+	transition: margin-top 1s;
 }
