@@ -255,6 +255,10 @@ td {
 .aircraft-options input{
 	margin: auto;
 }
+.aircraft-options input:focus{
+	border-color: var(--red4) !important;
+	border-width: 5px !important;
+}
 
 .text-align-center{
 	text-align: center;	
@@ -304,7 +308,10 @@ margin:0 1%;
 	margin-bottom: 25px;
 }
 .advanced-btn:hover{
-	background-color: #c0c0c0 !important;
+	background-color: #b1b1b1 !important;
+}
+.advanced-btn-expanded{
+	background-color: rgb(144, 143, 143) !important;
 }
 .advanced-btn:focus{
 	color: black;
@@ -352,6 +359,6 @@ input{
 	text-align: center;
 }
 #second-part{
-	margin-top: -50px !important;
-	transition: margin-top 1s;
+	opacity: 0%;
+	transition: opacity 1s;
 }

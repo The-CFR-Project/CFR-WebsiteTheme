@@ -4,18 +4,17 @@
 			var y = document.getElementById("advanced-btn");
 			
 			function advancedOptionsTransition(){
-				x.style.setProperty("margin-top","0px","important")
+				x.style.setProperty("opacity","100%","important")
+				y.classList.add("advanced-btn-expanded");
 			}
 			
 			if (x.style.display === "none") {
 				x.style.display = "block";
-				y.style.setProperty("background-color", "rgb(144, 143, 143)", "important");
 				setTimeout(advancedOptionsTransition, 100)
 			} else {
 				x.style.display = "none";
-				y.style.setProperty("background-color", "rgb(213, 213, 213)", "important");
-				x.style.setProperty("margin-top","-50px","important")
-
+				y.classList.remove("advanced-btn-expanded");
+				x.style.setProperty("opacity","0%","important")
 			}
 		}
 	</script>
