@@ -5,7 +5,7 @@
 .container-fluid {
 	margin-top: 100px;
 	width: 100%;
-	height: 200px;
+	height: 250px;
 	overflow: hidden;
 	position: relative;
 	background-color: var(--blue3);
@@ -30,6 +30,9 @@
 	display: table-cell;
 	text-align: justify;
 }
+#repr{
+	margin-left: 20px;
+}
 .container-fluid img{
 	opacity: 40%;
 	width: 100%;
@@ -46,17 +49,33 @@
 	font-weight: 700;
 	font-size: 2.5em;
 	text-transform: uppercase;
+	text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
 #sharelinks{
 	position: absolute;
-	right: 15px;
+	right: 10px;
 	bottom: 9px;
+	width: 144px;
 }
 #sharelinks .btn{
 	background: #fff;
 	width: 40px;
 	height: 40px;
-	padding: 5px;
+	padding: 8px;
+	margin-right: 2px;
+}
+#fa-twitter{
+	left: 0;
+}
+#fa-facebook{
+	left: 52%;
+}
+#fa-link{
+	right: 0;
+}
+#sharelinks .btn:hover{
+	width: 42px;
+	height: 42px;
 }
 .btn-container{
 	justify-content: center;
@@ -65,9 +84,6 @@
 .row{
 	color: var(--grey4);
 	padding-top: 15px;
-}
-#quiz-tt{
-	margin-left: 18px;
 }
 #quiz-tt, .row{
 	font-weight: 700;
@@ -106,6 +122,7 @@ hr::after{
 	cursor: pointer;
 	bottom: -3px;
 	position: relative;
+	transition: background-color 0.5s;
 }
 .dot.green{
 	background-color: #88d172;
@@ -129,8 +146,9 @@ hr::after{
 .opt-container{
 	display: flex;
 	margin-left: 10px;
-	height: 50px;
-	transition: height 0.5s, opacity 0s;
+	max-height: 50px;
+	overflow: hidden;
+	transition: max-height 0.5s, opacity 0s;
 }
 .option{
 	margin: 5px 30px;
@@ -144,6 +162,9 @@ hr::after{
 	padding: 0 15px;
 	color: #fff;
 	cursor: pointer;
+}
+.option:hover{
+	filter: brightness(130%);
 }
 .question :nth-child(3)>.let{
 	color: #88d172;
@@ -180,6 +201,7 @@ hr::after{
 	font-size: 13px;
 	font-weight: 600;
 	justify-content: center;
+	margin-top: 2px;
 }
 .qsleft{
 	display: none;
@@ -189,7 +211,7 @@ hr::after{
 }
 
 .attempted>.opt-container:not(.clicked):not(.corr){
-	height: 0px;
+	max-height: 0px;
 	opacity: 0;
 }
 .attempted>.corr{
@@ -229,6 +251,7 @@ hr::after{
 }
 #end-quiz.show{
 	display: flex;
+	margin-top: 10px;
 }
 #chart-container{
 	height: 150px;
@@ -257,6 +280,9 @@ hr::after{
 }
 .btn-danger{
 	background-color: var(--red2);
+}
+.btn-danger:hover{
+	background-color: #ff2b40;
 }
 .btn-dark{
 	background-color: #000;
@@ -289,7 +315,7 @@ hr::after{
   position: absolute;
   right: 40px;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 700px){
 	.quiz{
 		margin: 30px 10px 50px 10px;
 	}

@@ -60,7 +60,7 @@ for ($i = 1; $i < 10; $i++){
 				<?php echo get_field("quiz_desc"); ?><br>
 			</div>
 		</div>
-		<div class = "btn-container text-center">
+		<div class = "btn-container text-center" style = "margin-top: 20px;">
 			<button id = "start-btn" class = "btn btn-danger button">START QUIZ</button>
 			<br>
 			<div class = "btntext"><?php echo $i-1; ?> questions</div>
@@ -236,9 +236,9 @@ $(".nextbtn").click(function (e){
 					legend: {
 						display: false
 					},
-					tooltip: {
+					/*tooltip: {
 						enabled: false,
-					}
+					}*/
 				},
 				rotation: -90,
 				circumference: 180,
