@@ -29,7 +29,7 @@ $doc = new DOMXPath( $doc );
       <div class="col-md-6">
         <div>
           <a href="<?php echo $doc->query('//a')[1]->nodeValue;?>">
-            <div id='over-only-the-cat'></div>
+            <div id='over-only-the-cat' style="height:117px"></div>
           </a>
         </div>
         <img src="<?php echo get_template_directory_uri();?>/assets/images/balloon1.svg" id="flights-balloon1">
